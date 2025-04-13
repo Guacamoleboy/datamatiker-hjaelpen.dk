@@ -378,7 +378,7 @@ textarea:focus {
 .banner-area {
     padding: 400px 0 350px;
     background-color: #b0b0b0;
-    background-image: url("../images/background2.png");
+    background-image: url("../images/background2-enhanced.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -640,7 +640,7 @@ textarea:focus {
 
 .reservation-area {
     background-color: #b0b0b0;
-    background-image: url("../images/background1.png");
+    background-image: url("../images/background3.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
