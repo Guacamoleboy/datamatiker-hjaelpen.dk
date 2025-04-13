@@ -1,11 +1,82 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700");
+
 body {
     background-color: #e9e9e9;
     color: #777;
     font-family: "Roboto", sans-serif;
     font-size: 14px;
-    font-weight: 400
+    font-weight: 400;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+    background-color: #494974;
+    color: #f1f1f1;
+}
+
+body.dark-mode h3{
+    color: #f1f1f1;
+}
+
+body.dark-mode .food-content span {
+    color: #444444;
+}
+
+body.dark-mode .food-content p {
+    color: #444444;
+}
+
+body.dark-mode .header-area {
+    background-color: #494974;
+}
+
+body.dark-mode .header-area2 {
+    background-color: #ffffff00;
+}
+
+body.dark-mode .header-area a {
+    color: #f1f1f1;
+}
+
+body.dark-mode .deshes-area h1 {
+    color: #f1f1f1;
+}
+
+body.dark-mode .deshes-area a {
+    color: #f1f1f1;
+}
+
+body.dark-mode .deshes-area i {
+    color: #f1f1f1;
+}
+
+body.dark-mode .header-area .sub-menu a {
+    color: #444444;
+}
+
+body.dark-mode .update-area .single-food .food-content {
+
+    background: #d0d0e4;
+
+}
+
+body.dark-mode .update-area .single-food:hover .food-content {
+
+    background: #83838d;
+
+}
+
+.darkmode-btn {
+    background-color: #7c7c7c;
+    color: #fff;
+    border: none;
+    margin-left: 80px;
+    font-size: 1.0rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 8px;
 }
 
 h1 {
@@ -27,7 +98,8 @@ h3 {
     color: #131230;
     font-family: "Playfair Display", serif;
     font-size: 36px !important;
-    font-weight: 700
+    font-weight: 700;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h4 {
@@ -843,7 +915,8 @@ textarea:focus {
 
 .update-area .single-food .food-content {
     padding: 40px 30px;
-    background: #f9f9ff;
+    border-radius: 25px;
+    background: #fff;
     -webkit-transition: .5s;
     -moz-transition: .5s;
     -o-transition: .5s;
@@ -851,7 +924,7 @@ textarea:focus {
 }
 
 .update-area .single-food:hover .food-content {
-    background: #fff;
+    background: #c5c7d1;
     -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1)

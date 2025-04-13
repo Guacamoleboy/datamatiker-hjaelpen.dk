@@ -35,7 +35,7 @@
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
-<body>
+<body class="dark-mode">
     <!-- Preloader Starts -->
     <div class="preloader">
         <div class="spinner"></div>
@@ -73,6 +73,7 @@
                             <li><a href="#">Om os</a></li>
                             <li><a href="#">Kontakt</a></li>
                             <li><a href="#">dev</a></li>
+                            <li><button id="darkModeToggle" class="darkmode-btn">Darkmode 🌙</button></li>
                         </ul>
                     </div>
                 </div>
@@ -120,42 +121,419 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="section-top2 text-center white-text">
-                        <h3>Hvad skal man kunne efter 1. Semester?<br>Se med herunder</h3>
-                        <h4 class="mb-20"><b><br>01 | Objeker</b></h4>
-                        <p>Hvad er en klasse, et objekt, en constructor, gettere/settere & attributter/felter?<br>Hvad er toString(), access modifiers (private/public/protected)? Hvordan instantierer man et objekt?</p>
-                        <h4 class="mb-20"><b><br>02 | ArrayList</b></h4>
-                        <p>Hvordan erklærer og instantiere man en ArrayList? Hvordan adskiller ArrayList sig fra et array?<br>Hvilke metoder anvender vi på ArrayList? Det er bl.a. add(), size(), contains(), indexOf(), remove(), get().<br>Hvad gør det?</p>
-                        <h4 class="mb-20"><b><br>03 | Array</b></h4>
-                        <p>Hvad bruger man arrays til og hvad kan de indeholde? Hvordan gemmer man værdier og objekter i et array?<br>Hvordan gennemløber man et array? Hvad er begrænsningen med arrays i forhold til ArrayList?<br> Hvor kan du vælge at bruge et array i stedet for en ArrayList?</p>
-                        <h4 class="mb-20"><b><br>04 | Scanner</b></h4>
-                        <p>Hvordan bruges Scanner til at indlæse fra tastaturet?<br>Hvordan kan vi sørge for at fange fejlsituationer under indlæsning, f.eks. hvis vi kun ønsker doubles eller integers?<br>Hint: try-catch.</p>
-                        <h4 class="mb-20"><b><br>05 | Strings</b></h4>
-                        <p>Det bruger vi overalt. Fokuser på hvilke metoder, der hører til String klassen.<br>F.eks. length(), charAt(), toLowerCase().</p>
-                        <h4 class="mb-20"><b><br>06 | Metoder</b></h4>
-                        <p>Hvornår og hvorfor bruger vi metoder? Hvad består en metode-signatur af?<br>Hvad vil det sige at assigne en returværdi til en variabel?<br>(en:assignment, da: tildeling)</p>
-                        <h4 class="mb-20"><b><br>07 | Logik</b></h4>
-                        <p>if-then-else, switch-case-break, &&, ||, booleans 
-                        <br>Hvornår kan man vælge en switch-case i stedet for et if-statement?<br>Hvad er forskellen?</p>
-                        <h4 class="mb-20"><b><br>08 | Loops</b></h4>
-                        <p>for- og while løkker og for-each i forbindelse med ArrayLists.<br>Sørg for at du er helt hjemme i syntaksen så du relativt hurtigt kan gennemløbe et array.<br>Det skal trænes.</p>
-                        <h4 class="mb-20"><b><br>09 | Variabletyper</b></h4>
-                        <p>int, Integer, String, double, boolean. Du skal kende de mest gængse datatyper, og hvad de bruges til.<br>Hvad er forskellen på simple typer (int, boolean, double osv.) og objekter?</p>
-                        <h4 class="mb-20"><b><br>10 | Exceptions</b></h4>
-                        <p>Hvad er try-catch og exceptions? Hvornår bruger vi try-catch?<br>Skal alle exceptions gribes med try-catch?</p>
-                        <h4 class="mb-20"><b><br>11 | Filer</b></h4>
-                        <p>Hvordan indlæser man data fra en fil? Hvordan omdanner man data til objekter i sit program?<br>Hvad kan gå galt når man indlæser fra en fil - og hvordan håndterer man det?<br>Hint: try-catch</p>
-                        <h4 class="mb-20"><b><br>12 | Nedarvning</b></h4>
-                        <p>Hvordan virker nedarvning? Hvad er en superklasse?<br>Hvordan ser en constructor ud for en sub-klasse og hvad betyder "super".<br>Hvordan anvender man nedarvning (Hint: extends). Hvad er formålet med nedarvning?</p>
-                        <h4 class="mb-20"><b><br>13 | Interfaces</b></h4>
-                        <p>Hvad er et interface (Hint: en kontrakt) og hvordan bruger man det (Hint: implements)?<br>Giv eksempler på brug af interfaces. Hvad betyder polymorfi og hvordan kan det bruges i praksis?<br>(Hint: forskellen på referencens/variablens typer og objektets type).</p>
-                        <h4 class="mb-20"><b><br>14 | UML</b></h4>
-                        <p>Hvad er en domænemodel?<br>Hvad er et klassediagram?<br>Hvad er et sekvensdiagram?</p>
+                    <div class="section-top2 text-center">
+                        <h3>Checkliste for dine<span> læringsmål</span></h3>
+                        <p class="mt-4"><i>Check alle 14 kasser af - så er du klar til eksamen!</i></p>
+                        <div class="single-element-widget col-lg-6 mx-auto mt-5">
+
+                            <div class="row"> <!-- ROW START -->
+
+                                <div class="col-6">
+                                    <div class="switch-wrap d-flex justify-content-between">
+                                        <p>01. Objekter</p>
+                                        <div class="primary-checkbox">
+                                            <input type="checkbox" id="default-checkbox">
+                                            <label for="default-checkbox"></label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6">
+                                    <div class="switch-wrap d-flex justify-content-between">
+                                        <p>02. ArrayList</p>
+                                        <div class="primary-checkbox">
+                                            <input type="checkbox" id="default-checkbox">
+                                            <label for="default-checkbox"></label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div> <!-- ROW END -->
+
+                            <div class="row"> <!-- ROW START -->
+
+                                <div class="col-6">
+                                    <div class="switch-wrap d-flex justify-content-between">
+                                        <p>03. Array</p>
+                                        <div class="primary-checkbox">
+                                            <input type="checkbox" id="default-checkbox">
+                                            <label for="default-checkbox"></label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6">
+                                    <div class="switch-wrap d-flex justify-content-between">
+                                        <p>04. Scanner</p>
+                                        <div class="primary-checkbox">
+                                            <input type="checkbox" id="default-checkbox">
+                                            <label for="default-checkbox"></label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div> <!-- ROW END -->
+
+                            <div class="row"> <!-- ROW START -->
+
+                                <div class="col-6">
+                                    <div class="switch-wrap d-flex justify-content-between">
+                                        <p>05. Strings</p>
+                                        <div class="primary-checkbox">
+                                            <input type="checkbox" id="default-checkbox">
+                                            <label for="default-checkbox"></label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6">
+                                    <div class="switch-wrap d-flex justify-content-between">
+                                        <p>06. Metoder</p>
+                                        <div class="primary-checkbox">
+                                            <input type="checkbox" id="default-checkbox">
+                                            <label for="default-checkbox"></label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div> <!-- ROW END -->
+
+                            <div class="row"> <!-- ROW START -->
+
+                                <div class="col-6">
+                                    <div class="switch-wrap d-flex justify-content-between">
+                                        <p>07. Logik</p>
+                                        <div class="primary-checkbox">
+                                            <input type="checkbox" id="default-checkbox">
+                                            <label for="default-checkbox"></label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6">
+                                    <div class="switch-wrap d-flex justify-content-between">
+                                        <p>08. Loops</p>
+                                        <div class="primary-checkbox">
+                                            <input type="checkbox" id="default-checkbox">
+                                            <label for="default-checkbox"></label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div> <!-- ROW END -->
+
+                            <div class="row"> <!-- ROW START -->
+
+                                <div class="col-6">
+                                    <div class="switch-wrap d-flex justify-content-between">
+                                        <p>09. Variabletyper</p>
+                                        <div class="primary-checkbox">
+                                            <input type="checkbox" id="default-checkbox">
+                                            <label for="default-checkbox"></label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6">
+                                    <div class="switch-wrap d-flex justify-content-between">
+                                        <p>10. Exceptions</p>
+                                        <div class="primary-checkbox">
+                                            <input type="checkbox" id="default-checkbox">
+                                            <label for="default-checkbox"></label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div> <!-- ROW END -->
+
+                            <div class="row"> <!-- ROW START -->
+
+                                <div class="col-6">
+                                    <div class="switch-wrap d-flex justify-content-between">
+                                        <p>11. Filer</p>
+                                        <div class="primary-checkbox">
+                                            <input type="checkbox" id="default-checkbox">
+                                            <label for="default-checkbox"></label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6">
+                                    <div class="switch-wrap d-flex justify-content-between">
+                                        <p>12. Nedarvning</p>
+                                        <div class="primary-checkbox">
+                                            <input type="checkbox" id="default-checkbox">
+                                            <label for="default-checkbox"></label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div> <!-- ROW END -->
+
+                            <div class="row"> <!-- ROW START -->
+
+                                <div class="col-6">
+                                    <div class="switch-wrap d-flex justify-content-between">
+                                        <p>13. Interfaces</p>
+                                        <div class="primary-checkbox">
+                                            <input type="checkbox" id="default-checkbox">
+                                            <label for="default-checkbox"></label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6">
+                                    <div class="switch-wrap d-flex justify-content-between">
+                                        <p>14. PlantUML</p>
+                                        <div class="primary-checkbox">
+                                            <input type="checkbox" id="default-checkbox">
+                                            <label for="default-checkbox"></label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div> <!-- ROW END -->
+                            
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-5 col-md-6 align-self-center">
+                    <h1>01.</h1>
+                    <div class="deshes-text">
+                        <h3><span>Objekter</span><br> _______</h3>
+                        <p class="pt-3">Hvad er en klasse, et objekt, en constructor, gettere/settere & attributter/felter?
+                        Hvad er toString(), access modifiers (private/public/protected)? Hvordan instantierer man et objekt?</p>
+                        <span class="style-change">Tekst her</span>
+                        <a href="#" class="template-btn3 mt-3">Læs mere <span><i class="fa fa-long-arrow-right"></i></span></a>
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
+                    <img src="../assets/images/image1.png" alt="" class="img-fluid">
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-lg-5 col-md-6 align-self-center order-2 order-md-1 mt-4 mt-md-0">
+                    <img src="../assets/images/image1.png" alt="" class="img-fluid">
+                </div>
+                <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center order-1 order-md-2">
+                    <h1>02.</h1>
+                    <div class="deshes-text">
+                        <h3><span>ArrayList</span><br> _______</h3>
+                        <p class="pt-3">Hvordan erklærer og instantiere man en ArrayList? Hvordan adskiller ArrayList sig fra et array?
+                            Hvilke metoder anvender vi på ArrayList? Det er bl.a. add(), size(), contains(), indexOf(), remove(), get().
+                            Hvad gør det?</p>
+                        <span class="style-change">!= Array</span>
+                        <a href="#" class="template-btn3 mt-3">Læs mere <span><i class="fa fa-long-arrow-right"></i></span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-5 col-md-6 align-self-center">
+                    <h1>03.</h1>
+                    <div class="deshes-text">
+                        <h3><span>Array</span><br> _______</h3>
+                        <p class="pt-3">Hvad bruger man arrays til og hvad kan de indeholde? Hvordan gemmer man værdier og objekter i et array?
+                            Hvordan gennemløber man et array? Hvad er begrænsningen med arrays i forhold til ArrayList?
+                            Hvor kan du vælge at bruge et array i stedet for en ArrayList?</p>
+                        <span class="style-change">Tekst her</span>
+                        <a href="#" class="template-btn3 mt-3">Læs mere <span><i class="fa fa-long-arrow-right"></i></span></a>
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
+                    <img src="../assets/images/image1.png" alt="" class="img-fluid">
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-lg-5 col-md-6 align-self-center order-2 order-md-1 mt-4 mt-md-0">
+                    <img src="../assets/images/image1.png" alt="" class="img-fluid">
+                </div>
+                <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center order-1 order-md-2">
+                    <h1>04.</h1>
+                    <div class="deshes-text">
+                        <h3><span>Scanner</span><br> _______</h3>
+                        <p class="pt-3">Hvordan bruges Scanner til at indlæse fra tastaturet?
+                            Hvordan kan vi sørge for at fange fejlsituationer under indlæsning, f.eks. hvis vi kun ønsker doubles eller integers?
+                            Hint: try-catch.</p>
+                        <span class="style-change">Tekst her</span>
+                        <a href="#" class="template-btn3 mt-3">Læs mere <span><i class="fa fa-long-arrow-right"></i></span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-5 col-md-6 align-self-center">
+                    <h1>05.</h1>
+                    <div class="deshes-text">
+                        <h3><span>Strings</span><br> _______</h3>
+                        <p class="pt-3">Det bruger vi overalt. Fokuser på hvilke metoder, der hører til String klassen.
+                            F.eks. length(), charAt(), toLowerCase().</p>
+                        <span class="style-change">Tekst her</span>
+                        <a href="#" class="template-btn3 mt-3">Læs mere <span><i class="fa fa-long-arrow-right"></i></span></a>
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
+                    <img src="../assets/images/image1.png" alt="" class="img-fluid">
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-lg-5 col-md-6 align-self-center order-2 order-md-1 mt-4 mt-md-0">
+                    <img src="../assets/images/image1.png" alt="" class="img-fluid">
+                </div>
+                <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center order-1 order-md-2">
+                    <h1>06.</h1>
+                    <div class="deshes-text">
+                        <h3><span>Metoder</span><br> _______</h3>
+                        <p class="pt-3">Hvornår og hvorfor bruger vi metoder? Hvad består en metode-signatur af?
+                            Hvad vil det sige at assigne en returværdi til en variabel?
+                            (en:assignment, da: tildeling)</p>
+                        <span class="style-change">Tekst her</span>
+                        <a href="#" class="template-btn3 mt-3">Læs mere <span><i class="fa fa-long-arrow-right"></i></span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-5 col-md-6 align-self-center">
+                    <h1>07.</h1>
+                    <div class="deshes-text">
+                        <h3><span>Logik</span><br> _______</h3>
+                        <p class="pt-3">if-then-else, switch-case-break, &&, ||, booleans
+                            Hvornår kan man vælge en switch-case i stedet for et if-statement?
+                            Hvad er forskellen?</p>
+                        <span class="style-change">Tekst her</span>
+                        <a href="#" class="template-btn3 mt-3">Læs mere <span><i class="fa fa-long-arrow-right"></i></span></a>
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
+                    <img src="../assets/images/image1.png" alt="" class="img-fluid">
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-lg-5 col-md-6 align-self-center order-2 order-md-1 mt-4 mt-md-0">
+                    <img src="../assets/images/image1.png" alt="" class="img-fluid">
+                </div>
+                <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center order-1 order-md-2">
+                    <h1>08.</h1>
+                    <div class="deshes-text">
+                        <h3><span>Loops</span><br> _______</h3>
+                        <p class="pt-3">for- og while løkker og for-each i forbindelse med ArrayLists.
+                            Sørg for at du er helt hjemme i syntaksen så du relativt hurtigt kan gennemløbe et array.
+                            Det skal trænes.</p>
+                        <span class="style-change">Tekst her</span>
+                        <a href="#" class="template-btn3 mt-3">Læs mere <span><i class="fa fa-long-arrow-right"></i></span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-5 col-md-6 align-self-center">
+                    <h1>09.</h1>
+                    <div class="deshes-text">
+                        <h3><span>Variabletyper</span><br> _______</h3>
+                        <p class="pt-3">int, Integer, String, double, boolean. Du skal kende de mest gængse datatyper, og hvad de bruges til.
+                            Hvad er forskellen på simple typer (int, boolean, double osv.) og objekter?</p>
+                        <span class="style-change">Tekst her</span>
+                        <a href="#" class="template-btn3 mt-3">Læs mere <span><i class="fa fa-long-arrow-right"></i></span></a>
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
+                    <img src="../assets/images/image1.png" alt="" class="img-fluid">
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-lg-5 col-md-6 align-self-center order-2 order-md-1 mt-4 mt-md-0">
+                    <img src="../assets/images/image1.png" alt="" class="img-fluid">
+                </div>
+                <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center order-1 order-md-2">
+                    <h1>10.</h1>
+                    <div class="deshes-text">
+                        <h3><span>Exceptions</span><br> _______</h3>
+                        <p class="pt-3">Hvad er try-catch og exceptions? Hvornår bruger vi try-catch?
+                            Skal alle exceptions gribes med try-catch?</p>
+                        <span class="style-change">Tekst her</span>
+                        <a href="#" class="template-btn3 mt-3">Læs mere <span><i class="fa fa-long-arrow-right"></i></span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-5 col-md-6 align-self-center">
+                    <h1>11.</h1>
+                    <div class="deshes-text">
+                        <h3><span>Filer</span><br> _______</h3>
+                        <p class="pt-3">Hvordan indlæser man data fra en fil? Hvordan omdanner man data til objekter i sit program?
+                            Hvad kan gå galt når man indlæser fra en fil - og hvordan håndterer man det?
+                            Hint: try-catch</p>
+                        <span class="style-change">Tekst her</span>
+                        <a href="#" class="template-btn3 mt-3">Læs mere <span><i class="fa fa-long-arrow-right"></i></span></a>
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
+                    <img src="../assets/images/image1.png" alt="" class="img-fluid">
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-lg-5 col-md-6 align-self-center order-2 order-md-1 mt-4 mt-md-0">
+                    <img src="../assets/images/image1.png" alt="" class="img-fluid">
+                </div>
+                <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center order-1 order-md-2">
+                    <h1>12.</h1>
+                    <div class="deshes-text">
+                        <h3><span>Nedarvning</span><br> _______</h3>
+                        <p class="pt-3">Hvordan virker nedarvning? Hvad er en superklasse?
+                            Hvordan ser en constructor ud for en sub-klasse og hvad betyder "super".
+                            Hvordan anvender man nedarvning (Hint: extends). Hvad er formålet med nedarvning?</p>
+                        <span class="style-change">Tekst her</span>
+                        <a href="#" class="template-btn3 mt-3">Læs mere <span><i class="fa fa-long-arrow-right"></i></span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-5 col-md-6 align-self-center">
+                    <h1>13.</h1>
+                    <div class="deshes-text">
+                        <h3><span>Interfaces</span><br> _______</h3>
+                        <p class="pt-3">Hvad er et interface (Hint: en kontrakt) og hvordan bruger man det (Hint: implements)?
+                            Giv eksempler på brug af interfaces. Hvad betyder polymorfi og hvordan kan det bruges i praksis?
+                            (Hint: forskellen på referencens/variablens typer og objektets type).</p>
+                        <span class="style-change">Tekst her</span>
+                        <a href="#" class="template-btn3 mt-3">Læs mere <span><i class="fa fa-long-arrow-right"></i></span></a>
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
+                    <img src="../assets/images/image1.png" alt="" class="img-fluid">
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-lg-5 col-md-6 align-self-center order-2 order-md-1 mt-4 mt-md-0">
+                    <img src="../assets/images/image1.png" alt="" class="img-fluid">
+                </div>
+                <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center order-1 order-md-2">
+                    <h1>14.</h1>
+                    <div class="deshes-text">
+                        <h3><span>PlantUML (UML)</span><br> _______</h3>
+                        <p class="pt-3">Hvad er en domænemodel?
+                            Hvad er et klassediagram?
+                            Hvad er et sekvensdiagram?</p>
+                        <span class="style-change">Tekst her</span>
+                        <a href="#" class="template-btn3 mt-3">Læs mere <span><i class="fa fa-long-arrow-right"></i></span></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
     <!-- Deshes Area End -->
 
     <!-- Footer Area Starts -->
@@ -235,10 +613,10 @@
     </footer>
     <!-- Footer Area End -->
 
-
     <!-- Javascript -->
     <script src="../assets/js/vendor/jquery-2.2.4.min.js"></script>
     <script src="../assets/js/vendor/bootstrap-4.1.3.min.js"></script>
+    <script src="../assets/js/darkmode.js"></script>
     <script src="../assets/js/vendor/wow.min.js"></script>
     <script src="../assets/js/vendor/owl-carousel.min.js"></script>
     <script src="../assets/js/vendor/jquery.datetimepicker.full.min.js"></script>
