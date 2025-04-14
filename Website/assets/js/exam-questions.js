@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         } else {
                             container.innerHTML = `
                                 <h4 class="h4-background col-lg-4 mx-auto mb-5">5/5</h4>
-                                <blockquote class="generic-blockquote">🎉 Tillykke! Du har bestået testen!</blockquote>
+                                <blockquote class="generic-blockquote">Tillykke! Du har bestået testen!</blockquote>
                             `;
                         }
                     } else {

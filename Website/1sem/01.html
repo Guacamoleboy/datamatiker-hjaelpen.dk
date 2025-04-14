@@ -145,7 +145,7 @@
                 </div>
             </div>
 
-            <div class="row mt-5">
+            <div class="row mt-5 mb-5">
                 <div class="col-lg-5 col-md-6 align-self-center order-2 order-md-1 mt-4 mt-md-0">
                     <img src="../assets/images/1sem/01_02.png" alt="" class="img-fluid custom-img-settings">
                 </div>
@@ -155,7 +155,7 @@
                         <h3><span>Hvad er et objekt?</span><br> ______________</h3>
                         <p class="pt-3">
 
-                            Et objekt indkapsler attributer, metoder og funktionalitet. Objektet bruges som en form for grænseflade som stilles til rådighed for andre objekter.
+                            Et objekt indkapsler attributer, metoder og funktionalitet. Objektet bruges som en form for <b>grænseflade</b> som stilles til rådighed for andre objekter.
                             De andre objekter kan så via dette objekt gå ind og få det nye objekt til at udføre nogle opgaver.<br>
 
                         </p>
@@ -163,6 +163,32 @@
                             Eksempel - Tryk her!
                         </button>
                     </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-5 col-md-6 align-self-center mt-5">
+                    <h1>03.</h1>
+                    <div class="deshes-text">
+                        <h3><span>Getter & Setter</span><br> ____________</h3>
+                        <p class="pt-3">
+                            
+                            I java har vi access modifiers som fx <b>private</b>, <b>public</b> & <b>protected</b>. Hvis en attribut er private, så er det kun klassen som har denne.
+                            Hvis vi ønsker at andre klasser skal kunne bruge den <b>private attribut</b>, så skal vi lave en <b>getter</b> - altså en metode som <b>returnerer denne værdi</b>.
+                            En <b>setter</b> bruges til at <b>ændre attributter</b>. Fx kan vi have en String username; som har navnet "Jonas". Ved at lave en setter kan vi ændret navnet
+                            til lige hvad vi vil.
+
+                        </p>
+
+                        <button class="learning-example-settings mt-3" data-toggle="modal" data-target="#codeExampleModal2">
+                            Eksempel | Getter & Setter
+                        </button>
+
+
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
+                    <img src="../assets/images/1sem/01_01.png" alt="" class="img-fluid custom-img-settings">
                 </div>
             </div>
 
@@ -293,6 +319,8 @@
 
     <!-- Modals -->
 
+    <!-- 01 -->
+
     <div class="modal fade" id="codeExampleModal" tabindex="-1" role="dialog" aria-labelledby="codeExampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
           <div class="modal-content p-4" style="border-radius: 20px;">
@@ -339,6 +367,72 @@
             </div>
         </div>
     </div>
+
+    <!-- 01 END -->
+
+    <!-- 02 -->
+
+    <div class="modal fade" id="codeExampleModal2" tabindex="-1" role="dialog" aria-labelledby="codeExampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content p-4" style="border-radius: 20px;">
+            <div class="modal-header">
+              <h5 class="modal-title" id="codeExampleModalLabel">Eksempel – Getter / Setter</h5>
+              
+              <button type="button" class="close" data-dismiss="modal" aria-label="Luk">
+                <span style="color: #fff;" aria-hidden="true">&times;</span>
+              </button>
+
+            </div>
+
+                        <div class="modal-body">
+                            <pre>
+                                    <code class="language-java">
+
+public class Main{
+
+    // Attributes
+    private String name;
+
+    // ____________________
+
+    public static void main(String[] args){
+
+        name = "Jonas";
+
+    }
+
+    // ____________________
+
+    public String getName(){
+        return this.name;
+    }
+
+    // ____________________
+
+    public void setName(String name){
+        this.name = name;
+    }
+
+}
+
+
+                                    </code>
+                            </pre>
+                        </div>
+
+                        <div class="explain-center">
+                            <h3 class="mx-auto">Forklaring</h3>
+                            <p>
+
+                            Tekst her
+                            </p>
+                         </div>
+                    
+            </div>
+        </div>
+    </div>
+
+    <!-- 02 END -->
 
     <!-- Modals end -->
 
