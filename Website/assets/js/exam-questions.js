@@ -1,4 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+
+        let lives = 3;
+    
         const questions = [
             {
                 progress: "1/10",
@@ -80,12 +84,12 @@ document.addEventListener("DOMContentLoaded", () => {
             {
                 progress: "8/10",
                 title: "01 | Objekter",
-                question: "Kan jeg instantiere mit objekt på den her måde?<br><b>Text</b>",
+                question: "Hvis vi instantierer et objekt <b>Dice dice = new Dice()</b> og printer dice resultatet i en TextUI instantieret som <b>ui</b> med metoden displayMsg(String msg).. Hvad sker der så?<br><br>Vi har ingen toString metoder!<br><br><b>ui.displayMsg(dice.getSum());</b>",
                 options: [
-                    { text: "Ja", correct: false },
-                    { text: "Nej", correct: false },
-                    { text: "Det SKAL ske under global attributes (KORREKT LIGE PT)", correct: true },
-                    { text: "Man kan kun instantiere under constructoren", correct: false }
+                    { text: "Den printer værdien af summen", correct: false },
+                    { text: "Den printer resultatet af 2 terninger", correct: false },
+                    { text: "Dice mangler en toString metode, så vi printer HashCode", correct: true },
+                    { text: "Vi har instantieret den forkert, så der sker ikke noget", correct: false }
                 ]
             },
             {
@@ -120,6 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const container = document.querySelector(".changelog-custom");
             container.innerHTML = `
                 <h4 class="h4-background col-lg-4 mx-auto mb-5">${q.progress}</h4>
+                <p id="hearts" class="text-center mb-3">${"❤️".repeat(lives)}</p>
                 <blockquote class="generic-blockquote">${q.question}</blockquote>
                 ${q.options.map(option => `<button>${option.text}</button>`).join("")}
             `;
@@ -136,11 +141,47 @@ document.addEventListener("DOMContentLoaded", () => {
                             container.innerHTML = `
                                 <h4 class="h4-background col-lg-4 mx-auto mb-5">Yay</h4>
                                 <blockquote class="generic-blockquote">Tillykke! Du har bestået testen!</blockquote>
+                                <div class="text-center mt-4">
+                                    <button id="completed-btn" class="btn btn-primary w-auto">Tilbage til læringsmål</button>
+                                </div>
                             `;
                         }
+
+                        const completedBtn = document.getElementById("completed-btn");
+                        
+                        if (completedBtn) {
+                            completedBtn.addEventListener("click", () => {
+                                window.location.href = "overblik.html";
+                            });
+                        }
+
                     } else {
+                        lives--;
                         button.style.backgroundColor = "#c0392b";
                         button.style.color = "white";
+                        
+                        const heartElement = document.getElementById("hearts");
+                        if (heartElement) {
+                        heartElement.textContent = "❤️".repeat(lives);
+                        }
+
+                        if (lives === 0) {
+                            container.innerHTML = `
+                                <h4 class="h4-background col-lg-4 mx-auto mb-5">Game Over</h4>
+                                <blockquote class="generic-blockquote">Du har brugt alle dine liv. Prøv igen!</blockquote>
+                                <div class="text-center mt-4">
+                                    <button id="retry-btn" class="btn btn-primary w-auto">Prøv igen</button>
+                                </div>
+                            `;
+                        
+                            
+                            document.getElementById("retry-btn").addEventListener("click", () => {
+                                lives = 3;
+                                currentQuestionIndex = 0;
+                                renderQuestion(currentQuestionIndex);
+                            });
+
+                        }
                     }
                 });
             });

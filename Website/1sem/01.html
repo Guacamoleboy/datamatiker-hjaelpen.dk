@@ -107,13 +107,18 @@
             <div class="row">
                 <div class="col-md-6 align-self-center">
                     <div class="welcome-img">
-                        <img src="../assets/images/image1-large.png" class="img-fluid" alt="">
+                        <img src="../assets/images/1sem/01_lm_final2.png" class="img-fluid" alt="">
                     </div>
                 </div>
                 <div class="col-md-6 align-self-center">
                     <div class="welcome-text mt-5 mt-md-0">
                         <h3><span class="style-change">Læringsmål | 01</span><br> for 1. Semester</h3>
-                        <p class="pt-3">Hvad er en klasse, et objekt, en constructor, gettere/settere & attributter/felter? Hvad er toString(), access modifiers (private/public/protected)? Hvordan instantierer man et objekt?</p>
+                        <p class="pt-3">
+                            <blockquote class="generic-blockquote-exam">
+                            Her vil vi kigge på det <b>første læringsmål</b> for 1. Semester. Nemlig <b>objekter</b>.. Vi kommmer til at snakke lidt om forskellige data typer, attributter, variabler, metoder og meget mere.
+                            <b>Til sidst</b> tager vi en lille <b>test</b> for at se om du har fået helt styr på stoffet!
+                            </blockquote>
+                        </p>
                         <a href="#exam" class="template-btn mt-3">Hop til test</a>
                     </div>
                 </div>
@@ -194,7 +199,7 @@
                     </div>
                 </div>
                 <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
-                    <img src="../assets/images/placeholder1.png" alt="" class="img-fluid custom-img-settings">
+                    <img src="../assets/images/1sem/01_03.png" alt="" class="img-fluid custom-img-settings">
                 </div>
             </div>
 
@@ -204,7 +209,7 @@
 
             <div class="row mt-5 mb-5">
                 <div class="col-lg-5 col-md-6 align-self-center order-2 order-md-1 mt-4 mt-md-0">
-                    <img src="../assets/images/placeholder1.png" alt="" class="img-fluid custom-img-settings">
+                    <img src="../assets/images/1sem/01_04.png" alt="" class="img-fluid custom-img-settings">
                 </div>
                 <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center order-1 order-md-2">
                     <h1>04.</h1>
@@ -212,11 +217,19 @@
                         <h3><span>Attributter & Felter</span><br> ______________</h3>
                         <p class="pt-3">
 
-                            Tekst her
+                            Hvad er <b>forskellen</b> på en <b>attribut</b> og et <b>felt</b>? Hvad er en <b>lokal variabel</b>? Her kigger vi på forskellen..
+                            En <b>attribut</b> og et <b>felt</b> er en betegnelse for det <b>samme</b>. Det er altså en variabel som er <b>erklæret</b> i en <b>klasse</b> eller <b>uden for</b> en <b>metode</b>.
+                            En <b>lokal variabel</b> derimod er en variabel som er defineret <b>inde i</b> en <b>metode</b> og kun i metoden.
+                            <br><br>Text
+                            <blockquote class="generic-blockquote-exam">
+                                <b>Attribute</b> | I klassen og uden for metoderne
+                                <br><b>Felt</b> | I klassen og uden for metoderne
+                                <br><b>Lokal variabel</b> | Kun under metoden
+                            </blockquote>
 
                         </p>
                         <button class="learning-example-settings mt-3" data-toggle="modal" data-target="#codeExampleModal">
-                            Eksempel | Tryk her!
+                            Eksempel
                         </button>
                     </div>
                 </div>
@@ -233,6 +246,29 @@
                         <h3><span>Hvad er toString()?</span><br> ____________</h3>
                         <p class="pt-3">
                             
+                            I java er toString() en metode som bruges til at <b>returnere</b> en <b>String</b> som benytter sig af <b>attributter</b>. Det kunnne fx være
+                            at vi havde en <b>User.java</b> fil hvor vi havde attributterne <b>username</b>, <b>age</b>, <b>balance</b>, <b>weight</b>, <b>year</b>, <b>isHappy</b> osv. De har alle <b>forskellige data typer</b>.
+                            <br><br><b>Instantierer</b> vi et objekt User u og laver en System.out.println(<b>u</b>), så får vi <b>ClassName@HashCode</b>fremfor vores attributters reele værdi..
+                            <br><br>Ved at lave en <b>toString()</b> metode og <b>@Override</b> den, så kan vi <b>printe vores attributter</b> for vores instans.
+
+                            <blockquote class="generic-blockquote-red">
+                                <b>Uden toString metode</b>
+                                <br><br>User u = new User("Jonas", 26);
+                                <br>System.out.println(u);
+                                <br>
+                                <br><b class="b-line-under">Console Output</b>
+                                <br>
+                                <br><b class="b-white">User@1718f0191</b>
+                            </blockquote>
+                            <blockquote class="generic-blockquote-green">
+                                <b>Med toString metode</b>
+                                <br><br>User u = new User("Jonas", 26);
+                                <br>System.out.println(u);
+                                <br>
+                                <br><b class="b-line-under">Console Output</b>
+                                <br>
+                                <br><b class="b-white">Name: Jonas, age: 26!</b>
+                            </blockquote>
 
                         </p>
 
@@ -244,7 +280,7 @@
                     </div>
                 </div>
                 <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
-                    <img src="../assets/images/placeholder1.png" alt="" class="img-fluid custom-img-settings">
+                    <img src="../assets/images/1sem/01_05.png" alt="" class="img-fluid custom-img-settings">
                 </div>
             </div>
 
@@ -254,7 +290,7 @@
 
             <div class="row mt-5 mb-5">
                 <div class="col-lg-5 col-md-6 align-self-center order-2 order-md-1 mt-4 mt-md-0">
-                    <img src="../assets/images/placeholder1.png" alt="" class="img-fluid custom-img-settings">
+                    <img src="../assets/images/1sem/01_06.png" alt="" class="img-fluid custom-img-settings">
                 </div>
                 <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center order-1 order-md-2">
                     <h1>06.</h1>
@@ -262,7 +298,27 @@
                         <h3><span>Public, private & protected</span><br> ______________</h3>
                         <p class="pt-3">
 
-                            Access modifiers
+                            Dette kaldes ofte "<b>Access Modifiers</b>" som altså refererer til public, private og protected.
+                            Vi benytter os af Access Modifiers på vores attributter og variabler for at skifte hvem og hvad der har <b>adgang</b> til dem.
+                            <br><br><b>Public</b> er tilgængelig <b>over alt</b>. Dvs i <b>alle packages</b>, i <b>alle klasse</b> osv. Dette er ikke altid optimalt, hvorfor vi så ville kigge på den 
+                            anden løsning som er protected hvor det stadig er åbent, men stadig med noget sikkerhed.
+                            <br><br><b>Protected</b> er tilgængelig i <b>samme klasse</b> og <b>samme package</b>. Den er også tilgængelig i andre packages hvis de er <b>subclasses</b> heraf. Den har altså noget beskyttelse,
+                            men stadig relativ tilgængelig. Hvis man derimod vil have fuld sikkerhed for attributten, så kigger man på private.
+                            <br><br><b>Private</b> er kun tilgængelig i <b>samme klasse</b>. Den er ofte brugt til at <b>beskytte data</b> som fx passwords, IDs og usernames. Siger man <b>private</b>, så siger man ofte <b>getter</b> og <b>setter</b>.
+                            Vi kan via gettere og settere "<b class="b-white">access</b>" vores private attributter via en metode som er public og <b>returnerer attributten</b>. Så kan andre klasser bruger den vha en <b>instans</b> af denne. <br>Super smart!
+                            
+                            <blockquote class="generic-blockquote-exam-green">
+                                <b class="b-line-under">Public</b>
+                                <br><br><b class="b-white">Alle klasser og packages</b>
+                            </blockquote>
+                            <blockquote class="generic-blockquote-exam-orange">
+                                <b class="b-line-under">Protected</b>
+                                <br><br><b class="b-white">Alle klasser i samme package samt subclasses</b>
+                            </blockquote>
+                            <blockquote class="generic-blockquote-exam-red">
+                                <b class="b-line-under">Private</b>
+                                <br><br><b class="b-white">Kun samme klasse</b>
+                            </blockquote>
 
                         </p>
                         <button class="learning-example-settings mt-3" data-toggle="modal" data-target="#codeExampleModal">
@@ -283,8 +339,18 @@
                         <h3><span>Instantiering af objekter</span><br> ____________</h3>
                         <p class="pt-3">
                             
-                            Hvordan gør man? 
+                            Hvad vil det sige at <b>instantiere et objekt</b>? At lave en instans af et objekt skal ses som at vi gerne vil bruge vores klasses <b>"blueprint"</b> til vores program.
+                            <br><br>Typisk i programmering arbejder vi med <b>OOP</b> (<b class="b-white">Objekt Orienteret Programmering</b>). Det vil sige at vi <b>deler</b> vores <b>kode</b> ud <b>i metoder</b> og <b>klasser</b>.
+                            Gør vi ikke dette, så kan koden blive svær at læse, og <b>meget lang</b>. Det er ikke optimalt. Derfor laver vi klasser.
+                            <br><br>Fx. <b>User.java</b>, <b>Movie.java</b>, <b>Main.java</b>, <b>Dice.java</b> osv.
+                            For at bruge vores <b>Dice.java</b> "blueprint", så skal vi altså <b>lave en instans</b> af denne klasse. Dette gøres ved at sige <b>Dice dice = new Dice()</b>.<br><br>Vi instantierer altså et nyt <b>objekt</b> som vi nu kan
+                            bruge i vores anden klasse med "<b class="b-white">dice</b>". Vi har altså delt koden op. Den kan det samme, men det er meget <b>mere overskueligt</b> nu!
 
+                            <blockquote class="generic-blockquote-exam">
+                                <b class="b-line-under">User u = new User()</b>
+                                <br>
+                                <br><b class="b-white">Klasse variabel = Objekt()</b>
+                            </blockquote>
                         </p>
 
                         <button class="learning-example-settings mt-3" data-toggle="modal" data-target="#codeExampleModal2">
@@ -295,7 +361,7 @@
                     </div>
                 </div>
                 <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
-                    <img src="../assets/images/placeholder1.png" alt="" class="img-fluid custom-img-settings">
+                    <img src="../assets/images/1sem/01_07.png" alt="" class="img-fluid custom-img-settings">
                 </div>
             </div>
 
@@ -320,12 +386,13 @@
 
                             <div class="section-top-border">
                                 <h3 class="mb-30 title_color">01 | Objekter</h3>
-
+                                
                                 <div class="row">
                                     <div class="col-lg-12">
 
                                         <div class="changelog-custom">
                                             <h4 class="h4-background col-lg-4 mx-auto mb-5">1/10</h4>
+                                            <p id="hearts" class="text-center mb-3">❤️❤️❤️</p>
                                             <blockquote class="generic-blockquote">
                                                 Vi har lavet en FileIO.java klasse som vi nu ønsker at instantiere. Hvordan gør vi det?
                                             </blockquote>
