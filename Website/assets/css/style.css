@@ -23,6 +23,36 @@ body.dark-mode .food-content span {
     color: #444444;
 }
 
+.changelog-custom button {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    margin: 10px auto;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #6d6da0;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.changelog-custom button:hover {
+    background-color: #5a5a8a;
+    transform: translateY(-2px);
+}
+
+.changelog-custom button:active {
+    transform: scale(0.98);
+}
+
+.changelog-custom .generic-blockquote {
+    margin-bottom: 20px;
+}
+
 body.dark-mode .food-content p {
     color: #444444;
 }
@@ -33,7 +63,8 @@ body.dark-mode .header-area {
 
 body.dark-mode .generic-blockquote {
 
-    background-color: #494974;
+    background-color: #63639b;
+    transition: all 0.3s ease-in-out;
 
 }
 
@@ -261,7 +292,7 @@ body.dark-mode .h4-background {
 
 }
 
-.changelog-custom:hover {
+.changelog-custom:hover{
 
     border: 3px solid #8f8f8f;
     border-radius: 20px;
@@ -284,6 +315,13 @@ body.dark-mode .changelog-custom {
     transition: all 0.3s ease-in-out;
     background-color: #63639b;
     cursor: default;
+
+}
+
+body.dark-mode .changelog-custom:hover .generic-blockquote {
+
+    background-color: #6d6da0;
+    transition: all 0.3s ease-in-out;
 
 }
 
