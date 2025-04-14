@@ -124,7 +124,18 @@ document.addEventListener("DOMContentLoaded", () => {
             const container = document.querySelector(".changelog-custom");
             container.innerHTML = `
                 <h4 class="h4-background col-lg-4 mx-auto mb-5">${q.progress}</h4>
-                <p id="hearts" class="text-center mb-3">${"❤️".repeat(lives)}</p>
+                <div id="visual-lives" class="d-flex justify-content-center mb-4">
+                <div class="life-star" id="star1">
+                    <img src="../assets/images/liv_star_final.png" class="star-img">
+                </div>
+                <div class="life-star" id="star2">
+                    <img src="../assets/images/liv_star_final.png" class="star-img">
+                    <img src="../assets/images/liv_astronaut_final.png" class="astronaut-img" id="astronaut">
+                </div>
+                <div class="life-star" id="star3">
+                    <img src="../assets/images/liv_star_final.png" class="star-img balloon">
+                </div>
+                </div>
                 <blockquote class="generic-blockquote">${q.question}</blockquote>
                 ${q.options.map(option => `<button>${option.text}</button>`).join("")}
             `;
@@ -159,29 +170,52 @@ document.addEventListener("DOMContentLoaded", () => {
                         lives--;
                         button.style.backgroundColor = "#c0392b";
                         button.style.color = "white";
-                        
-                        const heartElement = document.getElementById("hearts");
-                        if (heartElement) {
-                        heartElement.textContent = "❤️".repeat(lives);
-                        }
 
                         if (lives === 0) {
-                            container.innerHTML = `
-                                <h4 class="h4-background col-lg-4 mx-auto mb-5">Game Over</h4>
-                                <blockquote class="generic-blockquote">Du har brugt alle dine liv. Prøv igen!</blockquote>
-                                <div class="text-center mt-4">
-                                    <button id="retry-btn" class="btn btn-primary w-auto">Prøv igen</button>
-                                </div>
-                            `;
+                            
+                            const lastStar = document.querySelector("#star2 .star-img");
+                            const astronaut = document.getElementById("astronaut");
+                        
+                            lastStar.classList.add("vanish");
+                       
+                            setTimeout(() => {
+                                astronaut.classList.add("drop");
+                            }, 300);
                         
                             
-                            document.getElementById("retry-btn").addEventListener("click", () => {
-                                lives = 3;
-                                currentQuestionIndex = 0;
-                                renderQuestion(currentQuestionIndex);
-                            });
-
+                            setTimeout(() => {
+                                container.innerHTML = `
+                                    <h4 class="h4-background col-lg-4 mx-auto mb-5">Game Over</h4>
+                                    <blockquote class="generic-blockquote">Du har brugt alle dine liv. Prøv igen!</blockquote>
+                                    <div class="text-center mt-4">
+                                        <button id="retry-btn" class="btn btn-primary w-auto">Prøv igen</button>
+                                    </div>
+                                `;
+                        
+                                document.getElementById("retry-btn").addEventListener("click", () => {
+                                    lives = 3;
+                                    currentQuestionIndex = 0;
+                        
+                                    
+                                    document.querySelectorAll(".star-img").forEach(img => img.classList.remove("vanish"));
+                                    astronaut.classList.remove("drop");
+                        
+                                    renderQuestion(currentQuestionIndex);
+                                });
+                            }, 1500);
+                        } else {
+                            
+                            const starMap = {
+                                2: "#star1 .star-img", 
+                                1: "#star3 .star-img", 
+                                0: "#star2 .star-img" 
+                            };
+                            
+                            const starToPop = document.querySelector(starMap[lives]);
+                            if (starToPop) starToPop.classList.add("vanish");
                         }
+                        
+
                     }
                 });
             });
