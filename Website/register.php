@@ -63,16 +63,18 @@
                                 <!-- Register START -->
 
                                 <div class="login-form">
-                                    <input type="text" class="form-control my-3" placeholder="Brugernavn" required>
-                                    <input type="password" class="form-control my-3" placeholder="Adgangskode" required>
-                                    <input type="password" class="form-control my-3" placeholder="Skriv adgangskode igen" required>
-                                    <input type="email" class="form-control my-3" placeholder="Email" required>
+                                    <form action="register-backend.php" method="POST" class="login-form">
+                                        <input type="text" class="form-control my-3" name="username" placeholder="Brugernavn" required>
+                                        <input type="password" class="form-control my-3" name="password" placeholder="Adgangskode" required>
+                                        <input type="password" class="form-control my-3" name="confirm_password" placeholder="Skriv adgangskode igen" required>
+                                        <input type="email" class="form-control my-3" name="email" placeholder="Email" required>
 
-                                    <button id="completed-btn" class="btn btn-primary w-auto">Næste</button>
+                                        <button type="submit" class="btn btn-primary w-auto">Næste</button>
 
-                                    <div class="mt-3 text-center a-color-change">
-                                        <a href="index.html" class="btn btn-link">Tilbage til forsiden</a>
-                                    </div>
+                                        <div class="mt-3 text-center a-color-change">
+                                            <a href="index.html" class="btn btn-link">Tilbage til forsiden</a>
+                                        </div>
+                                    </form>
                                 </div>
 
                                 <!-- Register END -->
@@ -90,6 +92,7 @@
 
 
     <!-- Javascript -->
+    
     <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
     <script src="assets/js/learning-example.js"></script>
     <script src="assets/js/exam-questions.js"></script>
@@ -101,6 +104,7 @@
     <script src="assets/js/vendor/jquery.datetimepicker.full.min.js"></script>
     <script src="assets/js/vendor/jquery.nice-select.min.js"></script>
     <script src="assets/js/main.js"></script>
+
 </body>
 
 </html>

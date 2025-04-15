@@ -68,7 +68,7 @@
 
                                     <button id="completed-btn" class="btn btn-primary w-auto">Log ind</button>
                                     <button id="completed-btn" class="btn btn-primary-2 ml-3 w-auto">Glemt noget?</button>
-                                    <button id="completed-btn" class="btn btn-primary-2 ml-3 w-auto">Opret bruger</button>
+                                    <a href="register.php"><button id="completed-btn" class="btn btn-primary-2 ml-3 w-auto">Opret bruger</button></a>
 
                                     <div class="mt-3 text-center a-color-change">
                                         <a href="index.html" class="btn btn-link">Tilbage til forsiden</a>
