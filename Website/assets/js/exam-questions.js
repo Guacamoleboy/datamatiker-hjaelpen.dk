@@ -7,18 +7,18 @@ document.addEventListener("DOMContentLoaded", () => {
             {
                 progress: "1/10",
                 title: "01 | Objekter",
-                question: "Vi har lavet en <b>FileIO.java</b> klasse som vi nu ønsker at <b>instantiere</b>. Hvordan gør vi det?",
+                question: "Vi har lavet en <b>FileIO.java</b> klasse som vi nu ønsker at <b>instantiere</b>.<br><br>Hvordan gør vi det?",
                 options: [
-                    { text: "io FileIO = FileIO new();", correct: false },
-                    { text: "new FileIO = io FileIO();", correct: false },
-                    { text: "FileIO io = new FileIO();", correct: true },
-                    { text: "io.FileIO();", correct: false }
+                    { text: "io FileIO = FileIO new()", correct: false },
+                    { text: "new FileIO = io FileIO()", correct: false },
+                    { text: "FileIO io = new FileIO()", correct: true },
+                    { text: "io.FileIO()", correct: false }
                 ]
             },
             {
                 progress: "2/10",
                 title: "01 | Objekter",
-                question: "Jeg har lavet en attribut som er <b>String navn =  'Jonas';</b>. <br>Hvad vil <b>outputtet</b> være hvis jeg kalder den i en <b>System.out.println(navn);</b> ?  ",
+                question: "Jeg har lavet en attribut som er <b>String navn =  'Jonas';</b>. <br>Hvad vil <b>outputtet</b> være hvis jeg kalder den i en System.out.println(navn); ?  ",
                 options: [
                     { text: "Jonas", correct: true },
                     { text: "Intet output", correct: false },
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
             {
                 progress: "4/10",
                 title: "01 | Objekter",
-                question: "<b>Hvorfor</b> laver vi <b>gettere</b>?",
+                question: "Hvorfor laver vi <b>gettere</b>?",
                 options: [
                     { text: "Fordi vores public attributter skal returneres", correct: false },
                     { text: "Fordi vores private klasser skal returneres", correct: false },
@@ -51,12 +51,12 @@ document.addEventListener("DOMContentLoaded", () => {
             {
                 progress: "5/10",
                 title: "01 | Objekter",
-                question: "<b>Hvilken</b> af disse er en <b>setter</b>",
+                question: "Hvilken af disse er en <b>setter</b>",
                 options: [
-                    { text: "public String setName() {}", correct: false },
-                    { text: "private void setName(int name) {}", correct: false },
-                    { text: "setName() {}", correct: false },
-                    { text: "public void setName() {}", correct: true }
+                    { text: "public String setName()", correct: false },
+                    { text: "private void setName(int name)", correct: false },
+                    { text: "setName()", correct: false },
+                    { text: "public void setName()", correct: true }
                 ]
             },
             {
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
             {
                 progress: "7/10",
                 title: "01 | Objekter",
-                question: "I denne kode.. Hvilken er så objektet?<br><b>private static final User user;</b>",
+                question: "I denne kode.. Hvilken er så objektet?<br><br><b>private static final User user</b>",
                 options: [
                     { text: "private", correct: false },
                     { text: "static", correct: false },
@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
             {
                 progress: "10/10",
                 title: "01 | Objekter",
-                question: "Hvad sker der hvis jeg prøver at kalde denne i en <b>System.out.println();</b> ?<br><br><b>string username = 'Janus_666'</b>",
+                question: "Hvad sker der hvis jeg prøver at kalde denne i en System.out.println() ?<br><br><b>string username = 'Janus_666'</b>",
                 options: [
                     { text: "Den skriver 'Janus_666'", correct: false },
                     { text: "Der mangler en toString() metode", correct: false },
