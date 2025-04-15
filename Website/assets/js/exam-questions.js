@@ -122,24 +122,19 @@ document.addEventListener("DOMContentLoaded", () => {
         function renderQuestion(index) {
             const q = questions[index];
             const container = document.querySelector(".changelog-custom");
-            container.innerHTML = `
-                <h4 class="h4-background col-lg-4 mx-auto mb-5">${q.progress}</h4>
-                <div id="visual-lives" class="d-flex justify-content-center mb-4">
-                <div class="life-star" id="star1">
-                    <img src="../assets/images/liv_star_final.png" class="star-img">
-                </div>
-                <div class="life-star" id="star2">
-                    <img src="../assets/images/liv_star_final.png" class="star-img">
-                    <img src="../assets/images/liv_astronaut_final.png" class="astronaut-img" id="astronaut">
-                </div>
-                <div class="life-star" id="star3">
-                    <img src="../assets/images/liv_star_final.png" class="star-img balloon">
-                </div>
-                </div>
+            const progress = `<h4 class="h4-background col-lg-4 mx-auto mb-5">${q.progress}</h4>`;
+
+            const question = `
                 <blockquote class="generic-blockquote">${q.question}</blockquote>
                 ${q.options.map(option => `<button>${option.text}</button>`).join("")}
             `;
 
+            
+            container.innerHTML = progress + document.getElementById("visual-lives").outerHTML + question;
+
+            const existingVisualLives = document.getElementById("visual-lives");
+            const newVisualLives = container.querySelector("#visual-lives");
+            existingVisualLives.replaceWith(newVisualLives);           
             
             const buttons = container.querySelectorAll("button");
             buttons.forEach((button, idx) => {
@@ -172,37 +167,56 @@ document.addEventListener("DOMContentLoaded", () => {
                         button.style.color = "white";
 
                         if (lives === 0) {
-                            
                             const lastStar = document.querySelector("#star2 .star-img");
                             const astronaut = document.getElementById("astronaut");
                         
                             lastStar.classList.add("vanish");
-                       
+                        
+                            // Trigger drop after short delay
                             setTimeout(() => {
+                                astronaut.classList.remove("drop", "dropped"); // remove any existing drop state
+                                void astronaut.offsetWidth; // 💡 forces reflow to re-trigger animation
                                 astronaut.classList.add("drop");
                             }, 300);
                         
                             
                             setTimeout(() => {
+
+                            const visualLives = document.getElementById("visual-lives").cloneNode(true);
+
+                            const clonedAstronaut = visualLives.querySelector("#astronaut");
+
+                            if (clonedAstronaut) {
+                            clonedAstronaut.classList.remove("drop");
+                            clonedAstronaut.classList.add("dropped");
+                            }
+
+                            
                                 container.innerHTML = `
-                                    <h4 class="h4-background col-lg-4 mx-auto mb-5">Game Over</h4>
-                                    <blockquote class="generic-blockquote">Du har brugt alle dine liv. Prøv igen!</blockquote>
+                                    <h4 class="h4-background col-lg-4 mx-auto mb-5">Øv!</h4>
+                                    <blockquote class="generic-blockquote">Du har brugt alle dine liv.</blockquote>
                                     <div class="text-center mt-4">
                                         <button id="retry-btn" class="btn btn-primary w-auto">Prøv igen</button>
                                     </div>
                                 `;
-                        
+                            
+                                container.insertBefore(visualLives, container.querySelector("blockquote"));
+                            
                                 document.getElementById("retry-btn").addEventListener("click", () => {
                                     lives = 3;
                                     currentQuestionIndex = 0;
-                        
-                                    
+                                
+                                    const astronaut = document.getElementById("astronaut");
+                                    astronaut.classList.remove("drop", "dropped");
+                                
                                     document.querySelectorAll(".star-img").forEach(img => img.classList.remove("vanish"));
-                                    astronaut.classList.remove("drop");
-                        
+                                
                                     renderQuestion(currentQuestionIndex);
                                 });
+
                             }, 1500);
+                            
+
                         } else {
                             
                             const starMap = {

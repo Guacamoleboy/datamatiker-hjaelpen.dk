@@ -190,6 +190,14 @@ body.dark-mode .update-area .single-food:hover .food-content {
     z-index: 2;
 }
 
+.astronaut-img.drop {
+    animation: fall 1.2s forwards ease-in;
+}
+
+.astronaut-img.dropped {
+    opacity: 0;
+}
+
 .vanish {
     opacity: 0;
     transform: scale(0);
@@ -200,15 +208,15 @@ body.dark-mode .update-area .single-food:hover .food-content {
     animation: fall 2s ease-in forwards;
 }
 
+/* Astronaut drop animation - DO NOT REMOVE */
 @keyframes fall {
-    0% {
-        transform: translateY(0);
-    }
-    100% {
+    to {
         transform: translateY(300px);
+        opacity: 0;
     }
 }
 
+/* Eksempler background opacity - IMPORTANT */
 .modal {
 
     background-color: rgba(0, 0, 0, 0.4);
