@@ -46,7 +46,7 @@ const navbarHTML = `
                                 <li><a href="#">Something</a></li>
                             </ul>
                         </li>
-                        <li><button id="loginToggle" class="darkmode-btn">Log Ind</button></li>
+                        <li><a href="login.php" id="loginToggle" class="darkmode-btn">Log Ind</a></li>
                     </ul>
                 </div>
             </div>
