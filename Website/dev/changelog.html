@@ -6,7 +6,7 @@
     Datamatiker elever Vinter 2025
     
     Sidst opdateret:
-    14-04-2025
+    15-04-2025
 
     Af: Jonas
 
@@ -26,6 +26,12 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="../assets/images/image1.png" type="image/x-icon">
 
+    <!-- Navbar load ../ -->
+    <script src="../assets/js/navbar2.js" defer></script>
+
+    <!-- Footer load  -->
+    <script src="../assets/js/footer2.js" defer></script>
+
     <!-- CSS Files -->
     <link rel="stylesheet" href="../assets/css/animate-3.7.0.css">
     <link rel="stylesheet" href="../assets/css/font-awesome-4.7.0.min.css">
@@ -42,50 +48,8 @@
     </div>
     <!-- Preloader End -->
 
-    <!-- Header Area Starts -->
-    <header class="header-area header-area2">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-2">
-                    <div class="logo-area">
-                        <a href="../index.html"><img src="../assets/images/logo/logo2-white.png" alt="logo"></a>
-                    </div>
-                </div>
-                <div class="col-lg-10">
-                    <div class="custom-navbar">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <div class="main-menu main-menu2">
-                        <ul>
-                            <li><a href="../index.html">Forside</a></li>
-                            <li class="active dropdown"><a href="#">Semestre</a>
-                                <ul class="sub-menu">
-                                    <li><a href="../1sem/choose.html">1. Semester</a></li>
-                                    <li><a href="#">2. Semester</a></li>
-                                    <li><a href="#">3. Semester</a></li>
-                                    <li><a href="#">4. Semester</a></li>
-                                    <li><a href="#">5. Semester</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="https://buymeacoffee.com/datamatikerhjaelpen">Støt os</a></li>
-                            <li><a href="#">Om os</a></li>
-                            <li><a href="#">Kontakt</a></li>
-                            <li><a href="#">dev</a>
-                                <ul class="sub-menu">
-                                    <li><a href="dev/changelog.html">Change Log</a></li>
-                                    <li><a href="#">Something</a></li>
-                                </ul>
-                            </li>
-                            <li><button id="darkModeToggle" class="darkmode-btn">Darkmode 🌙</button></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!-- Header Area End -->
+    <!-- Darkmode button -->
+    <button id="darkModeToggle" class="darkmode-btn-floating" title="Skift tema">☀️</button>
 
     <!-- Banner Area Starts -->
     <section class="banner-area banner-area2 text-center">
@@ -108,11 +72,51 @@
                     <div class="section-top2 text-center">
                         <h3>Vi <span>opdaterer</span> siden løbende</h3>
                         <p class="mt-4"><i>Her kan du følge med i vores udvikling!</i></p>
-                        <div class="single-element-widget col-lg-6 mx-auto mt-5">
+                        <div class="single-element-widget-exam col-lg-6 mx-auto mt-5">
 
 
                             <div class="section-top-border">
                                 <h3 class="mb-30 title_color">Changelog</h3>
+
+                                <!-- Changelog INNER START -->
+
+                                <div class="row">
+                                    <div class="col-lg-12">
+
+                                        <div class="changelog-custom">
+                                            <h4 class="h4-background col-lg-4 mx-auto mb-5">Version 0.3.0</h4>
+                                            <p class="changelog-p-green col-lg-3 mx-auto">Tilføjet</p>
+                                            
+                                                <p class="mt-2">Login & Register tilføjet</p>
+                                                <p class="mt-2">Scripts</p>
+                                                <p class="mt-2">Templates til billeder opdateret</p>
+                                                <p class="mt-2">Navbar og footer tilføjet til .js så den loader via den</p>
+                                                <p class="mt-2">Darkmode tilføjet til flere undersider</p>
+                                                <p class="mt-2">Meget mere Custom CSS tilføjet</p>  
+                                                <p class="mt-2">:hover effekt på yderligere</p>
+                                                <p class="mt-2">Placeholder photos</p>    
+                                                
+                                            <p class="changelog-p-orange col-lg-3 mx-auto">Ændret</p>
+                                            
+                                                <p class="mt-2">Liv under Quiz er ændret til noget sjovt!</p>
+                                                <p class="mt-2">Footeren er nu centreret! OCD!!!</p>
+                                                <p class="mt-2">Darkmode fjernet fra navbar og sat fast på siden</p>
+                                                <p class="mt-2">Spørgsmål 8 under 01 | Objeker Quiz ændret - Tak, Daniel!</p>
+                                                <p class="mt-2">Navbar overhaul</p>
+                                                <p class="mt-2">border-radius på diverse ændret</p>
+                                            
+                                            <p class="changelog-p-red col-lg-3 mx-auto">Fixed</p>
+                                            
+                                                <p class="mt-2">Bugs er destrueret!</p>
+                                            
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <!-- Changelog INNER END -->
+
+                                <br><br><br> <!-- FIX LATER WITH A DEV PADDING / MARGIN -->
 
                                 <!-- Changelog INNER START -->
 
@@ -189,83 +193,6 @@
         </div>
     </div>
     <!-- Changelog Area End -->
-
-    <!-- Footer Area Starts -->
-    <footer class="footer-area">
-        <div class="footer-widget section-padding">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="single-widget single-widget1">
-                            <a href="../index.html"><img src="../assets/images/logo/logo2-orange.png" alt=""></a>
-                            <p class="mt-3"><b>Datamatiker-hjaelpen - Din vej til et godt studie!</b></p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="single-widget single-widget2 my-5 my-md-0">
-                            <h5 class="mb-4">Kontakt os</h5>
-                            <div class="d-flex">
-                                <div class="into-icon">
-                                    <i class="fa fa-map-marker"></i>
-                                </div>
-                                <div class="info-text">
-                                    <p><b>Firskovvej 18, 2800 Kongens Lyngby</b></p>
-                                </div>
-                            </div>
-                            <div class="d-flex">
-                                <div class="into-icon">
-                                    <i class="fa fa-phone"></i>
-                                </div>
-                                <div class="info-text">
-                                    <p><b>+45 00 00 00 00</b></p>
-                                </div>
-                            </div>
-                            <div class="d-flex">
-                                <div class="into-icon">
-                                    <i class="fa fa-envelope-o"></i>
-                                </div>
-                                <div class="info-text">
-                                    <p><b>hej@datamatiker-hjaelpen.dk</b></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="single-widget single-widget3">
-                            <h5 class="mb-4">Links</h5>
-                            <div class="b-white">
-                                <p><a href="#"><b>Github</b></a></p>
-                                <p><a href="../https://buymeacoffee.com/datamatikerhjaelpen"><b>Buy us a coffee!</b></a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-7 col-md-6">
-                        
-                        <span>
-                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> Alle rettigheder forbeholdes | Hjemmesiden er lavet af <a href="https://datamatiker-hjaelpen.dk" target="_blank"><b>Andreas, Ebou & Jonas</b></a>
-                        </span>
-
-                    </div>
-                    <div class="col-lg-5 col-md-6">
-                        <div class="social-icons">
-                            <ul>
-                                <li class="no-margin">Følg os på</li>
-                                <li><a href="https://buymeacoffee.com/datamatikerhjaelpen"><i class="fa fa-coffee"></i></a></li>
-                                <li><a href="#"><i class="fa fa-github"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- Footer Area End -->
 
     <!-- Javascript -->
     <script src="../assets/js/vendor/jquery-2.2.4.min.js"></script>
