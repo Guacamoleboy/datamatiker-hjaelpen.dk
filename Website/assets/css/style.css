@@ -2232,6 +2232,124 @@ body.dark-mode .contact-form form .left input,
     transform: scaleX(-1) rotate(2deg);
 }
 
+body.dark-mode .single-element-widget {
+    background-color: #6868af !important;
+    transition: all 0.3s ease-in-out;
+    border-radius: 15px !important; 
+    padding: 20px; 
+}
+
+body.dark-mode .single-element-widget:hover {
+    background-color: #7373be !important;
+}
+
+body.dark-mode .single-element-widget .form-control:hover {
+    
+    background-color: #e9e9e9;
+
+}
+
+body.dark-mode .login-form .btn-primary {
+    background-color: #8b8bd4 !important;
+    border: none;
+    transition: all 0.2s ease-in-out;
+    color: #fff;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+body.dark-mode .login-form .btn-primary-2 {
+    background-color: #8b8bd4 !important;
+    border: none;
+    transition: all 0.2s ease-in-out;
+    color: #fff;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+body.dark-mode .login-form .btn-primary-2:hover {
+    background-color: #6c6cb1 !important;
+}
+
+body.dark-mode .login-form .btn-primary:hover {
+    background-color: #6c6cb1 !important;
+}
+
+body.dark-mode .login-form input.form-control:focus {
+    border-radius: 15px;
+    border-color: #9696a8 !important;
+    box-shadow: 0 0 4px rgba(139, 107, 255, 0.4);
+    outline: none;
+}
+
+.single-element-widget {
+    background-color: #7272b3;
+    border-radius: 15px !important; 
+    transition: all 0.3s ease-in-out;
+    padding: 20px; 
+}
+
+body.dark-mode .single-element-widget .a-color-change a {
+    color: #f3f3f3 !important;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;;
+}
+
+.single-element-widget .a-color-change a {
+    color: #707070 !important;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;;
+}
+
+.login-form input.form-control {
+    border: 1px solid #7272b3;
+    border-radius: 15px;
+    padding: 12px 14px;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.login-form input.form-control:focus {
+    border-radius: 15px;
+    border-color: #ffb606;
+    box-shadow: 0 0 4px rgba(255, 102, 0, 0.4);
+    outline: none;
+}
+
+.login-form .btn-primary {
+    background-color: #ffb606;
+    border: none;
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.login-form .btn-primary-2 {
+    background-color: #ffb606;
+    border: none;
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.login-form .btn-primary:hover {
+    border-radius: 15px;
+    background-color: #ffb606;
+}
+
+.login-form .btn-primary-2:hover {
+    border-radius: 15px;
+    background-color: #ffb606;
+}
+
 .darkmode-btn-floating {
     position: fixed;
     top: 50%;
