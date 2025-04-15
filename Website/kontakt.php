@@ -59,6 +59,67 @@
     </section>
     <!-- Banner Area End -->
 
+    <!-- Contact Form Starts -->
+    <section class="contact-form section-padding3" style="margin-top: 200px;">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 mb-5 mb-lg-0">
+                    
+                <div class="people-overlay">
+                    <img src="assets/images/people/person1.png" class="person person-1" alt="Person 1">
+                    <img src="assets/images/people/person2.png" class="person person-2" alt="Person 2">
+                </div>
+                    
+                    <div class="d-flex">
+                        <div class="into-icon">
+                            <i class="fa fa-home"></i>
+                        </div>
+                        <div class="info-text">
+                            <h5><b class="b-white">Kongens Lyngby</b></h5>
+                            <p>Firskovvej 18, 2800</p>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <div class="into-icon">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <div class="info-text">
+                            <h5><b class="b-white">+45 00 00 00 00</b></h5>
+                            <p>Mandag til Fredag 10-15</p>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <div class="into-icon">
+                            <i class="fa fa-envelope-o"></i>
+                        </div>
+                        <div class="info-text">
+                            <h5><b class="b-white">hej@datamatiker-hjaelpen.dk</b></h5>
+                            <p>Spørgsmål? Fyr løs</p>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="col-lg-9 contact-visuals">
+                    <form action="#">
+                        <div class="left">
+                            <input type="text" placeholder="Navn" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" required>
+                            <input type="email" placeholder="email@domain.com" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" required>
+                            <input type="text" placeholder="Emne" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter subject'" required>
+                        </div>
+                        <div class="right">
+                            <textarea name="message" cols="20" rows="7" placeholder="Skriv en besked" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'" required></textarea>
+                        </div>
+                        <button type="submit" class="template-btn">Send Besked</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Form End -->
+
     <!-- Footer Area Starts -->
     <footer class="footer-area">
         <div class="footer-widget section-padding">
