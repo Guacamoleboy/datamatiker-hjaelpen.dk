@@ -36,7 +36,7 @@ const navbarHTML = `
                                 <li><a href="#">HTML</a></li>
                                 <li><a href="#">CSS</a></li>
                                 <li><a href="#">ReactJS</a></li>
-                                <li><a href="#">ReactJS</a></li>
+                                <li><a href="#">Javascript</a></li>
                             </ul>
                         </li>
                         <li><a href="kontakt.php">Kontakt</a></li>

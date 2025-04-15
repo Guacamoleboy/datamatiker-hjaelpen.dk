@@ -901,9 +901,13 @@ textarea:focus {
 
 .banner-area2 {
     padding: 210px 0 160px;
-    background-image: url("../images/background3.jpg");
+    background-image: url("../images/background9.png");
     position: relative;
     z-index: 1
+}
+
+.banner-area2::before {
+    background: rgba(0, 0, 0, 0.4);
 }
 
 .banner-area2:after {
