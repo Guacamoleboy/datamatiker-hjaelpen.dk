@@ -4,14 +4,14 @@ const toggleBtn = document.getElementById('darkModeToggle');
 
     const setDarkMode = () => {
         body.classList.add('dark-mode');
-        toggleBtn.textContent = 'Lightmode ☀️';
+        toggleBtn.textContent = '☀️';
         logo.src = 'assets/images/logo/logo2-white.png';
         localStorage.setItem('mode', 'dark');
     };
 
     const setLightMode = () => {
         body.classList.remove('dark-mode');
-        toggleBtn.textContent = 'Darkmode 🌙';
+        toggleBtn.textContent = '🌙';
         logo.src = 'assets/images/logo/logo2-resized.png';
         localStorage.setItem('mode', 'light');
     };

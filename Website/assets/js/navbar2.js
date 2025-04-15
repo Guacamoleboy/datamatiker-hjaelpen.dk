@@ -20,8 +20,8 @@ const navbarHTML = `
                 </div>
                 <div class="main-menu">
                     <ul>
-                        <li class="active"><a href="index.html">Forside</a></li>
-                        <li class="dropdown"><a href="overblik.html">Semestre</a>
+                        <li class="active"><a href="../index.html">Forside</a></li>
+                        <li class="dropdown"><a href="../overblik.html">Semestre</a>
                             <ul class="sub-menu">
                                 <li><a href="../1sem/overblik.html">1. Semester</a></li>
                                 <li><a href="../2sem/overblik.html">2. Semester</a></li>
@@ -41,14 +41,14 @@ const navbarHTML = `
                                 <li><a href="#">ReactJS</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">Kontakt</a></li>
+                        <li><a href="../kontakt.php">Kontakt</a></li>
                         <li><a href="#">dev</a>
                             <ul class="sub-menu">
                                 <li><a href="../dev/changelog.html">Change Log</a></li>
                                 <li><a href="#">Something</a></li>
                             </ul>
                         </li>
-                        <li><button id="darkModeToggle" class="darkmode-btn">Darkmode 🌙</button></li>
+                        <li><button id="loginToggle" class="darkmode-btn">Log Ind</button></li>
                     </ul>
                 </div>
             </div>

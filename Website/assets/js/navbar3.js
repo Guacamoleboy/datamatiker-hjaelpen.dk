@@ -1,8 +1,10 @@
 // Sikrer at alle navbars er de samme på alle sites
 
+// Denne er til sider som er på src men bruger semester overblik templaten
+
 const navbarHTML = `
 <!-- Header Area Starts -->
-<header class="header-area">
+<header class="header-area header-area2">
     <div class="container">
         <div class="row">
             <div class="col-lg-2">
