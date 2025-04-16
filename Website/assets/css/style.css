@@ -134,6 +134,10 @@ body.dark-mode .header-area a {
     color: #f1f1f1;
 }
 
+.header-area2 a {
+    color: #f1f1f1 !important;
+}
+
 body.dark-mode .deshes-area h1 {
     color: #f1f1f1;
 }
@@ -446,13 +450,12 @@ body.dark-mode .changelog-custom:hover {
 
 body.dark-mode .darkmode-btn {
 
-
     background-color: #8989cfb6;
 
 }
 
 .darkmode-btn {
-    background-color: #7c7c7c;
+    background-color: #d89911;
     color: #fff;
     border: none;
     margin-left: 80px;
@@ -460,7 +463,7 @@ body.dark-mode .darkmode-btn {
     font-weight: bold;
     cursor: pointer;
     padding: 5px 10px;
-    border-radius: 8px;
+    border-radius: 15px;
 }
 
 h1 {
@@ -525,6 +528,45 @@ a:focus {
 input:focus,
 textarea:focus {
     outline: none
+}
+
+body.dark-mode .wave-bottom {
+    position: relative;
+    opacity: 1 !important;
+    fill: #494974;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 2; /* Fixes the opacity issue from banner-area2 being set with RGBA */
+    top: 175px;
+}
+
+body.dark-mode .wave-bottom svg path {
+    display: block;
+    width: 100%;
+    height: 150px; /* Wave height (each individual wave) */
+}
+
+.wave-bottom {
+    position: relative;
+    fill: #e9e9e9;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 2; /* Fixes the opacity issue from banner-area2 being set with RGBA */
+    top: 175px;
+}
+
+.wave-bottom svg path {
+    display: block;
+    width: 100%;
+    height: 150px; /* Wave height (each individual wave */
+}
+
+.wave-top svg { /* Rotation of the section wave */
+
+    transform: rotate(180deg);
+
 }
 
 .spinner {
@@ -899,6 +941,32 @@ textarea:focus {
 
 }
 
+body.dark-mode .banner-area2 {
+    padding: 210px 0 160px;
+    background-image: url("../images/background10.png");
+    position: relative;
+    z-index: 1
+}
+
+body.dark-mode .banner-area2::before {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .banner-area2:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(1, 7, 16, 0.2);
+    z-index: -1
+}
+
+body.dark-mode .banner-area2 p {
+    color: #fff
+}
+
 .banner-area2 {
     padding: 210px 0 160px;
     background-image: url("../images/background9.png");
@@ -907,7 +975,7 @@ textarea:focus {
 }
 
 .banner-area2::before {
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.1);
 }
 
 .banner-area2:after {
