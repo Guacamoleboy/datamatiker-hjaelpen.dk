@@ -107,50 +107,68 @@
 
     <!-- Welcome Area End -->
 
-    <!-- Deshes Area Starts -->
-    <div class="deshes-area section-padding">
+    <!-- Comparison Section Start -->
+
+    <div class="deshes-area section-padding text-center">
         <div class="container">
-
-            <!-- RIGHT SECTION START -->
-
             <div class="row">
-                <div class="col-lg-5 col-md-6 align-self-center">
-                    <h1>01.</h1>
-                    <div class="deshes-text">
-                        <h3><span>Gundlæggende om ArrayList</span><br> ______________</h3>
-                        <p class="pt-3">
-                            
-                            En ArrayList er ligesom en Array en <b>liste</b> som kan holde noget. Det kan være et objekt, dataværdier osv. En ArrayList vil typisk se således ud:
-                            <br><br><b>ArrayList &lt;String&gt; sum = new ArrayList&lt;&gt;()</b>.<br><br>Hvorfor er der ikke noget i de sidste &lt;&gt; sidder du måske og tænker.. Det er fordi de følger de første &lt;&gt;. Altså &lt;String&gt;.
-                            <br><br>Man kan godt tilføje så den ser sådan her ud:<br><br><b>ArrayList &lt;String&gt; sum = new ArrayList&lt;String&gt;()</b><br><br>Men det er indforstået at det er det samme.
-                            
-                            I modsætning til en Array, så er er en ArrayList en <b>fleksibel liste</b>. Dvs at vi kan <b>tilføje</b> og <b>fjerne</b> som vi vil. En Array derimod er en fast værdi af fx. 10. Så SKAL den være 10. 
-                            Derfor er en ArrayList noget <b class="b-white">nemmere</b> at bruge. Det er dog ikke altid optimalt at bruge en ArrayList for <b>optimering</b> og <b>performance</b>.<br><br>Derfor skal man tænke over hvilken
-                            liste man skal lave, og så skal man selvfølgelig bruge den korrekte. Hvis man ved at der kun skal være 2 terninger konstant, så bruger man selvfølgelig bare en Array sat til 2.
 
-                            <blockquote class="generic-blockquote-exam-orange">
-                                <b class="b-line-under">ArrayList</b>
-                                <br><br><b class="b-white">Fleksibel. Kan tilføjes og fjernes fra</b>
-                            </blockquote>
-                            <blockquote class="generic-blockquote-exam-orange">
-                                <b class="b-line-under">Array</b>
-                                <br><br><b class="b-white">Fast værdi. Kan IKKE fjernes og tilføjes fra</b>
-                            </blockquote>
-
-                        </p>
+                <div class="card-deck col-lg-12">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">ArrayList</h5>
+                        <p class="card-text">Tekst om ArrayList<br><br> Mere tekst</p>
+                        <div class="button-cool">
+                            <button>ArrayList &lt;String&gt; user = new ArrayList&lt;&gt;()</button>
+                            <button class="into-icon-learning">
+                                Fleksibel <i class="fa fa-check" style="color: #00cf1c;"></i>
+                            </button>
+                            <button class="into-icon-learning">
+                                Performance <i class="fa fa-close" style="color: #860101;"></i>
+                            </button>
+                            <button class="into-icon-learning">
+                                Indbyggede metoder <i class="fa fa-check" style="color: #00cf1c;"></i>
+                            </button>
+                            <button class="into-icon-learning">
+                                Skift størrelse efter oprettelse <i class="fa fa-check" style="color: #00cf1c;"></i>
+                            </button> 
+                            <button class="into-icon-learning">
+                                Primitive datatyper (int, double, char) <i class="fa fa-close" style="color: #860101;"></i>
+                            </button>
+                        </div>
+                      </div>
                     </div>
-                </div>
-                <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
-                    <img src="../assets/images/1sem/02_01.png" alt="" class="img-fluid custom-img-settings">
-                </div>
-            </div>
-
-            <!-- RIGHT SECTION END -->
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Array</h5>
+                        <p class="card-text">Tekst om Array<br><br> Mere tekst</p>
+                        <div class="button-cool">
+                            <button>String[&nbsp;] user = new String[10]</button>
+                            <button class="into-icon-learning">
+                                Fleksibel <i class="fa fa-close" style="color: #860101;"></i>
+                            </button>
+                            <button class="into-icon-learning">
+                                Performance <i class="fa fa-check" style="color: #00cf1c;"></i>
+                            </button> 
+                            <button class="into-icon-learning">
+                                Indbyggede metoder <i class="fa fa-close" style="color: #860101;"></i>
+                            </button>
+                            <button class="into-icon-learning">
+                                Skift størrelse efter oprettelse <i class="fa fa-close" style="color: #860101;"></i>
+                            </button>
+                            <button class="into-icon-learning">
+                                Primitive datatyper (int, double, char) <i class="fa fa-check" style="color: #00cf1c;"></i>
+                            </button> 
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
             </div>
         </div>
     </div>
-    <!-- Deshes Area End -->
+
+    <!-- Comparison Section End -->
 
     <!-- Reservation Area Starts -->
     <div class="reservation-area reservation-area-learning section-padding text-center">
@@ -187,38 +205,75 @@
     </div>
     <!-- Reservation Area End -->
 
-    <!-- Comparison Section Start -->
-
-    <div class="deshes-area section-padding text-center">
+    <!-- Learning Area Starts -->
+    <div class="deshes-area section-padding">
         <div class="container">
             <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-top2 text-center">
+                        <h3><b>Øvelse</b> gør mester</h3>
+                        <p class="mt-4"><i>Det er okay at fejle! Du bliver bare klogere..</i></p>
+                        <div class="single-element-widget-exam col-lg-6 mx-auto mt-5">
+                            <div class="section-top-border">
+                                <h3 class="mb-30 title_color">Udfyld det der mangler</h3>
 
-                <div class="card-deck col-lg-12">
-                    <div class="card">
-                      <div class="card-body">
-                        <h5 class="card-title">ArrayList</h5>
-                        <p class="card-text">Tekst om ArrayList<br><br> Mere tekst</p>
-                        <div class="button-cool">
-                            <button>ArrayList &lt;String&gt; user = new ArrayList&lt;&gt;()</button> 
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card">
-                      <div class="card-body">
-                        <h5 class="card-title">Array</h5>
-                        <p class="card-text">Tekst om Array<br><br> Mere tekst</p>
-                        <div class="button-cool">
-                            <button>String[&nbsp;] user = new String[10]</button> 
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                                <!-- TASK START -->
 
+                                <div class="row">
+                                    <div class="col-lg-12">
+
+                                        <div class="changelog-custom-learning">
+    
+                                            <blockquote class="generic-blockquote-bottom">
+                                                Vi vil gerne <b>instantere</b> en ArrayList som skal holde <b class="b-white">aldre</b>.. Hvad skal der stå i feltet herunder?
+                                            </blockquote>    
+
+                                            <label for="user-input" class="into-icon-learning">
+                                                ArrayList <input id="user-input01" type="text" placeholder="Input">
+                                            </label>
+
+                                            <span class="span-white">age = new ArrayList&lt;&gt;()</span>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <!-- TASK END -->
+
+                                <!-- TASK START -->
+
+                                <div class="row">
+                                    <div class="col-lg-12">
+
+                                        <div class="changelog-custom-learning mt-5">
+    
+                                            <blockquote class="generic-blockquote-bottom">
+                                                <b>Instantier</b> en ArrayList kan holde vores <b>User.java</b> objekter. Den skal have variablen &quot;<b class="b-white">user</b>&quot;...
+                                            </blockquote>    
+
+                                            <label for="user-input" class="into-icon-learning-long">
+                                                <input id="user-input02" type="text" placeholder="Input">
+                                            </label>
+
+                                            <span class="span-white"></span>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <!-- TASK END -->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <!-- Learning Area End -->
 
-    <!-- Comparison Section End -->
 
     <!-- Exam Area Starts -->
     <div class="deshes-area section-padding" id="exam">
@@ -276,6 +331,7 @@
     <script src="../assets/js/vendor/jquery-2.2.4.min.js"></script>
     <script src="../assets/js/exam-questions0102.js"></script>
     <script src="../assets/js/darkmode.js"></script>
+    <script src="../assets/js/prompt-validate.js"></script>
     <script src="../assets/js/vendor/bootstrap-4.1.3.min.js"></script>
     <script src="../assets/js/vendor/wow.min.js"></script>
     <script src="../assets/js/vendor/owl-carousel.min.js"></script>
