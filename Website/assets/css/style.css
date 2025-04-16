@@ -136,8 +136,8 @@ body.dark-mode .header-area2 {
     background-color: #ffffff00;
 }
 
-body.dark-mode .header-area a {
-    color: #f1f1f1;
+body.dark-mode .header-area .sub-menu a {
+    color: #575757 !important;
 }
 
 .header-area2 a {
