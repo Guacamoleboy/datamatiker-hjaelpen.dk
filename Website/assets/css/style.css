@@ -1,6 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700");
 
+@font-face {
+    font-family: 'Datamatiker-font';
+    src: url('../fonts/candy.otf') format('opentype');
+    font-style: normal;
+}
+
 body {
     background-color: #e9e9e9;
     color: #777;
@@ -530,7 +536,109 @@ textarea:focus {
     outline: none
 }
 
+.wave-bottom {
+    position: absolute;
+    fill: #e9e9e9 !important;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    top: 170px;
+    overflow: hidden;
+    z-index: 2;
+    opacity: 1;
+    pointer-events: none;
+    line-height: 0;
+}
+
+.wave-bottom svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.wave-path {
+    fill: #ffffff;
+    opacity: 1 !important;
+    z-index: 2;
+}
+
+.wave-top {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    top: -150px;
+    overflow: hidden;
+    z-index: 1;
+    pointer-events: none;
+    line-height: 0;
+}
+
+.wave-top svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transform: rotate(180deg) scaleX(-1);
+}
+
 body.dark-mode .wave-bottom {
+    fill: #494974 !important;
+}
+
+body.dark-mode .wave-path {
+    fill: #494974 !important;
+}
+
+.i-candy {
+
+    color: #c4c4c4;
+    font-size: 30px;
+    font-family: 'Datamatiker-font', sans-serif;
+
+}
+
+.i-candy-h4 {
+
+    color: #c4c4c4;
+    font-size: 18px !important;
+    font-family: 'Datamatiker-font', sans-serif;
+
+}
+
+.reservation-area {
+    position: relative;
+    padding-bottom: 150px; 
+    background-color: #b0b0b0;
+    background-image: url("../images/background10.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.reservation-area::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 0;
+}
+
+.reservation-area * {
+    position: relative;
+    z-index: 2;
+}
+  
+.reservation-area-learning {
+
+    background-image: url("../images/background13.png") !important;
+
+}
+
+body.dark-mode .wave-bottom-index {
     position: relative;
     opacity: 1 !important;
     fill: #494974;
@@ -538,32 +646,32 @@ body.dark-mode .wave-bottom {
     overflow: hidden;
     line-height: 0;
     z-index: 2; /* Fixes the opacity issue from banner-area2 being set with RGBA */
-    top: 175px;
+    top: 350px;
 }
 
-body.dark-mode .wave-bottom svg path {
+body.dark-mode .wave-bottom-index svg path {
     display: block;
     width: 100%;
     height: 150px; /* Wave height (each individual wave) */
 }
 
-.wave-bottom {
+.wave-bottom-index {
     position: relative;
     fill: #e9e9e9;
     width: 100%;
     overflow: hidden;
     line-height: 0;
     z-index: 2; /* Fixes the opacity issue from banner-area2 being set with RGBA */
-    top: 175px;
+    top: 350px;
 }
 
-.wave-bottom svg path {
+.wave-bottom-index svg path {
     display: block;
     width: 100%;
     height: 150px; /* Wave height (each individual wave */
 }
 
-.wave-top svg { /* Rotation of the section wave */
+.wave-top-index svg { /* Rotation of the section wave */
 
     transform: rotate(180deg);
 
@@ -1182,38 +1290,6 @@ body.dark-mode .banner-area2 p {
 
 .food-area .single-food:hover .food-content p {
     color: #131230
-}
-
-.reservation-area {
-    background-color: #b0b0b0;
-    background-image: url("../images/background9.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-}
-
-.reservation-area::before {
-
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.3);
-    z-index: -1;
-    pointer-events: none;
-
-}
-
-.reservation-area * {
-
-    position: relative;
-    z-index: 2;
-
 }
 
 .deshes-area span {
@@ -4122,4 +4198,24 @@ h6 {
 
 .section-top2 span {
     color: #ffb606
+}
+
+.bubble {
+    position: fixed;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+    z-index: 1;
+    animation: fadeOut 3s ease-out forwards;
+}
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+      transform: scale(0.5);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1.5);
+    }
 }

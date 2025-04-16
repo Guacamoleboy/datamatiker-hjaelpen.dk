@@ -95,6 +95,7 @@
     
     <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
     <script src="assets/js/learning-example.js"></script>
+    <script src="assets/js/bubble-spawn.js"></script>
     <script src="assets/js/exam-questions.js"></script>
     <script src="assets/js/learning-example-visuals.js"></script>
     <script src="assets/js/darkmode.js"></script>

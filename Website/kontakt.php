@@ -62,6 +62,17 @@
                 </div>
             </div>
         </div>
+
+        <!-- Wavy transfer Start -->
+
+        <div class="wave-bottom">
+            <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <path d="M0,50 Q90,0 180,50 T360,50 T540,50 T720,50 T900,50 T1080,50 T1260,50 T1440,50 L1440,100 L0,100 Z"/>
+            </svg>
+        </div>
+
+        <!-- Wavy transfer end -->
+         
     </section>
     <!-- Banner Area End -->
 

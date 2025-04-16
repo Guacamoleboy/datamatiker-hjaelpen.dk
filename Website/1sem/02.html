@@ -104,6 +104,7 @@
             </div>
         </div>
     </section>
+
     <!-- Welcome Area End -->
 
     <!-- Deshes Area Starts -->
@@ -146,116 +147,45 @@
 
             <!-- RIGHT SECTION END -->
 
-            <!-- LEFT SECTION START -->
-
-            <div class="row mt-5 mb-5">
-                <div class="col-lg-5 col-md-6 align-self-center order-2 order-md-1 mt-4 mt-md-0">
-                    <img src="../assets/images/placeholder1.png" alt="" class="img-fluid custom-img-settings">
-                </div>
-                <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center order-1 order-md-2">
-                    <h1>02.</h1>
-                    <div class="deshes-text">
-                        <h3><span>Metoder & ArrayList</span><br> ______________</h3>
-                        <p class="pt-3">
-
-                           ArrayList kommer som en <b>utility package</b> vi importerer til vores program. Herunder er der en række metoder som følger med.<br><br>Vi har ikke behov for at opfinde hjulet 2 gange, så vi bruger bare de <b>pre-definerede metoder</b>.
-                           Fx kan vi bruge add() metoden til at tilføje til vores ArrayList.<br><br>Lad os sige at vi har en <b>ArrayList &lt;String&gt; names = new ArrayList&lt;&gt;()</b>. Her vil vi gerne tilføje et navn. Hvordan gør vi så det?
-                           Vi siger bare <b>names.add(&quot;Jonas&quot;)</b>. Det er super smart. Herunder kan du se de mest normale metoder og deres funktion.<br><br>I <b>IntelliJ IDE</b> kan man skrive &quot;<b>.</b>&quot; efter listens navn når den bruges, og så kommer
-                            der er række muligheder som kan bruges på denne. Her er dog de meste normale som du kan prøve og forstå og lære
-
-                            <blockquote class="generic-blockquote-exam-orange">
-
-                            <b class="b-line-under">add(&quot;Jonas&quot;)</b>
-                            <br><br><b class="b-white">Tilføjer vores String til sidst i vores liste</b>
-                            <br><br>
-                            <b class="b-line-under">add(5, &quot;Jonas&quot;)</b>
-                            <br><br><b class="b-white">Tilføjer vores String på plads nr 6 - (0, 1, 2 .. )</b>
-                            <br><br>
-                            <b class="b-line-under">get(3)</b>
-                            <br><br><b class="b-white">Tager værdien på plads nr 4</b>
-                            <br><br>
-                            <b class="b-line-under">set(3, &quot;Jonas&quot;)</b>
-                            <br><br><b class="b-white">Sætter værdien på plads 4 til Jonas</b>
-                            <br><br>
-                            <b class="b-line-under">remove(2)</b>
-                            <br><br><b class="b-white">Fjerner værdien på plads nr 3. Data efter rykkes én ned. Dvs plads 5 bliver til 4 nu.</b>
-                            <br><br>
-                            <b class="b-line-under">clear()</b>
-                            <br><br><b class="b-white">Fjerner alle værdier</b>
-                            <br><br>
-                            <b class="b-line-under">size()</b>
-                            <br><br><b class="b-white">Returnerer størrelsen på vores ArrayList</b>
-                            <br><br>
-                            <b class="b-line-under">isEmpty()</b>
-                            <br><br><b class="b-white">Kigger på om vores liste er tom</b>
-
-                            </blockquote>
-
-                        </p>
-                        <button class="learning-example-settings mt-3" data-toggle="modal" data-target="#codeExampleModal">
-                            Eksempel | Tryk her!
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- LEFT SECTION END -->
-
-            <!-- RIGHT SECTION START -->
-
-            <div class="row">
-                <div class="col-lg-5 col-md-6 align-self-center">
-                    <h1>03.</h1>
-                    <div class="deshes-text">
-                        <h3><span>Loops & ArrayList</span><br> ______________</h3>
-                        <p class="pt-3">
-                            
-                            Nu har vi kigget lidt på generelt om ArrayList, instantiering, erklæring og pre-definerede metoder..<br><br>Hvordan bruger vi alt det her i praksis?
-                            Det kigger vi på her. Ved at bruge loops og for-løkker, så kan vi iterere gennem vores ArrayList. Vi kunne fx have en ArrayList som holder datatypen String.
-                            Her er de mest normale måder at køre gennem denne løkke hvis vi bare skal printe værdierne..<br><br>
-
-                            <blockquote class="generic-blockquote-exam-orange">
-                                <b class="b-line-under">For loop</b>
-                                <br><br>
-                                <b class="b-white">
-                                for(int <b>i</b> = 0; <b>i</b> &lt; list.size(); <b>i</b>++){
-                                <br><br>
-                                    System.out.println(list.get(<b>i</b>));
-                                <br><br>
-                                }
-                                <br><br>
-                                Vi printer altså plads nummer 0 først, og så kører den bare indtil loopet er færdigt ved at bruge size() metoden som <b>værdi</b>
-                                </b>
-                            </blockquote>
-
-                            <blockquote class="generic-blockquote-exam-orange mt-5">
-                                <b class="b-line-under">For-each loop</b>
-                                <br><br>
-                                <b class="b-white">
-                                for(String <b>s</b> : list){
-                                <br><br>
-                                    System.out.println(<b>s</b>);
-                                <br><br>
-                                }
-                                <br><br>
-                                Her printes vores liste på samme måde, men vi benytter os af variablen &quot;<b>s</b>&quot; fremfor i++.
-                                </b>
-                            </blockquote>
-
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
-                    <img src="../assets/images/placeholder1.png" alt="" class="img-fluid custom-img-settings">
-                </div>
-            </div>
-
-            <!-- RIGHT SECTION END -->
-        
             </div>
         </div>
     </div>
     <!-- Deshes Area End -->
+
+    <!-- Reservation Area Starts -->
+    <div class="reservation-area reservation-area-learning section-padding text-center">
+
+        <!-- Wavy section Start -->
+        <div class="wave-top">
+            <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <path
+                d="M0,50 Q90,0 180,50 T360,50 T540,50 T720,50 T900,50 T1080,50 T1260,50 T1440,50 L1440,100 L0,100 Z"
+                class="wave-path" />
+            </svg>
+        </div>
+        <!-- Wavy Section End -->
+
+        <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+            <h2><i class="i-candy">ArrayList &lt;String&gt; users = new ArrayList&lt;&gt;()</i></h2>
+            <h4 class="mt-4 i-candy-h4">Instantiering & Erklæring af en ArrayList</h4>
+            </div>
+        </div>
+        </div>
+    
+        <!-- Wavy section Start -->
+        <div class="wave-bottom">
+        <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+            <path
+            d="M0,50 Q90,0 180,50 T360,50 T540,50 T720,50 T900,50 T1080,50 T1260,50 T1440,50 L1440,100 L0,100 Z"
+            class="wave-path" />
+        </svg>
+        </div>
+        <!-- Wavy Section End -->
+
+    </div>
+    <!-- Reservation Area End -->
 
     <!-- Exam Area Starts -->
     <div class="deshes-area section-padding" id="exam">
