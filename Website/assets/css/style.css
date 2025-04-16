@@ -132,6 +132,87 @@ body.dark-mode .generic-blockquote-green {
 
 }
 
+body.dark-mode .card {
+    
+    background-color: #5e5e93;
+    border-style: dashed;
+
+}
+
+body.dark-mode .card-title {
+
+    font-family: 'Datamatiker-font', sans-serif;
+    font-weight: normal;
+    font-size: 25px !important;
+    color: #fff;
+
+}
+
+body.dark-mode .card-text {
+
+    font-family: 'Datamatiker-font', sans-serif;
+    font-weight: normal;
+    font-size: 16px !important;
+    color: #dedede;
+
+}
+
+body.dark-mode .button-cool  button{
+
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    margin: 10px auto;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #6d6da0;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: default;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+body.dark-mode .button-cool {
+    
+    padding: 10px 20px;
+    text-align: center;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    cursor: default;
+
+}
+
+.card-text {
+
+    font-family: 'Datamatiker-font', sans-serif;
+    font-weight: normal;
+    font-size: 16px !important;
+    color: #dedede;
+
+}
+
+.card-title {
+
+    font-family: 'Datamatiker-font', sans-serif;
+    font-weight: normal;
+    color: #fff;
+
+}
+
+.card {
+
+    background-color: #e9e9e9;
+    border-radius: 15px;
+    border-color: #7777a8;
+    border-style: dashed;
+    border: 4px solid;
+
+}
+
 body.dark-mode .header-area2 {
     background-color: #ffffff00;
 }
