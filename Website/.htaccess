@@ -15,4 +15,6 @@ RewriteRule ^ /%1 [NC,L,R]
 RewriteCond %{REQUEST_FILENAME}.php -f
 RewriteRule ^ %{REQUEST_URI}.php [NC,L]
 
+DirectoryIndex construction.html
+
 ErrorDocument 404 /404.html
