@@ -10,6 +10,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const correctAnswer03 = 'ArrayList <Double> balance = new ArrayList<>()';
     const correctAnswer03_02 = 'ArrayList <Double> balance = new ArrayList<Double>()';
 
+    const correctSound = new Audio('../assets/sound/coin.mp3');
+    correctSound.volume = 0.1;
+
+    function playCorrectAnswerSound() {
+        correctSound.play();
+    }
+
     function validateInput(inputElement, correctAnswers, key) {
         const userAnswer = inputElement.value.trim();
         let bgColor = '';
@@ -18,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
             bgColor = '#8383be'; 
         } else if (correctAnswers.includes(userAnswer)) {
             bgColor = '#0e8a21'; 
+            playCorrectAnswerSound();
         } else {
             bgColor = '#8a0e0e'; 
         }
