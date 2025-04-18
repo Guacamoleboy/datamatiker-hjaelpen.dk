@@ -1,89 +1,52 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-    // Tilføjer vores "correct" og vores ID fra vores .html
     const input = document.getElementById('user-input01');
     const input2 = document.getElementById('user-input02');
     const input3 = document.getElementById('user-input03');
+
     const correctAnswer01 = '<Integer>';
-    const correctAnswer02= 'ArrayList <User> user = new ArrayList<>()';
+    const correctAnswer02 = 'ArrayList <User> user = new ArrayList<>()';
     const correctAnswer02_02 = 'ArrayList <User> user = new ArrayList<User>()';
     const correctAnswer03 = 'ArrayList <Double> balance = new ArrayList<>()';
     const correctAnswer03_02 = 'ArrayList <Double> balance = new ArrayList<Double>()';
 
-    // __________________________________________________________________
-   
-    // Prompt 1 - START
-    input.addEventListener('input', function () {
-
-        const userAnswer = input.value.trim();
-
-        if (userAnswer === correctAnswer01) {
-            input.style.backgroundColor = '#0e8a21'; 
-            input.style.color = 'white';
-        } else {
-            input.style.backgroundColor = '#8a0e0e'; 
-            input.style.color = 'white';
-        }
-
+    function validateInput(inputElement, correctAnswers, key) {
+        const userAnswer = inputElement.value.trim();
+        let bgColor = '';
+    
         if (userAnswer === '') {
-            input.style.backgroundColor = '#8383be'; 
-            input.style.color = 'white';
-        }
-
-    });
-    // Prompt 1 - END
-
-    // __________________________________________________________________
-
-    // Prompt 2 - START
-    input2.addEventListener('input', function () {
-
-        const userAnswer = input2.value.trim();
-
-        if (userAnswer === correctAnswer02 || userAnswer === correctAnswer02_02) {
-            input2.style.backgroundColor = '#0e8a21'; 
-            input2.style.color = 'white';
+            bgColor = '#8383be'; 
+        } else if (correctAnswers.includes(userAnswer)) {
+            bgColor = '#0e8a21'; 
         } else {
-            input2.style.backgroundColor = '#8a0e0e'; 
-            input2.style.color = 'white';
+            bgColor = '#8a0e0e'; 
         }
+    
+        inputElement.style.backgroundColor = bgColor;
+        inputElement.style.color = 'white';
+    
+        localStorage.setItem(`02-${key}-value`, userAnswer);
+        localStorage.setItem(`02-${key}-bg`, bgColor);
+        localStorage.setItem(`02-${key}-correct`, correctAnswers.includes(userAnswer));
+    }
 
-        if (userAnswer === '') {
-            input2.style.backgroundColor = '#8383be'; 
-            input2.style.color = 'white';
+    function restoreInput(inputElement, key) {
+        const savedValue = localStorage.getItem(`${key}-value`);
+        const savedBg = localStorage.getItem(`${key}-bg`);
+
+        if (savedValue !== null) {
+            inputElement.value = savedValue;
+            inputElement.style.backgroundColor = savedBg;
+            inputElement.style.color = 'white';
         }
+    }
 
-    });
-    // Prompt 2 - END
+    input.addEventListener('input', () => validateInput(input, [correctAnswer01], 'input01'));
+    input2.addEventListener('input', () => validateInput(input2, [correctAnswer02, correctAnswer02_02], 'input02'));
+    input3.addEventListener('input', () => validateInput(input3, [correctAnswer03, correctAnswer03_02], 'input03'));
 
-    // __________________________________________________________________
-
-    // Prompt 3 - START
-    input3.addEventListener('input', function () {
-
-        const userAnswer = input3.value.trim();
-
-        if (userAnswer === correctAnswer03 || userAnswer === correctAnswer03_02) {
-            input3.style.backgroundColor = '#0e8a21'; 
-            input3.style.color = 'white';
-        } else {
-            input3.style.backgroundColor = '#8a0e0e'; 
-            input3.style.color = 'white';
-        }
-
-        if (userAnswer === '') {
-            input3.style.backgroundColor = '#8383be'; 
-            input3.style.color = 'white';
-        }
-
-    });
-    // Prompt 3 - END
-
-    // __________________________________________________________________
-
-    // Clears input if page reloaded
-    window.addEventListener('DOMContentLoaded', () => {
-        document.querySelectorAll('input').forEach(input => input.value = '');
-    });
+    restoreInput(input, '02-input01');
+    restoreInput(input2, '02-input02');
+    restoreInput(input3, '02-input03');
 
 });
