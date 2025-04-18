@@ -573,6 +573,62 @@ body.dark-mode .h4-background {
 
 }
 
+.same-height-row {
+    display: flex;
+}
+
+.same-height-row > .col-lg-9,
+.same-height-row > .col-lg-3 {
+    display: flex;
+    flex-direction: column;
+}
+
+.same-height-row .card {
+    flex: 1;
+}
+
+.same-height-row .card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.same-height-row .card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.note-input-wrapper {
+    flex: 1;
+    display: flex;
+}
+
+.card-body .card-text i {
+    font-size: 12px !important;
+    color: #d1d1d1 !important; 
+}
+
+.note-input-wrapper textarea {
+    flex: 1;
+    resize: none;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    box-sizing: border-box;
+    border: 2px solid #9090e2;
+    background-color: #7b7bc2;
+    border-radius: 15px;
+}
+
+
+.same-height-row .card-body label {
+    flex: 1;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
+
 .changelog-custom-learning {
 
     border: 3px solid #7979b8b6;
