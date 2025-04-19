@@ -5023,6 +5023,39 @@ h6 {
     filter: grayscale(70%);
 }
 
+.end-boss.locked {
+    opacity: 0.4;
+    pointer-events: none;
+    filter: grayscale(70%);
+}
+
+.end-boss {
+    width: 150px;
+    height: 150px;
+    z-index: 4;
+    background-color: #f8b600;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 50%;
+    border: 10px solid #6767a3;
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+}
+
+.end-boss .timeline-icon {
+    color: #fff;
+    font-size: 65px;
+    font-weight: 600;
+    text-align: center;
+    position: absolute;
+    top: 15px;
+    left: 30px;
+    z-index: 1;
+}
+
+
 .main-timeline:before{
     content: '';
     background-color: #f8b600;
@@ -5058,9 +5091,10 @@ h6 {
     right: -10px;
     top: 50%;
 }
+
 .main-timeline .timeline-icon{
     color: #fff;
-    background-color: #FE553B;
+    background-color: #d69e02;
     font-size: 35px;
     font-weight: 600;
     text-align: center;
@@ -5076,8 +5110,9 @@ h6 {
     right: 11px;
     z-index: 1;
 }
+
 .main-timeline .title{
-    color: #FE553B;
+    color: #f8b600;
     font-size: 22px;
     font-weight: 600;
     text-transform: capitalize;
@@ -5094,6 +5129,7 @@ h6 {
     margin: 0 0 0 2px;
     float: right;
 }
+
 .main-timeline .timeline:nth-child(even) .timeline-content{ padding: 0 0 0 130px; }
 .main-timeline .timeline:nth-child(even) .timeline-content:before{
     right: auto;
@@ -5103,12 +5139,7 @@ h6 {
     right: auto;
     left: 11px;
 }
-.main-timeline .timeline:nth-child(4n+2) .timeline-icon{ background-color: #5CC33A; }
-.main-timeline .timeline:nth-child(4n+2) .title{ color: #5CC33A; }
-.main-timeline .timeline:nth-child(4n+3) .timeline-icon{ background-color: #FE3356; }
-.main-timeline .timeline:nth-child(4n+3) .title{ color: #FE3356; }
-.main-timeline .timeline:nth-child(4n+4) .timeline-icon{ background-color: #009B99; }
-.main-timeline .timeline:nth-child(4n+4) .title{ color: #009B99; }
+
 @media screen and (max-width:767px){
     .main-timeline:before{
         transform: translateX(0);
