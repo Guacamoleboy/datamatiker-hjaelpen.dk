@@ -31,12 +31,13 @@ const navbarHTML = `
                         <li><a href="https://buymeacoffee.com/datamatikerhjaelpen">Støt os</a></li>
                         <li><a href="#">Sprog</a>
                             <ul class="sub-menu">
-                                <li><a href="#">Java</a></li>
-                                <li><a href="#">Processing</a></li>
-                                <li><a href="#">HTML</a></li>
-                                <li><a href="#">CSS</a></li>
-                                <li><a href="#">ReactJS</a></li>
-                                <li><a href="#">Javascript</a></li>
+                                <li><a href="Sprog/java.html">Java</a></li>
+                                <li><a href="Sprog/processing.html">Processing</a></li>
+                                <li><a href="Sprog/html.html">HTML</a></li>
+                                <li><a href="Sprog/css.html">CSS</a></li>
+                                <li><a href="Sprog/reactjs.html">ReactJS</a></li>
+                                <li><a href="Sprog/javascript.html">Javascript</a></li>
+                                <li><a href="Sprog/plantuml.html">PlantUML</a></li>
                             </ul>
                         </li>
                         <li><a href="kontakt.php">Kontakt</a></li>

@@ -17,6 +17,26 @@ document.addEventListener('DOMContentLoaded', function () {
         correctSound.play();
     }
 
+    function toggleStatusCard() {
+        const card = document.getElementById('quiz-02-status');
+    
+        if (card.classList.contains('d-none') || card.style.opacity === '0') { 
+            card.classList.remove('d-none');  
+            card.style.transition = 'opacity 0.5s ease';
+            card.style.opacity = '1';        
+            card.style.visibility = 'visible';
+        } else {
+            
+            card.style.transition = 'opacity 0.5s ease';
+            card.style.opacity = '0';         
+            card.style.visibility = 'hidden'; 
+           
+            setTimeout(() => {
+                card.classList.add('d-none');  
+            }, 500); 
+        }
+    }
+    
     function validateInput(inputElement, correctAnswers, key) {
         const userAnswer = inputElement.value.trim();
         let bgColor = '';
@@ -26,6 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
         } else if (correctAnswers.includes(userAnswer)) {
             bgColor = '#0e8a21'; 
             playCorrectAnswerSound();
+            toggleStatusCard();
         } else {
             bgColor = '#8a0e0e'; 
         }
