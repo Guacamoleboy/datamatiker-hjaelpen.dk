@@ -5184,3 +5184,13 @@ h6 {
         top: 0;
     }
 }
+
+.error-visuals {
+    background-image: url("../images/404_01.png");
+    background-repeat: no-repeat;
+    background-size: 65%;
+    background-position: center;
+    z-index: 0;
+    height: 1000px;
+    overflow: hidden;
+}
