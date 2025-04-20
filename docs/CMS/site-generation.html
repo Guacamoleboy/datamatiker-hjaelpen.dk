@@ -60,28 +60,20 @@
                 <div class="col-lg-9">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Komponent // <b>05 | Title</b></h5>
+                            <h5 class="card-title">Komponent Nummer 1</h5>
                             <p class="card-text">Udfyld som du ønsker</p>
                
                             <div class="d-flex">
                                 <!-- Left -->
                                 <div class="button-cool col-lg-6">
-                                    <button>Titel</button>
-                                    <button>Text</button>
-                                    <button>Text</button>
-                                    <button>Text</button>
-                                    <button>Text</button>
-                                    <button>Text</button>
-                                    <button>Text</button>
-                                    <button>Text</button>
-                                    <button>Text</button>
+                                    <button>Plads 1</button>
+                                    <button>Plads 2</button>
+                                    <button>Plads 3</button>
                                 </div>
                 
                                 <!-- Right -->
-                                <div class="col-lg-6 ps-4 mt-4">
-                                    <h5 class="card-title">Preview</b></h5>
-                                    
-                                    <img src="../assets/images/astronaut_resize.png" class="img-fluid" alt="Placeholder">
+                                <div class="col-lg-6 ps-4">
+                                    <img src="../assets/images/cms/komp_01.png" class="img-fluid mt-4" alt="Placeholder">
                                 </div>
                             </div>
                 
@@ -92,22 +84,40 @@
 
                 <div class="col-lg-3">
                     <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Vælg komponent</h5>
-                            <p class="card-text">Tekst</p>
-                            <div class="button-cool">
-                                <select>
-                                    <option>01</option>
-                                    <option>02</option>
-                                    <option>03</option>
-                                    <option>04</option>
-                                    <option>05</option>
-                                    <option>06</option>
-                                </select>
-                            </div>
+                      <div class="card-body">
+                        <h5 class="card-title">Vælg komponent</h5>
+                        <div class="button-cool">
+                            <button class="toggle-dropdown-button" type="button">
+                            Vælg
+                            </button>
                         </div>
+                  
+                        <div class="custom-dropdown" style="display: none; margin-top: 10px;">
+                          <select class="custom-dropdown-select">
+                            <option>01</option>
+                            <option>02</option>
+                            <option>03</option>
+                            <option>04</option>
+                            <option>05</option>
+                            <option>06</option>
+                          </select>
+                        </div>
+                      </div>
                     </div>
-                </div>
+                  </div>
+                  
+                  <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                      const button = document.querySelector(".toggle-dropdown-button");
+                      const dropdown = document.querySelector(".custom-dropdown");
+                  
+                      button.addEventListener("click", function () {
+                        const isVisible = dropdown.style.display === "block";
+                        dropdown.style.display = isVisible ? "none" : "block";
+                      });
+                    });
+                  </script>
+                  
 
             </div>
         </div>
