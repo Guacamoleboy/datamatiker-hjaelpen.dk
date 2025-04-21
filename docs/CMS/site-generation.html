@@ -48,9 +48,9 @@
     <!-- Custom_01 Section Start -->
     <div class="deshes-area section-padding text-center mt-5">
 
-        <!-- 2 ROW START -->
+        <!-- Component ROW START -->
         <div class="container">
-            <div class="row">
+            <div id="component-rows" class="row">
 
                 <div class="section-top2 col-lg-12 text-center">
                     <h3>Opret en <b>custom</b> side</h3>
@@ -60,40 +60,62 @@
                 <div class="col-lg-9">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Komponent // <b>05 | Title</b></h5>
+                            <h5 class="card-title">Komponent Nummer 1</h5>
                             <p class="card-text">Udfyld som du ønsker</p>
-                            <div class="button-cool col-lg-6">
-                                <button>Titel</button>
-                                <button>Text</button>
-                                <button>Text</button>
-                                <button>Text</button>
-                                <button>Text</button>
-                                <button>Text</button>
-                                <button>Text</button>
-                                <button>Text</button>
-                                <button>Text</button>
+               
+                            <div class="d-flex">
+
+                                <!-- Left -->
+                                <div class="button-cool col-lg-6">
+                                    <label for="component_input_01" class="into-icon-learning-long">
+                                      <input id="component_input_01" type="text" placeholder="Plads 1">
+                                    </label>
+                                    <label for="component_input_02" class="into-icon-learning-long">
+                                      <input id="component_input_02" type="text" placeholder="Plads 2">
+                                    </label>
+                                    <label for="component_input_03" class="into-icon-learning-long">
+                                      <input id="component_input_03" type="text" placeholder="Plads 3">
+                                    </label>
+                                </div>
+                
+                                <!-- Right -->
+                                <div class="col-lg-6 ps-4">
+                                    <img src="../assets/images/cms/komp_01.png" class="img-fluid mt-1" alt="">
+                                </div>
+
                             </div>
-                            
+                
                         </div>
                     </div>
                 </div>
-
+              
                 <div class="col-lg-3">
                     <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Vælg komponent</h5>
-                            <p class="card-text">Tekst</p>
-                            <div class="button-cool">
-                                <button>Tryk</button>
-                            </div>
+                      <div class="card-body">
+                        <h5 class="card-title">Vælg komponent</h5>
+                        <div class="button-cool">
+                            <button class="toggle-dropdown-button" type="button">
+                            Vælg
+                            </button>
                         </div>
+                      </div>
                     </div>
                 </div>
-
             </div>
         </div>
-        <!-- 2 ROW END -->
-
+        <!-- Component ROW END -->
+        
+        <!-- FINAL BUTTONS START -->
+        <div class="button-cool mt-5">
+              <button id="add-component" class="toggle-dropdown-button w-auto" type="button">
+                  Tilføj flere Komponenter
+              </button>
+              <button id="generate-page" class="toggle-dropdown-button w-auto" type="button">
+                  Opret side
+              </button>
+        </div>
+        <!-- FINAL BUTTONS END -->
+       
     </div>
     <!-- Custom_01 Section End -->
 
@@ -105,6 +127,8 @@
     <script src="../assets/js/vendor/jquery.datetimepicker.full.min.js"></script>
     <script src="../assets/js/vendor/jquery.nice-select.min.js"></script>
     <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/CMS/component-spawn.js"></script>
+    <script src="../assets/js/CMS/generate-site.js"></script>
 
 </body>
 
