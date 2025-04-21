@@ -37,7 +37,7 @@ $fullHTML = <<<HTML
     <link rel="stylesheet" href="../assets/css/jquery.datetimepicker.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
-<body>
+<body class="dark-mode">
     <div class="deshes-area section-padding text-center mt-5">
         {$html}
     </div>
