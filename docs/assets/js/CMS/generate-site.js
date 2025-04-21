@@ -1,7 +1,7 @@
 document.getElementById('generate-page').addEventListener('click', function () {
     const content = document.getElementById('component-rows').innerHTML;
 
-    fetch('/generate-html.php', {
+    fetch('/generate-backend.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
