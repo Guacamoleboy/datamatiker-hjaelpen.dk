@@ -11,7 +11,7 @@ window.addEventListener("DOMContentLoaded", () => {
           butterfly.className = "butterfly";
 
           nameText.className = "butterfly-name";
-          nameText.textContent = "Sidney - I miss you";
+          nameText.textContent = "Sidney";
 
           butterflyWrapper.className = "butterfly-wrapper";
           butterflyWrapper.appendChild(butterfly);
