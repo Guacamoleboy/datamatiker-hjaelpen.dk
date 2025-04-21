@@ -48,9 +48,9 @@
     <!-- Custom_01 Section Start -->
     <div class="deshes-area section-padding text-center mt-5">
 
-        <!-- 2 ROW START -->
+        <!-- Component ROW START -->
         <div class="container">
-            <div class="row">
+            <div id="component-rows" class="row">
 
                 <div class="section-top2 col-lg-12 text-center">
                     <h3>Opret en <b>custom</b> side</h3>
@@ -64,24 +64,31 @@
                             <p class="card-text">Udfyld som du ønsker</p>
                
                             <div class="d-flex">
+
                                 <!-- Left -->
                                 <div class="button-cool col-lg-6">
-                                    <button>Plads 1</button>
-                                    <button>Plads 2</button>
-                                    <button>Plads 3</button>
+                                    <label for="component_input_01" class="into-icon-learning-long">
+                                      <input id="component_input_01" type="text" placeholder="Plads 1">
+                                    </label>
+                                    <label for="component_input_02" class="into-icon-learning-long">
+                                      <input id="component_input_02" type="text" placeholder="Plads 2">
+                                    </label>
+                                    <label for="component_input_03" class="into-icon-learning-long">
+                                      <input id="component_input_03" type="text" placeholder="Plads 3">
+                                    </label>
                                 </div>
                 
                                 <!-- Right -->
                                 <div class="col-lg-6 ps-4">
-                                    <img src="../assets/images/cms/komp_01.png" class="img-fluid mt-4" alt="Placeholder">
+                                    <img src="../assets/images/cms/komp_01.png" class="img-fluid mt-1" alt="">
                                 </div>
+
                             </div>
                 
                         </div>
                     </div>
                 </div>
-                
-
+              
                 <div class="col-lg-3">
                     <div class="card">
                       <div class="card-body">
@@ -91,38 +98,24 @@
                             Vælg
                             </button>
                         </div>
-                  
-                        <div class="custom-dropdown" style="display: none; margin-top: 10px;">
-                          <select class="custom-dropdown-select">
-                            <option>01</option>
-                            <option>02</option>
-                            <option>03</option>
-                            <option>04</option>
-                            <option>05</option>
-                            <option>06</option>
-                          </select>
-                        </div>
                       </div>
                     </div>
-                  </div>
-                  
-                  <script>
-                    document.addEventListener("DOMContentLoaded", function () {
-                      const button = document.querySelector(".toggle-dropdown-button");
-                      const dropdown = document.querySelector(".custom-dropdown");
-                  
-                      button.addEventListener("click", function () {
-                        const isVisible = dropdown.style.display === "block";
-                        dropdown.style.display = isVisible ? "none" : "block";
-                      });
-                    });
-                  </script>
-                  
-
+                </div>
             </div>
         </div>
-        <!-- 2 ROW END -->
-
+        <!-- Component ROW END -->
+        
+        <!-- FINAL BUTTONS START -->
+        <div class="button-cool mt-5">
+              <button id="add-component" class="toggle-dropdown-button w-auto" type="button">
+                  Tilføj flere Komponenter
+              </button>
+              <button id="generate-page" class="toggle-dropdown-button w-auto" type="button">
+                  Opret side
+              </button>
+        </div>
+        <!-- FINAL BUTTONS END -->
+       
     </div>
     <!-- Custom_01 Section End -->
 
@@ -134,6 +127,8 @@
     <script src="../assets/js/vendor/jquery.datetimepicker.full.min.js"></script>
     <script src="../assets/js/vendor/jquery.nice-select.min.js"></script>
     <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/CMS/component-spawn.js"></script>
+    <script src="../assets/js/CMS/generate-site.js"></script>
 
 </body>
 
