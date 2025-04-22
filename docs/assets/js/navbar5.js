@@ -43,12 +43,6 @@ const navbarHTML = `
                             </ul>
                         </li>
                         <li><a href="../../../kontakt.php">Kontakt</a></li>
-                        <li><a href="#">dev</a>
-                            <ul class="sub-menu">
-                                <li><a href="../../../dev/changelog.html">Change Log</a></li>
-                                <li><a href="#">Something</a></li>
-                            </ul>
-                        </li>
                         <li><a href="../../../ogin.php" id="loginToggle" class="darkmode-btn">Log Ind</a></li>
                     </ul>
                 </div>
