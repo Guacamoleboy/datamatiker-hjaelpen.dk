@@ -1,8 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () { 
 
     // __________________ Objekter Status ______________________
-
-    const total01 = "?";
+    const total01 = 5; 
     let correct01 = 0;
 
     for (let i = 1; i <= total01; i++) {
