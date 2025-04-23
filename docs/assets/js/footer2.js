@@ -72,9 +72,12 @@ const footerHTML = `
                     <div class="col-lg-5 col-md-6">
                         <div class="social-icons">
                             <ul>
-                                <li class="no-margin">Følg os på</li>
                                 <li><a href="https://buymeacoffee.com/datamatikerhjaelpen"><i class="fa fa-coffee"></i></a></li>
                                 <li><a href="#"><i class="fa fa-github"></i></a></li>
+                                <li>
+                                <img id="cat-icon" src="../assets/images/sad/sidney02.png"
+                                    style="height: 20px; width: 20px; filter: brightness(0) invert(1); cursor: pointer;">
+                                </li>
                             </ul>
                         </div>
                     </div>

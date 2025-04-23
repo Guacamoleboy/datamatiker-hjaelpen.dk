@@ -117,14 +117,14 @@
                     <div class="card">
                       <div class="card-body">
                         <h5 class="card-title">ArrayList</h5>
-                        <p class="card-text">Tekst om ArrayList<br><br> Mere tekst</p>
+                        <p class="card-text">En <b>dynamisk</b> liste</p>
                         <div class="button-cool">
                             <button>ArrayList &lt;String&gt; user = new ArrayList&lt;&gt;()</button>
                             <button class="into-icon-learning">
                                 Fleksibel <i class="fa fa-check" style="color: #00cf1c;"></i>
                             </button>
                             <button class="into-icon-learning">
-                                Performance <i class="fa fa-close" style="color: #860101;"></i>
+                                Performance <i class="fa fa-close" style="color: #ff0000;"></i>
                             </button>
                             <button class="into-icon-learning">
                                 Indbyggede metoder <i class="fa fa-check" style="color: #00cf1c;"></i>
@@ -133,7 +133,7 @@
                                 Skift størrelse efter oprettelse <i class="fa fa-check" style="color: #00cf1c;"></i>
                             </button> 
                             <button class="into-icon-learning">
-                                Primitive datatyper (int, double, char) <i class="fa fa-close" style="color: #860101;"></i>
+                                Primitive datatyper (int, double, char) <i class="fa fa-close" style="color: #ff0000;"></i>
                             </button>
                         </div>
                       </div>
@@ -141,20 +141,20 @@
                     <div class="card">
                       <div class="card-body">
                         <h5 class="card-title">Array</h5>
-                        <p class="card-text">Tekst om Array<br><br> Mere tekst</p>
+                        <p class="card-text">En <b>statisk</b> liste</p>
                         <div class="button-cool">
                             <button>String[&nbsp;] user = new String[10]</button>
                             <button class="into-icon-learning">
-                                Fleksibel <i class="fa fa-close" style="color: #860101;"></i>
+                                Fleksibel <i class="fa fa-close" style="color: #ff0000;"></i>
                             </button>
                             <button class="into-icon-learning">
                                 Performance <i class="fa fa-check" style="color: #00cf1c;"></i>
                             </button> 
                             <button class="into-icon-learning">
-                                Indbyggede metoder <i class="fa fa-close" style="color: #860101;"></i>
+                                Indbyggede metoder <i class="fa fa-close" style="color: #ff0000;"></i>
                             </button>
                             <button class="into-icon-learning">
-                                Skift størrelse efter oprettelse <i class="fa fa-close" style="color: #860101;"></i>
+                                Skift størrelse efter oprettelse <i class="fa fa-close" style="color: #ff0000;"></i>
                             </button>
                             <button class="into-icon-learning">
                                 Primitive datatyper (int, double, char) <i class="fa fa-check" style="color: #00cf1c;"></i>
@@ -193,7 +193,7 @@
         </div>
     
         <!-- Wavy section Start -->
-        <div class="wave-bottom">
+        <div class="wave-bottom" style="margin-bottom: 5px;">
         <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
             <path
             d="M0,50 Q90,0 180,50 T360,50 T540,50 T720,50 T900,50 T1080,50 T1260,50 T1440,50 L1440,100 L0,100 Z"
@@ -215,11 +215,15 @@
                 <div class="col-lg-9">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">ArrayList</h5>
-                            <p class="card-text">Tekst om ArrayList<br><br> Mere tekst</p>
-                            <div class="button-cool">
-                                <button>Text here</button>
-                            </div>
+                            <h5 class="card-title generic-blockquote-bottom" style="background-color: #5e5e93;">Hvad er forskellen så?</h5>
+                            <p class="card-text button-cool" style="font-weight: normal;">
+                                En ArrayList holder Objekter og er dynamisk hvilket<br>
+                                vil sige at den kan ændre størrelse.<br><br>
+                                En Array derimod er statisk og holder datatyper.<br><br>Fx kan vores ArrayList ikke holde <b>int</b> eller <b>double</b> da det er datatyper.<br>
+                                ArrayListen kan dog holde <b>Integer</b> og <b>Double</b> hvilket er objekter.<br><br>
+                                En <b>instantiering</b> af en ArrayList som holder int vil altså se sådan her ud<br><br>
+                                <button style="font-weight: normal;">ArrayList &lt;Integer&gt; alder = new ArrayList<>()</button>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -227,11 +231,13 @@
                 <div class="col-lg-3">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">ArrayList</h5>
-                            <p class="card-text">Tekst om ArrayList<br><br> Mere tekst</p>
-                            <div class="button-cool">
-                                <button>Text here</button>
-                            </div>
+                            <h5 class="card-title">Husk</h5>
+                            <p class="card-text" style="font-weight: normal;">
+                                <b class="b-white" style="font-weight: normal;">Dynamisk</b> = Bevægelse<br>
+                                <b class="b-white" style="font-weight: normal;">Statisk</b> = Fast størrelse<br>
+                                <b class="b-white" style="font-weight: normal;">Instantiering</b> = oprettelse<br><br>
+                                Integer & int er ikke det samme
+                            </p> 
                         </div>
                     </div>
                 </div>
@@ -239,90 +245,98 @@
             </div>
         </div>
         <!-- 2 ROW END -->
+        
+        <!-- Forskel SECTION START -->
 
-        <!-- 4 ROW START -->
-        <div class="container">
-            <div class="row mt-5">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-top2 text-center">
+                        <h3 class="card-title">Se forskellen her...</h3>
+                
+                        <div class="row justify-content-center mt-5">
 
-                <div class="col-lg-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">ArrayList</h5>
-                            <p class="card-text">Tekst om ArrayList<br><br> Mere tekst</p>
-                            <div class="button-cool">
-                                <button>Text here</button>
+                            <div class="col-lg-6 mb-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title generic-blockquote-bottom" style="background-color: #5e5e93;">Eksempel ArrayList</h5>
+                                        <p class="card-text button-cool" style="font-weight: normal;">
+                                            Vi har en <b>bankkonto</b> hvor vi gerne vil gemme personens pengebeholdning... Hvad skal vi bruge?<br><br>
+                                            <button class="w-auto" style="font-weight: normal;">ArrayList</button><br>
+                                            Fordi listen ændrer sig alt efter om personen får eller mister penge.
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
+
+                            <div class="col-lg-6 mb-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title generic-blockquote-bottom" style="background-color: #5e5e93;">Eksempel Array</h5>
+                                        <p class="card-text button-cool" style="font-weight: normal;">
+                                            Vi har <b>2</b> terninger som vi gerne vil kaste og få værdierne af.. Hvad skal vi bruge og hvorfor?<br><br>
+                                            <button class="w-auto" style="font-weight: normal;">Array</button><br>
+                                            Vi skal bruge en Array fordi størrelsen er konstant. Den ændrer sig ikke.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
-
-                <div class="col-lg-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">ArrayList</h5>
-                            <p class="card-text">Tekst om ArrayList<br><br> Mere tekst</p>
-                            <div class="button-cool">
-                                <button>Text here</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">ArrayList</h5>
-                            <p class="card-text">Tekst om ArrayList<br><br> Mere tekst</p>
-                            <div class="button-cool">
-                                <button>Text here</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">ArrayList</h5>
-                            <p class="card-text">Tekst om ArrayList<br><br> Mere tekst</p>
-                            <div class="button-cool">
-                                <button>Text here</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
-        <!-- 4 ROW END -->
+
+        <!-- Forskel SECTION END -->
 
     </div>
     <!-- Custom_01 Section End -->
 
     <!-- YouTube Section Start -->
-    <div class="deshes-area section-padding text-center">
+    <div class="deshes-area section-padding text-center" style="margin-top: -200px;">
 
         <!-- 2 ROW START -->
         <div class="container">
             <div class="row same-height-row">
 
+                <div class="col-12 text-center mb-5">
+                    <h3>Se en video om <b>ArrayLister</b></h3>
+                    <p class="mt-2"><i>Code with John forklarer her om Array og ArrayList</i></p>
+                    </div>
+            
                 <div class="col-lg-12 d-flex">
 
                     <div class="flex-grow-1 me-3" style="flex-basis: 60%; margin-right: 30px;">
                         <div class="card h-100">
                             <div class="card-body">
                                 <div class="youtube-embed">
-                                    <iframe 
-                                        width="100%" height="515" 
-                                        src="https://www.youtube.com/embed/NbYgm0r7u6o?si=SBzpVqGHMJnhIuW-" 
-                                        title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                        allowfullscreen>
-                                    </iframe>
+                                    <div class="youtube-embed-custom" onclick="loadYouTubeVideo(this)">
+                                        <img src="../assets/images/youtube/youtube_placeholder02.png" alt="YouTube Thumbnail">
+                                        
+                                      </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    <!-- INDIVIDUAL PER SITE . DO NOT MAKE IT INTO A .JS PLEASE -->
+                    <script>
+                        function loadYouTubeVideo(container) {
+                          const iframe = document.createElement("iframe");
+                          iframe.setAttribute("width", "100%");
+                          iframe.setAttribute("height", "515");
+                          iframe.setAttribute("src", "https://www.youtube.com/embed/NbYgm0r7u6o?autoplay=1");
+                          iframe.setAttribute("title", "YouTube video player");
+                          iframe.setAttribute("frameborder", "0");
+                          iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
+                          iframe.setAttribute("allowfullscreen", "");
+                        
+                          container.innerHTML = "";
+                          container.appendChild(iframe);
+                        }
+                    </script>
+                    <!-- INDIVIDUAL PER SITE . DO NOT MAKE IT INTO A .JS PLEASE -->
             
                     <div class="flex-grow-1" style="flex-basis: 40%;">
                         <div class="card h-100">
@@ -428,34 +442,6 @@
 
                                 <!-- TASK END -->
 
-                                <!-- Example button Start -->
-                                <div class="button-cool-overlay mt-5">
-                                    <button id="overlayBtn">Eksempel</button>
-
-                                    <div id="overlay"></div>
-
-                                    <div id="hiddenDiv">
-                                        <h5 class="card-title card-title-bottom-border">Titel her</h5>
-                                        <p class="mt-4"><i>Information her evt...</i></p>
-                                        <div class="container mt-5">
-                                            <div class="card code-card">
-                                                
-                                                <div class="card-header">
-                                                    Tekst her til eksempel
-                                                </div>
-
-                                                <div class="card-body p-0">
-                                                    <img id="codeImage" src="../assets/images/intelliJ/02_example_01.png" alt="Code Image" class="img-fluid" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="mt-4">
-                                            <button id="closeBtn">Close Overlay</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Example button End -->
-
                             </div>
                         </div>
                     </div>
@@ -466,7 +452,7 @@
     <!-- Learning Area End -->
 
     <!-- Dynamic Learning Section Start -->
-    <div class="deshes-area new-blue section-padding text-center">
+    <div class="deshes-area new-blue section-padding text-center orange-text" style="margin-top: -200px;">
 
         <div class="container">
             <div class="row">
@@ -683,38 +669,8 @@
     </div>
     <!-- Fixed notification END -->
 
-    <!-- Like Section Start -->
-    <div class="deshes-area new-blue section-padding text-center no-spacing">
-
-        <div class="section-top2 col-lg-12 text-center">
-            <h3>Giv <b>02 | ArrayList</b> en rating</h3>
-            <p class="mt-4"><i>Tryk på den du føler for!</i></p>
-        </div>
-
-        <div class="d-flex justify-content-center align-items-center flex-row gap-4">
-            <div class="outer-circle position-relative mr-5">
-                <button class="like-button" onclick="scaleHeart()">Like</button>
-                <div class="like-count">12</div>
-                <div class="like-icon">
-                    <i class="fa fa-heart"></i>
-                </div>
-            </div>
-            
-            <div class="outer-circle position-relative ml-5">
-                <button class="like-button" onclick="scaleThumb()">Dislike</button>
-                <div class="dislike-count">0</div>
-                <div class="dislike-icon">
-                    <i class="fa fa-thumbs-down"></i>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    <!-- Like Section End -->
-
-
     <!-- Exam Area Starts -->
-    <div class="deshes-area-02 section-padding" id="exam">
+    <div class="deshes-area-02 section-padding" id="exam" style="margin-top: -300px;">
         <div class="container">
             <div class="row">
 
@@ -764,6 +720,35 @@
         </div>
     </div>
     <!-- Exam Area End -->
+
+    <!-- Like Section Start -->
+    <div class="deshes-area new-blue section-padding text-center no-spacing" style="margin-top: -200px;">
+
+        <div class="section-top2 col-lg-12 text-center">
+            <h3>Giv <b>02 | ArrayList</b> en rating</h3>
+            <p class="mt-4"><i>Tryk på den du føler for!</i></p>
+        </div>
+
+        <div class="d-flex justify-content-center align-items-center flex-row gap-4">
+            <div class="outer-circle position-relative mr-5">
+                <button class="like-button" onclick="scaleHeart()">Like</button>
+                <div class="like-count">12</div>
+                <div class="like-icon">
+                    <i class="fa fa-heart"></i>
+                </div>
+            </div>
+            
+            <div class="outer-circle position-relative ml-5">
+                <button class="like-button" onclick="scaleThumb()">Dislike</button>
+                <div class="dislike-count">0</div>
+                <div class="dislike-icon">
+                    <i class="fa fa-thumbs-down"></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Like Section End -->
 
     <!-- Javascript -->
     <script src="../assets/js/vendor/jquery-2.2.4.min.js"></script>
