@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // __________________ Objekter Status ______________________
 
-    const total01 = 3;
+    const total01 = "?";
     let correct01 = 0;
 
     for (let i = 1; i <= total01; i++) {
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // __________________ ArrayList Status ______________________
 
-    const total02 = 3;
+    const total02 = 4;
     let correct02 = 0;
 
     for (let i = 1; i <= total02; i++) {
