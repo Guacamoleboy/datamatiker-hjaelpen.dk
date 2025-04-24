@@ -57,7 +57,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1><i>02 | <b>ArrayList</b></i></h1>
+                    <h1><i>03 | <b>Array</b></i></h1>
                     <p class="pt-2"><i>1. Semester / Læringsmål</i></p>
                 </div>
             </div>
@@ -84,17 +84,20 @@
             <div class="row">
                 <div class="col-md-6 align-self-center">
                     <div class="welcome-img">
-                        <img src="../assets/images/1sem/02_lm_final.png" class="img-fluid" alt="">
+                        <img src="../assets/images/1sem/03_01.png" class="img-fluid" alt="">
                     </div>
                 </div>
                 <div class="col-md-6 align-self-center">
                     <div class="welcome-text mt-5 mt-md-0">
-                        <h3><span class="style-change">Læringsmål | 02</span><br> Arraylist</h3>
+                        <h3><span>Array er en <b>statisk</b> liste</h3>
                         <p class="pt-3">
                             <blockquote class="generic-blockquote-exam">
                             
-                                Vi har nu lært lidt om objekter og instantiering. Nu er det tid til at kigge på <b>ArrayList</b>. ArrayList er meget udbredt inden for programmering og specielt på <b>1. Semester</b>
-                                hvor vi bruger den i mange af vores Java programmer og opgaver. <br><br>Hvad er forskellen dog på <b>Array</b> og <b>ArrayList</b>? Det kigger vi lidt på herunder. 
+                                En Arrays størrelse vil altid være den samme. Den er med andre ord <b>statisk</b>..
+                                Et eksempel kunne være at vi havde <b>10 fingre</b>. Det vil vi med stor sandsynlighed have resten af vores liv.
+                                De 10 fingre gemmes altså i en Array fremfor en ArrayList.
+
+                                <br><br>Vi kigger lidt mere på det herunder med eksempler og ting du selv kan udfylde!
 
                             </blockquote>
                         </p>
@@ -107,9 +110,78 @@
 
     <!-- Welcome Area End -->
 
+    <!-- Custom_01 Section Start -->
+    <div class="deshes-area section-padding text-center mt-5">
+
+        <!-- Component ROW START -->
+        <div class="container">
+            <div id="component-rows" class="row">
+
+                <div class="section-top2 col-lg-12 text-center">
+                    <h3><b>Arrays</b> opbygning..</h3>
+                    <p class="mt-4"><i>Statisk liste som IKKE ændrer størrelse..</i></p>
+                </div>
+
+                <div class="col-lg-9">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Lister starter fra 0..</h5>
+                            <p class="card-text">
+                                Som du måske allerede ved, så starter vores lister i programmering altid fra <b>0</b>.
+                                <br>Dvs at hvis vi har en <b>int[8]</b>, så vil det altså se således ud:
+                            </p>
+                            <img src="../assets/images/1sem/03_02.png" style="width: 100%; height: 60%;">
+                            <p class="card-text">
+                                Som du kan se herover starter vores liste altså fra 0 og kører til 7<br>hvis den har en størrelse på 8.
+                            </p>
+
+                            <div class="input-holder mt-auto">
+                                <label for="user-input" class="into-icon-learning">
+                                    <h5 class="card-title">Indsæt <b>værdierne</b> fra billedet herover..</h5>
+                                    <input id="03-user-input01" type="text" placeholder="Plads 1">
+                                    <input id="03-user-input01" type="text" placeholder="Plads 4">
+                                    <input id="03-user-input01" type="text" placeholder="Plads 6">
+                                    <input id="03-user-input01" type="text" placeholder="Plads 8">
+                                </label>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+              
+                <div class="col-lg-3">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Eksempler</h5>
+                        <div class="button-cool">
+                            <button class="toggle-dropdown-button" type="button">
+                                int[10] 
+                            </button>
+                            <button class="toggle-dropdown-button" type="button">
+                                String[3] 
+                            </button>
+                            <button class="toggle-dropdown-button" type="button">
+                                double[16] 
+                            </button>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Component ROW END -->
+       
+    </div>
+    <!-- Custom_01 Section End -->
+
     <!-- Comparison Section Start -->
 
-    <div class="deshes-area section-padding text-center">
+    <div class="deshes-area section-padding text-center" style="margin-top: -150px;">
+
+        <div class="section-top2 col-lg-12 text-center">
+            <h3><b>Array</b> vs <b>ArrayList</b></h3>
+        </div>
+
         <div class="container">
             <div class="row">
 
@@ -184,16 +256,27 @@
         <!-- Wavy Section End -->
 
         <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-            <h2><i class="i-candy">ArrayList &lt;String&gt; users = new ArrayList&lt;&gt;()</i></h2>
-            <h4 class="mt-4 i-candy-h4">Instantiering & Erklæring af en ArrayList</h4>
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2><i class="i-candy"><b>Eksempler</b> på oprettelse af Arrays</i></h2>
+        
+                    <h4 class="mt-4 i-candy-h4">
+                        <code>String[] names = {"Jonas", "Andreas", "Ebou"};</code>
+                    </h4>
+        
+                    <h4 class="mt-4 i-candy-h4">
+                        <code>String[] names = new String[3];&#10;&#10;names[2] = "Jonas";</code>
+                    </h4>
+        
+                    <h4 class="mt-4 i-candy-h4">
+                        <code>Person[] person = new Person[3];&#10;&#10;person[0] = new Person("Jonas", 26);</code>
+                    </h4>
+                </div>
             </div>
-        </div>
-        </div>
+        </div>        
     
         <!-- Wavy section Start -->
-        <div class="wave-bottom">
+        <div class="wave-bottom" style="margin-bottom: 5px;">
         <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
             <path
             d="M0,50 Q90,0 180,50 T360,50 T540,50 T720,50 T900,50 T1080,50 T1260,50 T1440,50 L1440,100 L0,100 Z"
@@ -206,574 +289,39 @@
     <!-- Reservation Area End -->
 
     <!-- Custom_01 Section Start -->
-    <div class="deshes-area section-padding text-center">
+    <div class="deshes-area section-padding text-center mt-5">
 
-        <!-- 2 ROW START -->
+        <!-- Component ROW START -->
         <div class="container">
-            <div class="row">
+            <div id="component-rows" class="row">
+
+                <div class="section-top2 col-lg-12 text-center">
+                    <h3>Title</h3>
+                    <p class="mt-4"><i>Text</i></p>
+                </div>
 
                 <div class="col-lg-9">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Hvad er forskellen så?</h5>
-                            <p class="card-text button-cool" style="font-weight: normal;">
-                                En ArrayList holder Objekter og er dynamisk hvilket<br>
-                                vil sige at den kan ændre størrelse.<br><br>
-                                En Array derimod er statisk og holder datatyper.<br><br>Fx kan vores ArrayList ikke holde <b>int</b> eller <b>double</b> da det er datatyper.<br>
-                                ArrayListen kan dog holde <b>Integer</b> og <b>Double</b> hvilket er objekter.<br><br>
-                                En <b>instantiering</b> af en ArrayList som holder int vil altså se sådan her ud<br><br>
-                                <button style="font-weight: normal;">ArrayList &lt;Integer&gt; alder = new ArrayList<>()</button>
-                            </p>
+                            <h5 class="card-title">Text</h5>
+                            <p class="card-text">Text</p>
+               
                             
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Husk</h5>
-                            <p class="card-text" style="font-weight: normal;">
-                                <b class="b-white" style="font-weight: normal;">Dynamisk</b> = Bevægelse<br>
-                                <b class="b-white" style="font-weight: normal;">Statisk</b> = Fast størrelse<br>
-                                <b class="b-white" style="font-weight: normal;">Instantiering</b> = oprettelse<br><br>
-                                Integer & int er ikke det samme
-                            </p>
-                            <div class="button-cool">
-                                <button>Text here</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        <!-- 2 ROW END -->
-
-        <!-- 4 ROW START -->
-        <div class="container">
-            <div class="row mt-5">
-
-                <div class="col-lg-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">ArrayList</h5>
-                            <p class="card-text">Tekst om ArrayList<br><br> Mere tekst</p>
-                            <div class="button-cool">
-                                <button>Text here</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">ArrayList</h5>
-                            <p class="card-text">Tekst om ArrayList<br><br> Mere tekst</p>
-                            <div class="button-cool">
-                                <button>Text here</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">ArrayList</h5>
-                            <p class="card-text">Tekst om ArrayList<br><br> Mere tekst</p>
-                            <div class="button-cool">
-                                <button>Text here</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">ArrayList</h5>
-                            <p class="card-text">Tekst om ArrayList<br><br> Mere tekst</p>
-                            <div class="button-cool">
-                                <button>Text here</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        <!-- 4 ROW END -->
-
-    </div>
-    <!-- Custom_01 Section End -->
-
-    <!-- YouTube Section Start -->
-    <div class="deshes-area section-padding text-center">
-
-        <!-- 2 ROW START -->
-        <div class="container">
-            <div class="row same-height-row">
-
-                <div class="col-lg-12 d-flex">
-
-                    <div class="flex-grow-1 me-3" style="flex-basis: 60%; margin-right: 30px;">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <div class="youtube-embed">
-                                    <iframe 
-                                        width="100%" height="515" 
-                                        src="https://www.youtube.com/embed/NbYgm0r7u6o?si=SBzpVqGHMJnhIuW-" 
-                                        title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                        allowfullscreen>
-                                    </iframe>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-            
-                    <div class="flex-grow-1" style="flex-basis: 40%;">
-                        <div class="card h-100">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Noter til video</h5>
-                                <p class="card-text"><i>Bare rolig - vi gemmer dem!</i></p>
-                                <div class="note-input-wrapper" style="flex: 1;">
-                                    <textarea id="intet" placeholder="Skriv dine noter her..." spellcheck="false"></textarea>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        <!-- 2 ROW END -->
-
-    </div>
-    <!-- YouTube Section End -->
-
-    <!-- Learning Area Starts -->
-    <div class="deshes-area deshes-area-background section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-top2 text-center">
-                        <h3><b>Øvelse</b> gør mester</h3>
-                        <p class="mt-4"><i>Det er okay at fejle! Du bliver bare klogere..</i></p>
-                        <div class="single-element-widget-exam col-lg-6 mx-auto mt-5">
-                            <div class="section-top-border">
-                                <h3 class="mb-30 title_color">Udfyld det der mangler</h3>
-
-                                <!-- TASK START -->
-
-                                <div class="row">
-                                    <div class="col-lg-12">
-
-                                        <div class="changelog-custom-learning">
-    
-                                            <blockquote class="generic-blockquote-bottom">
-                                                Vi vil gerne <b>instantere</b> en ArrayList som skal holde <b class="b-white">aldre</b>.. Hvad skal der stå i feltet herunder?
-                                            </blockquote>    
-
-                                            <label for="user-input" class="into-icon-learning">
-                                                ArrayList <input id="user-input01" type="text" placeholder="Input">
-                                            </label>
-
-                                            <span class="span-white">age = new ArrayList&lt;&gt;()</span>
-
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                                <!-- TASK END -->
-
-                                <!-- TASK START -->
-
-                                <div class="row">
-                                    <div class="col-lg-12">
-
-                                        <div class="changelog-custom-learning mt-5">
-    
-                                            <blockquote class="generic-blockquote-bottom">
-                                                <b>Instantier</b> en ArrayList kan holde vores <b>User.java</b> objekter. Den skal have variablen &quot;<b class="b-white">user</b>&quot;...
-                                            </blockquote>    
-
-                                            <label for="user-input" class="into-icon-learning-long">
-                                                <input id="user-input02" type="text" placeholder="Input">
-                                            </label>
-
-                                            <span class="span-white"></span>
-
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                                <!-- TASK END -->
-
-                                <!-- TASK START -->
-
-                                <div class="row">
-                                    <div class="col-lg-12">
-
-                                        <div class="changelog-custom-learning mt-5">
-    
-                                            <blockquote class="generic-blockquote-bottom">
-                                                <b>Instantier</b> en ArrayList af typen double herunder...<br><br>Den skal have variablen <b class="b-white">balance</b>!
-                                            </blockquote>    
-
-                                            <label for="user-input" class="into-icon-learning-long">
-                                                <input id="user-input03" type="text" placeholder="Input">
-                                            </label>
-
-                                            <span class="span-white"></span>
-
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                                <!-- TASK END -->
-
-                                <!-- Example button Start -->
-                                <div class="button-cool-overlay mt-5">
-                                    <button id="overlayBtn">Eksempel</button>
-
-                                    <div id="overlay"></div>
-
-                                    <div id="hiddenDiv">
-                                        <h5 class="card-title card-title-bottom-border">Titel her</h5>
-                                        <p class="mt-4"><i>Information her evt...</i></p>
-                                        <div class="container mt-5">
-                                            <div class="card code-card">
-                                                
-                                                <div class="card-header">
-                                                    Tekst her til eksempel
-                                                </div>
-
-                                                <div class="card-body p-0">
-                                                    <img id="codeImage" src="../assets/images/intelliJ/02_example_01.png" alt="Code Image" class="img-fluid" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="mt-4">
-                                            <button id="closeBtn">Close Overlay</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Example button End -->
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Learning Area End -->
-
-    <!-- Dynamic Learning Section Start -->
-    <div class="deshes-area new-blue section-padding text-center">
-
-        <div class="container">
-            <div class="row">
-
-                <div class="section-top2 col-lg-12 text-center">
-                    <h3>ArrayList <b>metoder</b></h3>
-                    <p class="mt-4"><i>import java.util.ArrayList</i></p>
-                </div>
-
-                    <!-- 4 ROW START -->
-
-                    <div class="col-lg-12 d-flex">
-
-                        <div class="container">
-                            <div class="row mt-5">
-
-                                <div class="col-lg-3">
-                                    <div class="card card-hover">
-                                        <div class="card-body">
-                                            <h5 class="method-title">
-                                                <span class="method-text-wrap">
-                                                  <span class="span-white method-text-default">add(E)</span>
-                                                  <span class="span-white method-text-hover">Tilføjer sidst i listen</span>
-                                                </span>
-                                            </h5>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-3">
-                                    <div class="card card-hover">
-                                        <div class="card-body">
-                                            <h5 class="method-title">
-                                                <span class="method-text-wrap">
-                                                  <span class="span-white method-text-default">add(int, E)</span>
-                                                  <span class="span-white method-text-hover">Element på bestemt plads</span>
-                                                </span>
-                                            </h5>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-3">
-                                    <div class="card card-hover">
-                                        <div class="card-body">
-                                            <h5 class="method-title">
-                                                <span class="method-text-wrap">
-                                                  <span class="span-white method-text-default">get(int)</span>
-                                                  <span class="span-white method-text-hover">Returnerer specifik plads</span>
-                                                </span>
-                                            </h5>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-3">
-                                    <div class="card card-hover">
-                                        <div class="card-body">
-                                            <h5 class="method-title">
-                                                <span class="method-text-wrap">
-                                                  <span class="span-white method-text-default">set(int, E)</span>
-                                                  <span class="span-white method-text-hover">Sætter element på plads</span>
-                                                </span>
-                                            </h5>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
                 
-                    </div>
-
-                    <!-- 4 ROW END -->
-
-                    <!-- 4 ROW START -->
-
-                    <div class="col-lg-12 d-flex">
-
-                        <div class="container">
-                            <div class="row mt-5">
-
-                                <div class="col-lg-3">
-                                    <div class="card card-hover">
-                                        <div class="card-body">
-                                            <h5 class="method-title">
-                                                <span class="method-text-wrap">
-                                                  <span class="span-white method-text-default">remove(int)</span>
-                                                  <span class="span-white method-text-hover">Fjerner specifik plads</span>
-                                                </span>
-                                            </h5>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-3">
-                                    <div class="card card-hover">
-                                        <div class="card-body">
-                                            <h5 class="method-title">
-                                                <span class="method-text-wrap">
-                                                  <span class="span-white method-text-default">clear()</span>
-                                                  <span class="span-white method-text-hover">Rydder listen</span>
-                                                </span>
-                                            </h5>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-3">
-                                    <div class="card card-hover">
-                                        <div class="card-body">
-                                            <h5 class="method-title">
-                                                <span class="method-text-wrap">
-                                                  <span class="span-white method-text-default">size()</span>
-                                                  <span class="span-white method-text-hover">Returnerer størrelsen på<br>listen</span>
-                                                </span>
-                                            </h5>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-3">
-                                    <div class="card card-hover">
-                                        <div class="card-body">
-                                            <h5 class="method-title">
-                                                <span class="method-text-wrap">
-                                                  <span class="span-white method-text-default">isEmpty()</span>
-                                                  <span class="span-white method-text-hover">Kigger om listen er tom</span>
-                                                </span>
-                                            </h5>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                
-                    </div>
-
-                    <!-- 4 ROW END -->
-
-            </div>
-        </div>
-        
-    </div>
-    <!-- Dynamic Learning Section End -->
-
-    <!-- Dropdown Info Section Start -->
-    <div class="deshes-area new-blue section-padding text-center">
-
-        <div style="visibility: hidden; position: absolute; width: 0px; height: 0px;">
-            <svg xmlns="http://www.w3.org/2000/svg">
-              <symbol viewBox="0 0 24 24" id="expand-more">
-                <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/><path d="M0 0h24v24H0z" fill="none"/>
-              </symbol>
-              <symbol viewBox="0 0 24 24" id="close">
-                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/><path d="M0 0h24v24H0z" fill="none"/>
-              </symbol>
-            </svg>
-        </div>
-          
-        <details open>
-            <summary>
-                Title here brothers!
-                <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" /></svg>
-                <svg class="control-icon control-icon-close" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" /></svg>
-            </summary>
-            <p>Inside text here broski..</p>
-        </details>
-          
-        <details>
-            <summary>
-                Title here brothers!
-                <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" /></svg>
-                <svg class="control-icon control-icon-close" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" /></svg>
-            </summary>
-            <p>Inside text here broski...</p>
-        </details>
-          
-        <details>
-            <summary>
-                Title here brothers!  
-                <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" /></svg>
-                <svg class="control-icon control-icon-close" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" /></svg>
-            </summary>
-            <p>Inside text here broski..</p>
-        </details>
-
-    </div>
-    <!-- Dropdown Info Section End -->
-
-    <!-- Fixed notification START -->
-    <div class="deshes-area new-blue section-padding text-center">
-
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 d-none" id="quiz-02-status" 
-                    style="position: fixed; bottom: 20px; right: 20px; width: 300px; z-index: 9999;">
-                    <div class="card-status h-100">
-                        <div class="card-body d-flex flex-column justify-content-center">
-                            <h5 class="card-title">02 | ArrayList</h5>
-                            <p class="card-text mb-2" data-status-id="status-02">0/3</p>
-                            <div class="progress" style="height: 20px;">
-                                <div class="progress-bar bg-warning" role="progressbar" style="width: 0%;"
-                                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" data-progress-id="progress-02">
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-
-    </div>
-    <!-- Fixed notification END -->
-
-    <!-- Like Section Start -->
-    <div class="deshes-area new-blue section-padding text-center no-spacing">
-
-        <div class="section-top2 col-lg-12 text-center">
-            <h3>Giv <b>02 | ArrayList</b> en rating</h3>
-            <p class="mt-4"><i>Tryk på den du føler for!</i></p>
-        </div>
-
-        <div class="d-flex justify-content-center align-items-center flex-row gap-4">
-            <div class="outer-circle position-relative mr-5">
-                <button class="like-button" onclick="scaleHeart()">Like</button>
-                <div class="like-count">12</div>
-                <div class="like-icon">
-                    <i class="fa fa-heart"></i>
-                </div>
-            </div>
-            
-            <div class="outer-circle position-relative ml-5">
-                <button class="like-button" onclick="scaleThumb()">Dislike</button>
-                <div class="dislike-count">0</div>
-                <div class="dislike-icon">
-                    <i class="fa fa-thumbs-down"></i>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    <!-- Like Section End -->
-
-
-    <!-- Exam Area Starts -->
-    <div class="deshes-area-02 section-padding" id="exam">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-lg-12">
-                    <div class="section-top2 text-center">
-                        <h3>Se om du har forstået <b>ArrayList</b> korrekt</h3>
-                        <p class="mt-4"><i>Du skal svare korrekt på alle spørgsmål for at bestå!</i></p>
-                        <div class="single-element-widget-exam col-lg-6 mx-auto mt-5">
-
-                            <div class="section-top-border">
-                                <h3 class="mb-30 title_color">02 | ArrayList</h3>
-                                
-                                <div class="row">
-                                    <div class="col-lg-12">
-
-                                        <div class="changelog-custom">
-                                            <h4 class="h4-background col-lg-4 mx-auto mb-5">1/10</h4>
-                                            <div id="visual-lives" class="d-flex justify-content-center mb-4">
-                                                <div class="life-star" id="star1">
-                                                    <img src="../assets/images/liv_star_final.png" class="star-img">
-                                                </div>
-                                                <div class="life-star" id="star2">
-                                                    <img src="../assets/images/liv_star_final.png" class="star-img">
-                                                    <img src="../assets/images/liv_astronaut_final.png" class="astronaut-img" id="astronaut">
-                                                </div>
-                                                <div class="life-star" id="star3">
-                                                    <img src="../assets/images/liv_star_final.png" class="star-img balloon">
-                                                </div>
-                                            </div>
-                                            <blockquote class="generic-blockquote">
-                                                En ArrayList er det samme som en Array..
-                                            </blockquote>
-                                            <button>Ja</button>
-                                            <button>Nej</button> 
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-
-        
-                        </div>
+              
+                <div class="col-lg-3">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Text</h5>
+                      </div>
                     </div>
                 </div>
-
             </div>
         </div>
-    </div>
-    <!-- Exam Area End -->
+        <!-- Component ROW END -->
 
     <!-- Javascript -->
     <script src="../assets/js/vendor/jquery-2.2.4.min.js"></script>

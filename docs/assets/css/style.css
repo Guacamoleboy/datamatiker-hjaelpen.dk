@@ -1354,6 +1354,17 @@ body.dark-mode .wave-path {
 
 }
 
+.i-candy-h4 code {
+    white-space: pre-wrap;
+    display: inline-block;
+    color: #fff;
+    font-size: 16px;
+    background-color: #494974;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
 .reservation-area {
     position: relative;
     padding-bottom: 150px; 
