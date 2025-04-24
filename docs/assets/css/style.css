@@ -3112,6 +3112,16 @@ body.dark-mode .banner-area2 p {
     transition: all 0.3s ease-in-out;
 }
 
+.row .learn-card-lol {
+    border-style: none !important;
+    border-radius: 25px;
+}
+
+.row .learn-card-lol:hover {
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+}
+
 .code-card {
     font-size: 18px !important;
     background-color: #51517e !important;

@@ -1,0 +1,4658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning Platform</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">LearnPro</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#courses">Courses</a></li>
+          <li class="nav-item"><a class="nav-link" href="#instructors">Instructors</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link btn btn-primary text-white" href="#signup">Sign Up</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="jumbotron text-center bg-primary text-white">
+    <h1 class="display-4">Level Up Your Learning</h1>
+    <p class="lead">Free and premium courses on web dev, data science, and more.</p>
+    <a class="btn btn-light btn-lg m-2" href="#">Get Started</a>
+    <a class="btn btn-outline-light btn-lg m-2" href="#">Browse Courses</a>
+  </div>
+
+  <!-- Feature Highlights -->
+  <div class="container text-center my-5">
+    <h2 class="mb-4">Why Choose LearnPro?</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <i class="fas fa-chalkboard-teacher fa-2x text-primary"></i>
+        <h5 class="mt-3">Expert Mentors</h5>
+        <p>Learn from industry professionals with years of real-world experience.</p>
+      </div>
+      <div class="col-md-4">
+        <i class="fas fa-laptop-code fa-2x text-primary"></i>
+        <h5 class="mt-3">Hands-on Projects</h5>
+        <p>Build real projects to reinforce your learning and boost your portfolio.</p>
+      </div>
+      <div class="col-md-4">
+        <i class="fas fa-certificate fa-2x text-primary"></i>
+        <h5 class="mt-3">Certifications</h5>
+        <p>Get certified after course completion and showcase your skills to employers.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Course Grid -->
+  <div class="container my-5" id="courses">
+    <h2 class="text-center mb-4">Popular Courses</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img class="card-img-top" src="https://placehold.co/350x150" alt="Course 1">
+          <div class="card-body">
+            <h5 class="card-title">Intro to HTML</h5>
+            <p class="card-text">Start your web journey here.</p>
+            <a href="#" class="btn btn-primary">Enroll</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img class="card-img-top" src="https://placehold.co/350x150" alt="Course 2">
+          <div class="card-body">
+            <h5 class="card-title">CSS for Beginners</h5>
+            <p class="card-text">Style your web pages beautifully.</p>
+            <a href="#" class="btn btn-primary">Enroll</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img class="card-img-top" src="https://placehold.co/350x150" alt="Course 3">
+          <div class="card-body">
+            <h5 class="card-title">JavaScript Basics</h5>
+            <p class="card-text">Make your websites interactive.</p>
+            <a href="#" class="btn btn-primary">Enroll</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Instructors Section -->
+  <div class="container" id="instructors">
+    <h2 class="text-center my-5">Meet Our Instructors</h2>
+    <div class="media mb-4">
+      <img class="mr-3 rounded-circle" src="https://placehold.co/80x80" alt="Instructor" width="80">
+      <div class="media-body">
+        <h5 class="mt-0">Jane Doe</h5>
+        Full Stack Developer with 10+ years of teaching experience.
+      </div>
+    </div>
+    <div class="media mb-4">
+      <img class="mr-3 rounded-circle" src="https://placehold.co/80x80" alt="Instructor" width="80">
+      <div class="media-body">
+        <h5 class="mt-0">John Smith</h5>
+        Data Scientist passionate about machine learning and AI education.
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonials Carousel -->
+  <div id="testimonialCarousel" class="carousel slide my-5" data-ride="carousel" id="testimonials">
+    <div class="carousel-inner">
+      <div class="carousel-item active text-center">
+        <blockquote class="blockquote">
+          <p class="mb-0">Best platform I’ve used to learn coding!</p>
+          <footer class="blockquote-footer">Alex Johnson</footer>
+        </blockquote>
+      </div>
+      <div class="carousel-item text-center">
+        <blockquote class="blockquote">
+          <p class="mb-0">High-quality content and amazing instructors.</p>
+          <footer class="blockquote-footer">Maria Lee</footer>
+        </blockquote>
+      </div>
+      <div class="carousel-item text-center">
+        <blockquote class="blockquote">
+          <p class="mb-0">The hands-on projects really helped solidify what I learned.</p>
+          <footer class="blockquote-footer">Daniel Wu</footer>
+        </blockquote>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#testimonialCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+  <!-- Newsletter Signup -->
+  <div class="container my-5" id="signup">
+    <div class="bg-light p-5 rounded">
+      <h2 class="text-center">Stay Updated</h2>
+      <p class="text-center">Subscribe to our newsletter to get the latest course updates and promotions.</p>
+      <form class="form-inline justify-content-center">
+        <input type="email" class="form-control mb-2 mr-sm-2" placeholder="Enter your email">
+        <button type="submit" class="btn btn-primary mb-2">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Existing content above remains unchanged -->
+
+  <!-- Blog Section -->
+  <div class="container my-5" id="blog">
+    <h2 class="text-center mb-4">Latest from Our Blog</h2>
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/600x300" class="card-img-top" alt="Blog Post 1">
+          <div class="card-body">
+            <h5 class="card-title">5 Tips for Learning Online Effectively</h5>
+            <p class="card-text">Struggling with focus or consistency? Here are five quick tips to help you succeed.</p>
+            <a href="#" class="btn btn-outline-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/600x300" class="card-img-top" alt="Blog Post 2">
+          <div class="card-body">
+            <h5 class="card-title">Top 10 Free Tools for Web Developers</h5>
+            <p class="card-text">Discover powerful tools that won't cost you a dime but will boost your productivity.</p>
+            <a href="#" class="btn btn-outline-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- News Section -->
+  <div class="container my-5" id="news">
+    <h2 class="text-center mb-4">Platform News</h2>
+    <ul class="list-group">
+      <li class="list-group-item">📢 New AI & ML course launching next week!</li>
+      <li class="list-group-item">🎉 We've hit 1M users—thank you for being part of our journey!</li>
+      <li class="list-group-item">📅 Web Dev Bootcamp live cohort starts July 1st—reserve your spot!</li>
+    </ul>
+  </div>
+
+  <!-- Quotes Section -->
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Inspiration</h2>
+    <div class="row text-center">
+      <div class="col-md-4">
+        <blockquote class="blockquote">
+          <p>"Learning never exhausts the mind."</p>
+          <footer class="blockquote-footer">Leonardo da Vinci</footer>
+        </blockquote>
+      </div>
+      <div class="col-md-4">
+        <blockquote class="blockquote">
+          <p>"An investment in knowledge pays the best interest."</p>
+          <footer class="blockquote-footer">Benjamin Franklin</footer>
+        </blockquote>
+      </div>
+      <div class="col-md-4">
+        <blockquote class="blockquote">
+          <p>"The beautiful thing about learning is nobody can take it away from you."</p>
+          <footer class="blockquote-footer">B.B. King</footer>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+
+  <!-- Advanced Course Cards -->
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Explore More Courses</h2>
+    <div class="row">
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100">
+          <img class="card-img-top" src="https://placehold.co/300x150" alt="Course">
+          <div class="card-body">
+            <h5 class="card-title">Python for Data Analysis</h5>
+            <p class="card-text">Master Python libraries like Pandas, Numpy, and Matplotlib.</p>
+          </div>
+          <div class="card-footer text-center">
+            <a href="#" class="btn btn-primary">Enroll</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-12 mb-4">
+        <div class="card">
+          <img class="card-img-top" src="https://placehold.co/600x300" alt="Course">
+          <div class="card-body">
+            <h4 class="card-title">Full-Stack Developer Bootcamp</h4>
+            <p class="card-text">From frontend to backend, become job-ready with our intensive bootcamp.</p>
+            <a href="#" class="btn btn-success">Join Bootcamp</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100">
+          <img class="card-img-top" src="https://placehold.co/300x150" alt="Course">
+          <div class="card-body">
+            <h5 class="card-title">Intro to UI/UX Design</h5>
+            <p class="card-text">Learn to craft user-friendly interfaces and experiences.</p>
+          </div>
+          <div class="card-footer text-center">
+            <a href="#" class="btn btn-primary">Start Learning</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Existing sections remain unchanged -->
+
+  <!-- Grid Layout Variations Section -->
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Card Grid Layout Variations</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/400x200" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Compact Grid Card</h5>
+            <p class="card-text">Ideal for displaying dense content in a small space.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/800x200" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Wide Layout Card</h5>
+            <p class="card-text">Useful for showcasing wide images or extended content blocks.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Minimal Card</h5>
+            <p class="card-text">No image, pure content for a clean design.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/600x200" class="card-img-top" alt="Card image">
+          <div class="card-body">
+            <h5 class="card-title">Balanced Media Card</h5>
+            <p class="card-text">Balanced mix of media and text.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonials Section -->
+  <div class="container my-5" id="testimonials">
+    <h2 class="text-center mb-4">What Our Learners Say</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card p-3">
+          <blockquote class="blockquote mb-0 card-body">
+            <p>"This platform changed my life. I landed a job within 3 months!"</p>
+            <footer class="blockquote-footer">Alex R., <cite title="Source Title">Web Developer</cite></footer>
+          </blockquote>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-3">
+          <blockquote class="blockquote mb-0 card-body">
+            <p>"The community and support are incredible. Highly recommend it!"</p>
+            <footer class="blockquote-footer">Maria S., <cite title="Source Title">UI Designer</cite></footer>
+          </blockquote>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-3">
+          <blockquote class="blockquote mb-0 card-body">
+            <p>"A treasure trove of knowledge. So much value for so little!"</p>
+            <footer class="blockquote-footer">James T., <cite title="Source Title">Data Analyst</cite></footer>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Feature Highlights Section -->
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Why Choose Us?</h2>
+    <div class="row text-center">
+      <div class="col-md-3">
+        <div class="card p-3">
+          <h5 class="card-title">Expert Instructors</h5>
+          <p class="card-text">Learn from industry leaders and experienced professionals.</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card p-3">
+          <h5 class="card-title">Flexible Learning</h5>
+          <p class="card-text">Self-paced courses accessible anytime, anywhere.</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card p-3">
+          <h5 class="card-title">Certifications</h5>
+          <p class="card-text">Earn certificates to boost your resume and credibility.</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card p-3">
+          <h5 class="card-title">Community Support</h5>
+          <p class="card-text">Get help, share tips, and connect with other learners.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Existing sections remain unchanged -->
+
+  <!-- Pricing Table Section -->
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Pricing Plans</h2>
+    <div class="row text-center">
+      <div class="col-md-4">
+        <div class="card mb-4 box-shadow">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Free</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Access to limited courses</li>
+              <li>Community support</li>
+            </ul>
+            <button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-4 box-shadow">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Pro</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$15 <small class="text-muted">/ mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Unlimited courses</li>
+              <li>Certificate of completion</li>
+              <li>Email support</li>
+            </ul>
+            <button type="button" class="btn btn-lg btn-block btn-primary">Get started</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-4 box-shadow">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Enterprise</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$29 <small class="text-muted">/ mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Team management</li>
+              <li>Priority support</li>
+              <li>Dedicated dashboard</li>
+            </ul>
+            <button type="button" class="btn btn-lg btn-block btn-primary">Contact us</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ Section -->
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+    <div class="accordion" id="faqAccordion">
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h2 class="mb-0">
+            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne">
+              How do I enroll in a course?
+            </button>
+          </h2>
+        </div>
+        <div id="collapseOne" class="collapse" data-parent="#faqAccordion">
+          <div class="card-body">You can enroll by clicking the 'Enroll' button on any course card.</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo">
+              Do I get a certificate?
+            </button>
+          </h2>
+        </div>
+        <div id="collapseTwo" class="collapse" data-parent="#faqAccordion">
+          <div class="card-body">Yes, most courses come with a certificate of completion.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- User Dashboard Preview -->
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Dashboard Preview</h2>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Welcome back, Alex!</h5>
+        <p class="card-text">Here's a quick summary of your progress:</p>
+        <ul>
+          <li>Python Basics - 80% complete</li>
+          <li>UI/UX Design - 30% complete</li>
+        </ul>
+        <a href="#" class="btn btn-primary">Go to Dashboard</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Form -->
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Get in Touch</h2>
+    <form>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Your Name">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="name@example.com">
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea class="form-control" id="message" rows="3"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+
+  <!-- Dark Mode Toggle -->
+  <div class="container text-center my-5">
+    <button class="btn btn-dark" onclick="document.body.classList.toggle('dark-mode')">Toggle Dark Mode</button>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+  <!-- Existing sections remain unchanged -->
+
+  <!-- Blog Section -->
+  <div class="container my-5">
+    <h2 class="text-center mb-4">From the Blog</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://picsum.photos/400/200" class="card-img-top" alt="Blog post">
+          <div class="card-body">
+            <h5 class="card-title">Latest Trends in Online Learning</h5>
+            <p class="card-text">Explore how modern platforms are changing the way we learn new skills.</p>
+            <a href="#" class="btn btn-outline-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://picsum.photos/400/200" class="card-img-top" alt="Blog post">
+          <div class="card-body">
+            <h5 class="card-title">Tips for Staying Productive</h5>
+            <p class="card-text">Learn how to maximize productivity while studying from home.</p>
+            <a href="#" class="btn btn-outline-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://picsum.photos/400/200" class="card-img-top" alt="Blog post">
+          <div class="card-body">
+            <h5 class="card-title">Career Paths in Tech</h5>
+            <p class="card-text">Discover the most in-demand tech skills and how to acquire them.</p>
+            <a href="#" class="btn btn-outline-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Course Listings Section -->
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Popular Courses</h2>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="card">
+          <img src="https://picsum.photos/300/150" class="card-img-top" alt="Course">
+          <div class="card-body">
+            <h5 class="card-title">Intro to Python</h5>
+            <p class="card-text">Beginner-friendly course covering Python basics.</p>
+            <a href="#" class="btn btn-sm btn-primary">Enroll</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <img src="https://picsum.photos/300/150" class="card-img-top" alt="Course">
+          <div class="card-body">
+            <h5 class="card-title">Web Development</h5>
+            <p class="card-text">Learn HTML, CSS, and JavaScript from scratch.</p>
+            <a href="#" class="btn btn-sm btn-primary">Enroll</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <img src="https://picsum.photos/300/150" class="card-img-top" alt="Course">
+          <div class="card-body">
+            <h5 class="card-title">Data Science</h5>
+            <p class="card-text">An introduction to data analysis and machine learning.</p>
+            <a href="#" class="btn btn-sm btn-primary">Enroll</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <img src="https://picsum.photos/300/150" class="card-img-top" alt="Course">
+          <div class="card-body">
+            <h5 class="card-title">UI/UX Design</h5>
+            <p class="card-text">Design beautiful and user-friendly interfaces.</p>
+            <a href="#" class="btn btn-sm btn-primary">Enroll</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4 mt-5">
+    <div class="container text-center">
+      <p>&copy; 2025 Learning Platform. All rights reserved.</p>
+      <a href="#" class="text-white">Privacy Policy</a> | <a href="#" class="text-white">Terms of Use</a>
+    </div>
+  </footer>
+
+  <!-- Testimonials -->
+  <div class="container my-5">
+    <h2 class="text-center mb-4">What Our Students Say</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <blockquote class="blockquote">
+          <p class="mb-0">“This platform has completely transformed the way I learn!”</p>
+          <footer class="blockquote-footer">Alex Johnson, <cite title="Source Title">Python Learner</cite></footer>
+        </blockquote>
+      </div>
+      <div class="col-md-4">
+        <blockquote class="blockquote">
+          <p class="mb-0">“The courses are clear, concise, and really helpful.”</p>
+          <footer class="blockquote-footer">Maria Lopez, <cite title="Source Title">Web Dev Student</cite></footer>
+        </blockquote>
+      </div>
+      <div class="col-md-4">
+        <blockquote class="blockquote">
+          <p class="mb-0">“Amazing instructors and content. Highly recommend!”</p>
+          <footer class="blockquote-footer">James Kim, <cite title="Source Title">UX Designer</cite></footer>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quote Banner -->
+  <div class="jumbotron jumbotron-fluid bg-primary text-white text-center">
+    <div class="container">
+      <h1 class="display-4">“Learning never exhausts the mind.”</h1>
+      <p class="lead">- Leonardo da Vinci</p>
+    </div>
+  </div>
+
+  <!-- Grid Variation -->
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Explore Categories</h2>
+    <div class="row">
+      <div class="col-lg-6 mb-4">
+        <div class="card h-100">
+          <img src="https://picsum.photos/600/300" class="card-img-top" alt="Category">
+          <div class="card-body">
+            <h5 class="card-title">Programming</h5>
+            <p class="card-text">Courses in Python, Java, C++, and more.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 mb-4">
+        <div class="card h-100">
+          <img src="https://picsum.photos/300/200" class="card-img-top" alt="Category">
+          <div class="card-body">
+            <h5 class="card-title">Design</h5>
+            <p class="card-text">UI/UX, graphic, and web design courses.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 mb-4">
+        <div class="card h-100">
+          <img src="https://picsum.photos/300/200" class="card-img-top" alt="Category">
+          <div class="card-body">
+            <h5 class="card-title">Marketing</h5>
+            <p class="card-text">Digital, SEO, and content marketing strategies.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonials -->
+  <div class="container my-5">
+    <h2 class="text-center mb-4">What Our Students Say</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <blockquote class="blockquote">
+          <p class="mb-0">“This platform has completely transformed the way I learn!”</p>
+          <footer class="blockquote-footer">Alex Johnson, <cite title="Source Title">Python Learner</cite></footer>
+        </blockquote>
+      </div>
+      <div class="col-md-4">
+        <blockquote class="blockquote">
+          <p class="mb-0">“The courses are clear, concise, and really helpful.”</p>
+          <footer class="blockquote-footer">Maria Lopez, <cite title="Source Title">Web Dev Student</cite></footer>
+        </blockquote>
+      </div>
+      <div class="col-md-4">
+        <blockquote class="blockquote">
+          <p class="mb-0">“Amazing instructors and content. Highly recommend!”</p>
+          <footer class="blockquote-footer">James Kim, <cite title="Source Title">UX Designer</cite></footer>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quote Banner -->
+  <div class="jumbotron jumbotron-fluid bg-primary text-white text-center">
+    <div class="container">
+      <h1 class="display-4">“Learning never exhausts the mind.”</h1>
+      <p class="lead">- Leonardo da Vinci</p>
+    </div>
+  </div>
+
+  <!-- Grid Variation -->
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Explore Categories</h2>
+    <div class="row">
+      <div class="col-lg-6 mb-4">
+        <div class="card h-100">
+          <img src="https://picsum.photos/600/300" class="card-img-top" alt="Category">
+          <div class="card-body">
+            <h5 class="card-title">Programming</h5>
+            <p class="card-text">Courses in Python, Java, C++, and more.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 mb-4">
+        <div class="card h-100">
+          <img src="https://picsum.photos/300/200" class="card-img-top" alt="Category">
+          <div class="card-body">
+            <h5 class="card-title">Design</h5>
+            <p class="card-text">UI/UX, graphic, and web design courses.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 mb-4">
+        <div class="card h-100">
+          <img src="https://picsum.photos/300/200" class="card-img-top" alt="Category">
+          <div class="card-body">
+            <h5 class="card-title">Marketing</h5>
+            <p class="card-text">Digital, SEO, and content marketing strategies.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2-Column Card Grid -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Featured Courses</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <img src="https://picsum.photos/500/300" class="card-img-top" alt="Course Image">
+          <div class="card-body">
+            <h5 class="card-title">Advanced JavaScript</h5>
+            <p class="card-text">Master advanced JS concepts and frameworks.</p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <img src="https://picsum.photos/500/300" class="card-img-top" alt="Course Image">
+          <div class="card-body">
+            <h5 class="card-title">React for Beginners</h5>
+            <p class="card-text">Get started with React.js and build dynamic apps.</p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- 3-Column Card Grid -->
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Popular Blogs</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://picsum.photos/400/200" class="card-img-top" alt="Blog Post">
+          <div class="card-body">
+            <h5 class="card-title">How to Stay Motivated While Learning</h5>
+            <p class="card-text">Learn strategies for staying focused and motivated.</p>
+            <a href="#" class="btn btn-outline-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://picsum.photos/400/200" class="card-img-top" alt="Blog Post">
+          <div class="card-body">
+            <h5 class="card-title">Mastering Time Management</h5>
+            <p class="card-text">Tips and tricks to help you manage your time more effectively.</p>
+            <a href="#" class="btn btn-outline-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://picsum.photos/400/200" class="card-img-top" alt="Blog Post">
+          <div class="card-body">
+            <h5 class="card-title">Understanding Machine Learning</h5>
+            <p class="card-text">An introduction to machine learning concepts and techniques.</p>
+            <a href="#" class="btn btn-outline-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- 6-Column Card Grid -->
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Featured Instructors</h2>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="card">
+          <img src="https://picsum.photos/150/150" class="card-img-top rounded-circle" alt="Instructor">
+          <div class="card-body">
+            <h5 class="card-title">John Doe</h5>
+            <p class="card-text">Web Development Expert</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="card">
+          <img src="https://picsum.photos/150/150" class="card-img-top rounded-circle" alt="Instructor">
+          <div class="card-body">
+            <h5 class="card-title">Jane Smith</h5>
+            <p class="card-text">Data Science Specialist</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="card">
+          <img src="https://picsum.photos/150/150" class="card-img-top rounded-circle" alt="Instructor">
+          <div class="card-body">
+            <h5 class="card-title">Maria Lopez</h5>
+            <p class="card-text">UI/UX Designer</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="card">
+          <img src="https://picsum.photos/150/150" class="card-img-top rounded-circle" alt="Instructor">
+          <div class="card-body">
+            <h5 class="card-title">David Green</h5>
+            <p class="card-text">Python Master</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="card">
+          <img src="https://picsum.photos/150/150" class="card-img-top rounded-circle" alt="Instructor">
+          <div class="card-body">
+            <h5 class="card-title">Emily Brown</h5>
+            <p class="card-text">Digital Marketing Guru</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="card">
+          <img src="https://picsum.photos/150/150" class="card-img-top rounded-circle" alt="Instructor">
+          <div class="card-body">
+            <h5 class="card-title">Samuel White</h5>
+            <p class="card-text">Cloud Computing Expert</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- 9-Column Card Grid -->
+  <div class="container my-5">
+    <h2 class="text-center mb-4">All Courses</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://picsum.photos/400/200" class="card-img-top" alt="Course Image">
+          <div class="card-body">
+            <h5 class="card-title">Intro to Python</h5>
+            <p class="card-text">Get started with Python programming in this beginner course.</p>
+            <a href="#" class="btn btn-outline-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://picsum.photos/400/200" class="card-img-top" alt="Course Image">
+          <div class="card-body">
+            <h5 class="card-title">Web Development</h5>
+            <p class="card-text">Learn HTML, CSS, and JavaScript in this comprehensive course.</p>
+            <a href="#" class="btn btn-outline-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://picsum.photos/400/200" class="card-img-top" alt="Course Image">
+          <div class="card-body">
+            <h5 class="card-title">Data Science</h5>
+            <p class="card-text">Dive into data analysis, machine learning, and more.</p>
+            <a href="#" class="btn btn-outline-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://picsum.photos/400/200" class="card-img-top" alt="Course Image">
+          <div class="card-body">
+            <h5 class="card-title">Digital Marketing</h5>
+            <p class="card-text">Master SEO, social media, and email marketing strategies.</p>
+            <a href="#" class="btn btn-outline-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://picsum.photos/400/200" class="card-img-top" alt="Course Image">
+          <div class="card-body">
+            <h5 class="card-title">Graphic Design</h5>
+            <p class="card-text">Learn design fundamentals and tools like Photoshop and Illustrator.</p>
+            <a href="#" class="btn btn-outline-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://picsum.photos/400/200" class="card-img-top" alt="Course Image">
+          <div class="card-body">
+            <h5 class="card-title">Mobile App Development</h5>
+            <p class="card-text">Build iOS and Android apps with popular tools.</p>
+            <a href="#" class="btn btn-outline-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://picsum.photos/400/200" class="card-img-top" alt="Course Image">
+          <div class="card-body">
+            <h5 class="card-title">UI/UX Design</h5>
+            <p class="card-text">Design beautiful, user-friendly interfaces.</p>
+            <a href="#" class="btn btn-outline-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://picsum.photos/400/200" class="card-img-top" alt="Course Image">
+          <div class="card-body">
+            <h5 class="card-title">Cloud Computing</h5>
+            <p class="card-text">Learn about cloud services and architecture.</p>
+            <a href="#" class="btn btn-outline-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://picsum.photos/400/200" class="card-img-top" alt="Course Image">
+          <div class="card-body">
+            <h5 class="card-title">Cybersecurity</h5>
+            <p class="card-text">Protect data and networks from threats and vulnerabilities.</p>
+            <a href="#" class="btn btn-outline-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Our Courses</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card" style="transition: transform 0.3s ease;">
+          <img src="https://picsum.photos/400/200" class="card-img-top" alt="Course Image">
+          <div class="card-body">
+            <h5 class="card-title">Intro to Web Design</h5>
+            <p class="card-text">A beginner's guide to designing beautiful websites.</p>
+            <a href="#" class="btn btn-primary">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card" style="transition: transform 0.3s ease;">
+          <img src="https://picsum.photos/400/200" class="card-img-top" alt="Course Image">
+          <div class="card-body">
+            <h5 class="card-title">Mastering JavaScript</h5>
+            <p class="card-text">Get hands-on experience with JavaScript fundamentals.</p>
+            <a href="#" class="btn btn-primary">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card" style="transition: transform 0.3s ease;">
+          <img src="https://picsum.photos/400/200" class="card-img-top" alt="Course Image">
+          <div class="card-body">
+            <h5 class="card-title">Data Science Bootcamp</h5>
+            <p class="card-text">Learn Python, data analysis, and machine learning.</p>
+            <a href="#" class="btn btn-primary">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        card.style.transform = 'scale(1.05)';
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'scale(1)';
+      });
+    });
+  </script>
+
+<div class="container my-5">
+    <h2 class="text-center mb-4">Featured Instructors</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card position-relative">
+          <img src="https://picsum.photos/400/250" class="card-img-top" alt="Instructor Image">
+          <div class="overlay position-absolute w-100 h-100 d-flex align-items-center justify-content-center text-center" style="background-color: rgba(0, 0, 0, 0.5); top: 0; left: 0;">
+            <h5 class="text-white">Jane Smith</h5>
+            <p class="text-white">Frontend Developer</p>
+          </div>
+          <div class="card-body">
+            <a href="#" class="btn btn-light">View Profile</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card position-relative">
+          <img src="https://picsum.photos/400/250" class="card-img-top" alt="Instructor Image">
+          <div class="overlay position-absolute w-100 h-100 d-flex align-items-center justify-content-center text-center" style="background-color: rgba(0, 0, 0, 0.5); top: 0; left: 0;">
+            <h5 class="text-white">John Doe</h5>
+            <p class="text-white">Data Scientist</p>
+          </div>
+          <div class="card-body">
+            <a href="#" class="btn btn-light">View Profile</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card position-relative">
+          <img src="https://picsum.photos/400/250" class="card-img-top" alt="Instructor Image">
+          <div class="overlay position-absolute w-100 h-100 d-flex align-items-center justify-content-center text-center" style="background-color: rgba(0, 0, 0, 0.5); top: 0; left: 0;">
+            <h5 class="text-white">Maria Lopez</h5>
+            <p class="text-white">UX/UI Designer</p>
+          </div>
+          <div class="card-body">
+            <a href="#" class="btn btn-light">View Profile</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Top Courses</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="badge bg-danger position-absolute" style="top: 10px; left: 10px;">Trending</div>
+          <img src="https://picsum.photos/400/200" class="card-img-top" alt="Course Image">
+          <div class="card-body">
+            <h5 class="card-title">Full Stack Development</h5>
+            <p class="card-text">Learn frontend and backend development skills.</p>
+            <a href="#" class="btn btn-primary">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="badge bg-warning position-absolute" style="top: 10px; left: 10px;">New</div>
+          <img src="https://picsum.photos/400/200" class="card-img-top" alt="Course Image">
+          <div class="card-body">
+            <h5 class="card-title">Machine Learning Basics</h5>
+            <p class="card-text">Understand the core concepts of machine learning and AI.</p>
+            <a href="#" class="btn btn-primary">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="badge bg-success position-absolute" style="top: 10px; left: 10px;">Popular</div>
+          <img src="https://picsum.photos/400/200" class="card-img-top" alt="Course Image">
+          <div class="card-body">
+            <h5 class="card-title">Web Development Bootcamp</h5>
+            <p class="card-text">Comprehensive course to build modern websites.</p>
+            <a href="#" class="btn btn-primary">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Featured Courses</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card bg-dark text-white">
+          <div class="card-img-overlay d-flex align-items-center justify-content-center">
+            <div>
+              <h4 class="card-title">Data Analytics</h4>
+              <p class="card-text">Learn the skills to analyze and interpret data effectively.</p>
+              <a href="#" class="btn btn-light">Enroll Now</a>
+            </div>
+          </div>
+          <img src="https://picsum.photos/400/250" class="card-img" alt="Course Image" style="opacity: 0.7;">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card bg-dark text-white">
+          <div class="card-img-overlay d-flex align-items-center justify-content-center">
+            <div>
+              <h4 class="card-title">Cybersecurity Fundamentals</h4>
+              <p class="card-text">Protect and secure information and systems from cyber threats.</p>
+              <a href="#" class="btn btn-light">Enroll Now</a>
+            </div>
+          </div>
+          <img src="https://picsum.photos/400/250" class="card-img" alt="Course Image" style="opacity: 0.7;">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card bg-dark text-white">
+          <div class="card-img-overlay d-flex align-items-center justify-content-center">
+            <div>
+              <h4 class="card-title">Artificial Intelligence</h4>
+              <p class="card-text">Delve into AI concepts and build smart systems.</p>
+              <a href="#" class="btn btn-light">Enroll Now</a>
+            </div>
+          </div>
+          <img src="https://picsum.photos/400/250" class="card-img" alt="Course Image" style="opacity: 0.7;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Popular Instructors</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://picsum.photos/400/200" class="card-img-top" alt="Instructor">
+          <div class="card-body">
+            <h5 class="card-title">John Doe</h5>
+            <p class="card-text">Expert in Web Development and Design</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://picsum.photos/400/200" class="card-img-top" alt="Instructor">
+          <div class="card-body">
+            <h5 class="card-title">Jane Smith</h5>
+            <p class="card-text">Leading Data Scientist with 10+ years of experience</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://picsum.photos/400/200" class="card-img-top" alt="Instructor">
+          <div class="card-body">
+            <h5 class="card-title">Maria Lopez</h5>
+            <p class="card-text">UI/UX Designer focused on user-centric design</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Inspirational Quotes</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card text-center">
+          <div class="card-body">
+            <blockquote class="blockquote">
+              <p class="mb-0">"The only limit to our realization of tomorrow is our doubts of today."</p>
+              <footer class="blockquote-footer">Franklin D. Roosevelt</footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card text-center">
+          <div class="card-body">
+            <blockquote class="blockquote">
+              <p class="mb-0">"Success is not the key to happiness. Happiness is the key to success."</p>
+              <footer class="blockquote-footer">Albert Schweitzer</footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card text-center">
+          <div class="card-body">
+            <blockquote class="blockquote">
+              <p class="mb-0">"Do not wait to strike till the iron is hot, but make it hot by striking."</p>
+              <footer class="blockquote-footer">William Butler Yeats</footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Skills Progress</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <p>Python Programming</p>
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <p>Web Development</p>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <p>Data Science</p>
+        <div class="progress">
+          <div class="progress-bar bg-warning" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Button trigger modal -->
+<button type="button" class="btn btn-info" data-toggle="modal" data-target="#courseModal">
+    View Course Details
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="courseModal" tabindex="-1" role="dialog" aria-labelledby="courseModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="courseModalLabel">Course: Web Development 101</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Learn how to build a website from scratch using HTML, CSS, and JavaScript. This course is perfect for beginners looking to enter the world of web development.</p>
+          <ul>
+            <li>Introduction to HTML</li>
+            <li>CSS Styling</li>
+            <li>JavaScript Basics</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Enroll Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+    <div class="accordion" id="faqAccordion">
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h5 class="mb-0">
+            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              What is a Learning Platform?
+            </button>
+          </h5>
+        </div>
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#faqAccordion">
+          <div class="card-body">
+            A learning platform is an online environment that provides educational courses, resources, and tools for students.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              How do I enroll in a course?
+            </button>
+          </h5>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqAccordion">
+          <div class="card-body">
+            Simply navigate to the course page and click on the "Enroll Now" button to get started.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Upcoming Event</h2>
+    <div class="text-center">
+      <div id="countdown"></div>
+    </div>
+  </div>
+  
+  <script>
+    // Countdown Timer
+    var countDownDate = new Date("May 31, 2025 00:00:00").getTime();
+    var x = setInterval(function() {
+      var now = new Date().getTime();
+      var distance = countDownDate - now;
+      
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+      document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+      + minutes + "m " + seconds + "s ";
+  
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("countdown").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+  </script>
+
+<div class="container my-5">
+    <h2 class="text-center mb-4">Hoverable Cards</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card hover-shadow-lg">
+          <img src="https://picsum.photos/400/200" class="card-img-top" alt="Course Image">
+          <div class="card-body">
+            <h5 class="card-title">Intro to Machine Learning</h5>
+            <p class="card-text">Understand the basics of machine learning with practical examples.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card hover-shadow-lg">
+          <img src="https://picsum.photos/400/200" class="card-img-top" alt="Course Image">
+          <div class="card-body">
+            <h5 class="card-title">Web Development Advanced</h5>
+            <p class="card-text">Take your web development skills to the next level with React and Node.js.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card hover-shadow-lg">
+          <img src="https://picsum.photos/400/200" class="card-img-top" alt="Course Image">
+          <div class="card-body">
+            <h5 class="card-title">UI/UX Design Basics</h5>
+            <p class="card-text">Learn the principles of user interface and experience design.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <style>
+    .hover-shadow-lg:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease-in-out;
+    }
+  </style>
+
+<div class="container my-5">
+    <h2 class="text-center mb-4">What Our Students Say</h2>
+    <div id="testimonialCarousel" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="d-flex justify-content-center">
+            <div class="card text-center" style="width: 18rem;">
+              <div class="card-body">
+                <p class="card-text">"The Web Development course was fantastic! It helped me build my first website and boosted my confidence."</p>
+                <footer class="blockquote-footer">John Doe, <cite title="Source Title">Student</cite></footer>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="d-flex justify-content-center">
+            <div class="card text-center" style="width: 18rem;">
+              <div class="card-body">
+                <p class="card-text">"I love how interactive the courses are. The Python course gave me real-world programming experience."</p>
+                <footer class="blockquote-footer">Jane Smith, <cite title="Source Title">Student</cite></footer>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#testimonialCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Our Students' Skill Levels</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <p>JavaScript</p>
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <p>Python</p>
+        <div class="progress">
+          <div class="progress-bar bg-info" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <p>UI/UX Design</p>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <p>Web Development</p>
+        <div class="progress">
+          <div class="progress-bar bg-warning" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    $(document).ready(function() {
+      $('.progress-bar').each(function () {
+        var width = $(this).attr('aria-valuenow');
+        $(this).animate({
+          width: width + '%'
+        }, 1500);
+      });
+    });
+  </script>
+
+<div class="container my-5">
+    <h2 class="text-center mb-4">Course Completion Stats</h2>
+    <canvas id="completionChart"></canvas>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    var ctx = document.getElementById('completionChart').getContext('2d');
+    var myPieChart = new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: ['Completed', 'In Progress', 'Not Started'],
+        datasets: [{
+          data: [70, 20, 10],
+          backgroundColor: ['#36A2EB', '#FFCE56', '#FF6384'],
+          hoverBackgroundColor: ['#36A2EB', '#FFCE56', '#FF6384']
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'top',
+          }
+        }
+      }
+    });
+  </script>
+
+  
+  
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Course Enrollment</h2>
+    <form id="enrollmentForm">
+      <!-- Step 1 -->
+      <div class="form-step form-step-1">
+        <h5>Step 1: Personal Information</h5>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Full Name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" class="form-control" placeholder="Email Address" required>
+        </div>
+        <button type="button" class="btn btn-primary" onclick="nextStep(1)">Next</button>
+      </div>
+  
+      <!-- Step 2 -->
+      <div class="form-step form-step-2" style="display:none;">
+        <h5>Step 2: Course Selection</h5>
+        <div class="form-group">
+          <select class="form-control" required>
+            <option value="">Select a Course</option>
+            <option value="webdev">Web Development</option>
+            <option value="python">Python</option>
+          </select>
+        </div>
+        <button type="button" class="btn btn-secondary" onclick="nextStep(-1)">Back</button>
+        <button type="button" class="btn btn-primary" onclick="nextStep(1)">Next</button>
+      </div>
+  
+      <!-- Step 3 -->
+      <div class="form-step form-step-3" style="display:none;">
+        <h5>Step 3: Review & Submit</h5>
+        <p>Please review your details before submitting your enrollment.</p>
+        <button type="button" class="btn btn-secondary" onclick="nextStep(-1)">Back</button>
+        <button type="submit" class="btn btn-success">Submit</button>
+      </div>
+    </form>
+  </div>
+  
+  <script>
+    function nextStep(step) {
+      var currentStep = document.querySelector('.form-step:not([style*="display: none"])');
+      var nextStep = document.querySelectorAll('.form-step')[Array.from(currentStep.parentNode.children).indexOf(currentStep) + step];
+      currentStep.style.display = 'none';
+      nextStep.style.display = 'block';
+    }
+  </script>
+  
+  <div id="imageSlider" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://picsum.photos/600/300" class="d-block w-100" alt="Course Image">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Course 1: Web Development</h5>
+          <p>Learn how to build websites from scratch using HTML, CSS, and JavaScript.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://picsum.photos/600/300?random=1" class="d-block w-100" alt="Course Image">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Course 2: Python Programming</h5>
+          <p>Master the fundamentals of Python programming and build real-world projects.</p>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#imageSlider" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#imageSlider" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+  <div class="container my-5">
+    <h2 class="text-center mb-4">New Updates</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://picsum.photos/400/200" class="card-img-top" alt="Update Image">
+          <div class="card-body">
+            <h5 class="card-title">New Course Released</h5>
+            <p class="card-text">We've just launched a new course on AI and Machine Learning. Check it out now!</p>
+            <span class="badge badge-danger">New</span>
+            <a href="#" class="btn btn-outline-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+    <div id="faqAccordion">
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h5 class="mb-0">
+            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              What is this platform?
+            </button>
+          </h5>
+        </div>
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#faqAccordion">
+          <div class="card-body">
+            This is an online learning platform offering courses in various subjects such as programming, design, and data science.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              How can I enroll in a course?
+            </button>
+          </h5>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqAccordion">
+          <div class="card-body">
+            You can simply go to our courses page, select your desired course, and click the enroll button.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Quick Course View</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://picsum.photos/400/200" class="card-img-top" alt="Course Image">
+          <div class="card-body">
+            <h5 class="card-title">Data Science 101</h5>
+            <p class="card-text">Begin your journey into data science with hands-on learning.</p>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#courseModal">Quick View</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="courseModal" tabindex="-1" role="dialog" aria-labelledby="courseModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="courseModalLabel">Data Science 101</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>This course introduces you to data science concepts, including data manipulation, visualization, and basic machine learning.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Enroll Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Platform Stats</h2>
+    <div class="row">
+      <div class="col-md-3 text-center">
+        <h3 class="count" data-count="500">0</h3>
+        <p>Courses Available</p>
+      </div>
+      <div class="col-md-3 text-center">
+        <h3 class="count" data-count="20000">0</h3>
+        <p>Students Enrolled</p>
+      </div>
+      <div class="col-md-3 text-center">
+        <h3 class="count" data-count="300">0</h3>
+        <p>Completed Projects</p>
+      </div>
+      <div class="col-md-3 text-center">
+        <h3 class="count" data-count="100">0</h3>
+        <p>Certified Instructors</p>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    $(document).ready(function() {
+      $('.count').each(function () {
+        var $this = $(this);
+        var countTo = $this.attr('data-count');
+        $({ countNum: $this.text() }).animate({ countNum: countTo }, {
+          duration: 2000,
+          easing: 'swing',
+          step: function () {
+            $this.text(Math.floor(this.countNum));
+          },
+          complete: function () {
+            $this.text(this.countNum);
+          }
+        });
+      });
+    });
+  </script>
+
+<div class="container my-5">
+    <h2 class="text-center mb-4">Choose Your Plan</h2>
+    <div class="row text-center">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-header bg-primary text-white">
+            <h5>Basic Plan</h5>
+          </div>
+          <div class="card-body">
+            <h3>$10/month</h3>
+            <p>Access to all beginner courses.</p>
+            <a href="#" class="btn btn-primary">Sign Up</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-header bg-success text-white">
+            <h5>Standard Plan</h5>
+          </div>
+          <div class="card-body">
+            <h3>$30/month</h3>
+            <p>Access to all courses and premium content.</p>
+            <a href="#" class="btn btn-success">Sign Up</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-header bg-danger text-white">
+            <h5>Premium Plan</h5>
+          </div>
+          <div class="card-body">
+            <h3>$50/month</h3>
+            <p>Access to all courses, exclusive webinars, and one-on-one mentoring.</p>
+            <a href="#" class="btn btn-danger">Sign Up</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Follow Us</h2>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Latest Tweets</h5>
+            <ul class="list-group">
+              <li class="list-group-item">
+                <strong>@learningplatform:</strong> Check out our latest course on Python! <a href="#">#Python #Programming</a>
+              </li>
+              <li class="list-group-item">
+                <strong>@learningplatform:</strong> Join our upcoming webinar on Web Development! <a href="#">#WebDev</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Find a Course</h2>
+    <input type="text" id="courseSearch" class="form-control" placeholder="Search for a course...">
+    <div class="row mt-4" id="courseGrid">
+      <div class="col-md-4 course-card">
+        <div class="card">
+          <img src="https://picsum.photos/400/200" class="card-img-top" alt="Course Image">
+          <div class="card-body">
+            <h5 class="card-title">Intro to JavaScript</h5>
+            <p class="card-text">Learn the basics of JavaScript and build dynamic websites.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 course-card">
+        <div class="card">
+          <img src="https://picsum.photos/400/200" class="card-img-top" alt="Course Image">
+          <div class="card-body">
+            <h5 class="card-title">HTML & CSS Fundamentals</h5>
+            <p class="card-text">Master HTML5 and CSS3 to build stunning web pages.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Add more courses as needed -->
+    </div>
+  </div>
+  
+  <script>
+    document.getElementById('courseSearch').addEventListener('input', function() {
+      let searchQuery = this.value.toLowerCase();
+      let courses = document.querySelectorAll('.course-card');
+      courses.forEach(function(course) {
+        let title = course.querySelector('.card-title').textContent.toLowerCase();
+        if (title.indexOf(searchQuery) !== -1) {
+          course.style.display = '';
+        } else {
+          course.style.display = 'none';
+        }
+      });
+    });
+  </script>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Card Grid Layout Variations</h2>
+    <div class="row">
+      <div class="col-md-8 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/800x400" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Large Card</h5>
+            <p class="card-text">This card is great for showcasing large content or images.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/400x200" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Small Card</h5>
+            <p class="card-text">A smaller card for concise information or quick highlights.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Three Column Grid Layout</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/400x200" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card 1</h5>
+            <p class="card-text">Content in the card is equally distributed, ideal for a uniform grid layout.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/400x200" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card 2</h5>
+            <p class="card-text">Great for an equal distribution of cards across the screen.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/400x200" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card 3</h5>
+            <p class="card-text">Balanced layout that helps organize multiple types of content neatly.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Four Column Grid with Mixed Heights</h2>
+    <div class="row">
+      <div class="col-md-3 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/400x300" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card 1</h5>
+            <p class="card-text">This card is taller than others for a mixed effect.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/400x200" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card 2</h5>
+            <p class="card-text">A smaller card for cleaner visuals.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/400x300" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card 3</h5>
+            <p class="card-text">This card is similar in size but balances the layout visually.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/400x200" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card 4</h5>
+            <p class="card-text">Short and sweet for a minimalistic approach.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Nested Card Grid</h2>
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Main Card</h5>
+            <p class="card-text">This card holds a mini grid of its own.</p>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="card">
+                  <img src="https://placehold.co/200x100" class="card-img-top" alt="Sub Card Image">
+                  <div class="card-body">
+                    <h5 class="card-title">Sub Card 1</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card">
+                  <img src="https://placehold.co/200x100" class="card-img-top" alt="Sub Card Image">
+                  <div class="card-body">
+                    <h5 class="card-title">Sub Card 2</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card">
+                  <img src="https://placehold.co/200x100" class="card-img-top" alt="Sub Card Image">
+                  <div class="card-body">
+                    <h5 class="card-title">Sub Card 3</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Mixed Content with Staggered Layout</h2>
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/600x300" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Large Staggered Card</h5>
+            <p class="card-text">A larger card with a tall image for impactful presentation.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/400x200" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Small Card</h5>
+            <p class="card-text">This card complements the larger card and adds balance.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/400x200" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Small Card 2</h5>
+            <p class="card-text">Another small card to create variation and fill the space.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Full-Width Large Card</h2>
+    <div class="row">
+      <div class="col-md-12 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/1200x400" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Full-Width Large Card</h5>
+            <p class="card-text">This card spans the entire row and is perfect for big headlines or announcements.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/400x200" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card 1</h5>
+            <p class="card-text">A small card placed underneath the large card.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/400x200" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card 2</h5>
+            <p class="card-text">Another small card to balance out the space.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/400x200" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card 3</h5>
+            <p class="card-text">Finishing up with a smaller card for variety.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Five Column Grid Layout</h2>
+    <div class="row">
+      <div class="col-md-2 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/200x100" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card 1</h5>
+            <p class="card-text">Ideal for short descriptions or small content blocks.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/200x100" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card 2</h5>
+            <p class="card-text">Perfect for minimalistic, compact information.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/200x100" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card 3</h5>
+            <p class="card-text">Another small card for balanced layouts.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/200x100" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card 4</h5>
+            <p class="card-text">Compact and easy-to-read card content.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/200x100" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card 5</h5>
+            <p class="card-text">Small card to fill up space in a neat grid.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Full-Width Card with Small Cards Below</h2>
+    <div class="row">
+      <div class="col-md-12 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/1200x400" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Main Full-Width Card</h5>
+            <p class="card-text">This card spans the entire width and provides an overview or large content block.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/600x300" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Sub Card 1</h5>
+            <p class="card-text">A smaller card with concise information.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/600x300" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Sub Card 2</h5>
+            <p class="card-text">Another small card that balances the layout below the full-width card.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Dynamic Three Card Layout</h2>
+    <div class="row">
+      <div class="col-md-8 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/800x400" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Main Large Card</h5>
+            <p class="card-text">A large card to highlight a main content block.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/400x200" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Side Card 1</h5>
+            <p class="card-text">This smaller card sits alongside the large card.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/400x200" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Side Card 2</h5>
+            <p class="card-text">Another smaller card that complements the larger card.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Tall Card with Three Small Cards Below</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/400x600" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Tall Card</h5>
+            <p class="card-text">This card is much taller, great for long images or content.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/400x200" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Small Card 1</h5>
+            <p class="card-text">Small cards placed neatly below the large card.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/400x200" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Small Card 2</h5>
+            <p class="card-text">Another small card, complementing the tall card above.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/400x200" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Small Card 3</h5>
+            <p class="card-text">Last card in this section, making it a balanced row.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Two Large Cards in a Row</h2>
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/600x400" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Large Card 1</h5>
+            <p class="card-text">A large card, perfect for detailed information and big visuals.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/600x400" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Large Card 2</h5>
+            <p class="card-text">Another large card for comparison or parallel content.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Centered Large Card with Small Cards on Sides</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/400x200" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Side Card 1</h5>
+            <p class="card-text">Smaller card placed to the side.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/800x400" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Main Large Card</h5>
+            <p class="card-text">The centerpiece card with more space for content.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/400x200" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Side Card 2</h5>
+            <p class="card-text">Another smaller card for a balanced look.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Three Equal Cards with Hover Effect</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card hover-effect">
+          <img src="https://placehold.co/400x200" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card 1</h5>
+            <p class="card-text">Hover over this card to see the effect.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card hover-effect">
+          <img src="https://placehold.co/400x200" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card 2</h5>
+            <p class="card-text">Hover over to explore more interactive elements.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card hover-effect">
+          <img src="https://placehold.co/400x200" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card 3</h5>
+            <p class="card-text">Hover to see the full details appear smoothly.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Two Large Horizontal Cards</h2>
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/600x300" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Large Horizontal Card 1</h5>
+            <p class="card-text">Great for content that needs horizontal space.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/600x300" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Large Horizontal Card 2</h5>
+            <p class="card-text">Another large card for showcasing media or detailed content.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Two Large Horizontal Cards</h2>
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/600x300" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Large Horizontal Card 1</h5>
+            <p class="card-text">Great for content that needs horizontal space.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/600x300" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Large Horizontal Card 2</h5>
+            <p class="card-text">Another large card for showcasing media or detailed content.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Card with Badge & Footer</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/400x200" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card with Badge</h5>
+            <p class="card-text">Card content with a badge and footer for extra information.</p>
+            <span class="badge badge-primary">New</span>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-sm btn-outline-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Card with Overlay Content</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card position-relative">
+          <img src="https://placehold.co/400x300" class="card-img-top" alt="Card image cap">
+          <div class="card-img-overlay d-flex align-items-center justify-content-center">
+            <h5 class="text-white">Overlay Content</h5>
+          </div>
+          <div class="card-body">
+            <p class="card-text">A stunning image overlay to capture the viewer's attention.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Card with Icons and Text</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <i class="fa fa-code fa-3x text-primary"></i>
+            <h5 class="card-title mt-3">Web Development</h5>
+            <p class="card-text">Learn the basics of web development with HTML, CSS, and JavaScript.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <i class="fa fa-database fa-3x text-success"></i>
+            <h5 class="card-title mt-3">Data Science</h5>
+            <p class="card-text">Dive into data analysis, machine learning, and Python.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <i class="fa fa-users fa-3x text-warning"></i>
+            <h5 class="card-title mt-3">UI/UX Design</h5>
+            <p class="card-text">Design user-friendly interfaces that make a difference.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Card with Circular Image and Text</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card text-center">
+          <div class="card-body">
+            <img src="https://placehold.co/150x150" class="rounded-circle mb-3" alt="Card image cap">
+            <h5 class="card-title">Circular Image Card</h5>
+            <p class="card-text">A clean and modern layout with a circular image and short content.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Grid of 4 Cards with Different Heights</h2>
+    <div class="row">
+      <div class="col-md-3 mb-4">
+        <div class="card" style="height: 300px;">
+          <img src="https://placehold.co/400x200" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Tall Card</h5>
+            <p class="card-text">This card is taller than the others to show content variations.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="card" style="height: 250px;">
+          <img src="https://placehold.co/400x200" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Shorter Card</h5>
+            <p class="card-text">This card has a smaller height for a compact look.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="card" style="height: 400px;">
+          <img src="https://placehold.co/400x200" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Extra Tall Card</h5>
+            <p class="card-text">This card is extra tall, offering more content space.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="card" style="height: 200px;">
+          <img src="https://placehold.co/400x200" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Small Card</h5>
+            <p class="card-text">A compact card for minimalistic content display.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Card with Header, Body, and Footer</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">Header</h5>
+          </div>
+          <div class="card-body">
+            <p class="card-text">The body section where the main content goes.</p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-sm btn-outline-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Card with Multiple Icons in Body</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <i class="fa fa-cogs fa-3x text-info"></i>
+            <i class="fa fa-rocket fa-3x text-success"></i>
+            <i class="fa fa-heart fa-3x text-danger"></i>
+            <h5 class="card-title">Multiple Icons</h5>
+            <p class="card-text">Showcase different features or services using icons for quick scanning.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Card with Shadow Effect</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-lg">
+          <img src="https://placehold.co/400x200" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Shadowed Card</h5>
+            <p class="card-text">This card has a shadow effect, giving it a floating appearance.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Card with Interactive Form</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Sign Up</h5>
+            <form>
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email">
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Password">
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Card with Video Embed</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Watch Our Video</h5>
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/tgbNymZ7vqY" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Card with Progress Bar</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Learning Progress</h5>
+            <p class="card-text">Track your learning progress with this visual indicator.</p>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Card with Badge and Rating Stars</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Best Seller</h5>
+            <span class="badge badge-warning">Popular</span>
+            <p class="card-text">This is one of the top-rated courses available!</p>
+            <div class="stars">
+              <i class="fa fa-star text-warning"></i>
+              <i class="fa fa-star text-warning"></i>
+              <i class="fa fa-star text-warning"></i>
+              <i class="fa fa-star-half-alt text-warning"></i>
+              <i class="fa fa-star text-warning"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Card with Full Background Image</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card text-white" style="background-image: url('https://placehold.co/800x400'); background-size: cover;">
+          <div class="card-body">
+            <h5 class="card-title">Exciting Course</h5>
+            <p class="card-text">Learn new skills with our best course yet.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Card with Tooltip</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card" data-toggle="tooltip" data-placement="top" title="Learn more about this course">
+          <img src="https://placehold.co/400x200" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Learn JavaScript</h5>
+            <p class="card-text">A comprehensive guide to mastering JavaScript.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Add this to activate tooltips -->
+  <script>
+    $(document).ready(function() {
+      $('[data-toggle="tooltip"]').tooltip();
+    });
+  </script>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Card with Footer Links</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/400x200" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Advanced CSS</h5>
+            <p class="card-text">Master advanced CSS techniques and create stunning designs.</p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="text-muted">Learn More</a> | 
+            <a href="#" class="text-muted">View Demo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Card with Overlay Image</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card position-relative">
+          <img src="https://placehold.co/400x200" class="card-img-top" alt="Card image cap">
+          <div class="overlay position-absolute w-100 h-100 d-flex justify-content-center align-items-center">
+            <h4 class="text-white">New Courses Available</h4>
+          </div>
+          <div class="card-body">
+            <p class="card-text">Take your skills to the next level with our new courses.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Add custom CSS for overlay -->
+  <style>
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+      top: 0;
+      left: 0;
+    }
+  </style>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Card with Horizontal Layout</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img src="https://placehold.co/400x200" class="card-img" alt="Card image cap">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Design Mastery</h5>
+                <p class="card-text">Learn how to design beautiful, user-friendly interfaces.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Card with Full-Width Image</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/800x300" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Web Development for Beginners</h5>
+            <p class="card-text">A beginner-friendly course that takes you through web development basics.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Card with Testimonials Carousel</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <div id="testimonialCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="card-body">
+                  <p class="card-text">"This course helped me launch my career in web development!"</p>
+                  <footer class="blockquote-footer">John Doe</footer>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card-body">
+                  <p class="card-text">"The best online learning experience I’ve ever had."</p>
+                  <footer class="blockquote-footer">Jane Smith</footer>
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#testimonialCarousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Add Bootstrap JS for Carousel -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Card with Hover Zoom Effect</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/400x200" class="card-img-top hover-zoom" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Interactive Design</h5>
+            <p class="card-text">Learn the fundamentals of interactive design with this comprehensive course.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Add CSS for hover zoom effect -->
+  <style>
+    .hover-zoom:hover {
+      transform: scale(1.1);
+      transition: transform 0.3s ease;
+    }
+  </style>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Card with Image and Text Overlay</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card position-relative">
+          <img src="https://placehold.co/400x200" class="card-img-top" alt="Card image cap">
+          <div class="overlay position-absolute w-100 h-100 d-flex justify-content-center align-items-center text-white">
+            <h4>Special Offer</h4>
+          </div>
+          <div class="card-body">
+            <p class="card-text">Grab the opportunity to learn something new with discounts.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Add custom CSS for overlay -->
+  <style>
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      top: 0;
+      left: 0;
+    }
+  </style>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Card with Floating Action Button</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/400x200" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Creative Coding</h5>
+            <p class="card-text">Unlock your creativity with this interactive coding course.</p>
+          </div>
+          <div class="fab-container">
+            <button class="btn btn-primary fab">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Add custom CSS for FAB -->
+  <style>
+    .fab-container {
+      position: relative;
+    }
+    .fab {
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      border-radius: 50%;
+      padding: 10px 20px;
+      font-size: 20px;
+    }
+  </style>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Card with Badge and Price</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/400x200" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Design for Beginners</h5>
+            <p class="card-text">Learn design fundamentals with hands-on examples.</p>
+            <div class="d-flex justify-content-between">
+              <span class="badge badge-success">New</span>
+              <span class="price">$49.99</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Add custom CSS for price styling -->
+  <style>
+    .price {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+  </style>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Card with Countdown Timer</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/400x200" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Limited Offer</h5>
+            <p class="card-text">Hurry up! This offer expires soon.</p>
+            <div id="countdown"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Add custom JavaScript for countdown timer -->
+  <script>
+    var countdownDate = new Date().getTime() + 3600 * 1000 * 24; // 24 hours from now
+    var countdownElement = document.getElementById("countdown");
+  
+    var countdownInterval = setInterval(function() {
+      var now = new Date().getTime();
+      var timeLeft = countdownDate - now;
+  
+      var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+  
+      countdownElement.innerHTML = hours + "h " + minutes + "m " + seconds + "s ";
+  
+      if (timeLeft < 0) {
+        clearInterval(countdownInterval);
+        countdownElement.innerHTML = "EXPIRED";
+      }
+    }, 1000);
+  </script>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Card with Pricing Table</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/400x200" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Premium Course</h5>
+            <p class="card-text">Join our premium plan to unlock advanced features.</p>
+            <table class="table table-sm">
+              <tbody>
+                <tr>
+                  <td>Monthly</td>
+                  <td>$19.99</td>
+                </tr>
+                <tr>
+                  <td>Yearly</td>
+                  <td>$199.99</td>
+                </tr>
+              </tbody>
+            </table>
+            <button class="btn btn-primary">Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Card with Customizable Background Color</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card" style="background-color: #f8d7da;">
+          <div class="card-body">
+            <h5 class="card-title">Urgent Update</h5>
+            <p class="card-text">Important information about our latest product release.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Card with Hover Shadow</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card hover-shadow">
+          <img src="https://placehold.co/400x200" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Interactive Python</h5>
+            <p class="card-text">Learn Python interactively with real-time feedback.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Add custom CSS for hover shadow effect -->
+  <style>
+    .hover-shadow:hover {
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      transition: box-shadow 0.3s ease;
+    }
+  </style>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Card with Toggle Content</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/400x200" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Toggle Content Card</h5>
+            <p class="card-text toggle-text">This is some hidden content. Click below to toggle visibility.</p>
+            <button class="btn btn-outline-secondary" onclick="toggleContent()">Show More</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Add JavaScript for toggle effect -->
+  <script>
+    function toggleContent() {
+      var content = document.querySelector('.toggle-text');
+      var button = document.querySelector('button');
+      content.style.display = (content.style.display === 'none') ? 'block' : 'none';
+      button.textContent = (content.style.display === 'none') ? 'Show More' : 'Show Less';
+    }
+  </script>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Card with Image Carousel</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <div id="carouselExample" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://placehold.co/400x200" class="d-block w-100" alt="Image 1">
+              </div>
+              <div class="carousel-item">
+                <img src="https://placehold.co/400x200" class="d-block w-100" alt="Image 2">
+              </div>
+              <div class="carousel-item">
+                <img src="https://placehold.co/400x200" class="d-block w-100" alt="Image 3">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Discover New Trends</h5>
+            <p class="card-text">Explore the latest trends in online education and tech.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Add Bootstrap JS for Carousel -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Card with Progress Bar</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/400x200" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Mastering Data Science</h5>
+            <p class="card-text">A comprehensive guide to becoming a data science expert.</p>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Add custom CSS for progress bar animation -->
+  <style>
+    .progress-bar {
+      transition: width 2s ease;
+    }
+  </style>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Card with Theme Toggle</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/400x200" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Dark Mode Switch</h5>
+            <p class="card-text">Switch between dark and light themes for a customized experience.</p>
+            <div class="custom-control custom-switch">
+              <input type="checkbox" class="custom-control-input" id="themeSwitch" onclick="toggleTheme()">
+              <label class="custom-control-label" for="themeSwitch">Enable Dark Mode</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Add JavaScript for theme toggle -->
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+  
+  <!-- Add custom CSS for dark mode -->
+  <style>
+    .dark-mode {
+      background-color: #121212;
+      color: white;
+    }
+  </style>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Card with Rating System</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/400x200" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Advanced Web Development</h5>
+            <p class="card-text">Learn advanced techniques for building scalable websites.</p>
+            <div class="rating">
+              <span>&#9733;</span>
+              <span>&#9733;</span>
+              <span>&#9733;</span>
+              <span>&#9734;</span>
+              <span>&#9734;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Add custom CSS for rating -->
+  <style>
+    .rating span {
+      font-size: 1.5rem;
+      color: gold;
+    }
+  </style>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Card with Animated Text</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/400x200" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Creative Writing Workshop</h5>
+            <p class="card-text" id="animatedText">This is a creative writing course to unlock your imagination.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Add JavaScript for text animation -->
+  <script>
+    var text = document.getElementById('animatedText');
+    var i = 0;
+    var txt = 'Learn the art of storytelling and creative expression.';
+    var speed = 100;
+  
+    function typeWriter() {
+      if (i < txt.length) {
+        text.innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+    
+    typeWriter();
+  </script>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Card with Badge and Tooltip</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/400x200" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">AI in Education</h5>
+            <p class="card-text">Explore the impact of Artificial Intelligence on education.</p>
+            <span class="badge badge-warning" data-toggle="tooltip" data-placement="top" title="This course is beginner-friendly.">Beginner</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Add Bootstrap JS for Tooltip -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  <!-- Initialize Tooltip -->
+  <script>
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+    });
+  </script>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Card with Icon Overlay</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card position-relative">
+          <img src="https://placehold.co/400x200" class="card-img-top" alt="Card image cap">
+          <div class="position-absolute top-50 start-50 translate-middle">
+            <button class="btn btn-light btn-lg rounded-circle">
+              <i class="fas fa-play"></i>
+            </button>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Introduction to JavaScript</h5>
+            <p class="card-text">Start your JavaScript journey with this beginner-friendly course.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Add FontAwesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Card with Hover Effects</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card hover-effect">
+          <img src="https://placehold.co/400x200" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Interactive Design</h5>
+            <p class="card-text">Learn the art of creating engaging web designs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Add custom CSS for hover effect -->
+  <style>
+    .hover-effect {
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+  
+    .hover-effect:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Card with Background Image</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card text-white" style="background-image: url('https://placehold.co/400x200'); background-size: cover; height: 200px;">
+          <div class="card-body d-flex align-items-center">
+            <h5 class="card-title">Creative Coding</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Card with Action Button</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/400x200" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Machine Learning</h5>
+            <p class="card-text">A beginner’s guide to machine learning algorithms and techniques.</p>
+          </div>
+          <div class="card-footer text-center">
+            <a href="#" class="btn btn-primary">Start Course</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Card with Icon Badge</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card position-relative">
+          <img src="https://placehold.co/400x200" class="card-img-top" alt="Card image cap">
+          <div class="position-absolute top-0 right-0 p-2">
+            <i class="fas fa-star text-warning"></i>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Advanced JavaScript</h5>
+            <p class="card-text">Dive deeper into JavaScript with advanced techniques.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Add FontAwesome for icon -->
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Card with Image Collage</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <div class="card-body d-flex flex-column align-items-center">
+            <div class="row">
+              <div class="col-4">
+                <img src="https://placehold.co/100x100" class="img-fluid" alt="Image 1">
+              </div>
+              <div class="col-4">
+                <img src="https://placehold.co/100x100" class="img-fluid" alt="Image 2">
+              </div>
+              <div class="col-4">
+                <img src="https://placehold.co/100x100" class="img-fluid" alt="Image 3">
+              </div>
+            </div>
+            <h5 class="card-title mt-3">Collage Style</h5>
+            <p class="card-text">Combine multiple images in one card for a unique layout.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Card with Badge and Rating Bar</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/400x200" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Responsive Web Design</h5>
+            <p class="card-text">Master the fundamentals of responsive design.</p>
+            <span class="badge badge-success">Popular</span>
+            <div class="mt-2">
+              <div class="progress">
+                <div class="progress-bar" style="width: 80%" role="progressbar">4.5/5</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Card with Flip Animation</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card-flip">
+          <div class="card">
+            <div class="card-front">
+              <img src="https://placehold.co/400x200" class="card-img-top" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Front of Card</h5>
+              </div>
+            </div>
+            <div class="card-back">
+              <div class="card-body">
+                <h5 class="card-title">Back of Card</h5>
+                <p>Additional details or actions can be placed here.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Add custom CSS for flip animation -->
+  <style>
+    .card-flip {
+      perspective: 1000px;
+    }
+    .card {
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 0.6s;
+    }
+    .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+    }
+    .card-back {
+      transform: rotateY(180deg);
+    }
+  </style>
+
+  <!-- Grid Layout Variations Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Card with Countdown Timer</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://placehold.co/400x200" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Limited Offer</h5>
+            <p class="card-text">Hurry up! This offer expires soon.</p>
+            <span class="badge badge-danger">Urgent</span>
+            <div id="countdown"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Add custom JavaScript for countdown timer -->
+  <script>
+    function countdownTimer() {
+      var countdownDate = new Date("Apr 25, 2025 00:00:00").getTime();
+      var x = setInterval(function() {
+        var now = new Date().getTime();
+        var distance = countdownDate - now;
+  
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+        document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+  
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("countdown").innerHTML = "EXPIRED";
+        }
+      }, 1000);
+    }
+    countdownTimer();
+  </script>
+  
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+      <p>&copy; 2025 LearnPro. All rights reserved.</p>
+      <a href="#" class="text-white mx-2">About</a>
+      <a href="#" class="text-white mx-2">Contact</a>
+      <a href="#" class="text-white mx-2">FAQ</a>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+  <!-- Creative Card Grid Combos -->
+<div class="container my-5">
+  <h2 class="text-center mb-4">Even More Card Layouts</h2>
+
+  <!-- Horizontal and Vertical Mix -->
+  <div class="row">
+    <div class="col-md-6 mb-4">
+      <div class="card flex-md-row">
+        <img class="card-img-left flex-auto d-none d-md-block" src="https://placehold.co/300x200" alt="Card image" style="width: 200px;">
+        <div class="card-body">
+          <h5 class="card-title">Horizontal Card</h5>
+          <p class="card-text">Great for layouts with text-heavy content next to an image.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 mb-4">
+      <div class="card text-white bg-secondary">
+        <div class="card-body">
+          <h5 class="card-title">Dark Themed Card</h5>
+          <p class="card-text">Perfect for night mode or modern aesthetics.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Offset Cards Grid -->
+  <div class="row">
+    <div class="col-md-4 mb-4 offset-md-2">
+      <div class="card border-primary">
+        <img src="https://placehold.co/400x200" class="card-img-top" alt="Image">
+        <div class="card-body">
+          <h5 class="card-title">Offset Grid Card</h5>
+          <p class="card-text">Offset layout adds visual interest to your grid.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card border-success">
+        <img src="https://placehold.co/400x200" class="card-img-top" alt="Image">
+        <div class="card-body">
+          <h5 class="card-title">Symmetry Breaker</h5>
+          <p class="card-text">Not every row needs to be symmetrical. Break patterns for focus.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mixed Size Responsive Grid -->
+  <div class="row">
+    <div class="col-sm-6 col-md-4 mb-4">
+      <div class="card">
+        <img src="https://placehold.co/400x200" class="card-img-top" alt="Image">
+        <div class="card-body">
+          <h5 class="card-title">Small Card</h5>
+          <p class="card-text">Responsive and stackable.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-8 mb-4">
+      <div class="card">
+        <img src="https://placehold.co/800x200" class="card-img-top" alt="Image">
+        <div class="card-body">
+          <h5 class="card-title">Large Card</h5>
+          <p class="card-text">Takes up twice the space — perfect for feature content.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cards with Footer -->
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="https://placehold.co/400x200" class="card-img-top" alt="Image">
+        <div class="card-body">
+          <h5 class="card-title">Card with Footer</h5>
+          <p class="card-text">Include action buttons or meta info in the footer.</p>
+        </div>
+        <div class="card-footer text-muted">
+          Last updated 5 mins ago
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <div class="card-header">Featured</div>
+        <div class="card-body">
+          <h5 class="card-title">Card with Header</h5>
+          <p class="card-text">Top headers are great for labels or context.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card border-warning">
+        <div class="card-body">
+          <h5 class="card-title">Border Highlight</h5>
+          <p class="card-text">Use Bootstrap’s contextual borders to highlight importance.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Fancy Card Layouts -->
+<div class="container my-5">
+  <h2 class="text-center mb-4">Slay-Worthy Card Combos</h2>
+
+  <!-- Overlay Text on Image -->
+  <div class="row mb-4">
+    <div class="col-md-6">
+      <div class="card bg-dark text-white">
+        <img src="https://placehold.co/600x300" class="card-img" alt="Overlay image">
+        <div class="card-img-overlay d-flex flex-column justify-content-end">
+          <h5 class="card-title">Overlay Card</h5>
+          <p class="card-text">Put content *on top* of images for max impact.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Transparent Shadow Card -->
+    <div class="col-md-6">
+      <div class="card shadow-lg border-0" style="background: rgba(255,255,255,0.9);">
+        <div class="card-body">
+          <h5 class="card-title">Soft Glow Card</h5>
+          <p class="card-text">Add transparent backgrounds and shadows for smooth style.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stacked Cards with z-index (Layered Look) -->
+  <div class="position-relative mb-5">
+    <div class="card position-absolute" style="top: 0; left: 10%; width: 80%; z-index: 1;">
+      <div class="card-body bg-light border rounded">
+        <h5 class="card-title">Layer 1</h5>
+        <p class="card-text">Cards can overlap with style. Useful for presentations or sliders.</p>
+      </div>
+    </div>
+    <div class="card position-absolute" style="top: 20px; left: 15%; width: 80%; z-index: 2;">
+      <div class="card-body bg-white border rounded">
+        <h5 class="card-title">Layer 2</h5>
+        <p class="card-text">Use z-index for stacking effects.</p>
+      </div>
+    </div>
+    <div class="card position-absolute" style="top: 40px; left: 20%; width: 80%; z-index: 3;">
+      <div class="card-body bg-white border rounded">
+        <h5 class="card-title">Top Layer</h5>
+        <p class="card-text">This one floats above the rest.</p>
+      </div>
+    </div>
+    <div style="padding-top: 180px;"></div> <!-- spacing hack -->
+  </div>
+
+  <!-- Avatar Card -->
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      <div class="card text-center">
+        <div class="card-body">
+          <img src="https://placehold.co/100x100" class="rounded-circle mb-3" alt="Avatar">
+          <h5 class="card-title">Profile Card</h5>
+          <p class="card-text">Great for team members, testimonials, or mentors.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Badge and Icon Card -->
+    <div class="col-md-4 mb-4">
+      <div class="card border-info">
+        <div class="card-body">
+          <h5 class="card-title">Card with Badge <span class="badge badge-info">New</span></h5>
+          <p class="card-text">Use Bootstrap badges for promotions or highlights.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Split Color Card -->
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <div class="row no-gutters">
+          <div class="col-4 bg-warning d-flex align-items-center justify-content-center text-white">
+            <strong>🔥 Hot</strong>
+          </div>
+          <div class="col-8">
+            <div class="card-body">
+              <h5 class="card-title">Split Color Card</h5>
+              <p class="card-text">When color is your vibe, split it bold and proud.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- More Card Layout Combos -->
+<div class="container my-5">
+  <h2 class="text-center mb-4">More Card Layout Combos</h2>
+
+  <!-- Asymmetrical Two Tall One Wide -->
+  <div class="row mb-4">
+    <div class="col-md-4">
+      <div class="card h-100">
+        <img src="https://placehold.co/400x500" class="card-img-top" alt="Tall Card">
+        <div class="card-body">
+          <h5 class="card-title">Tall Card</h5>
+          <p class="card-text">For when you’ve got lots of image to show.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div class="card h-100">
+        <img src="https://placehold.co/800x250" class="card-img-top" alt="Wide Card">
+        <div class="card-body">
+          <h5 class="card-title">Wide Card</h5>
+          <p class="card-text">Perfect for headers, banners, or bold messages.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hover Elevation Card -->
+  <div class="row mb-4">
+    <div class="col-md-3">
+      <div class="card shadow-sm transition" style="transition: transform .2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        <div class="card-body text-center">
+          <h5 class="card-title">Hover Me</h5>
+          <p class="card-text">Subtle scale effect on hover.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hover Caption Reveal -->
+    <div class="col-md-3">
+      <div class="card overflow-hidden position-relative">
+        <img src="https://placehold.co/300x200" class="card-img-top" alt="Hidden Text">
+        <div class="position-absolute w-100 h-100 bg-dark text-white d-flex align-items-center justify-content-center" style="opacity: 0; transition: opacity .3s;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='0'">
+          <p class="mb-0">Surprise caption 👀</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gradient Background Card -->
+    <div class="col-md-3">
+      <div class="card text-white" style="background: linear-gradient(45deg, #6a11cb 0%, #2575fc 100%);">
+        <div class="card-body">
+          <h5 class="card-title">Gradient Glow</h5>
+          <p class="card-text">Bring color, mood, and vibes with gradients.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Flip Card (Just for fun!) -->
+    <div class="col-md-3">
+      <div class="card flip-card" style="perspective: 1000px;">
+        <div class="flip-card-inner" style="transition: transform 0.6s; transform-style: preserve-3d;" onmouseover="this.style.transform='rotateY(180deg)'" onmouseout="this.style.transform='rotateY(0)'">
+          <div class="card-body text-center bg-info text-white" style="backface-visibility: hidden;">
+            <h5>Front</h5>
+            <p>Hover to flip me</p>
+          </div>
+          <div class="card-body text-center bg-dark text-white position-absolute w-100 h-100" style="transform: rotateY(180deg); backface-visibility: hidden;">
+            <h5>Back</h5>
+            <p>You found the secret!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Goated Card Layouts -->
+<div class="container my-5">
+  <h2 class="text-center mb-4">Elite Card Combos</h2>
+
+  <!-- Feature Grid: 1 big + 2 small -->
+  <div class="row mb-4">
+    <div class="col-md-6 mb-3">
+      <div class="card h-100">
+        <img src="https://placehold.co/600x300" class="card-img-top" alt="Feature">
+        <div class="card-body">
+          <h5 class="card-title">Main Feature</h5>
+          <p class="card-text">Centerpiece content card. Make it shine.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <div class="card h-100">
+        <img src="https://placehold.co/300x140" class="card-img-top" alt="Mini">
+        <div class="card-body">
+          <h6 class="card-title">Sidekick One</h6>
+          <p class="card-text">Supports the main content.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <div class="card h-100">
+        <img src="https://placehold.co/300x140" class="card-img-top" alt="Mini">
+        <div class="card-body">
+          <h6 class="card-title">Sidekick Two</h6>
+          <p class="card-text">More info, less fluff.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card with Icon Overlay -->
+  <div class="row mb-4">
+    <div class="col-md-4">
+      <div class="card text-white bg-dark">
+        <img src="https://placehold.co/400x200" class="card-img" alt="Background">
+        <div class="card-img-overlay d-flex flex-column justify-content-center align-items-start">
+          <h5 class="card-title">Overlay Hero</h5>
+          <p class="card-text">Put content right on the image. Dramatic.</p>
+          <a href="#" class="btn btn-outline-light btn-sm">Explore</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cards with Badges -->
+    <div class="col-md-4">
+      <div class="card position-relative">
+        <span class="badge badge-success position-absolute" style="top:10px; right:10px;">NEW</span>
+        <img src="https://placehold.co/400x200" class="card-img-top" alt="Card with badge">
+        <div class="card-body">
+          <h5 class="card-title">Card w/ Badge</h5>
+          <p class="card-text">Eye-catching callouts.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Icon Top Circle -->
+    <div class="col-md-4 text-center">
+      <div class="card py-4">
+        <div class="mx-auto mb-3 bg-primary rounded-circle d-flex align-items-center justify-content-center" style="width:60px; height:60px;">
+          <span class="text-white font-weight-bold">💡</span>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Idea Card</h5>
+          <p class="card-text">Perfect for highlighting key takeaways.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Compact Review Cards -->
+  <div class="row">
+    <div class="col-md-3 mb-3">
+      <div class="card p-3">
+        <div class="d-flex align-items-center">
+          <img src="https://placehold.co/50x50" class="rounded-circle mr-3" alt="Avatar">
+          <div>
+            <h6 class="mb-0">Alex</h6>
+            <small>★★★★★</small>
+          </div>
+        </div>
+        <p class="mt-2 mb-0">“Absolutely loved it. Very helpful layout!”</p>
+      </div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <div class="card p-3">
+        <div class="d-flex align-items-center">
+          <img src="https://placehold.co/50x50" class="rounded-circle mr-3" alt="Avatar">
+          <div>
+            <h6 class="mb-0">Jamie</h6>
+            <small>★★★★☆</small>
+          </div>
+        </div>
+        <p class="mt-2 mb-0">“Super aesthetic and easy to modify.”</p>
+      </div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <div class="card p-3">
+        <div class="d-flex align-items-center">
+          <img src="https://placehold.co/50x50" class="rounded-circle mr-3" alt="Avatar">
+          <div>
+            <h6 class="mb-0">Sam</h6>
+            <small>★★★★★</small>
+          </div>
+        </div>
+        <p class="mt-2 mb-0">“These cards are 🔥. Love the vibes.”</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Existing content... -->
+
+  <!-- Elite Card Combos -->
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Elite Card Combos</h2>
+
+    <!-- Feature Grid: 1 big + 2 small -->
+    <div class="row mb-4">
+      <div class="col-md-6 mb-3">
+        <div class="card h-100">
+          <img src="https://placehold.co/600x300" class="card-img-top" alt="Feature">
+          <div class="card-body">
+            <h5 class="card-title">Main Feature</h5>
+            <p class="card-text">Centerpiece content card. Make it shine.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <div class="card h-100">
+          <img src="https://placehold.co/300x140" class="card-img-top" alt="Mini">
+          <div class="card-body">
+            <h6 class="card-title">Sidekick One</h6>
+            <p class="card-text">Supports the main content.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <div class="card h-100">
+          <img src="https://placehold.co/300x140" class="card-img-top" alt="Mini">
+          <div class="card-body">
+            <h6 class="card-title">Sidekick Two</h6>
+            <p class="card-text">More info, less fluff.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card with Icon Overlay -->
+    <div class="row mb-4">
+      <div class="col-md-4">
+        <div class="card text-white bg-dark">
+          <img src="https://placehold.co/400x200" class="card-img" alt="Background">
+          <div class="card-img-overlay d-flex flex-column justify-content-center align-items-start">
+            <h5 class="card-title">Overlay Hero</h5>
+            <p class="card-text">Put content right on the image. Dramatic.</p>
+            <a href="#" class="btn btn-outline-light btn-sm">Explore</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cards with Badges -->
+      <div class="col-md-4">
+        <div class="card position-relative">
+          <span class="badge badge-success position-absolute" style="top:10px; right:10px;">NEW</span>
+          <img src="https://placehold.co/400x200" class="card-img-top" alt="Card with badge">
+          <div class="card-body">
+            <h5 class="card-title">Card w/ Badge</h5>
+            <p class="card-text">Eye-catching callouts.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Icon Top Circle -->
+      <div class="col-md-4 text-center">
+        <div class="card py-4">
+          <div class="mx-auto mb-3 bg-primary rounded-circle d-flex align-items-center justify-content-center" style="width:60px; height:60px;">
+            <span class="text-white font-weight-bold">💡</span>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Idea Card</h5>
+            <p class="card-text">Perfect for highlighting key takeaways.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Compact Review Cards -->
+    <div class="row">
+      <div class="col-md-3 mb-3">
+        <div class="card p-3">
+          <div class="d-flex align-items-center">
+            <img src="https://placehold.co/50x50" class="rounded-circle mr-3" alt="Avatar">
+            <div>
+              <h6 class="mb-0">Alex</h6>
+              <small>★★★★★</small>
+            </div>
+          </div>
+          <p class="mt-2 mb-0">“Absolutely loved it. Very helpful layout!”</p>
+        </div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <div class="card p-3">
+          <div class="d-flex align-items-center">
+            <img src="https://placehold.co/50x50" class="rounded-circle mr-3" alt="Avatar">
+            <div>
+              <h6 class="mb-0">Jamie</h6>
+              <small>★★★★☆</small>
+            </div>
+          </div>
+          <p class="mt-2 mb-0">“Super aesthetic and easy to modify.”</p>
+        </div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <div class="card p-3">
+          <div class="d-flex align-items-center">
+            <img src="https://placehold.co/50x50" class="rounded-circle mr-3" alt="Avatar">
+            <div>
+              <h6 class="mb-0">Sam</h6>
+              <small>★★★★★</small>
+            </div>
+          </div>
+          <p class="mt-2 mb-0">“These cards are 🔥. Love the vibes.”</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Continue existing content -->
+
+  <!-- Existing content... -->
+
+  <!-- Elite Card Combos -->
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Elite Card Combos</h2>
+
+    <!-- (Existing card blocks here...) -->
+
+    <!-- 🧨 SPICY NEW LAYOUTS BELOW -->
+    <!-- Fancy Asymmetric Grid: 1x2 then 2x1 -->
+    <div class="row mb-4">
+      <div class="col-md-8 mb-3">
+        <div class="card h-100">
+          <img src="https://placehold.co/800x300" class="card-img-top" alt="Wide">
+          <div class="card-body">
+            <h5 class="card-title">Ultra Wide Card</h5>
+            <p class="card-text">Perfect for banners or immersive stories.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card h-100">
+          <img src="https://placehold.co/400x300" class="card-img-top" alt="Narrow">
+          <div class="card-body">
+            <h5 class="card-title">Tight Frame</h5>
+            <p class="card-text">Useful for bios, promos, or extras.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Magazine-style staggered layout -->
+    <div class="row mb-4">
+      <div class="col-md-4 mb-3">
+        <div class="card">
+          <img src="https://placehold.co/400x250" class="card-img-top" alt="A">
+          <div class="card-body">
+            <h5 class="card-title">Staggered A</h5>
+            <p class="card-text">This layout feels like flipping pages.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-5">
+        <div class="card">
+          <img src="https://placehold.co/400x350" class="card-img-top" alt="B">
+          <div class="card-body">
+            <h5 class="card-title">Staggered B</h5>
+            <p class="card-text">Use varied heights for visual rhythm.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card">
+          <img src="https://placehold.co/400x250" class="card-img-top" alt="C">
+          <div class="card-body">
+            <h5 class="card-title">Staggered C</h5>
+            <p class="card-text">Masonry vibes with Bootstrap simplicity.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grid with hover effects -->
+    <div class="row mb-5">
+      <div class="col-md-4 mb-3">
+        <div class="card h-100 shadow-sm border-0">
+          <img src="https://placehold.co/400x200" class="card-img-top" alt="Hover1">
+          <div class="card-body">
+            <h5 class="card-title">Hover Pop</h5>
+            <p class="card-text">Card gets shadow when you hover.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card h-100 shadow-sm border-0">
+          <img src="https://placehold.co/400x200" class="card-img-top" alt="Hover2">
+          <div class="card-body">
+            <h5 class="card-title">Subtle Shine</h5>
+            <p class="card-text">Slick hover interactions for premium feel.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card h-100 shadow-sm border-0">
+          <img src="https://placehold.co/400x200" class="card-img-top" alt="Hover3">
+          <div class="card-body">
+            <h5 class="card-title">Interactive Flex</h5>
+            <p class="card-text">Perfect for clickable CTAs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Continue existing content -->
+
+  <!-- Elite Card Combos -->
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Elite Card Combos</h2>
+
+    <!-- Existing card blocks... -->
+
+    <!-- 💥 LEVEL UP Layouts -->
+    <!-- Horizontal Media Card Row -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="card flex-md-row">
+          <img class="card-img-left flex-auto d-none d-md-block" src="https://placehold.co/300x300" style="width: 200px; object-fit: cover;" alt="Media Left">
+          <div class="card-body d-flex flex-column align-items-start">
+            <h5 class="card-title">Horizontal Hero</h5>
+            <p class="card-text">Ideal for testimonials, blog highlights, or mini features.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card flex-md-row">
+          <img class="card-img-left flex-auto d-none d-md-block" src="https://placehold.co/300x300" style="width: 200px; object-fit: cover;" alt="Media Left">
+          <div class="card-body d-flex flex-column align-items-start">
+            <h5 class="card-title">Media Mix</h5>
+            <p class="card-text">Pair text with images for storytelling formats.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Multi-size Badge Cards -->
+    <div class="row mb-5">
+      <div class="col-md-3 mb-3">
+        <div class="card text-white bg-primary">
+          <div class="card-body">
+            <h5 class="card-title">Badge A <span class="badge badge-light">New</span></h5>
+            <p class="card-text">Attention-grabbing card with color emphasis.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <div class="card text-white bg-danger">
+          <div class="card-body">
+            <h5 class="card-title">Badge B <span class="badge badge-light">Hot</span></h5>
+            <p class="card-text">Use badges for trending or alerts.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <div class="card text-white bg-success">
+          <div class="card-body">
+            <h5 class="card-title">Badge C <span class="badge badge-light">Pro</span></h5>
+            <p class="card-text">Great for highlighting features or tiers.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <div class="card text-white bg-dark">
+          <div class="card-body">
+            <h5 class="card-title">Badge D <span class="badge badge-light">VIP</span></h5>
+            <p class="card-text">Perfect for exclusive or gated content.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Overlapping Card Grid (Z-index fun) -->
+    <div class="position-relative mb-5">
+      <div class="row no-gutters">
+        <div class="col-md-6">
+          <div class="card mb-4" style="z-index: 1; position: relative;">
+            <img src="https://placehold.co/600x300" class="card-img-top" alt="Layer 1">
+            <div class="card-body">
+              <h5 class="card-title">Layer One</h5>
+              <p class="card-text">Layered design for creative overlap effects.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6" style="margin-top: -40px;">
+          <div class="card shadow" style="z-index: 2;">
+            <img src="https://placehold.co/600x300" class="card-img-top" alt="Layer 2">
+            <div class="card-body">
+              <h5 class="card-title">Layer Two</h5>
+              <p class="card-text">This card overlaps the previous one for drama.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Full-Width Interactive Cards with Image Overlay -->
+<div class="row mb-5">
+  <div class="col-md-4 mb-3">
+    <div class="card bg-dark text-white position-relative">
+      <img src="https://placehold.co/600x400" class="card-img" alt="Overlay Card 1">
+      <div class="card-img-overlay d-flex justify-content-center align-items-center">
+        <h5 class="card-title text-center">Image Overlay Card</h5>
+        <p class="card-text">Hover to explore the content and interact.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 mb-3">
+    <div class="card bg-dark text-white position-relative">
+      <img src="https://placehold.co/600x400" class="card-img" alt="Overlay Card 2">
+      <div class="card-img-overlay d-flex justify-content-center align-items-center">
+        <h5 class="card-title text-center">Advanced Hover Effects</h5>
+        <p class="card-text">Responsive and intuitive interactions that pop on hover.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 mb-3">
+    <div class="card bg-dark text-white position-relative">
+      <img src="https://placehold.co/600x400" class="card-img" alt="Overlay Card 3">
+      <div class="card-img-overlay d-flex justify-content-center align-items-center">
+        <h5 class="card-title text-center">Immersive Interactive</h5>
+        <p class="card-text">Perfect for creating engaging user experiences.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Carousel-style Slider Cards -->
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="card">
+        <img src="https://placehold.co/400x200" class="card-img-top" alt="Slider 1">
+        <div class="card-body">
+          <h5 class="card-title">Slider Card 1</h5>
+          <p class="card-text">Swipe through these cards for dynamic visual transitions.</p>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="card">
+        <img src="https://placehold.co/400x200" class="card-img-top" alt="Slider 2">
+        <div class="card-body">
+          <h5 class="card-title">Slider Card 2</h5>
+          <p class="card-text">Customizable image cards with smooth transitions.</p>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="card">
+        <img src="https://placehold.co/400x200" class="card-img-top" alt="Slider 3">
+        <div class="card-body">
+          <h5 class="card-title">Slider Card 3</h5>
+          <p class="card-text">Add as many slides as needed for your design.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<!-- Circular Avatar Cards with Hover Transition -->
+<div class="row mb-5">
+  <div class="col-md-4 mb-3">
+    <div class="card">
+      <div class="card-body text-center">
+        <div class="avatar-card" style="width: 120px; height: 120px; border-radius: 50%; margin: auto; overflow: hidden;">
+          <img src="https://placehold.co/120x120" class="img-fluid" alt="Avatar 1">
+        </div>
+        <h5 class="card-title mt-3">Avatar 1</h5>
+        <p class="card-text">Hover for more info about this user.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 mb-3">
+    <div class="card">
+      <div class="card-body text-center">
+        <div class="avatar-card" style="width: 120px; height: 120px; border-radius: 50%; margin: auto; overflow: hidden;">
+          <img src="https://placehold.co/120x120" class="img-fluid" alt="Avatar 2">
+        </div>
+        <h5 class="card-title mt-3">Avatar 2</h5>
+        <p class="card-text">Interactive avatar cards with hover effects.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 mb-3">
+    <div class="card">
+      <div class="card-body text-center">
+        <div class="avatar-card" style="width: 120px; height: 120px; border-radius: 50%; margin: auto; overflow: hidden;">
+          <img src="https://placehold.co/120x120" class="img-fluid" alt="Avatar 3">
+        </div>
+        <h5 class="card-title mt-3">Avatar 3</h5>
+        <p class="card-text">Hover to reveal a fun, interactive user profile.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Cards with Dual Actions (CTA and More Info) -->
+<div class="row mb-5">
+  <div class="col-md-4 mb-3">
+    <div class="card h-100">
+      <img src="https://placehold.co/400x250" class="card-img-top" alt="Action Card 1">
+      <div class="card-body">
+        <h5 class="card-title">Dual Action Card</h5>
+        <p class="card-text">Card with primary action and more info options.</p>
+        <div class="d-flex justify-content-between">
+          <a href="#" class="btn btn-primary">Action</a>
+          <a href="#" class="btn btn-secondary">More Info</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 mb-3">
+    <div class="card h-100">
+      <img src="https://placehold.co/400x250" class="card-img-top" alt="Action Card 2">
+      <div class="card-body">
+        <h5 class="card-title">Dual Action Card 2</h5>
+        <p class="card-text">This card allows for multiple user interactions.</p>
+        <div class="d-flex justify-content-between">
+          <a href="#" class="btn btn-primary">Action</a>
+          <a href="#" class="btn btn-secondary">More Info</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 mb-3">
+    <div class="card h-100">
+      <img src="https://placehold.co/400x250" class="card-img-top" alt="Action Card 3">
+      <div class="card-body">
+        <h5 class="card-title">Dual Action Card 3</h5>
+        <p class="card-text">An alternative design with flexibility for CTA actions.</p>
+        <div class="d-flex justify-content-between">
+          <a href="#" class="btn btn-primary">Action</a>
+          <a href="#" class="btn btn-secondary">More Info</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Cards with Hover Animation (Scale & Rotate) -->
+<div class="row mb-5">
+  <div class="col-md-4 mb-3">
+    <div class="card h-100 transform-hover">
+      <img src="https://placehold.co/400x250" class="card-img-top" alt="Hover Animation 1">
+      <div class="card-body">
+        <h5 class="card-title">Scale on Hover</h5>
+        <p class="card-text">Experience a subtle scale effect when you hover over the card.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 mb-3">
+    <div class="card h-100 transform-hover">
+      <img src="https://placehold.co/400x250" class="card-img-top" alt="Hover Animation 2">
+      <div class="card-body">
+        <h5 class="card-title">Rotate on Hover</h5>
+        <p class="card-text">A fun rotation effect that adds personality to the design.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 mb-3">
+    <div class="card h-100 transform-hover">
+      <img src="https://placehold.co/400x250" class="card-img-top" alt="Hover Animation 3">
+      <div class="card-body">
+        <h5 class="card-title">Scale & Rotate on Hover</h5>
+        <p class="card-text">A combination of scaling and rotating to create dynamic interactions.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .transform-hover:hover {
+    transform: scale(1.05) rotate(5deg);
+    transition: transform 0.3s ease-in-out;
+  }
+</style>
+
+<!-- Slide-in Text on Hover -->
+<div class="row mb-5">
+  <div class="col-md-4 mb-3">
+    <div class="card position-relative overflow-hidden">
+      <img src="https://placehold.co/400x250" class="card-img-top" alt="Slide-in Text Card 1">
+      <div class="card-body">
+        <h5 class="card-title">Slide-in Text</h5>
+        <p class="card-text">Hover to reveal more details with a smooth sliding effect.</p>
+      </div>
+      <div class="card-overlay position-absolute w-100 h-100 d-flex justify-content-center align-items-center">
+        <p class="text-center text-white">More Information</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 mb-3">
+    <div class="card position-relative overflow-hidden">
+      <img src="https://placehold.co/400x250" class="card-img-top" alt="Slide-in Text Card 2">
+      <div class="card-body">
+        <h5 class="card-title">Slide-in Text</h5>
+        <p class="card-text">Reveal more content with a sleek slide-in effect on hover.</p>
+      </div>
+      <div class="card-overlay position-absolute w-100 h-100 d-flex justify-content-center align-items-center">
+        <p class="text-center text-white">Additional Info</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 mb-3">
+    <div class="card position-relative overflow-hidden">
+      <img src="https://placehold.co/400x250" class="card-img-top" alt="Slide-in Text Card 3">
+      <div class="card-body">
+        <h5 class="card-title">Slide-in Text</h5>
+        <p class="card-text">Interactive cards that reveal more text when hovered over.</p>
+      </div>
+      <div class="card-overlay position-absolute w-100 h-100 d-flex justify-content-center align-items-center">
+        <p class="text-center text-white">Click to Learn More</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .card-overlay {
+    top: -100%;
+    left: 0;
+    transition: top 0.3s ease-in-out;
+  }
+
+  .card:hover .card-overlay {
+    top: 0;
+  }
+</style>
+
+<!-- Flip Card Effect -->
+<div class="row mb-5">
+  <div class="col-md-4 mb-3">
+    <div class="card flip-card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="https://placehold.co/400x250" class="card-img-top" alt="Flip Card 1">
+          <div class="card-body">
+            <h5 class="card-title">Front of Card</h5>
+            <p class="card-text">Flip this card to reveal more details.</p>
+          </div>
+        </div>
+        <div class="card-back d-flex justify-content-center align-items-center">
+          <p class="text-white">This is the back of the card</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 mb-3">
+    <div class="card flip-card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="https://placehold.co/400x250" class="card-img-top" alt="Flip Card 2">
+          <div class="card-body">
+            <h5 class="card-title">Flip for More</h5>
+            <p class="card-text">An exciting card flip effect when hovered.</p>
+          </div>
+        </div>
+        <div class="card-back d-flex justify-content-center align-items-center">
+          <p class="text-white">Details on the back of the card</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 mb-3">
+    <div class="card flip-card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="https://placehold.co/400x250" class="card-img-top" alt="Flip Card 3">
+          <div class="card-body">
+            <h5 class="card-title">Flip and Learn</h5>
+            <p class="card-text">An interactive card flip to engage users.</p>
+          </div>
+        </div>
+        <div class="card-back d-flex justify-content-center align-items-center">
+          <p class="text-white">Backside Content</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .flip-card {
+    perspective: 1000px;
+  }
+
+  .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+  }
+
+  .card-front,
+  .card-back {
+    backface-visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .card-back {
+    transform: rotateY(180deg);
+    background-color: #333;
+    color: white;
+  }
+
+  .card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+</style>
+
+<!-- Card with Progress Bar -->
+<div class="row mb-5">
+  <div class="col-md-4 mb-3">
+    <div class="card h-100">
+      <img src="https://placehold.co/400x250" class="card-img-top" alt="Progress Bar Card 1">
+      <div class="card-body">
+        <h5 class="card-title">Progress Card</h5>
+        <p class="card-text">Track progress in real-time with a dynamic bar.</p>
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 mb-3">
+    <div class="card h-100">
+      <img src="https://placehold.co/400x250" class="card-img-top" alt="Progress Bar Card 2">
+      <div class="card-body">
+        <h5 class="card-title">Progress Tracker</h5>
+        <p class="card-text">Use this card to display completion rates or task progress.</p>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 45%;" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 mb-3">
+    <div class="card h-100">
+      <img src="https://placehold.co/400x250" class="card-img-top" alt="Progress Bar Card 3">
+      <div class="card-body">
+        <h5 class="card-title">Task Progress</h5>
+        <p class="card-text">Track the progression of any task with this visual indicator.</p>
+        <div class="progress">
+          <div class="progress-bar bg-warning" role="progressbar" style="width: 30%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Gradient Background Card with Icon -->
+<div class="row mb-5">
+  <div class="col-md-4 mb-3">
+    <div class="card h-100 bg-gradient">
+      <div class="card-body text-center">
+        <i class="fas fa-chart-line fa-3x mb-3" style="color: #ffffff;"></i>
+        <h5 class="card-title text-white">Growth Stats</h5>
+        <p class="card-text text-white">Track the key metrics with this visually engaging card.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 mb-3">
+    <div class="card h-100 bg-gradient">
+      <div class="card-body text-center">
+        <i class="fas fa-cogs fa-3x mb-3" style="color: #ffffff;"></i>
+        <h5 class="card-title text-white">Settings</h5>
+        <p class="card-text text-white">Manage your preferences and customize the app.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 mb-3">
+    <div class="card h-100 bg-gradient">
+      <div class="card-body text-center">
+        <i class="fas fa-users fa-3x mb-3" style="color: #ffffff;"></i>
+        <h5 class="card-title text-white">Team Overview</h5>
+        <p class="card-text text-white">Stay updated with your team’s progress and activity.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .bg-gradient {
+    background: linear-gradient(45deg, #ff6b6b, #f06595);
+    color: white;
+  }
+</style>
+
+<!-- Circular Image Cards -->
+<div class="row mb-5">
+  <div class="col-md-4 mb-3">
+    <div class="card h-100 text-center">
+      <div class="card-body">
+        <img src="https://placehold.co/200x200" class="rounded-circle mb-3" alt="Circular Card 1">
+        <h5 class="card-title">Team Leader</h5>
+        <p class="card-text">Leading the way with expertise and vision.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 mb-3">
+    <div class="card h-100 text-center">
+      <div class="card-body">
+        <img src="https://placehold.co/200x200" class="rounded-circle mb-3" alt="Circular Card 2">
+        <h5 class="card-title">Developer</h5>
+        <p class="card-text">Crafting solutions and coding with passion.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 mb-3">
+    <div class="card h-100 text-center">
+      <div class="card-body">
+        <img src="https://placehold.co/200x200" class="rounded-circle mb-3" alt="Circular Card 3">
+        <h5 class="card-title">Designer</h5>
+        <p class="card-text">Turning ideas into visually stunning designs.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Card with Multiple Action Buttons -->
+<div class="row mb-5">
+  <div class="col-md-4 mb-3">
+    <div class="card h-100">
+      <img src="https://placehold.co/400x250" class="card-img-top" alt="Multiple Actions Card 1">
+      <div class="card-body">
+        <h5 class="card-title">Action Card</h5>
+        <p class="card-text">This card features several buttons for different actions.</p>
+        <div class="d-flex justify-content-between">
+          <button class="btn btn-primary">Primary Action</button>
+          <button class="btn btn-secondary">Secondary Action</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 mb-3">
+    <div class="card h-100">
+      <img src="https://placehold.co/400x250" class="card-img-top" alt="Multiple Actions Card 2">
+      <div class="card-body">
+        <h5 class="card-title">Multiple Options</h5>
+        <p class="card-text">Let the users choose what they want to do with these options.</p>
+        <div class="d-flex justify-content-between">
+          <button class="btn btn-success">Confirm</button>
+          <button class="btn btn-danger">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 mb-3">
+    <div class="card h-100">
+      <img src="https://placehold.co/400x250" class="card-img-top" alt="Multiple Actions Card 3">
+      <div class="card-body">
+        <h5 class="card-title">More Interactions</h5>
+        <p class="card-text">Cards with multiple choices make things easier for your users.</p>
+        <div class="d-flex justify-content-between">
+          <button class="btn btn-warning">Action 1</button>
+          <button class="btn btn-info">Action 2</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Card with Countdown Timer -->
+<div class="row mb-5">
+  <div class="col-md-4 mb-3">
+    <div class="card h-100">
+      <img src="https://placehold.co/400x250" class="card-img-top" alt="Countdown Card">
+      <div class="card-body">
+        <h5 class="card-title">Countdown to Sale</h5>
+        <p class="card-text">Don’t miss our limited-time sale! Countdown to the end of the offer.</p>
+        <div id="countdown" class="font-weight-bold text-danger">03:45:30</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Countdown Timer Logic
+  const countdown = document.getElementById("countdown");
+  let timeLeft = 3 * 60 * 60 + 45 * 60 + 30; // 3 hours 45 minutes 30 seconds
+  setInterval(() => {
+    const hours = Math.floor(timeLeft / 3600);
+    const minutes = Math.floor((timeLeft % 3600) / 60);
+    const seconds = timeLeft % 60;
+    countdown.innerText = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+    timeLeft -= 1;
+  }, 1000);
+</script>
+
+<!-- Card with Nested Collapsible Cards -->
+<div class="row mb-5">
+  <div class="col-md-4 mb-3">
+    <div class="card h-100">
+      <img src="https://placehold.co/400x250" class="card-img-top" alt="Collapsible Card 1">
+      <div class="card-body">
+        <h5 class="card-title">Collapsible Card</h5>
+        <p class="card-text">This card contains nested cards that can be expanded.</p>
+        <button class="btn btn-info" data-toggle="collapse" data-target="#nestedCard1">Toggle Nested Card</button>
+        <div id="nestedCard1" class="collapse mt-3">
+          <div class="card mt-3">
+            <div class="card-body">
+              <h6>Nested Card</h6>
+              <p>This is the nested content inside the collapsible card.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+</body>
+</html>
