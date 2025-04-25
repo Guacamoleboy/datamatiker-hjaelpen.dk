@@ -2,12 +2,12 @@
 
 <!-- 
 
-    Website By Andreas, Ebou & Jonas.
-    Datamatiker elever Vinter 2025
+    Website By Jonas.
+    Datamatiker elev Vinter 2025
     
     Sidst opdateret:
-    13-04-2025
-
+    25-04-2025
+    
     Af: Jonas
 
 -->
@@ -26,6 +26,9 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="../assets/images/image1.png" type="image/x-icon">
 
+    <!-- Navbar load ../ -->
+    <script src="../assets/js/navbar2.js" defer></script>
+
     <!-- CSS Files -->
     <link rel="stylesheet" href="../assets/css/animate-3.7.0.css">
     <link rel="stylesheet" href="../assets/css/font-awesome-4.7.0.min.css">
@@ -35,185 +38,39 @@
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
-<body>
+<body class="dark-mode">
+    
     <!-- Preloader Starts -->
     <div class="preloader">
         <div class="spinner"></div>
     </div>
     <!-- Preloader End -->
 
-    <!-- Header Area Starts -->
-    <header class="header-area header-area2">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-2">
-                    <div class="logo-area">
-                        <a href="../index.html"><img src="../assets/images/logo/logo2-white.png" alt="logo"></a>
-                    </div>
-                </div>
-                <div class="col-lg-10">
-                    <div class="custom-navbar">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <div class="main-menu main-menu2">
-                        <ul>
-                            <li><a href="../index.html">Forside</a></li>
-                            <li class="active dropdown"><a href="#">Semestre</a>
-                                <ul class="sub-menu">
-                                    <li><a href="#">1. Semester</a></li>
-                                    <li><a href="#">2. Semester</a></li>
-                                    <li><a href="#">3. Semester</a></li>
-                                    <li><a href="#">4. Semester</a></li>
-                                    <li><a href="#">5. Semester</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="https://buymeacoffee.com/datamatikerhjaelpen">Støt os</a></li>
-                            <li><a href="#">Om os</a></li>
-                            <li><a href="#">Kontakt</a></li>
-                            <li><a href="#">dev</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!-- Header Area End -->
+    <!-- Darkmode button -->
+    <button id="darkModeToggle" class="darkmode-btn-floating" title="Skift tema">☀️</button>
 
-    <!-- Banner Area Starts -->
-    <section class="banner-area banner-area2 text-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1><i>Tekst</i></h1>
-                    <p class="pt-2"><i>1. Semester</i></p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Banner Area End -->
+    <!-- Custom_01 Section Start -->
+    <div class="deshes-area section-padding text-center" style="margin-top: 300px;">
 
-    <!-- Welcome Area Starts -->
-    <section class="welcome-area section-padding2">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-6 align-self-center">
-                    <div class="welcome-img">
-                        <img src="../assets/images/image1-large.png" class="img-fluid" alt="">
-                    </div>
-                </div>
-                <div class="col-md-6 align-self-center">
-                    <div class="welcome-text mt-5 mt-md-0">
-                        <h3><span class="style-change">Overskrift</span> <br>Tekst til emnet</h3>
-                        <p class="pt-3">Noget random tekst som bare skal ændres</p>
-                        <a href="#" target="_blank" class="template-btn mt-3">Knap til noget</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Welcome Area End -->
-
-    <!-- Deshes Area Starts -->
-    <div class="deshes-area section-padding">
+        <!-- Component ROW START -->
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-top2 text-center">
-                        <h3>Noget <span>Tekst</span> Her</h3>
-                        <div class="welcome-text mt-5 mt-md-0">
-                            <p>Sværheds grad: <span class="style-changer2">2/10</span></p>
-                        </div>
-                        <p><br>Tekst her</p>
-                        <h4 class="mb-20"><b>Tekst her</b></h4>
-                    </div>
+            <div id="component-rows" class="row">
+
+                <div class="section-top2 col-lg-12 text-center">
+                    <h3>Jeg går desværre kun på <b>1. Semester</b> lige pt...</h3>
+                    <p class="mt-4"><i>Opdateres når jeg går læringsmålene for 5. Semester!</i></p>
                 </div>
+
             </div>
         </div>
+        <!-- Component ROW END -->
+
     </div>
-    <!-- Deshes Area End -->
-
-    <!-- Footer Area Starts -->
-    <footer class="footer-area">
-        <div class="footer-widget section-padding">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="single-widget single-widget1">
-                            <a href="../index.html"><img src="../assets/images/logo/logo2-orange.png" alt=""></a>
-                            <p class="mt-3"><b>Datamatiker-hjaelpen - Din vej til et godt studie!</b></p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="single-widget single-widget2 my-5 my-md-0">
-                            <h5 class="mb-4">Kontakt os</h5>
-                            <div class="d-flex">
-                                <div class="into-icon">
-                                    <i class="fa fa-map-marker"></i>
-                                </div>
-                                <div class="info-text">
-                                    <p><b>Firskovvej 18, 2800 Kongens Lyngby</b></p>
-                                </div>
-                            </div>
-                            <div class="d-flex">
-                                <div class="into-icon">
-                                    <i class="fa fa-phone"></i>
-                                </div>
-                                <div class="info-text">
-                                    <p><b>+45 00 00 00 00</b></p>
-                                </div>
-                            </div>
-                            <div class="d-flex">
-                                <div class="into-icon">
-                                    <i class="fa fa-envelope-o"></i>
-                                </div>
-                                <div class="info-text">
-                                    <p><b>hej@datamatiker-hjaelpen.dk</b></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="single-widget single-widget3">
-                            <h5 class="mb-4">Links</h5>
-                            <div class="b-white">
-                                <p><a href="#"><b>Github</b></a></p>
-                                <p><a href="../https://buymeacoffee.com/datamatikerhjaelpen"><b>Buy us a coffee!</b></a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-7 col-md-6">
-                        
-                        <span>
-                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> Alle rettigheder forbeholdes | Hjemmesiden er lavet af <a href="https://datamatiker-hjaelpen.dk" target="_blank"><b>Andreas, Ebou & Jonas</b></a>
-                        </span>
-
-                    </div>
-                    <div class="col-lg-5 col-md-6">
-                        <div class="social-icons">
-                            <ul>
-                                <li class="no-margin">Følg os på</li>
-                                <li><a href="https://buymeacoffee.com/datamatikerhjaelpen"><i class="fa fa-coffee"></i></a></li>
-                                <li><a href="#"><i class="fa fa-github"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- Footer Area End -->
-
+    <!-- Custom_01 Section END -->
 
     <!-- Javascript -->
     <script src="../assets/js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="../assets/js/darkmode.js"></script>
     <script src="../assets/js/vendor/bootstrap-4.1.3.min.js"></script>
     <script src="../assets/js/vendor/wow.min.js"></script>
     <script src="../assets/js/vendor/owl-carousel.min.js"></script>

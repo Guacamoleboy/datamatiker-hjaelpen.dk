@@ -1354,6 +1354,17 @@ body.dark-mode .wave-path {
 
 }
 
+.i-candy-h4 code {
+    white-space: pre-wrap;
+    display: inline-block;
+    color: #fff;
+    font-size: 16px;
+    background-color: #494974;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
 .reservation-area {
     position: relative;
     padding-bottom: 150px; 
@@ -3099,6 +3110,112 @@ body.dark-mode .banner-area2 p {
     margin-right: 0px !important;
     padding: 0.3rem 0.6rem;
     transition: all 0.3s ease-in-out;
+}
+
+.row .learn-card-lol {
+    border-style: none !important;
+    border-radius: 25px;
+}
+
+.row .learn-card-lol:hover {
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+}
+
+.row .card-solo-center {
+    max-width: 600px; 
+    margin: auto; 
+    margin-top: 50px; 
+    padding-top: 40px;
+    border-style: none !important;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.divider-line {
+    width: 60%;
+    height: 250px;
+    background: linear-gradient(135deg, #665294 0%, #7861ad 100%);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 -10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.update-area.tilted-line {
+    position: relative;
+    background-color: #59598b;
+    z-index: 1;
+    clip-path: polygon(0 80px, 100% 0, 100% 100%, 0% 100%);
+}
+
+.update-area.tilted-line::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: transparent;
+    z-index: -1;
+    border-top: 80px solid #494974;
+    border-left: 100vw solid transparent;
+    transform: translateY(-80px);
+}
+
+.container .locked {
+    opacity: 0.2;
+    pointer-events: none;
+    filter: grayscale(70%);
+}
+
+.divider-line::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    transform: translateY(-50%);
+}
+
+.divider-line::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -100px;
+    width: 100px;
+    height: 5px;
+    background: linear-gradient(to right, transparent, rgba(255,255,255,0.8), transparent);
+    transform: translateY(-50%);
+    filter: blur(4px);
+    animation: slideGlow 3s linear infinite;
+}
+
+@keyframes slideGlow {
+    0% {
+        left: -150px;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+.row .card-solo-center span {
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    background-color: red;
+    transform: scale(1.5);
+}
+
+.row .card-solo-center:hover {
+    transform: scale(1.02);
+    transition: all 0.3s ease-in-out;
+    background-color: #67679e;
 }
 
 .code-card {
@@ -5344,3 +5461,71 @@ h6 {
     height: 1000px;
     overflow: hidden;
 }
+
+@keyframes fadeFromLeftToRight {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+  
+.fade-from-left-right {
+    animation: fadeFromLeftToRight 1s ease-out forwards;
+}
+
+@keyframes popOut {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+}
+  
+.pop-out {
+    animation: popOut 0.6s ease-out forwards;
+}
+
+@keyframes popEffect {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.08);
+    }
+    100% {
+      transform: scale(1);
+    }
+}
+  
+.pop-effect {
+    animation: popEffect 1s ease-in-out forwards;
+}
+
+.scroll-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 10px 20px;
+    background-color: #373757;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+    display: none;
+    cursor: pointer;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+  
+.scroll-btn:hover {
+    background-color: #f8b600;
+    transition: all 0.3s ease;
+}
+  
