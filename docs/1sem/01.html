@@ -33,6 +33,14 @@
     <!-- Footer load  -->
     <script src="../assets/js/footer2.js" defer></script>
 
+    <!-- WOW.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+    <!-- WOW toggle -->
+    <script>
+        new WOW().init();
+    </script>
+
     <!-- CSS Files -->
     <link rel="stylesheet" href="../assets/css/animate-3.7.0.css">
     <link rel="stylesheet" href="../assets/css/font-awesome-4.7.0.min.css">
@@ -57,8 +65,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1><i>01 | <b>Objekter</b></i></h1>
-                    <p class="pt-2"><i>1. Semester / Læringsmål</i></p>
+                    <h1 class="wow animated fadeInDown"><i>01 | <b>Objekter</b></i></h1>
+                    <p class="pt-2 wow animated fadeInDown"><i>1. Semester / Læringsmål</i></p>
                 </div>
             </div>
         </div>
@@ -82,7 +90,7 @@
             <div class="row">
                 <div class="col-md-6 align-self-center">
                     <div class="welcome-img">
-                        <img src="../assets/images/1sem/01_lm_final2.png" class="img-fluid" alt="">
+                        <img src="../assets/images/1sem/01_lm_final2.png" class="img-fluid wow animated fadeInUp" alt="">
                     </div>
                 </div>
                 <div class="col-md-6 align-self-center">
@@ -111,15 +119,15 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-top2 text-center">
-                        <h3 class="card-title">Hvad er <b>klasser</b>? Hvorfor er de vigtige?</h3>
+                        <h3 class="card-title wow animated fadeInDown">Hvad er <b>klasser</b>? Hvorfor er de vigtige?</h3>
                 
                         <div class="row justify-content-center mt-5">
 
                             <div class="col-lg-6 mb-4">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h5 class="card-title generic-blockquote-bottom" style="background-color: #5e5e93;">Hvorfor</h5>
-                                        <p class="card-text button-cool" style="font-weight: normal;">
+                                        <h5 class="card-title generic-blockquote-bottom wow animated fadeInDown" style="background-color: #5e5e93;">Hvorfor</h5>
+                                        <p class="card-text button-cool wow animated fadeInDown" style="font-weight: normal;">
                                             I starten af dit programmeringseventyr kan det være svært at forstå <b>hvorfor</b> du skal benytte dig af klasser..
                                             <br><br>Det skyldes at du i starten laver <b>mindre programmer</b> end når du er færdig på uddannelsen på et tidspunkt.
                                             <br><br>Klasser bruges til at <b>opdele kode</b> i funktionalitet og område. Dvs hvis vi har et program, så er det en god idé at
@@ -134,7 +142,7 @@
 
                             <div class="col-lg-6 mb-4">
                                 <div class="card">
-                                    <div class="card-body">
+                                    <div class="card-body wow animated fadeInDown">
                                         <img src="../assets/images/1sem/01_01.png" style="width: 100%; height: 100%; border-radius: 25px;">
                                     </div>
                                 </div>
@@ -154,13 +162,13 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-top2 text-center">
-                        <h3 class="card-title">Eksempler fra <b>Processing</b> & <b>IntelliJ</b></h3>
+                        <h3 class="card-title wow animated fadeInUp">Eksempler fra <b>Processing</b> & <b>IntelliJ</b></h3>
                 
                         <div class="row justify-content-center mt-5">
 
                             <div class="col-lg-6 mb-4">
                                 <div class="card">
-                                    <div class="card-body">
+                                    <div class="card-body wow animated fadeInUp">
                                         <img src="../assets/images/1sem/01_klasser_intellij.jpg" style="width: 100%; height: 100%; border-radius: 25px;">
                                     </div>
                                 </div>
@@ -168,7 +176,7 @@
 
                             <div class="col-lg-6 mb-4">
                                 <div class="card">
-                                    <div class="card-body">
+                                    <div class="card-body wow animated fadeInUp delay-1s">
                                         <img src="../assets/images/1sem/01_klasser_processing.jpg" style="width: 100%; height: 100%; border-radius: 25px;">
                                     </div>
                                 </div>
@@ -201,8 +209,8 @@
         <div class="container">
         <div class="row">
             <div class="col-lg-12">
-            <h2><i class="i-candy">Instantiering og erklæring af objekt</i></h2>
-            <h4 class="mt-4 i-candy-h4">TextUI ui = new TextUI ( )<br><br><b>Objekt</b> <b>variabel</b> = new <b>Objekt</b>(<b>parametre</b>)
+            <h2 class="wow fade-from-right-left"><i class="i-candy">Instantiering og erklæring af objekt</i></h2>
+            <h4 class="mt-4 i-candy-h4 wow fade-from-right-left">TextUI ui = new TextUI ( )<br><br><b>Objekt</b> <b>variabel</b> = new <b>Objekt</b>(<b>parametre</b>)
             <br><br>Variablen kan hedde lige hvad du vil. Det er dog effektivt at navngive den efter objektet..
             </h4>
             </div>
@@ -236,7 +244,7 @@
             </svg>
         </div>
           
-        <details open>
+        <details open class="wow animated fadeInUp">
             <summary>
                 Access Modifiers...
                 <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" /></svg>
@@ -247,7 +255,7 @@
             <p class="mt-2"><b class="b-orange">Protected</b><br>Alle klasser i samme package samt subclasses</p>
         </details>
           
-        <details>
+        <details class="wow animated fadeInUp">
             <summary>
                 Getter & Setter
                 <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" /></svg>
@@ -271,12 +279,12 @@
     <!-- Dropdown Info Section End -->
 
     <!-- Learning Area Starts -->
-    <div class="deshes-area section-padding">
+    <div class="deshes-area tilted-line section-padding">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-top2 text-center">
-                        <h3><b>Øvelse</b> gør mester</h3>
+                        <h3 class="wow animated fadeInUp"><b>Øvelse</b> gør mester</h3>
                         <p class="mt-4"><i>Det er okay at fejle! Du bliver bare klogere..</i></p>
                         <div class="single-element-widget-exam col-lg-10 mx-auto mt-5">
                             <div class="section-top-border">
@@ -357,15 +365,15 @@
 
     <!-- Comparison Section Start -->
 
-    <div class="deshes-area section-padding text-center" style="margin-top: -200px;">
+    <div class="deshes-area section-padding tilted-line-end text-center" style="margin-top: -200px;">
 
-        <h3>Hvorfor er <b>toString()</b> metoden vigtig?</b></h3>
-        <p class="mt-4"><i>Herunder kan du se forskellen på toString og uden toString</i></p>
+        <h3 class="wow animated fadeInUp">Hvorfor er <b>toString()</b> metoden vigtig?</b></h3>
+        <p class="mt-4 wow animated fadeInUp"><i>Herunder kan du se forskellen på toString og uden toString</i></p>
 
         <div class="container mt-5">
             <div class="row">
 
-                <div class="card-deck col-lg-12">
+                <div class="card-deck col-lg-12 wow animated fadeInUp">
 
                     <div class="card">
                         <div class="card-body">
@@ -401,7 +409,7 @@
 
     <!-- Comparison Section Start -->
 
-    <div class="deshes-area section-padding text-center">
+    <div class="deshes-area section-padding text-center wow animated fadeInUp">
 
         <h3><b>Attributter</b>, <b>felter</b> & <b>lokale variabler</b>...</b></h3>
         <p class="mt-4"><i>Hvad er forskellen?</i></p>
@@ -455,7 +463,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-top2 text-center">
-                        <h3>Se om du har forstået <b>læringsområdet</b></h3>
+                        <h3 class="wow animated fadeInUp">Se om du har forstået <b>læringsområdet</b></h3>
                         <p class="mt-4"><i>Du skal svare korrekt på alle spørgsmål for at bestå!</i></p>
                         <div class="single-element-widget-exam col-lg-6 mx-auto mt-5">
 
@@ -504,13 +512,13 @@
     <!-- Like Section Start -->
     <div class="deshes-area section-padding text-center no-spacing" style="margin-top: -200px;">
 
-        <div class="section-top2 col-lg-12 text-center">
+        <div class="section-top2 col-lg-12 text-center wow pop-effect">
             <h3>Giv <b>01 | ArrayList</b> en rating</h3>
             <p class="mt-4"><i>Tryk på den du føler for!</i></p>
         </div>
 
         <div class="d-flex justify-content-center align-items-center flex-row gap-4">
-            <div class="outer-circle position-relative mr-5">
+            <div class="outer-circle position-relative mr-5 wow pop-effect">
                 <button class="like-button" onclick="scaleHeart()">Like</button>
                 <div class="like-count">12</div>
                 <div class="like-icon">
@@ -518,7 +526,7 @@
                 </div>
             </div>
             
-            <div class="outer-circle position-relative ml-5">
+            <div class="outer-circle position-relative ml-5 wow pop-effect">
                 <button class="like-button" onclick="scaleThumb()">Dislike</button>
                 <div class="dislike-count">0</div>
                 <div class="dislike-icon">
