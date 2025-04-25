@@ -1277,6 +1277,14 @@ a:focus {
     text-decoration: none
 }
 
+.row input::placeholder {
+    color: white;
+}
+
+.row input {
+    border-radius: 15px;
+}
+
 input:focus,
 textarea:focus {
     outline: none
