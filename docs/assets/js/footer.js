@@ -65,7 +65,7 @@ const footerHTML = `
                     <div class="col-lg-7 col-md-6">
                         
                         <span>
-                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> Alle rettigheder forbeholdes | Hjemmesiden er lavet af <a href="https://datamatiker-hjaelpen.dk" target="_blank"><b>Andreas, Ebou & Jonas</b></a>
+                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> Alle rettigheder forbeholdes | Hjemmesiden er lavet af <a href="https://datamatiker-hjaelpen.dk" target="_blank"><b>Jonas</b></a>
                         </span>
 
                     </div>
