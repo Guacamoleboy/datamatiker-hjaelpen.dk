@@ -3122,6 +3122,81 @@ body.dark-mode .banner-area2 p {
     transition: all 0.2s ease-in-out;
 }
 
+.row .card-solo-center {
+    max-width: 600px; 
+    margin: auto; 
+    margin-top: 50px; 
+    padding-top: 40px;
+    border-style: none !important;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.divider-line {
+    width: 60%;
+    height: 250px;
+    background: linear-gradient(135deg, #665294 0%, #7861ad 100%);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 -10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.container .locked {
+    opacity: 0.2;
+    pointer-events: none;
+    filter: grayscale(70%);
+}
+
+.divider-line::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    transform: translateY(-50%);
+}
+
+.divider-line::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -100px;
+    width: 100px;
+    height: 5px;
+    background: linear-gradient(to right, transparent, rgba(255,255,255,0.8), transparent);
+    transform: translateY(-50%);
+    filter: blur(4px);
+    animation: slideGlow 3s linear infinite;
+}
+
+@keyframes slideGlow {
+    0% {
+        left: -150px;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+.row .card-solo-center span {
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    background-color: red;
+    transform: scale(1.5);
+}
+
+.row .card-solo-center:hover {
+    transform: scale(1.02);
+    transition: all 0.3s ease-in-out;
+    background-color: #67679e;
+}
+
 .code-card {
     font-size: 18px !important;
     background-color: #51517e !important;
