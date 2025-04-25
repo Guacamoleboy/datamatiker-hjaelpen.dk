@@ -3143,6 +3143,27 @@ body.dark-mode .banner-area2 p {
     overflow: hidden;
 }
 
+.update-area.tilted-line {
+    position: relative;
+    background-color: #59598b;
+    z-index: 1;
+    clip-path: polygon(0 80px, 100% 0, 100% 100%, 0% 100%);
+}
+
+.update-area.tilted-line::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: transparent;
+    z-index: -1;
+    border-top: 80px solid #494974;
+    border-left: 100vw solid transparent;
+    transform: translateY(-80px);
+}
+
 .container .locked {
     opacity: 0.2;
     pointer-events: none;
@@ -5440,3 +5461,71 @@ h6 {
     height: 1000px;
     overflow: hidden;
 }
+
+@keyframes fadeFromLeftToRight {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+  
+.fade-from-left-right {
+    animation: fadeFromLeftToRight 1s ease-out forwards;
+}
+
+@keyframes popOut {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+}
+  
+.pop-out {
+    animation: popOut 0.6s ease-out forwards;
+}
+
+@keyframes popEffect {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.08);
+    }
+    100% {
+      transform: scale(1);
+    }
+}
+  
+.pop-effect {
+    animation: popEffect 1s ease-in-out forwards;
+}
+
+.scroll-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 10px 20px;
+    background-color: #373757;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+    display: none;
+    cursor: pointer;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+  
+.scroll-btn:hover {
+    background-color: #f8b600;
+    transition: all 0.3s ease;
+}
+  

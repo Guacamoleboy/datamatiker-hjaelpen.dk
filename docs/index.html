@@ -32,6 +32,14 @@
     <!-- Footer load  -->
     <script src="assets/js/footer.js" defer></script>
 
+    <!-- WOW.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+    <!-- WOW toggle -->
+    <script>
+        new WOW().init();
+    </script>
+
     <!-- CSS Files -->
     <link rel="stylesheet" href="assets/css/animate-3.7.0.css">
     <link rel="stylesheet" href="assets/css/font-awesome-4.7.0.min.css">
@@ -51,15 +59,18 @@
     <!-- Darkmode button -->
     <button id="darkModeToggle" class="darkmode-btn-floating" title="Skift tema">☀️</button>
 
+    <!-- Scroll-to-Top Button -->
+    <button id="scrollToTopBtn" class="scroll-btn" onclick="scrollToSection()"><i class="fa fa-arrow-up"></i></button>
+
     <!-- Banner Area Starts -->
-    <section class="banner-area text-center">
+    <section class="banner-area text-center" id="start">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <h6>Håndlavet af datamatikere</h6>
-                    <h1>Hjælper dig til et godt og<span class="prime-color"> forståeligt </span>studie<br>
+                    <h1 class="animated fadeInDown">Hjælper dig til et godt og<span class="prime-color"> forståeligt </span>studie<br>
                     </h1>
-                    <a href="#" class="template-btn mt-3">Gå til arkiv</a>
+                    <a href="#" class="template-btn mt-3 animated fadeInUp">Gå til arkiv</a>
                 </div>
             </div>
         </div>
@@ -83,20 +94,20 @@
             <div class="row">
                 <div class="col-md-6 align-self-center">
                     <div class="welcome-img">
-                        <img src="assets/images/index_01.png" class="img-fluid" alt="">
+                        <img src="assets/images/index_01.png" class="img-fluid wow animated fadeInDown" alt="">
                     </div>
                 </div>
                 <div class="col-md-6 align-self-center">
                     <div class="welcome-text mt-5 mt-md-0">
-                        <h3 class="dark-mode"><span class="style-change">Velkommen</span> <br>til datamatiker-hjaelpen.dk</h3>
+                        <h3 class="dark-mode wow animated fadeInDown"><span class="style-change">Velkommen</span> <br>til datamatiker-hjaelpen.dk</h3>
                         
-                        <p class="pt-3">
+                        <p class="pt-3 wow animated fadeInDown delay-0.5s">
                             Her hos os har du mulighed for at lære på en helt ny måde. <b>Vi er nemlig selv datamatikere</b>. Vores mål er fælles forståelse og bedre effektivitet og læringsmiljø.
                             En lærer har en måde at forklare det meget i termer. Hos os pensler vi det helt ned så <b>ALLE</b> kan være med. 
                             Når du har læst et læringsmål, så er der en test du kan tage i bunden for at se om du har helt styr på emnet!
                         </p>
                         
-                        <p>
+                        <p class="wow animated fadeInDown delay-0.5s">
                             På siden finder du <b>udover semester information</b> samt læringsmål også anden information vedr programmering. Vi har andre sprog (<b class="b-white">Java, React, HTML, CSS og meget mere</b>).
                             Vi arbejder også på at lave en mulighed for at <b>lærere</b> og <b>institutioner</b> kan oprette og lave deres egne undersider til deres elever og måde at lære på.
                             Vores side bliver altså et <b>bindeled mellem uddannelsen og eleven</b>.
@@ -128,8 +139,8 @@
         <div class="container">
         <div class="row">
             <div class="col-lg-12">
-            <h2><i><b>Læring i øjenhøjde</b>...</i></h2>
-            <h4 class="mt-4">Datamatiker-hjaelpen.dk</h4>
+            <h2 class="wow fade-from-left-right"><i><b>Læring i øjenhøjde</b>...</i></h2>
+            <h4 class="mt-4 wow fade-from-left-right">Datamatiker-hjaelpen.dk</h4>
             </div>
         </div>
         </div>
@@ -146,15 +157,97 @@
 
     </div>
     <!-- Reservation Area End -->
+
+    <!--? Team -->
+    <section class="deshes-area section-padding40 section-bg1 mt-5 mb-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-12">
+                    <div class="section-tittle text-center mb-5">
+                        <h2 class="wow fadeInUp">Hvorfor <b>os</b> fremfor andre alternativer?</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5 wow fade-from-left-right">
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="single-cat">
+                        <div class="cat-icon mb-5">
+                            <img src="assets/images/icon/services1.svg" alt="">
+                        </div>
+                        <div class="cat-cap">
+                            <h5><a href="#">Title here</a></h5>
+                            <p>Text placeholder here lol this is long</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="single-cat">
+                        <div class="cat-icon mb-5">
+                            <img src="assets/images/icon/services2.svg" alt="">
+                        </div>
+                        <div class="cat-cap">
+                            <h5><a href="#">Title here</a></h5>
+                            <p>Text placeholder here lol this is long</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="single-cat">
+                        <div class="cat-icon mb-5">
+                            <img src="assets/images/icon/services3.svg" alt="">
+                        </div>
+                        <div class="cat-cap">
+                            <h5><a href="#">Title here</a></h5>
+                            <p>Text placeholder here lol this is long</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 mt-5">
+                    <div class="single-cat">
+                        <div class="cat-icon mb-5">
+                            <img src="assets/images/icon/services4.svg" alt="">
+                        </div>
+                        <div class="cat-cap">
+                            <h5><a href="#">Title here</a></h5>
+                            <p>Text placeholder here lol this is long</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 mt-5">
+                    <div class="single-cat">
+                        <div class="cat-icon mb-5">
+                            <img src="assets/images/icon/services5.svg" alt="">
+                        </div>
+                        <div class="cat-cap">
+                            <h5><a href="#">Title here</a></h5>
+                            <p>Text placeholder here lol this is long</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 mt-5">
+                    <div class="single-cat">
+                        <div class="cat-icon mb-5">
+                            <img src="assets/images/icon/services6.svg" alt="">
+                        </div>
+                        <div class="cat-cap">
+                            <h5><a href="#">Title here</a></h5>
+                            <p>Text placeholder here lol this is long</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services End -->
   
     <!-- Update Area Starts -->
-    <section class="update-area section-padding">
+    <section class="update-area tilted-line section-padding">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-top2 text-center">
-                        <h3>Vores <span>nyeste</span> opdateringer</h3>
-                        <p><i>Følg vores seneste opdateringer</i></p>
+                        <h3 class="wow fadeInUp">Vores <span>nyeste</span> opdateringer</h3>
+                        <p class="wow fadeInUp"><i>Følg vores seneste opdateringer</i></p>
                     </div>
                 </div>
             </div>
@@ -162,7 +255,7 @@
                 <div class="col-md-4">
                     <div class="single-food">
                         <div class="food-img">
-                            <img src="assets/images/placeholder1.png" class="img-fluid mb-3" alt="">
+                            <img src="assets/images/placeholder1.png" class="img-fluid mb-3 wow pop-effect" alt="">
                         </div>
                         <div class="food-content">
                             <div class="post-admin d-lg-flex mb-3">
@@ -178,7 +271,7 @@
                 <div class="col-md-4">
                     <div class="single-food my-5 my-md-0">
                         <div class="food-img">
-                            <img src="assets/images/placeholder1.png" class="img-fluid mb-3" alt="">
+                            <img src="assets/images/placeholder1.png" class="img-fluid mb-3 wow pop-effect delay-1s" alt="">
                         </div>
                         <div class="food-content">
                             <div class="post-admin d-lg-flex mb-3">
@@ -194,7 +287,7 @@
                 <div class="col-md-4">
                     <div class="single-food">
                         <div class="food-img">
-                            <img src="assets/images/placeholder1.png" class="img-fluid mb-3" alt="">
+                            <img src="assets/images/placeholder1.png" class="img-fluid mb-3 wow pop-effect delay-2s" alt="">
                         </div>
                         <div class="food-content">
                             <div class="post-admin d-lg-flex mb-3">
@@ -222,7 +315,7 @@
     <script src="assets/js/vendor/jquery.nice-select.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/sidney.js"></script>
+    <script src="assets/js/button-to-top.js"></script>
 
 </body>
-
 </html>
