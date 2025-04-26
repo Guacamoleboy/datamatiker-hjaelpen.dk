@@ -56,6 +56,24 @@
     </div>
     <!-- Preloader End -->
 
+    <!-- Notification Box (NEWS) START -->
+    <div id="notification" class="notification" style="display: none;">
+        <span>Nyt læringsmål tilføjet!</span>
+        <button onclick="window.location.href='1sem/overblik.html'">Se nu</button>
+    </div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const notification = document.getElementById('notification');
+            notification.style.display = 'flex';
+
+            setTimeout(() => {
+                notification.style.display = 'none';
+            }, 5000);
+        });
+    </script>
+    <!-- Notification Box (NEWS) START -->
+
     <!-- Darkmode button -->
     <button id="darkModeToggle" class="darkmode-btn-floating" title="Skift tema">☀️</button>
 
