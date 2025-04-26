@@ -14,6 +14,29 @@ body {
     font-size: 14px;
     font-weight: 400;
     transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: none !important;
+}
+
+.cursor {
+    width: 10px;
+    height: 10px;
+    background-color: orange !important;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+.cursor.hover {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(77, 84, 166) !important;
+    border: 2px solid black !important;
+}
+
+a, button {
+    cursor: none !important;
 }
 
 body.dark-mode {
