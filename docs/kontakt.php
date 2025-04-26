@@ -49,6 +49,26 @@
     </div>
     <!-- Preloader End -->
 
+    <!-- Custom Cursor START -->
+    <div class="cursor" id="customCursor"></div>
+
+    <script>
+        const cursor = document.getElementById('customCursor');
+
+        document.addEventListener('mousemove', (e) => {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+
+        const target = e.target;
+        if (target.tagName === 'A' || target.tagName === 'BUTTON' || target.tagName === 'UL' || target.tagName === 'LI') {
+            cursor.classList.add('hover');
+        } else {
+            cursor.classList.remove('hover');
+        }
+        });
+    </script>
+    <!-- Custom Cursor END -->
+
     <!-- Darkmode button -->
     <button id="darkModeToggle" class="darkmode-btn-floating" title="Skift tema">☀️</button>
 

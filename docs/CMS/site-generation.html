@@ -45,6 +45,26 @@
     </div>
     <!-- Preloader End -->
 
+    <!-- Custom Cursor START -->
+    <div class="cursor" id="customCursor"></div>
+
+    <script>
+        const cursor = document.getElementById('customCursor');
+
+        document.addEventListener('mousemove', (e) => {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+
+        const target = e.target;
+        if (target.tagName === 'A' || target.tagName === 'BUTTON' || target.tagName === 'UL' || target.tagName === 'LI') {
+            cursor.classList.add('hover');
+        } else {
+            cursor.classList.remove('hover');
+        }
+        });
+    </script>
+    <!-- Custom Cursor END -->
+
     <!-- Custom_01 Section Start -->
     <div class="deshes-area section-padding text-center mt-5">
 
