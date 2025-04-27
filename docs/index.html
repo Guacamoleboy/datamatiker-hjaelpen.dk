@@ -49,30 +49,40 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body class="dark-mode">
+<body class="dark-mode" style="overflow-x: hidden !important;">
+    
     <!-- Preloader Starts -->
     <div class="preloader">
         <div class="spinner"></div>
     </div>
     <!-- Preloader End -->
 
-    <!-- Custom Cursor START -->
+    <!-- Custom Cursor START --> 
     <div class="cursor" id="customCursor"></div>
 
     <script>
         const cursor = document.getElementById('customCursor');
 
-        document.addEventListener('mousemove', (e) => {
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
+        // Detect if it's a touch device
+        const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
-        const target = e.target;
-        if (target.tagName === 'A' || target.tagName === 'BUTTON' || target.tagName === 'UL' || target.tagName === 'LI') {
-            cursor.classList.add('hover');
+        if (!isTouchDevice) {
+            cursor.style.display = 'block';
+
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+
+                const target = e.target;
+                if (target.tagName === 'A' || target.tagName === 'BUTTON' || target.tagName === 'UL' || target.tagName === 'LI') {
+                    cursor.classList.add('hover');
+                } else {
+                    cursor.classList.remove('hover');
+                }
+            });
         } else {
-            cursor.classList.remove('hover');
+            cursor.style.display = 'none';
         }
-        });
     </script>
     <!-- Custom Cursor END -->
 

@@ -25,7 +25,7 @@ body {
     position: fixed;
     pointer-events: none;
     transform: translate(-50%, -50%);
-    z-index: 99999; /* Always #1 infront */
+    z-index: 99999;
     border: 2px solid black !important;
 }
 
@@ -35,6 +35,12 @@ body {
 
 a, button {
     cursor: none !important;
+}
+
+@media (pointer: coarse) { /* MOBILE CURSOR REMOVAL - IMPORTANT DONT REMOVE */
+    body, a, button {
+      cursor: default !important;
+    }
 }
 
 body.dark-mode {
@@ -5272,9 +5278,9 @@ h6 {
     transition: all 0.5s
 }
 
-.template-btn:hover {
-    color: #131230;
-    background: transparent;
+.template-btn:hover { /* Index Button : hover */
+    color: #fff;
+    background: #996a03;
     border: 1px solid #ffb606
 }
 
