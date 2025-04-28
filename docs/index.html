@@ -94,18 +94,17 @@
 
     <script>
         window.addEventListener('DOMContentLoaded', () => {
-
-            let count = 0;
-
-            if(count === 0){
-                const notification = document.getElementById('notification');
+            const notificationShown = localStorage.getItem('notificationShown');
+            const notification = document.getElementById('notification');
+    
+            if (!notificationShown) {
                 notification.style.display = 'flex';
-                count++;
+                localStorage.setItem('notificationShown', 'true');
+    
+                setTimeout(() => {
+                    notification.style.display = 'none';
+                }, 10000);
             }
-
-            setTimeout(() => {
-                notification.style.display = 'none';
-            }, 5000);
         });
     </script>
     <!-- Notification Box (NEWS) END -->

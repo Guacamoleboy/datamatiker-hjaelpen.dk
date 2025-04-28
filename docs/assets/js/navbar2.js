@@ -30,6 +30,38 @@ const navbarHTML = `
                                 <li><a href="../5sem/overblik.html">5. Semester</a></li>
                             </ul>
                         </li>
+                        <li class="dropdown"><a href="#">Guide</a>
+                            <ul class="sub-menu">
+                                <li class="dropdown"><a href="#">Studiestart</a>
+                                    <ul class="sub-menu-further">
+                                        <li><a href="#">Introdagene</a></li>
+                                        <li><a href="#">Parkering</a></li>
+                                        <li><a href="#">Skema</a></li>
+                                        <li><a href="#">SU</a></li>
+                                        <li><a href="#">Om skolen</a></li>
+                                        <li><a href="#">Find vej</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Installering af programmer</a>
+                                    <ul class="sub-menu-further">
+                                        <li><a href="#">Processing</a></li>
+                                        <li><a href="#">Sublime Text</a></li>
+                                        <li><a href="#">IntelliJ</a></li>
+                                        <li><a href="#">Github</a></li>
+                                        <li><a href="#">Visual Studio Code</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Fra os</a>
+                                    <ul class="sub-menu-further">
+                                        <li><a href="#">Darkmode Processing</a></li>
+                                        <li><a href="#">Darkmode DocJava</a></li>
+                                        <li><a href="#">Darkmode Moodle</a></li>
+                                        <li><a href="#">Path Finder</a></li>
+                                        <li><a href="#">Java Compiler</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
                         <li><a href="https://buymeacoffee.com/datamatikerhjaelpen">Støt os</a></li>
                         <li><a href="#">Sprog</a>
                             <ul class="sub-menu">

@@ -172,10 +172,9 @@ document.addEventListener("DOMContentLoaded", () => {
                         
                             lastStar.classList.add("vanish");
                         
-                            // Trigger drop after short delay
                             setTimeout(() => {
-                                astronaut.classList.remove("drop", "dropped"); // remove any existing drop state
-                                void astronaut.offsetWidth; // 💡 forces reflow to re-trigger animation
+                                astronaut.classList.remove("drop", "dropped"); 
+                                void astronaut.offsetWidth; 
                                 astronaut.classList.add("drop");
                             }, 300);
                         

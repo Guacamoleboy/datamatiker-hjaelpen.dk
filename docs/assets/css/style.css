@@ -1625,6 +1625,30 @@ body.dark-mode .wave-bottom-index svg path {
     }
 }
 
+.main-menu ul li ul.sub-menu li:hover ul.sub-menu-further {
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+    left: 100%;
+}
+
+.main-menu ul li ul.sub-menu li ul.sub-menu-further {
+    position: absolute;
+    top: 0;
+    left: 105% !important;
+    padding: 15px;
+    background: #ffffff;
+    background: #f0f0f5;
+    border-radius: 20px;
+    width: 240px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 3;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: 0.5s;
+}
+
 .main-menu ul li a {
     color: #131230;
     font-family: "Roboto", sans-serif;
@@ -5646,7 +5670,7 @@ h6 {
 }
 
 .intro-section {
-    background: linear-gradient(to right, rgba(73, 73, 116, 0.95), rgba(100, 100, 170, 0.95));
+    background: linear-gradient(to right, rgba(73, 73, 116, 0.95), rgba(100, 100, 130, 0.95));
     padding: 10rem 0 0 0;
     width: 100%;
     height: 100%;
