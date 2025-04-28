@@ -46,6 +46,32 @@ a, button {
     }
 }
 
+/*
+
+    class="coming-soon" A
+    class="text" SPAN
+
+*/
+
+a.coming-soon {
+    position: relative;
+    color: grey;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+a.coming-soon .text {
+    text-decoration: line-through;
+}
+
+a.coming-soon .badge {
+    color: red;
+    font-size: 0.75em;
+    margin-left: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 body.dark-mode {
     background-color: #494974;
     color: #f1f1f1;
