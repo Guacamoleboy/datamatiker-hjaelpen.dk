@@ -54,24 +54,42 @@
 
     <script>
         const cursor = document.getElementById('customCursor');
-
-        // Detect if it's a touch device
+    
         const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-
+    
         if (!isTouchDevice) {
             cursor.style.display = 'block';
-
+    
             document.addEventListener('mousemove', (e) => {
                 cursor.style.left = e.clientX + 'px';
                 cursor.style.top = e.clientY + 'px';
-
+    
                 const target = e.target;
-                if (target.tagName === 'A' || target.tagName === 'BUTTON' || target.tagName === 'UL' || target.tagName === 'LI') {
+                if (['A', 'BUTTON', 'UL', 'LI'].includes(target.tagName)) {
                     cursor.classList.add('hover');
                 } else {
                     cursor.classList.remove('hover');
                 }
             });
+    
+            window.addEventListener('mouseout', (e) => {
+                if (!e.relatedTarget && !e.toElement) {
+                    cursor.style.opacity = '0';
+                }
+            });
+    
+            window.addEventListener('mouseover', (e) => {
+                cursor.style.opacity = '1';
+            });
+    
+            window.addEventListener('blur', () => {
+                cursor.style.opacity = '0';
+            });
+    
+            window.addEventListener('focus', () => {
+                cursor.style.opacity = '1';
+            });
+    
         } else {
             cursor.style.display = 'none';
         }

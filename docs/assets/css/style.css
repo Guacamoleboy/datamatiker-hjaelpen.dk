@@ -27,13 +27,14 @@ body {
     transform: translate(-50%, -50%);
     z-index: 99999;
     border: 2px solid black !important;
-    transition: background-color 0.1s ease-in-out;
+    opacity: 1;
+    transition: background-color 0.1s ease-in-out, opacity 0.1s ease-in-out;
 }
 
 .cursor.hover {
     background-color: rgb(77, 84, 166) !important;
-    transition: background-color 0.1s ease-in-out;
 }
+
 
 a, button {
     cursor: none !important;
