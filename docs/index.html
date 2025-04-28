@@ -97,8 +97,11 @@
 
             let count = 0;
 
-            const notification = document.getElementById('notification');
-            notification.style.display = 'flex';
+            if(count === 0){
+                const notification = document.getElementById('notification');
+                notification.style.display = 'flex';
+                count++;
+            }
 
             setTimeout(() => {
                 notification.style.display = 'none';
