@@ -2445,7 +2445,7 @@ body.dark-mode .banner-area2 p {
 }
 
 .footer-widget {
-    background: #131230
+    background: #131230;
 }
 
 .footer-widget .single-widget1 {
@@ -5944,4 +5944,10 @@ h6 {
 @keyframes fadeOut {
     from { opacity: 1; transform: translateY(0); }
     to { opacity: 0; transform: translateY(20px); }
+}
+
+.footer-frame {
+    height: 5rem;
+    width: 100%;
+    background-color: #59598b;
 }
