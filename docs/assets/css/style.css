@@ -470,11 +470,17 @@ body.dark-mode .header-area2 {
 }
 
 body.dark-mode .header-area .sub-menu a {
-    color: #575757 !important;
+    color: #e0e0e0 !important;
 }
 
 body.dark-mode .header-area a {
     color: #f1f1f1 !important;
+    transition: all 0.2s ease-in-out;
+}
+
+body.dark-mode .header-area a:hover {
+    color: #ffb606 !important;
+    transition: all 0.2s ease-in-out;
 }
 
 .header-area2 a {
@@ -1665,7 +1671,7 @@ body.dark-mode .wave-bottom-index svg path {
     left: 105% !important;
     padding: 15px;
     background: #ffffff;
-    background: #f0f0f5;
+    background: #6c6cab;
     border-radius: 20px;
     width: 240px;
     opacity: 0;
@@ -1702,7 +1708,7 @@ body.dark-mode .wave-bottom-index svg path {
     top: 150%;
     left: 30px;
     width: 250px;
-    background: #f9f9ff;
+    background: #6c6cab;
     z-index: 2;
     -webkit-transition: .5s;
     -moz-transition: .5s;
@@ -1722,7 +1728,7 @@ body.dark-mode .wave-bottom-index svg path {
 }
 
 .main-menu ul li ul.sub-menu li a:hover {
-    color: #ffb606
+    color: #ffb606 !important;
 }
 
 .main-menu2 ul a {
