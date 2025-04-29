@@ -74,7 +74,7 @@
                 cursor.style.top = e.clientY + 'px';
 
                 const target = e.target;
-                if (target.tagName === 'A' || target.tagName === 'BUTTON' || target.tagName === 'UL' || target.tagName === 'LI') {
+                if (target.tagName === 'A' || target.tagName === 'BUTTON' || target.tagName === 'UL' || target.tagName === 'LI' || target.tagName === 'INPUT') {
                     cursor.classList.add('hover');
                 } else {
                     cursor.classList.remove('hover');
@@ -116,43 +116,170 @@
     </section>
     <!-- Banner Area End -->
 
-    <!-- Custom_01 Section Start -->
-    <div class="deshes-area section-padding text-center mt-5">
-
-        <!-- Component ROW START -->
+    <!-- Learning by Doing START -->
+    <div id="features" class="tabs">
         <div class="container">
-            <div id="component-rows" class="row">
-
-                <div class="section-top2 col-lg-12 text-center">
-                    <h3>Title</h3>
-                    <p class="mt-4"><i>Text</i></p>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="above-heading">En lille test</div>
+                    <h2 class="h2-heading">Learning By Doing</h2>
+                    <p class="p-heading">Her har du mulighed for at øve dig lidt i det du læser</p>
                 </div>
+            </div> 
+            <div class="row">
+                <div class="col-lg-12">
 
-                <div class="col-lg-9">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Text</h5>
-                            <p class="card-text">Text</p>
-               
-                            
-                
+                    <!-- Tabs Links -->
+                    <ul class="nav nav-tabs" id="argoTabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="nav-tab-1" data-toggle="tab" href="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true">1</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="nav-tab-2" data-toggle="tab" href="#tab-2" role="tab" aria-controls="tab-2" aria-selected="false">2</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="nav-tab-3" data-toggle="tab" href="#tab-3" role="tab" aria-controls="tab-3" aria-selected="false">3</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="nav-tab-4" data-toggle="tab" href="#tab-4" role="tab" aria-controls="tab-4" aria-selected="false">4</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="nav-tab-5" data-toggle="tab" href="#tab-5" role="tab" aria-controls="tab-4" aria-selected="false">5</a>
+                        </li>
+                    </ul>
+                    <!-- end of tabs links -->
+
+                    <!-- Tabs Content -->
+                    <div class="tab-content mt-5" id="argoTabsContent">
+
+                        <!-- Tab -->
+                        <div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="tab-1">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="image-container">
+                                        <img class="img-fluid" src="../assets/images/learning/details.png" alt="alternative">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="text-container">
+                                        <h3>Title here</h3>
+                                        <p class="generic-blockquote">
+                                            Her skal spørgsmålet være.. Kan du forstå det!? GG. Det ren GG. Her skal spørgsmålet være.. Kan du forstå det!? GG. Det ren GG.
+                                            Her skal spørgsmålet være.. Kan du forstå det!? GG. Det ren GG. Her skal spørgsmålet være.. Kan du forstå det!? GG. Det ren GG.
+                                        </p>
+                                        
+                                        <a href="#" class="template-btn mt-3 animated fadeInUp">Hint</a>
+                                        <input type="text" class="template-input mt-3 animated fadeInUp" placeholder="Dit svar..">
+                                    </div> 
+                                </div>
+                            </div> 
+                        </div> 
+                        <!-- end of tab -->
+
+                        <!-- Tab -->
+                        <div class="tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="tab-2">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="image-container">
+                                        <img class="img-fluid" src="../assets/images/learning/details.png" alt="alternative">
+                                    </div> 
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="text-container">
+                                        <h3>Title here</h3>
+                                        <p class="generic-blockquote">
+                                            Her skal spørgsmålet være.. Kan du forstå det!? GG. Det ren GG. Her skal spørgsmålet være.. Kan du forstå det!? GG. Det ren GG.
+                                            Her skal spørgsmålet være.. Kan du forstå det!? GG. Det ren GG. Her skal spørgsmålet være.. Kan du forstå det!? GG. Det ren GG.
+                                        </p>
+                                        
+                                        <a href="#" class="template-btn mt-3 animated fadeInUp">Hint</a>
+                                        <input type="text" class="template-input mt-3 animated fadeInUp" placeholder="Dit svar..">
+                                    </div> 
+                                </div>
+                            </div> 
+                        </div> 
+                        <!-- end of tab -->
+
+                        <!-- Tab -->
+                        <div class="tab-pane fade" id="tab-3" role="tabpanel" aria-labelledby="tab-3">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="image-container">
+                                        <img class="img-fluid" src="../assets/images/learning/details.png" alt="alternative">
+                                    </div> 
+                                </div> 
+                                <div class="col-lg-6">
+                                    <div class="text-container">
+                                        <h3>Title here</h3>
+                                        <p class="generic-blockquote">
+                                            Her skal spørgsmålet være.. Kan du forstå det!? GG. Det ren GG. Her skal spørgsmålet være.. Kan du forstå det!? GG. Det ren GG.
+                                            Her skal spørgsmålet være.. Kan du forstå det!? GG. Det ren GG. Her skal spørgsmålet være.. Kan du forstå det!? GG. Det ren GG.
+                                        </p>
+                                        
+                                        <a href="#" class="template-btn mt-3 animated fadeInUp">Hint</a>
+                                        <input type="text" class="template-input mt-3 animated fadeInUp" placeholder="Dit svar..">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-              
-                <div class="col-lg-3">
-                    <div class="card">
-                      <div class="card-body">
-                        <h5 class="card-title">Text</h5>
-                      </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Component ROW END -->
+                        <!-- end of tab -->
 
-    </div>
-    <!-- Custom_01 Section END -->
+                        <!-- Tab -->
+                        <div class="tab-pane fade" id="tab-4" role="tabpanel" aria-labelledby="tab-4">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="image-container">
+                                        <img class="img-fluid" src="../assets/images/learning/details.png" alt="alternative">
+                                    </div> 
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="text-container">
+                                        <h3>Title here</h3>
+                                        <p class="generic-blockquote">
+                                            Her skal spørgsmålet være.. Kan du forstå det!? GG. Det ren GG. Her skal spørgsmålet være.. Kan du forstå det!? GG. Det ren GG.
+                                            Her skal spørgsmålet være.. Kan du forstå det!? GG. Det ren GG. Her skal spørgsmålet være.. Kan du forstå det!? GG. Det ren GG.
+                                        </p>
+                                        
+                                        <a href="#" class="template-btn mt-3 animated fadeInUp">Hint</a>
+                                        <input type="text" class="template-input mt-3 animated fadeInUp" placeholder="Dit svar..">
+                                    </div> 
+                                </div>
+                            </div> 
+                        </div> 
+                        <!-- end of tab -->
+
+                        <!-- Tab -->
+                        <div class="tab-pane fade" id="tab-5" role="tabpanel" aria-labelledby="tab-5">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="image-container">
+                                        <img class="img-fluid" src="../assets/images/learning/details.png" alt="alternative">
+                                    </div> 
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="text-container">
+                                        <h3>Title here</h3>
+                                        <p class="generic-blockquote">
+                                            Her skal spørgsmålet være.. Kan du forstå det!? GG. Det ren GG. Her skal spørgsmålet være.. Kan du forstå det!? GG. Det ren GG.
+                                            Her skal spørgsmålet være.. Kan du forstå det!? GG. Det ren GG. Her skal spørgsmålet være.. Kan du forstå det!? GG. Det ren GG.
+                                        </p>
+                                        
+                                        <a href="#" class="template-btn mt-3 animated fadeInUp">Hint</a>
+                                        <input type="text" class="template-input mt-3 animated fadeInUp" placeholder="Dit svar..">
+                                    </div> 
+                                </div>
+                            </div> 
+                        </div> 
+                        <!-- end of tab -->
+                        
+                    </div> <!-- end of tab content -->
+                    <!-- end of tabs content -->
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of tabs -->
+    <!-- Learning by Doing END -->
 
     <!-- Javascript -->
     <script src="../assets/js/vendor/jquery-2.2.4.min.js"></script>
