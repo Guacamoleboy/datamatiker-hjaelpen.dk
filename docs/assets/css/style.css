@@ -444,6 +444,13 @@ body.dark-mode .button-cool button{
 
 }
 
+.button-cool .learning-button-color:hover {
+    
+    transition: all 0.3s ease-in-out;
+    background-color: #ffb606 !important;
+
+}
+
 body.dark-mode .button-cool {
     
     padding: 10px 20px;
@@ -2057,7 +2064,7 @@ body.dark-mode .banner-area2 p {
 }
 
 .welcome-area .welcome-text {
-    padding-right: 50%
+    padding-right: 25%
 }
 
 @media (min-width: 1200px) and (max-width: 1440px) {
