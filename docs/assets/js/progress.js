@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function updateStatusTitleIfComplete01() {
-        const keys = ['01-input01-correct', '01-input02-correct', '01-input03-correct'];
+        const keys = ['01-input01-correct', '01-input02-correct', '01-input03-correct', '01-input04-correct', '01-input05-correct', '01-input06-correct', '01-input07-correct', '01-input08-correct'];
         const allCorrect = keys.every(key => localStorage.getItem(key) === 'true');
 
         if (allCorrect) {
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function updateStatusTitleIfComplete02() {
-        const keys = ['02-input01-correct', '02-input02-correct', '02-input03-correct'];
+        const keys = ['02-input01-correct', '02-input02-correct', '02-input03-correct', '02-input04-correct'];
         const allCorrect = keys.every(key => localStorage.getItem(key) === 'true');
 
         if (allCorrect) {
