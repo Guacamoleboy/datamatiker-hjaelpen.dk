@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-
     const input1_01 = document.getElementById('01-user-input01');
     const input2_01 = document.getElementById('01-user-input02');
     const input3_01 = document.getElementById('01-user-input03');
@@ -26,24 +25,22 @@ document.addEventListener('DOMContentLoaded', function () {
             } else {
                 button.style.backgroundColor = '#8a0e0e';
                 button.style.color = 'white';
-
                 setTimeout(() => {
                     button.style.backgroundColor = '';
                     button.style.color = '';
-                }, 2000);
+                }, 1000);
             }
 
-            localStorage.setItem('input06_02', button.id);
-            localStorage.setItem('input06_02-correct', isCorrect);
+            localStorage.setItem('01-input07', button.id);
+            localStorage.setItem('01-input07-correct', isCorrect);
         });
 
-        const savedId = localStorage.getItem('input06_02');
-        const wasCorrect = localStorage.getItem('input06_02-correct') === 'true';
+        const savedId = localStorage.getItem('01-input07');
+        const wasCorrect = localStorage.getItem('01-input07-correct') === 'true';
 
         if (savedId && button.id === savedId) {
             button.style.backgroundColor = wasCorrect ? '#0e8a21' : '#8a0e0e';
             button.style.color = 'white';
-
             if (wasCorrect) {
                 buttonInputs.forEach(btn => btn.disabled = true);
             }
@@ -58,24 +55,24 @@ document.addEventListener('DOMContentLoaded', function () {
     const correctAnswer5_01 = 'Nej';
     const correctAnswer6_01 = 'Ja';
 
-    input1_01.addEventListener('input', () => validateInput(input1_01, [correctAnswer1_01], 'input01_01', false));
-    input2_01.addEventListener('input', () => validateInput(input2_01, [correctAnswer2_01], 'input02_01', false));
-    input3_01.addEventListener('input', () => validateInput(input3_01, [correctAnswer3_01], 'input03_01', false));
-    input4_01.addEventListener('input', () => validateInput(input4_01, [correctAnswer4_01], 'input04_01', false));
-    input4_02.addEventListener('input', () => validateInput(input4_02, [correctAnswer4_02], 'input04_02', false));
-    input5_01.addEventListener('input', () => validateInput(input5_01, [correctAnswer5_01], 'input05_01', false));
-    input6_01.addEventListener('input', () => validateInput(input6_01, [correctAnswer6_01], 'input06_01', false));
+    input1_01.addEventListener('input', () => validateInput(input1_01, [correctAnswer1_01], 'input01', false));
+    input2_01.addEventListener('input', () => validateInput(input2_01, [correctAnswer2_01], 'input02', false));
+    input3_01.addEventListener('input', () => validateInput(input3_01, [correctAnswer3_01], 'input03', false));
+    input4_01.addEventListener('input', () => validateInput(input4_01, [correctAnswer4_01], 'input04', false));
+    input4_02.addEventListener('input', () => validateInput(input4_02, [correctAnswer4_02], 'input05', false));
+    input5_01.addEventListener('input', () => validateInput(input5_01, [correctAnswer5_01], 'input06', false));
+    input6_01.addEventListener('input', () => validateInput(input6_01, [correctAnswer6_01], 'input08', false));
 
-    restoreInput(input1_01, 'input01_01');
-    restoreInput(input2_01, 'input02_01');
-    restoreInput(input3_01, 'input03_01');
-    restoreInput(input4_01, 'input04_01');
-    restoreInput(input4_02, 'input04_02');
-    restoreInput(input5_01, 'input05_01');
-    restoreInput(input6_01, 'input06_01');
-    restoreInput(input6_02, 'input06_02');
-    restoreInput(input6_03, 'input06_03');
-    restoreInput(input6_04, 'input06_04');
+    restoreInput(input1_01, 'input01');
+    restoreInput(input2_01, 'input02');
+    restoreInput(input3_01, 'input03');
+    restoreInput(input4_01, 'input04');
+    restoreInput(input4_02, 'input05');
+    restoreInput(input5_01, 'input06');
+    restoreInput(input6_01, 'input08');
+    restoreInput(input6_02, 'input07');
+    restoreInput(input6_03, 'input07');
+    restoreInput(input6_04, 'input07');
 
     function validateInput(inputElement, correctAnswers, key, isCaseInsensitive) {
         const userAnswer = inputElement.value.trim();
@@ -101,14 +98,14 @@ document.addEventListener('DOMContentLoaded', function () {
         inputElement.style.backgroundColor = bgColor;
         inputElement.style.color = 'white';
 
-        localStorage.setItem(`${key}-value`, userAnswer);
-        localStorage.setItem(`${key}-bg`, bgColor);
-        localStorage.setItem(`${key}-correct`, comparisonAnswers.includes(userAnswerToCompare));
+        localStorage.setItem(`01-${key}-value`, userAnswer);
+        localStorage.setItem(`01-${key}-bg`, bgColor);
+        localStorage.setItem(`01-${key}-correct`, comparisonAnswers.includes(userAnswerToCompare));
     }
 
     function restoreInput(inputElement, key) {
-        const savedValue = localStorage.getItem(`${key}-value`);
-        const savedBg = localStorage.getItem(`${key}-bg`);
+        const savedValue = localStorage.getItem(`01-${key}-value`);
+        const savedBg = localStorage.getItem(`01-${key}-bg`);
 
         if (savedValue !== null) {
             inputElement.value = savedValue;
