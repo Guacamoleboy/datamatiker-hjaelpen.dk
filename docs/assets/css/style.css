@@ -6284,3 +6284,53 @@ h6 {
 .basic-1 .list-unstyled .media-body {
 	margin-left: 0.625rem;
 }
+
+#navi {
+    position: sticky;
+    top: 100px;
+}
+  
+#navi ul {
+    list-style: none;
+    padding: 0;
+    padding-right: 50px;
+    margin-top: 110px; /* FIXED HEIGHT */
+}
+  
+#navi ul li {
+    margin-bottom: 10px;
+}
+  
+#navi ul li a {
+    text-decoration: none;
+    color: #FFF;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    padding: 8px 12px;
+    display: block;
+    border-radius: 10px;
+}
+  
+#navi ul li a.active {
+    background-color: #f8b600;
+    color: #FFF !important;
+}
+  
+.page {
+    padding: 100px 0;
+    margin-left: 75px !important;
+    border-bottom: 1px solid #f8b600;
+}
+ 
+.page .heading {
+    margin-bottom: 20px;
+}
+
+.page p {
+    margin-top: 50px;
+    font-size: 16px;
+}
+
+#navi a {
+    pointer-events: none;
+}

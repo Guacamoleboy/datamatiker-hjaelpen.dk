@@ -1,11 +1,14 @@
-public class Bank {
+public class Person {
+    String navn;
+    int alder;
 
-    public Bank(){
-
+    public Person(String navn, int alder) {
+        this.navn = navn;
+        this.alder = alder;
     }
 
-    public void display(){
-        System.out.println("Hej!");
+    @Override
+    public String toString() {
+        return navn + " er " + alder + " år gammel.";
     }
-
 }

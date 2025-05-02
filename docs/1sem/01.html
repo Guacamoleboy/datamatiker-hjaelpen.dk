@@ -6,7 +6,7 @@
     Datamatiker elev Vinter 2025
     
     Sidst opdateret:
-    25-04-2025
+    02-05-2025
     
     Af: Jonas
 
@@ -330,7 +330,7 @@
     <!-- Dropdown Info Section End -->
 
     <!-- Learning by Doing START -->
-    <div id="features" class="tabs lbd-visuals tilted-line">
+    <div id="features" class="tabs lbd-visuals">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -535,52 +535,93 @@
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
+        <!-- Wavy section Start -->
     </div> <!-- end of tabs -->
     <!-- Learning by Doing END -->
 
-    <!-- Comparison Section Start -->
-
-    <div class="deshes-area section-padding text-center">
-
-        <h3 class="wow animated fadeInUp">Hvorfor er <b>toString()</b> metoden vigtig?</b></h3>
-        <p class="mt-4 wow animated fadeInUp"><i>Herunder kan du se forskellen på toString og uden toString</i></p>
-
-        <div class="container mt-5">
-            <div class="row">
-
-                <div class="card-deck col-lg-12 wow animated fadeInUp">
-
-                    <div class="card">
-                        <div class="card-body">
-                        <h5 class="card-title">Print <b>uden</b> toString</h5>
-                        <p class="card-text">User u = new User()</p>
-                        <div class="button-cool">
-                            <button>System.out.println(u)</button>
-                            <button>Output: ClassName@HashCode</button>
-                            <button>Console: <b class="b-red">User@1718f0191</b></button>
-                        </div>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-body">
-                        <h5 class="card-title">Print <b>med</b> toString</h5>
-                        <p class="card-text">User u = new User()</p>
-                        <div class="button-cool">
-                            <button>System.out.println(u)</button>
-                            <button>Output: toString af input</button>
-                            <button>Console: <b class="b-green">Jonas, 26 år.</b></button>
-                        </div>
-                        </div>
-                    </div>
-
+    <!-- Text Learning START -->
+    <section class="mt-5 mb-5" id="chapter-section">
+        <div class="container">
+            <div class="row justify-content-center py-5 mt-5">
+                <div class="col-md-12 heading-section text-center">
+                    <div class="above-heading">Bedre forståelse</div>
+                    <h2 class="mb-2">Læring om <b>Objekter</b></h2>
+                    <p class="p-heading generic-blockquote-bottom" style="background-color: #494974;">Her har du mulighed for at øve dig lidt i det du læser</p>
                 </div>
-
             </div>
-        </div>
-    </div>
-
-    <!-- Comparison Section End -->
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <nav id="navi">
+                        <ul>
+                            <li><a href="#page-1">Objekter</a><div class="indicator"></div></li>
+                            <li><a href="#page-2">toString</a><div class="indicator"></div></li>
+                            <li><a href="#page-3">Access Modifiers</a><div class="indicator"></div></li>
+                            <li><a href="#page-4">@Override</a><div class="indicator"></div></li>
+                        </ul>
+                    </nav>
+                </div>
+					<div class="col-md-9">
+					  <div id="page-1" class= "page one ml-5 text-center">
+					  	<h2 class="heading">Så hvad var et <b>objekt</b>?</h2>
+					  	<p>
+                            Et <b>objekt</b> er en måde at samle information og funktionalitet på ét sted. Du kan tænke på det som en <b>ting i virkeligheden</b> — f.eks. en bil. En bil har nogle <b>egenskaber</b>, som farve, mærke og årgang. Den kan også <b>gøre noget</b>, som at starte motoren, dreje eller bremse.
+                          </p>
+                          <p>
+                            I programmering kalder vi egenskaberne for <b>attributter</b> og handlingerne for <b>metoder</b>. Når vi laver et objekt i vores kode, samler vi disse attributter og metoder, så vi kan arbejde med dem på en logisk måde.
+                          </p>
+                          <p>
+                            For eksempel kunne vi lave et objekt der hedder <b>person</b>, som har en attribut <b>navn</b> og en metode <b>sigeHej()</b>, der printer "Hej, jeg hedder..." på skærmen. På den måde kan vi arbejde med personer som objekter, og give dem både data og adfærd.
+                          </p>
+                          <p>
+                            Når vi bruger et objekt i en klasse, kalder man det at <b>instantiere</b> det – det betyder, at vi laver en "kopi" af objektet, som vi så kan bruge i programmet.
+                          </p>
+					  </div>
+					  <div id="page-2" class="page two ml-5 text-center">
+                        <h2 class="heading"><b>toString</b> metoden</h2>
+                        <p>
+                          I Java bruges <b>toString()</b>-metoden til at bestemme, hvordan et objekt skal vises som tekst. Når du prøver at printe et objekt, er det faktisk <b>toString()</b>-metoden, der bliver kaldt automatisk.
+                        </p>
+                        <p>
+                          Hvis du ikke selv skriver en <b>toString()</b>-metode, vil programmet bare vise noget teknisk som objektets navn og en mærkelig kode – ikke særlig brugervenligt. Men hvis du laver din egen <b>toString()</b>, kan du selv bestemme, hvad der skal vises.
+                        </p>
+                        <p>
+                          <img src="../assets/images/terminal/01_05.png" style="width: 75%; height: auto; display: block; margin: 20px auto;">
+                        </p>
+                        <p>
+                          Nu vil <b>System.out.println(person);</b> vise noget forståeligt som: <br>
+                          <i>“Sofie er 12 år”</i>
+                        </p>
+                      </div>
+					  <div id="page-3" class="page three ml-5 text-center">
+                        <h2 class="heading"><b>Access</b> Modifiers</h2>
+                        <p>
+                          <b>Access modifiers</b> bestemmer, hvem der har adgang til de forskellige dele af din kode — især variabler og metoder.
+                        </p>
+                        <p>
+                          Her er et simpelt eksempel:
+                        </p>
+                        <p>
+                            <img src="../assets/images/terminal/01_06.png" style="width: 75%; height: auto; display: block; margin: 20px auto;">
+                        </p>
+                        <p>
+                          I dette eksempel kan man <b>ikke</b> direkte få adgang til variablen <b>mærke</b>, fordi den er <b class="b-red">private</b>. Men man kan stadig få dens værdi via metoden <b>getMærke()</b>, som er <b class="b-green">public</b>. Det kaldes <b>indkapsling</b> og hjælper med at holde koden organiseret og sikker.
+                        </p>
+                        <p>
+                           Ønsker vi at bruge vores <b class="b-red">private</b> mærke i en anden klasse, så kalder vi altså metoden <b class="b-green">getMærke</b> fra vores anden klasse på vores <b>instantierede objekt</b>!
+                        </p>
+                      </div>
+					  <div id="page-4" class="page four ml-5 text-center">
+                        <h2 class="heading"><b>@Override</b> - hvorfor?</h2>
+                        <p>
+                          Som du nok lagde mærke til, havde vores <b>toString()</b> metode en <b>@Override</b> annotation over sig. Men hvad betyder det, og hvad gør det egentlig?
+                        </p>
+                        
+                      </div>
+					</div>
+			  </div>
+    	</div>
+    </section>
+    <!-- Text Learning END -->
 
     <!-- Comparison Section Start -->
 
@@ -729,6 +770,7 @@
     <script src="../assets/js/scaleHeart.js"></script>
     <script src="../assets/js/scaleThumb.js"></script>
     <script src="../assets/js/button-to-top.js"></script>
+    <script src="../assets/js/learning-page-tab.js"></script>
 
 </body>
 
