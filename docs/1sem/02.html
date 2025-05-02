@@ -32,6 +32,14 @@
     <!-- Footer load  -->
     <script src="../assets/js/footer2.js" defer></script>
 
+    <!-- WOW.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+    <!-- WOW toggle -->
+    <script>
+        new WOW().init();
+    </script>
+
     <!-- CSS Files -->
     <link rel="stylesheet" href="../assets/css/animate-3.7.0.css">
     <link rel="stylesheet" href="../assets/css/font-awesome-4.7.0.min.css">
@@ -48,6 +56,53 @@
         <div class="spinner"></div>
     </div>
     <!-- Preloader End -->
+
+    <!-- Custom Cursor START --> 
+    <div class="cursor" id="customCursor"></div>
+
+    <script>
+        const cursor = document.getElementById('customCursor');
+    
+        const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    
+        if (!isTouchDevice) {
+            cursor.style.display = 'block';
+    
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+    
+                const target = e.target;
+                if (['A', 'BUTTON', 'UL', 'LI'].includes(target.tagName)) {
+                    cursor.classList.add('hover');
+                } else {
+                    cursor.classList.remove('hover');
+                }
+            });
+    
+            window.addEventListener('mouseout', (e) => {
+                if (!e.relatedTarget && !e.toElement) {
+                    cursor.style.opacity = '0';
+                }
+            });
+    
+            window.addEventListener('mouseover', (e) => {
+                cursor.style.opacity = '1';
+            });
+    
+            window.addEventListener('blur', () => {
+                cursor.style.opacity = '0';
+            });
+    
+            window.addEventListener('focus', () => {
+                cursor.style.opacity = '1';
+            });
+    
+        } else {
+            cursor.style.display = 'none';
+        }
+    </script>
+    <!-- Custom Cursor END -->
 
     <!-- Darkmode button -->
     <button id="darkModeToggle" class="darkmode-btn-floating" title="Skift tema">☀️</button>
@@ -722,15 +777,15 @@
     <!-- Exam Area End -->
 
     <!-- Like Section Start -->
-    <div class="deshes-area new-blue section-padding text-center no-spacing" style="margin-top: -200px;">
+    <div class="deshes-area section-padding text-center no-spacing" style="margin-top: -200px;">
 
-        <div class="section-top2 col-lg-12 text-center">
-            <h3>Giv <b>02 | ArrayList</b> en rating</h3>
+        <div class="section-top2 col-lg-12 text-center wow pop-effect">
+            <h3>Giv <b>01 | ArrayList</b> en rating</h3>
             <p class="mt-4"><i>Tryk på den du føler for!</i></p>
         </div>
 
         <div class="d-flex justify-content-center align-items-center flex-row gap-4">
-            <div class="outer-circle position-relative mr-5">
+            <div class="outer-circle position-relative mr-5 wow pop-effect delay-1s">
                 <button class="like-button" onclick="scaleHeart()">Like</button>
                 <div class="like-count">12</div>
                 <div class="like-icon">
@@ -738,7 +793,7 @@
                 </div>
             </div>
             
-            <div class="outer-circle position-relative ml-5">
+            <div class="outer-circle position-relative ml-5 wow pop-effect delay-1s">
                 <button class="like-button" onclick="scaleThumb()">Dislike</button>
                 <div class="dislike-count">0</div>
                 <div class="dislike-icon">

@@ -40,16 +40,64 @@
 </head>
 
 <body class="dark-mode">
+
     <!-- Preloader Starts -->
     <div class="preloader">
         <div class="spinner"></div>
     </div>
     <!-- Preloader End -->
 
+    <!-- Custom Cursor START --> 
+    <div class="cursor" id="customCursor"></div>
+
+    <script>
+        const cursor = document.getElementById('customCursor');
+    
+        const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    
+        if (!isTouchDevice) {
+            cursor.style.display = 'block';
+    
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+    
+                const target = e.target;
+                if (['A', 'BUTTON', 'UL', 'LI'].includes(target.tagName)) {
+                    cursor.classList.add('hover');
+                } else {
+                    cursor.classList.remove('hover');
+                }
+            });
+    
+            window.addEventListener('mouseout', (e) => {
+                if (!e.relatedTarget && !e.toElement) {
+                    cursor.style.opacity = '0';
+                }
+            });
+    
+            window.addEventListener('mouseover', (e) => {
+                cursor.style.opacity = '1';
+            });
+    
+            window.addEventListener('blur', () => {
+                cursor.style.opacity = '0';
+            });
+    
+            window.addEventListener('focus', () => {
+                cursor.style.opacity = '1';
+            });
+    
+        } else {
+            cursor.style.display = 'none';
+        }
+    </script>
+    <!-- Custom Cursor END -->
+
     <!-- Darkmode button -->
     <button id="darkModeToggle" class="darkmode-btn-floating" title="Skift tema">☀️</button>
 
-    <!-- Login Area Starts -->
+    <!-- Countdown Area Start -->
     <div class="deshes-area section-padding">
 
         <div class="container">
@@ -63,7 +111,7 @@
 
                         <div class="single-element-widget mt-5 p-4 shadow rounded bg-white">
 
-                            <!-- Login START -->
+                            <!-- Countdown START -->
 
                             <div class="login-form">
                                 
@@ -73,7 +121,7 @@
 
                             </div>
 
-                            <!-- Login END -->
+                            <!-- Countdown END -->
 
                         </div>
 
@@ -84,7 +132,7 @@
         </div>
 
     </div>
-    <!-- Login Area End -->
+    <!-- Countdown Area End -->
 
 
     <!-- Javascript -->

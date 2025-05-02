@@ -6,7 +6,7 @@
     Datamatiker elev Vinter 2025
     
     Sidst opdateret:
-    25-04-2025
+    02-05-2025
     
     Af: Jonas
 
@@ -29,7 +29,7 @@
     <!-- Navbar load -->
     <script src="assets/js/navbar.js" defer></script>
 
-    <!-- Footer load  -->
+    <!-- Footer load -->
     <script src="assets/js/footer.js" defer></script>
 
     <!-- WOW.js -->
@@ -49,12 +49,83 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body class="dark-mode">
+<body class="dark-mode" style="overflow-x: hidden !important;">
+    
     <!-- Preloader Starts -->
     <div class="preloader">
         <div class="spinner"></div>
     </div>
     <!-- Preloader End -->
+
+    <!-- Custom Cursor START --> 
+    <div class="cursor" id="customCursor"></div>
+
+    <script>
+        const cursor = document.getElementById('customCursor');
+    
+        const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    
+        if (!isTouchDevice) {
+            cursor.style.display = 'block';
+    
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+    
+                const target = e.target;
+                if (['A', 'BUTTON', 'UL', 'LI'].includes(target.tagName)) {
+                    cursor.classList.add('hover');
+                } else {
+                    cursor.classList.remove('hover');
+                }
+            });
+    
+            window.addEventListener('mouseout', (e) => {
+                if (!e.relatedTarget && !e.toElement) {
+                    cursor.style.opacity = '0';
+                }
+            });
+    
+            window.addEventListener('mouseover', (e) => {
+                cursor.style.opacity = '1';
+            });
+    
+            window.addEventListener('blur', () => {
+                cursor.style.opacity = '0';
+            });
+    
+            window.addEventListener('focus', () => {
+                cursor.style.opacity = '1';
+            });
+    
+        } else {
+            cursor.style.display = 'none';
+        }
+    </script>
+    <!-- Custom Cursor END -->
+
+    <!-- Notification Box (NEWS) START -->
+    <div id="notification" class="notification" style="display: none;">
+        <span>Nyt læringsmål tilføjet!</span>
+        <button onclick="window.location.href='1sem/15.html'">Se nu</button>
+    </div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const notificationShown = localStorage.getItem('notificationShown');
+            const notification = document.getElementById('notification');
+    
+            if (!notificationShown) {
+                notification.style.display = 'flex';
+                localStorage.setItem('notificationShown', 'true');
+    
+                setTimeout(() => {
+                    notification.style.display = 'none';
+                }, 10000);
+            }
+        });
+    </script>
+    <!-- Notification Box (NEWS) END -->
 
     <!-- Darkmode button -->
     <button id="darkModeToggle" class="darkmode-btn-floating" title="Skift tema">☀️</button>
@@ -158,8 +229,8 @@
     </div>
     <!-- Reservation Area End -->
 
-    <!--? Team -->
-    <section class="deshes-area section-padding40 section-bg1 mt-5 mb-5">
+    <!-- Offer Section START -->
+    <section class="deshes-area text-center justify-content-center section-padding40 section-bg1 mt-5 mb-5">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xl-12">
@@ -172,73 +243,73 @@
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="single-cat">
                         <div class="cat-icon mb-5">
-                            <img src="assets/images/icon/services1.svg" alt="">
+                            <img src="assets/images/icon/svg1.svg" alt="" style="width: 25%; height: 25%;">
                         </div>
                         <div class="cat-cap">
-                            <h5><a href="#">Title here</a></h5>
-                            <p>Text placeholder here lol this is long</p>
+                            <h5><a href="#">Læring på farten</a></h5>
+                            <p>Vi fungerer også på telefonen, så du kan bruge os 5min før din eksamen!</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="single-cat">
                         <div class="cat-icon mb-5">
-                            <img src="assets/images/icon/services2.svg" alt="">
+                            <img src="assets/images/icon/svg2.svg" alt="" style="width: 25%; height: 25%;">
                         </div>
                         <div class="cat-cap">
-                            <h5><a href="#">Title here</a></h5>
-                            <p>Text placeholder here lol this is long</p>
+                            <h5><a href="#">Vi er selv elever</a></h5>
+                            <p>Vi ved hvad du har brug for og hvordan du lærer bedst. Vi har selv været der.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="single-cat">
                         <div class="cat-icon mb-5">
-                            <img src="assets/images/icon/services3.svg" alt="">
+                            <img src="assets/images/icon/svg3.svg" alt="" style="width: 25%; height: 25%;">
                         </div>
                         <div class="cat-cap">
-                            <h5><a href="#">Title here</a></h5>
-                            <p>Text placeholder here lol this is long</p>
+                            <h5><a href="#">Byg dine skills</a></h5>
+                            <p>Hver gang du løser noget, så gemmer vi det, så du kan se hvor langt du er nået.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6 mt-5">
                     <div class="single-cat">
                         <div class="cat-icon mb-5">
-                            <img src="assets/images/icon/services4.svg" alt="">
+                            <img src="assets/images/icon/svg4.svg" alt="" style="width: 25%; height: 25%;">
                         </div>
                         <div class="cat-cap">
-                            <h5><a href="#">Title here</a></h5>
-                            <p>Text placeholder here lol this is long</p>
+                            <h5><a href="#">Kæmpe arkiv</a></h5>
+                            <p>Vi har alt fra læring til programmer vi selv har udviklet til at forbedre din læring..</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6 mt-5">
                     <div class="single-cat">
                         <div class="cat-icon mb-5">
-                            <img src="assets/images/icon/services5.svg" alt="">
+                            <img src="assets/images/icon/svg5.svg" alt="" style="width: 25%; height: 25%;">
                         </div>
                         <div class="cat-cap">
-                            <h5><a href="#">Title here</a></h5>
-                            <p>Text placeholder here lol this is long</p>
+                            <h5><a href="#">Håndlavet af  os selv</a></h5>
+                            <p>Ja, den er god nok. Vi har selv udviklet alt på hjemmesiden!</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6 mt-5">
                     <div class="single-cat">
                         <div class="cat-icon mb-5">
-                            <img src="assets/images/icon/services6.svg" alt="">
+                            <img src="assets/images/icon/svg6.svg" alt="" style="width: 25%; height: 25%;">
                         </div>
                         <div class="cat-cap">
-                            <h5><a href="#">Title here</a></h5>
-                            <p>Text placeholder here lol this is long</p>
+                            <h5><a href="#">Customized learning</a></h5>
+                            <p>Vi tilbyder guides til alle niveauer. Er du helt ny, så kan du følge vores guide!</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Services End -->
+    <!-- Offer Section END -->
   
     <!-- Update Area Starts -->
     <section class="update-area tilted-line section-padding">

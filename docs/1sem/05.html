@@ -6,7 +6,7 @@
     Datamatiker elev Vinter 2025
     
     Sidst opdateret:
-    25-04-2025
+    30-04-2025
     
     Af: Jonas
 
@@ -32,6 +32,14 @@
     <!-- Footer load  -->
     <script src="../assets/js/footer2.js" defer></script>
 
+    <!-- WOW.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+    <!-- WOW toggle -->
+    <script>
+        new WOW().init();
+    </script>
+
     <!-- CSS Files -->
     <link rel="stylesheet" href="../assets/css/animate-3.7.0.css">
     <link rel="stylesheet" href="../assets/css/font-awesome-4.7.0.min.css">
@@ -49,15 +57,47 @@
     </div>
     <!-- Preloader End -->
 
+    <!-- Custom Cursor START --> 
+    <div class="cursor" id="customCursor"></div>
+
+    <script>
+        const cursor = document.getElementById('customCursor');
+
+        // Detect if it's a touch device
+        const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+        if (!isTouchDevice) {
+            cursor.style.display = 'block';
+
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+
+                const target = e.target;
+                if (target.tagName === 'A' || target.tagName === 'BUTTON' || target.tagName === 'UL' || target.tagName === 'LI' || target.tagName === 'INPUT') {
+                    cursor.classList.add('hover');
+                } else {
+                    cursor.classList.remove('hover');
+                }
+            });
+        } else {
+            cursor.style.display = 'none';
+        }
+    </script>
+    <!-- Custom Cursor END -->
+
     <!-- Darkmode button -->
     <button id="darkModeToggle" class="darkmode-btn-floating" title="Skift tema">☀️</button>
 
+    <!-- Scroll-to-Top Button -->
+    <button id="scrollToTopBtn" class="scroll-btn" onclick="scrollToSection()"><i class="fa fa-arrow-up"></i></button>
+
     <!-- Banner Area Starts -->
-    <section class="banner-area banner-area2 text-center">
+    <section class="banner-area banner-area2 text-center" id="start">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1><i>05 | <b>Strings</b></i></h1>
+                    <h1><i>05 | <b>Noget</b></i></h1>
                     <p class="pt-2"><i>1. Semester / Læringsmål</i></p>
                 </div>
             </div>
@@ -76,46 +116,188 @@
     </section>
     <!-- Banner Area End -->
 
-    <!-- Custom_01 Section Start -->
-    <div class="deshes-area section-padding text-center mt-5">
-
-        <!-- Component ROW START -->
+    <!-- Learning by Doing START -->
+    <div id="features" class="tabs lbd-visuals">
         <div class="container">
-            <div id="component-rows" class="row">
-
-                <div class="section-top2 col-lg-12 text-center">
-                    <h3>Title</h3>
-                    <p class="mt-4"><i>Text</i></p>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="above-heading">En lille test</div>
+                    <h2 class="h2-heading">Learning By Doing</h2>
+                    <p class="p-heading">Her har du mulighed for at øve dig lidt i det du læser</p>
                 </div>
+            </div> 
+            <div class="row">
+                <div class="col-lg-12">
 
-                <div class="col-lg-9">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Text</h5>
-                            <p class="card-text">Text</p>
-               
-                            
-                
-                        </div>
-                    </div>
-                </div>
-              
-                <div class="col-lg-3">
-                    <div class="card">
-                      <div class="card-body">
-                        <h5 class="card-title">Text</h5>
-                      </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Component ROW END -->
+                    <!-- Tabs Links -->
+                    <ul class="nav nav-tabs" id="argoTabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="nav-tab-1" data-toggle="tab" href="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true">1</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="nav-tab-2" data-toggle="tab" href="#tab-2" role="tab" aria-controls="tab-2" aria-selected="false">2</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="nav-tab-3" data-toggle="tab" href="#tab-3" role="tab" aria-controls="tab-3" aria-selected="false">3</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="nav-tab-4" data-toggle="tab" href="#tab-4" role="tab" aria-controls="tab-4" aria-selected="false">4</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="nav-tab-5" data-toggle="tab" href="#tab-5" role="tab" aria-controls="tab-5" aria-selected="false">5</a>
+                        </li>
+                    </ul>
+                    <!-- end of tabs links -->
 
-    </div>
-    <!-- Custom_01 Section END -->
+                    <!-- Tabs Content -->
+                    <div class="tab-content mt-5" id="argoTabsContent">
+
+                        <!-- Tab -->
+                        <div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="tab-1">
+                            <div class="row">
+                                <div class="col-lg-6 mt-3">
+                                    <div class="image-container">
+                                        <img class="img-fluid" src="../assets/images/terminal/01_01.png" alt="alternative">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="text-container text-center">
+                                        <h3><b>Instantiering</b> af Klasse</h3>
+                                        <p class="generic-blockquote">
+                                            Vi har i eksemplet her til venstre lavet en klasse som hedder <b>Bank.java</b>. Denne vil vi nu gerne have <b>instantieret</b> i vores Main.java fil. Altså vores main klasse.. 
+                                            <br><br>Udfyld det der mangler herunder..
+                                        </p>
+                                        <div class="changelog-custom-learning d-flex justify-content-center align-items-center text-center wow animated fadeInUp">
+                                            <label for="user-input" class="into-icon-learning">
+                                                <input id="01-user-input01" type="text" placeholder="Dit svar.." style="margin-right: 10px;">
+                                                <span class="span-white text-visuals-span-input">myBank = new Bank( )</span>
+                                            </label>
+                                        </div>                                        
+                                    </div> 
+                                </div>
+                            </div> 
+                        </div> 
+                        <!-- end of tab -->
+
+                        <!-- Tab -->
+                        <div class="tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="tab-2">
+                            <div class="row">
+                                <div class="col-lg-6 mt-3">
+                                    <div class="image-container">
+                                        <img class="img-fluid" src="../assets/images/terminal/01_02.png" alt="alternative">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="text-container text-center">
+                                        <h3><b>Instantier</b> en hel klasse</h3>
+                                        <p class="generic-blockquote">
+                                            Du har nu fået en god idé om hvordan man instantierer et objekt..
+                                            <br><br>Vi ønsker nu at <b>instantiere</b> vores klasse til venstre. Vi vil gerne bruge variablen <b>food</b>.<br><br>Hvordan gør vi det?
+                                        </p>
+                                        <div class="changelog-custom-learning d-flex justify-content-center align-items-center text-center animated fadeInUp">
+                                            <label for="user-input" class="into-icon-learning-long">
+                                                <input id="01-user-input02" type="text" placeholder="Dit svar.." style="margin-right: 10px;">
+                                            </label>
+                                        </div>                                        
+                                    </div> 
+                                </div>
+                            </div> 
+                        </div> 
+                        <!-- end of tab -->
+
+                        <!-- Tab -->
+                        <div class="tab-pane fade" id="tab-3" role="tabpanel" aria-labelledby="tab-3">
+                            <div class="row">
+                                <div class="col-lg-6 mt-3">
+                                    <div class="image-container">
+                                        <img class="img-fluid" src="../assets/images/terminal/01_03.png" alt="alternative">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="text-container text-center">
+                                        <h3><b>Instantiering</b> med parametre</h3>
+                                        <p class="generic-blockquote">
+                                            Vi har tilføjet lidt til vores Food.java klasse.. Vi ønsker at instantiere den igen - med de nye parametre...<br><br>
+                                            Vi bruger igen variablen <b>food</b> og vi vil gerne have <b>5 Bananer</b> fra <b>Konga</b>.
+                                        </p>
+                                        <div class="changelog-custom-learning d-flex justify-content-center align-items-center text-center animated fadeInUp">
+                                            <label for="user-input" class="into-icon-learning-long">
+                                                <input id="01-user-input03" type="text" placeholder="Dit svar.." style="margin-right: 10px;">
+                                            </label>
+                                        </div>                                        
+                                    </div> 
+                                </div>
+                            </div> 
+                        </div> 
+                        <!-- end of tab -->
+
+                        <!-- Tab -->
+                        <div class="tab-pane fade" id="tab-4" role="tabpanel" aria-labelledby="tab-4">
+                            <div class="row">
+                                <div class="col-lg-6 mt-3">
+                                    <div class="image-container">
+                                        <img class="img-fluid" src="../assets/images/terminal/01_04.png" alt="alternative">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="text-container text-center">
+                                        <h3><b>Access Modifiers</b></h3>
+                                        <p class="generic-blockquote">
+                                            Vi har lavet en klasse som du kan se til venstre. Vi har givet den nogle attributter, en constructor og en getter og setter..<br><br>
+                                            Hvilke access modifiers skal vi bruge på hhv getter og setter?
+                                        </p>
+                                        <div class="changelog-custom-learning d-flex justify-content-center align-items-center text-center animated fadeInUp">
+                                            <label for="user-input" class="into-icon-learning-long">
+                                                <input id="01-user-input04" type="text" placeholder="Getter" style="margin-right: 10px;">
+                                                <input id="01-user-input04" type="text" placeholder="Setter">
+                                            </label>
+                                        </div>                                        
+                                    </div> 
+                                </div>
+                            </div> 
+                        </div> 
+                        <!-- end of tab -->
+
+                        <!-- Tab -->
+                        <div class="tab-pane fade" id="tab-5" role="tabpanel" aria-labelledby="tab-5">
+                            <div class="row">
+                                <div class="col-lg-6 mt-3">
+                                    <div class="image-container">
+                                        <img class="img-fluid" src="../assets/images/terminal/01_01.png" alt="alternative">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="text-container text-center">
+                                        <h3><b>Er denne korrekt?</b></h3>
+                                        <p class="generic-blockquote">
+                                            Hvis du kigger på koden - er denne så <b>korrekt</b>? Hvis vi kører vores program, fungerer det så, eller får vi en fejlkode?
+                                            <br><br>Kig på koden og <b>vurdér</b> om den fungerer!
+                                        </p>
+                                        <div class="changelog-custom-learning d-flex justify-content-center align-items-center text-center animated fadeInUp">
+                                            <label for="user-input" class="into-icon-learning-long">
+                                                <input id="01-user-input05" type="text" placeholder="Ja / Nej">
+                                            </label>
+                                        </div>                                        
+                                    </div> 
+                                </div>
+                            </div> 
+                        </div> 
+                        <!-- end of tab -->
+                        
+                    </div> <!-- end of tab content -->
+                    <!-- end of tabs content -->
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of tabs -->
+    <!-- Learning by Doing END -->
 
     <!-- Javascript -->
     <script src="../assets/js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="../assets/js/learning-example.js"></script>
+    <script src="../assets/js/exam-questions.js"></script>
+    <script src="../assets/js/learning-example-visuals.js"></script>
     <script src="../assets/js/darkmode.js"></script>
     <script src="../assets/js/vendor/bootstrap-4.1.3.min.js"></script>
     <script src="../assets/js/vendor/wow.min.js"></script>
@@ -123,6 +305,11 @@
     <script src="../assets/js/vendor/jquery.datetimepicker.full.min.js"></script>
     <script src="../assets/js/vendor/jquery.nice-select.min.js"></script>
     <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/prompt-validate01.js"></script>
+    <script src="../assets/js/scaleHeart.js"></script>
+    <script src="../assets/js/scaleThumb.js"></script>
+    <script src="../assets/js/button-to-top.js"></script>
+
 </body>
 
 </html>

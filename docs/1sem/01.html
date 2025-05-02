@@ -6,7 +6,7 @@
     Datamatiker elev Vinter 2025
     
     Sidst opdateret:
-    25-04-2025
+    02-05-2025
     
     Af: Jonas
 
@@ -33,6 +33,14 @@
     <!-- Footer load  -->
     <script src="../assets/js/footer2.js" defer></script>
 
+    <!-- WOW.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+    <!-- WOW toggle -->
+    <script>
+        new WOW().init();
+    </script>
+
     <!-- CSS Files -->
     <link rel="stylesheet" href="../assets/css/animate-3.7.0.css">
     <link rel="stylesheet" href="../assets/css/font-awesome-4.7.0.min.css">
@@ -43,22 +51,73 @@
 </head>
 
 <body class="dark-mode">
+    
     <!-- Preloader Starts -->
     <div class="preloader">
         <div class="spinner"></div>
     </div>
     <!-- Preloader End -->
 
+    <!-- Custom Cursor START --> 
+    <div class="cursor" id="customCursor"></div>
+
+    <script>
+        const cursor = document.getElementById('customCursor');
+    
+        const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    
+        if (!isTouchDevice) {
+            cursor.style.display = 'block';
+    
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+    
+                const target = e.target;
+                if (['A', 'BUTTON', 'UL', 'LI'].includes(target.tagName)) {
+                    cursor.classList.add('hover');
+                } else {
+                    cursor.classList.remove('hover');
+                }
+            });
+    
+            window.addEventListener('mouseout', (e) => {
+                if (!e.relatedTarget && !e.toElement) {
+                    cursor.style.opacity = '0';
+                }
+            });
+    
+            window.addEventListener('mouseover', (e) => {
+                cursor.style.opacity = '1';
+            });
+    
+            window.addEventListener('blur', () => {
+                cursor.style.opacity = '0';
+            });
+    
+            window.addEventListener('focus', () => {
+                cursor.style.opacity = '1';
+            });
+    
+        } else {
+            cursor.style.display = 'none';
+        }
+    </script>
+    <!-- Custom Cursor END -->
+
     <!-- Darkmode button -->
     <button id="darkModeToggle" class="darkmode-btn-floating" title="Skift tema">☀️</button>
 
+    <!-- Scroll-to-Top Button -->
+    <button id="scrollToTopBtn" class="scroll-btn" onclick="scrollToSection()"><i class="fa fa-arrow-up"></i></button>
+
     <!-- Banner Area Starts -->
-    <section class="banner-area banner-area2 text-center">
+    <section class="banner-area banner-area2 text-center" id="start">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1><i>01 | <b>Objekter</b></i></h1>
-                    <p class="pt-2"><i>1. Semester / Læringsmål</i></p>
+                    <h1 class="wow animated fadeInDown"><i>01 | <b>Objekter</b></i></h1>
+                    <p class="pt-2 wow animated fadeInDown"><i>1. Semester / Læringsmål</i></p>
                 </div>
             </div>
         </div>
@@ -82,7 +141,7 @@
             <div class="row">
                 <div class="col-md-6 align-self-center">
                     <div class="welcome-img">
-                        <img src="../assets/images/1sem/01_lm_final2.png" class="img-fluid" alt="">
+                        <img src="../assets/images/1sem/01_lm_final2.png" class="img-fluid wow animated fadeInUp" alt="">
                     </div>
                 </div>
                 <div class="col-md-6 align-self-center">
@@ -107,7 +166,7 @@
         
         <!-- Forskel SECTION START -->
 
-        <div class="container mt-5">
+        <div class="container mt-5 wow animated fadeInUp">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-top2 text-center">
@@ -150,7 +209,7 @@
 
         <!-- Forskel SECTION START -->
 
-        <div class="container mt-5">
+        <div class="container mt-5 wow animated fadeInUp">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-top2 text-center">
@@ -201,8 +260,8 @@
         <div class="container">
         <div class="row">
             <div class="col-lg-12">
-            <h2><i class="i-candy">Instantiering og erklæring af objekt</i></h2>
-            <h4 class="mt-4 i-candy-h4">TextUI ui = new TextUI ( )<br><br><b>Objekt</b> <b>variabel</b> = new <b>Objekt</b>(<b>parametre</b>)
+            <h2 class="wow fade-from-right-left"><i class="i-candy">Instantiering og erklæring af objekt</i></h2>
+            <h4 class="mt-4 i-candy-h4 wow fade-from-right-left">TextUI ui = new TextUI ( )<br><br><b>Objekt</b> <b>variabel</b> = new <b>Objekt</b>(<b>parametre</b>)
             <br><br>Variablen kan hedde lige hvad du vil. Det er dog effektivt at navngive den efter objektet..
             </h4>
             </div>
@@ -236,7 +295,7 @@
             </svg>
         </div>
           
-        <details open>
+        <details open class="wow animated fadeInUp">
             <summary>
                 Access Modifiers...
                 <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" /></svg>
@@ -247,7 +306,7 @@
             <p class="mt-2"><b class="b-orange">Protected</b><br>Alle klasser i samme package samt subclasses</p>
         </details>
           
-        <details>
+        <details class="wow animated fadeInUp">
             <summary>
                 Getter & Setter
                 <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" /></svg>
@@ -270,138 +329,303 @@
     </div>
     <!-- Dropdown Info Section End -->
 
-    <!-- Learning Area Starts -->
-    <div class="deshes-area section-padding">
+    <!-- Learning by Doing START -->
+    <div id="features" class="tabs lbd-visuals">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="section-top2 text-center">
-                        <h3><b>Øvelse</b> gør mester</h3>
-                        <p class="mt-4"><i>Det er okay at fejle! Du bliver bare klogere..</i></p>
-                        <div class="single-element-widget-exam col-lg-10 mx-auto mt-5">
-                            <div class="section-top-border">
-                                <h3 class="mb-30 title_color">Udfyld det der mangler...</h3>
-
-                                <!-- Tasks in rows of two -->
-                                <div class="row mt-5">
-                                    <!-- Task 1 -->
-                                    <div class="col-lg-6 d-flex">
-                                        <div class="changelog-custom-learning equal-height">
-                                            <blockquote class="generic-blockquote-bottom">
-                                                Udfyld det der mangler herunder..
-                                            </blockquote>
-                                            <label for="user-input" class="into-icon-learning">
-                                                <input id="01-user-input01" type="text" placeholder="Input">
-                                                <span class="span-white">myBank = new Bank()</span>
-                                            </label>
-                                            
-                                        </div>
-                                    </div>
-                                
-                                    <!-- Task 2 -->
-                                    <div class="col-lg-6 d-flex">
-                                        <div class="changelog-custom-learning equal-height">
-                                            <blockquote class="generic-blockquote-bottom">
-                                                <b>Instantier</b> et objekt af vores klasse som hedder Food.java med variablen food..
-                                            </blockquote>
-                                            <label for="user-input" class="into-icon-learning-long">
-                                                <input id="01-user-input02" type="text" placeholder="Input">
-                                            </label>
-                                            <span class="span-white"></span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Tasks in rows of two -->
-                                <div class="row mt-5">
-                                    <!-- Task 3 -->
-                                    <div class="col-lg-6 d-flex">
-                                        <div class="changelog-custom-learning equal-height">
-                                            <blockquote class="generic-blockquote-bottom">
-                                                Hvilken <b>access modifier</b> skal vi bruge på en getter og en setter?
-                                            </blockquote>
-                                            <div class="input-holder mt-auto">
-                                                <label for="user-input" class="into-icon-learning-long">
-                                                    <input id="01-user-input03" type="text" placeholder="Input">
-                                                </label>
-                                            </div>
-                                            <span class="span-white"></span>
-                                        </div>
-                                    </div>
-                                
-                                    <!-- Task 4 -->
-                                    <div class="col-lg-6 d-flex">
-                                        <div class="changelog-custom-learning equal-height">
-                                            <blockquote class="generic-blockquote-bottom">
-                                                Kan følgende printes uden en toString metode?
-                                            </blockquote>
-                                            <p style="margin-top: -30px;"><br><br>Media media = new Media()<br><br>System.out.println(<b>media.getName()</b>)</p>
-                                            <label for="user-input" class="into-icon-learning-long">
-                                                <input id="01-user-input04" type="text" placeholder="Input">
-                                            </label>
-                                            <span class="span-white"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End of task rows -->
-
-                            </div>
-                        </div>
-                    </div>
+                    <div class="above-heading">En lille test</div>
+                    <h2 class="h2-heading">Learning By Doing</h2>
+                    <p class="p-heading">Her har du mulighed for at øve dig lidt i det du læser</p>
                 </div>
-            </div>
-        </div>
-    </div>
-    <!-- Learning Area End -->
-
-
-    <!-- Comparison Section Start -->
-
-    <div class="deshes-area section-padding text-center" style="margin-top: -200px;">
-
-        <h3>Hvorfor er <b>toString()</b> metoden vigtig?</b></h3>
-        <p class="mt-4"><i>Herunder kan du se forskellen på toString og uden toString</i></p>
-
-        <div class="container mt-5">
+            </div> 
             <div class="row">
+                <div class="col-lg-12">
 
-                <div class="card-deck col-lg-12">
+                    <!-- Tabs Links -->
+                    <ul class="nav nav-tabs" id="argoTabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="nav-tab-1" data-toggle="tab" href="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true">1</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="nav-tab-2" data-toggle="tab" href="#tab-2" role="tab" aria-controls="tab-2" aria-selected="false">2</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="nav-tab-3" data-toggle="tab" href="#tab-3" role="tab" aria-controls="tab-3" aria-selected="false">3</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="nav-tab-4" data-toggle="tab" href="#tab-4" role="tab" aria-controls="tab-4" aria-selected="false">4</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="nav-tab-5" data-toggle="tab" href="#tab-5" role="tab" aria-controls="tab-5" aria-selected="false">5</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="nav-tab-6" data-toggle="tab" href="#tab-6" role="tab" aria-controls="tab-5" aria-selected="false">6</a>
+                        </li>
+                    </ul>
+                    <!-- end of tabs links -->
 
-                    <div class="card">
-                        <div class="card-body">
-                        <h5 class="card-title">Print <b>uden</b> toString</h5>
-                        <p class="card-text">User u = new User()</p>
-                        <div class="button-cool">
-                            <button>System.out.println(u)</button>
-                            <button>Output: ClassName@HashCode</button>
-                            <button>Console: <b class="b-red">User@1718f0191</b></button>
-                        </div>
-                        </div>
-                    </div>
+                    <!-- Tabs Content -->
+                    <div class="tab-content mt-5" id="argoTabsContent">
 
-                    <div class="card">
-                        <div class="card-body">
-                        <h5 class="card-title">Print <b>med</b> toString</h5>
-                        <p class="card-text">User u = new User()</p>
-                        <div class="button-cool">
-                            <button>System.out.println(u)</button>
-                            <button>Output: toString af input</button>
-                            <button>Console: <b class="b-green">Jonas, 26 år.</b></button>
-                        </div>
-                        </div>
-                    </div>
+                        <!-- Tab -->
+                        <div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="tab-1">
+                            <div class="row">
+                                <div class="col-lg-6 mt-3">
+                                    <div class="image-container">
+                                        <img class="img-fluid" src="../assets/images/terminal/01_01.png" alt="alternative">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="text-container text-center">
+                                        <h3><b>Instantiering</b> af Klasse</h3>
+                                        <p class="generic-blockquote">
+                                            Vi har i eksemplet her til venstre lavet en klasse som hedder <b>Bank.java</b>. Denne vil vi nu gerne have <b>instantieret</b> i vores Main.java fil. Altså vores main klasse.. 
+                                            <br><br>Udfyld det der mangler herunder..
+                                        </p>
+                                        <div class="changelog-custom-learning d-flex justify-content-center align-items-center text-center wow animated fadeInUp">
+                                            <label for="user-input" class="into-icon-learning">
+                                                <input id="01-user-input01" type="text" placeholder="Dit svar.." style="margin-right: 10px;">
+                                                <span class="span-white text-visuals-span-input">myBank = new Bank( )</span>
+                                            </label>
+                                        </div>                                        
+                                    </div> 
+                                </div>
+                            </div> 
+                        </div> 
+                        <!-- end of tab -->
 
+                        <!-- Tab -->
+                        <div class="tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="tab-2">
+                            <div class="row">
+                                <div class="col-lg-6 mt-3">
+                                    <div class="image-container">
+                                        <img class="img-fluid" src="../assets/images/terminal/01_02.png" alt="alternative">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="text-container text-center">
+                                        <h3><b>Instantier</b> en hel klasse</h3>
+                                        <p class="generic-blockquote">
+                                            Du har nu fået en god idé om hvordan man instantierer et objekt..
+                                            <br><br>Vi ønsker nu at <b>instantiere</b> vores klasse til venstre. Vi vil gerne bruge variablen <b>food</b>.<br><br>Hvordan gør vi det?
+                                        </p>
+                                        <div class="changelog-custom-learning d-flex justify-content-center align-items-center text-center animated fadeInUp">
+                                            <label for="user-input" class="into-icon-learning-long">
+                                                <input id="01-user-input02" type="text" placeholder="Dit svar.." style="margin-right: 10px;">
+                                            </label>
+                                        </div>                                        
+                                    </div> 
+                                </div>
+                            </div> 
+                        </div> 
+                        <!-- end of tab -->
+
+                        <!-- Tab -->
+                        <div class="tab-pane fade" id="tab-3" role="tabpanel" aria-labelledby="tab-3">
+                            <div class="row">
+                                <div class="col-lg-6 mt-3">
+                                    <div class="image-container">
+                                        <img class="img-fluid" src="../assets/images/terminal/01_03.png" alt="alternative">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="text-container text-center">
+                                        <h3><b>Instantiering</b> med parametre</h3>
+                                        <p class="generic-blockquote">
+                                            Vi har tilføjet lidt til vores Food.java klasse.. Vi ønsker at instantiere den igen - med de nye parametre...<br><br>
+                                            Vi bruger igen variablen <b>food</b> og vi vil gerne have <b>5 Bananer</b> fra <b>Congo</b>.
+                                        </p>
+                                        <div class="changelog-custom-learning d-flex justify-content-center align-items-center text-center animated fadeInUp">
+                                            <label for="user-input" class="into-icon-learning-long" style="width: 600px !important;">
+                                                <input id="01-user-input03" type="text" placeholder="Dit svar.." style="margin-right: 10px;">
+                                            </label>
+                                        </div>                                        
+                                    </div> 
+                                </div>
+                            </div> 
+                        </div> 
+                        <!-- end of tab -->
+
+                        <!-- Tab -->
+                        <div class="tab-pane fade" id="tab-4" role="tabpanel" aria-labelledby="tab-4">
+                            <div class="row">
+                                <div class="col-lg-6 mt-3">
+                                    <div class="image-container">
+                                        <img class="img-fluid" src="../assets/images/terminal/01_04.png" alt="alternative">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="text-container text-center">
+                                        <h3>Access Modifiers</h3>
+                                        <p class="generic-blockquote">
+                                            Vi har lavet en klasse som du kan se til venstre. Vi har givet den nogle attributter, en constructor og en getter og setter..<br><br>
+                                            Hvilke <b>access modifiers</b> skal vi bruge på hhv getter og setter?
+                                        </p>
+                                        <div class="changelog-custom-learning d-flex justify-content-center align-items-center text-center animated fadeInUp">
+                                            <label for="user-input" class="into-icon-learning-long">
+                                                <input id="01-user-input04" type="text" placeholder="Getter" style="margin-right: 10px;">
+                                                <input id="01-user-input04_02" type="text" placeholder="Setter">
+                                            </label>
+                                        </div>                                        
+                                    </div> 
+                                </div>
+                            </div> 
+                        </div> 
+                        <!-- end of tab -->
+
+                        <!-- Tab -->
+                        <div class="tab-pane fade" id="tab-5" role="tabpanel" aria-labelledby="tab-5">
+                            <div class="row">
+                                <div class="col-lg-6 mt-3">
+                                    <div class="image-container">
+                                        <img class="img-fluid" src="../assets/images/terminal/01_01.png" alt="alternative">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="text-container text-center">
+                                        <h3>Er denne korrekt?</h3>
+                                        <p class="generic-blockquote">
+                                            Hvis du kigger på koden - er denne så <b>korrekt</b>? Hvis vi kører vores program, fungerer det så, eller får vi en fejlkode?
+                                            <br><br>Kig på koden og <b>vurdér</b> om den fungerer!
+                                        </p>
+                                        <div class="changelog-custom-learning d-flex justify-content-center align-items-center text-center animated fadeInUp">
+                                            <label for="01-user-input05" class="into-icon-learning-long">
+                                                <input id="01-user-input05" type="text" placeholder="Ja / Nej">
+                                            </label>
+                                        </div>                                        
+                                    </div> 
+                                </div>
+                            </div> 
+                        </div> 
+                        <!-- end of tab -->
+
+                        <!-- Tab -->
+                        <div class="tab-pane fade" id="tab-6" role="tabpanel" aria-labelledby="tab-6">
+                            <div class="row">
+                                <div class="col-lg-6 mt-3">
+                                    <div class="image-container">
+                                        <img class="img-fluid" src="../assets/images/terminal/01_01.png" alt="alternative">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="text-container text-center">
+                                        <h3>Forståelse af <b>Access Modifiers</b></h3>
+                                        <p class="generic-blockquote">
+                                            Hvis du husker tilbage til <b>opgave 4</b>.. <br><br>Hvorfor skulle vores <b>Access Modifiers</b> på vores metoder være <b>public</b>?
+                                        </p>
+                                        <div class="changelog-custom-learning d-flex justify-content-center align-items-center text-center animated fadeInUp">
+                                            <div class="button-cool">
+                                                <button id="01-user-input06_01" class="learning-button-color">Fordi vores attributter var protected</button>
+                                                <button id="01-user-input06_02" class="learning-button-color">Fordi vores attributter var private</button>
+                                                <button id="01-user-input06_03" class="learning-button-color">Fordi vores attributter var public</button>
+                                                <button id="01-user-input06_04" class="learning-button-color">Fordi vores attributter var secure</button>
+                                            </div>
+                                        </div>                                        
+                                    </div> 
+                                </div>
+                            </div> 
+                        </div> 
+                        <!-- end of tab -->
+                        
+                    </div> <!-- end of tab content -->
+                    <!-- end of tabs content -->
+
+                    
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+        <!-- Wavy section Start -->
+    </div> <!-- end of tabs -->
+    <!-- Learning by Doing END -->
+
+    <!-- Text Learning START -->
+    <section class="mt-5 mb-5" id="chapter-section">
+        <div class="container">
+            <div class="row justify-content-center py-5 mt-5">
+                <div class="col-md-12 heading-section text-center">
+                    <div class="above-heading">Bedre forståelse</div>
+                    <h2 class="mb-2">Læring om <b>Objekter</b></h2>
+                    <p class="p-heading generic-blockquote-bottom" style="background-color: #494974;">Her har du mulighed for at øve dig lidt i det du læser</p>
                 </div>
-
             </div>
-        </div>
-    </div>
-
-    <!-- Comparison Section End -->
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <nav id="navi">
+                        <ul>
+                            <li><a href="#page-1">Objekter</a><div class="indicator"></div></li>
+                            <li><a href="#page-2">toString</a><div class="indicator"></div></li>
+                            <li><a href="#page-3">Access Modifiers</a><div class="indicator"></div></li>
+                            <li><a href="#page-4">@Override</a><div class="indicator"></div></li>
+                        </ul>
+                    </nav>
+                </div>
+					<div class="col-md-9">
+					  <div id="page-1" class= "page one ml-5 text-center">
+					  	<h2 class="heading">Så hvad var et <b>objekt</b>?</h2>
+					  	<p>
+                            Et <b>objekt</b> er en måde at samle information og funktionalitet på ét sted. Du kan tænke på det som en <b>ting i virkeligheden</b> — f.eks. en bil. En bil har nogle <b>egenskaber</b>, som farve, mærke og årgang. Den kan også <b>gøre noget</b>, som at starte motoren, dreje eller bremse.
+                          </p>
+                          <p>
+                            I programmering kalder vi egenskaberne for <b>attributter</b> og handlingerne for <b>metoder</b>. Når vi laver et objekt i vores kode, samler vi disse attributter og metoder, så vi kan arbejde med dem på en logisk måde.
+                          </p>
+                          <p>
+                            For eksempel kunne vi lave et objekt der hedder <b>person</b>, som har en attribut <b>navn</b> og en metode <b>sigeHej()</b>, der printer "Hej, jeg hedder..." på skærmen. På den måde kan vi arbejde med personer som objekter, og give dem både data og adfærd.
+                          </p>
+                          <p>
+                            Når vi bruger et objekt i en klasse, kalder man det at <b>instantiere</b> det – det betyder, at vi laver en "kopi" af objektet, som vi så kan bruge i programmet.
+                          </p>
+					  </div>
+					  <div id="page-2" class="page two ml-5 text-center">
+                        <h2 class="heading"><b>toString</b> metoden</h2>
+                        <p>
+                          I Java bruges <b>toString()</b>-metoden til at bestemme, hvordan et objekt skal vises som tekst. Når du prøver at printe et objekt, er det faktisk <b>toString()</b>-metoden, der bliver kaldt automatisk.
+                        </p>
+                        <p>
+                          Hvis du ikke selv skriver en <b>toString()</b>-metode, vil programmet bare vise noget teknisk som objektets navn og en mærkelig kode – ikke særlig brugervenligt. Men hvis du laver din egen <b>toString()</b>, kan du selv bestemme, hvad der skal vises.
+                        </p>
+                        <p>
+                          <img src="../assets/images/terminal/01_05.png" style="width: 75%; height: auto; display: block; margin: 20px auto;">
+                        </p>
+                        <p>
+                          Nu vil <b>System.out.println(person);</b> vise noget forståeligt som: <br>
+                          <i>“Sofie er 12 år”</i>
+                        </p>
+                      </div>
+					  <div id="page-3" class="page three ml-5 text-center">
+                        <h2 class="heading"><b>Access</b> Modifiers</h2>
+                        <p>
+                          <b>Access modifiers</b> bestemmer, hvem der har adgang til de forskellige dele af din kode — især variabler og metoder.
+                        </p>
+                        <p>
+                          Her er et simpelt eksempel:
+                        </p>
+                        <p>
+                            <img src="../assets/images/terminal/01_06.png" style="width: 75%; height: auto; display: block; margin: 20px auto;">
+                        </p>
+                        <p>
+                          I dette eksempel kan man <b>ikke</b> direkte få adgang til variablen <b>mærke</b>, fordi den er <b class="b-red">private</b>. Men man kan stadig få dens værdi via metoden <b>getMærke()</b>, som er <b class="b-green">public</b>. Det kaldes <b>indkapsling</b> og hjælper med at holde koden organiseret og sikker.
+                        </p>
+                        <p>
+                           Ønsker vi at bruge vores <b class="b-red">private</b> mærke i en anden klasse, så kalder vi altså metoden <b class="b-green">getMærke</b> fra vores anden klasse på vores <b>instantierede objekt</b>!
+                        </p>
+                      </div>
+					  <div id="page-4" class="page four ml-5 text-center">
+                        <h2 class="heading"><b>@Override</b> - hvorfor?</h2>
+                        <p>
+                          Som du nok lagde mærke til, havde vores <b>toString()</b> metode en <b>@Override</b> annotation over sig. Men hvad betyder det, og hvad gør det egentlig?
+                        </p>
+                        
+                      </div>
+					</div>
+			  </div>
+    	</div>
+    </section>
+    <!-- Text Learning END -->
 
     <!-- Comparison Section Start -->
 
-    <div class="deshes-area section-padding text-center">
+    <div class="deshes-area section-padding text-center wow animated fadeInUp">
 
         <h3><b>Attributter</b>, <b>felter</b> & <b>lokale variabler</b>...</b></h3>
         <p class="mt-4"><i>Hvad er forskellen?</i></p>
@@ -455,7 +679,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-top2 text-center">
-                        <h3>Se om du har forstået <b>læringsområdet</b></h3>
+                        <h3 class="wow animated fadeInUp">Se om du har forstået <b>læringsområdet</b></h3>
                         <p class="mt-4"><i>Du skal svare korrekt på alle spørgsmål for at bestå!</i></p>
                         <div class="single-element-widget-exam col-lg-6 mx-auto mt-5">
 
@@ -504,13 +728,13 @@
     <!-- Like Section Start -->
     <div class="deshes-area section-padding text-center no-spacing" style="margin-top: -200px;">
 
-        <div class="section-top2 col-lg-12 text-center">
+        <div class="section-top2 col-lg-12 text-center wow pop-effect">
             <h3>Giv <b>01 | ArrayList</b> en rating</h3>
             <p class="mt-4"><i>Tryk på den du føler for!</i></p>
         </div>
 
         <div class="d-flex justify-content-center align-items-center flex-row gap-4">
-            <div class="outer-circle position-relative mr-5">
+            <div class="outer-circle position-relative mr-5 wow pop-effect delay-1s">
                 <button class="like-button" onclick="scaleHeart()">Like</button>
                 <div class="like-count">12</div>
                 <div class="like-icon">
@@ -518,7 +742,7 @@
                 </div>
             </div>
             
-            <div class="outer-circle position-relative ml-5">
+            <div class="outer-circle position-relative ml-5 wow pop-effect delay-1s">
                 <button class="like-button" onclick="scaleThumb()">Dislike</button>
                 <div class="dislike-count">0</div>
                 <div class="dislike-icon">
@@ -545,6 +769,9 @@
     <script src="../assets/js/prompt-validate01.js"></script>
     <script src="../assets/js/scaleHeart.js"></script>
     <script src="../assets/js/scaleThumb.js"></script>
+    <script src="../assets/js/button-to-top.js"></script>
+    <script src="../assets/js/learning-page-tab.js"></script>
+
 </body>
 
 </html>

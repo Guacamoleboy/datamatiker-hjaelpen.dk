@@ -6,7 +6,7 @@
     Datamatiker elev Vinter 2025
     
     Sidst opdateret:
-    25-04-2025
+    26-04-2025
     
     Af: Jonas
 
@@ -32,6 +32,14 @@
     <!-- Footer load  -->
     <script src="../assets/js/footer2.js" defer></script>
 
+    <!-- WOW.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+    <!-- WOW toggle -->
+    <script>
+        new WOW().init();
+    </script>
+
     <!-- CSS Files -->
     <link rel="stylesheet" href="../assets/css/animate-3.7.0.css">
     <link rel="stylesheet" href="../assets/css/font-awesome-4.7.0.min.css">
@@ -49,70 +57,260 @@
     </div>
     <!-- Preloader End -->
 
+    <!-- Custom Cursor START --> 
+    <div class="cursor" id="customCursor"></div>
+
+    <script>
+        const cursor = document.getElementById('customCursor');
+    
+        const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    
+        if (!isTouchDevice) {
+            cursor.style.display = 'block';
+    
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+    
+                const target = e.target;
+                if (['A', 'BUTTON', 'UL', 'LI'].includes(target.tagName)) {
+                    cursor.classList.add('hover');
+                } else {
+                    cursor.classList.remove('hover');
+                }
+            });
+    
+            window.addEventListener('mouseout', (e) => {
+                if (!e.relatedTarget && !e.toElement) {
+                    cursor.style.opacity = '0';
+                }
+            });
+    
+            window.addEventListener('mouseover', (e) => {
+                cursor.style.opacity = '1';
+            });
+    
+            window.addEventListener('blur', () => {
+                cursor.style.opacity = '0';
+            });
+    
+            window.addEventListener('focus', () => {
+                cursor.style.opacity = '1';
+            });
+    
+        } else {
+            cursor.style.display = 'none';
+        }
+    </script>
+    <!-- Custom Cursor END -->
+
     <!-- Darkmode button -->
     <button id="darkModeToggle" class="darkmode-btn-floating" title="Skift tema">☀️</button>
 
-    <!-- Banner Area Starts -->
-    <section class="banner-area banner-area2 text-center">
+    <!-- Scroll-to-Top Button -->
+    <button id="scrollToTopBtn" class="scroll-btn" onclick="scrollToSection()"><i class="fa fa-arrow-up"></i></button>
+
+    <section id="home" class="intro-section">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1><i>15 | <b>Rekursion</b></i></h1>
-                    <p class="pt-2"><i>1. Semester / Læringsmål</i></p>
-                </div>
+          <div class="row align-items-center text-white">
+            
+            <div class="col-md-6 intros text-start">
+              <h1 class="display-2">
+                <span class="display-2--intro wow fade-from-left-right"><b>15 | Rekursion</b></span>
+                <span class="display-2--description lh-base wow fade-from-left-right">
+                  Her har du mulighed for at lære hvad rekursion er, og hvordan vi benytter os af det på <b>1. Semester</b>!
+                </span>
+              </h1>
+              <button type="button" class="rounded-pill btn-rounded">Hop Til Test
+                <span><i class="fa fa-arrow-down"></i></span>
+              </button>
             </div>
+            
+            <div class="col-md-6 intros text-end">
+              <div class="video-box">
+                <img src="../assets/images/random/intro.png" alt="video illutration" class="img-fluid wow fade-from-right-left">     
+                </a>
+              </div>
+            </div>
+            
+          </div>
         </div>
-
-        <!-- Wavy transfer Start -->
-
-        <div class="wave-bottom">
-            <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-                <path d="M0,50 Q90,0 180,50 T360,50 T540,50 T720,50 T900,50 T1080,50 T1260,50 T1440,50 L1440,100 L0,100 Z"/>
-            </svg>
-        </div>
-
-        <!-- Wavy transfer end -->
-
-    </section>
-    <!-- Banner Area End -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#5c5c88" fill-opacity="1" d="M0,160L48,176C96,192,192,224,288,208C384,192,480,128,576,133.3C672,139,768,213,864,202.7C960,192,1056,96,1152,74.7C1248,53,1344,107,1392,133.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+      </section>
 
     <!-- Custom_01 Section Start -->
-    <div class="deshes-area section-padding text-center mt-5">
+    <div class="deshes-area section-padding text-center" style="background-color: #5c5c88;">
 
         <!-- Component ROW START -->
         <div class="container">
             <div id="component-rows" class="row">
 
-                <div class="section-top2 col-lg-12 text-center">
-                    <h3>Title</h3>
-                    <p class="mt-4"><i>Text</i></p>
-                </div>
-
-                <div class="col-lg-9">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Text</h5>
-                            <p class="card-text">Text</p>
-               
-                            
-                
-                        </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services text-start">
+                      <div class="services__pic">
+                        <img src="../assets/images/random/service-3.png" alt="web development illustration" class="img-fluid wow fade-from-left-right">
+                      </div>
                     </div>
-                </div>
-              
-                <div class="col-lg-3">
-                    <div class="card">
-                      <div class="card-body">
-                        <h5 class="card-title">Text</h5>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4">
+                      <div class="services__content">
+                        <div class="icon d-block fa fa-code mb-4 wow fade-appear"></div>
+                        <h3 class="display-3--title mt-1 mb-4 wow fade-appear">Hvad er <b>rekursion</b> så?</h3>
+                        <p class="lh-lg wow fade-appear">
+                          Rekursion er kort fortalt et <b class="b-white">kald til sig selv</b>. Vi kalder altså metoden i sin egen metode. Du har fx en metode som checker efter noget..
+                          Såfremt det går galt, så ønsker vi at køre metoden igen.. Det kan vi gøre ved at lave rekursion. Altså kalde sig selv igen!
+                        </p>
                       </div>
                     </div>
                 </div>
+
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4">
+                      <div class="services__content">
+                        <div class="icon d-block fa fa-car mb-4 wow fade-appear"></div>
+                        <h3 class="display-3--title mt-1 mb-4 wow fade-appear"><b>Eksempel</b> fra livet</h3>
+                        <p class="lh-lg wow fade-appear">
+                          Du kører i en rundkørsel.. Du misser hvor du skal af, så du tager lige en omgang til. Det er <b>rekursion</b>! Vi tager altså lige "metoden" endnu engang.
+                          Når vi så på et tidspunkt rammer vores <b class="b-white">exit</b>, så hopper vi af. Indtil da kalder vi os selv <b>rekursivt</b> igen og igen!
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4 text-end">
+                      <div class="services__pic">
+                        <img src="../assets/images/random/service-4.png" alt="cloud hosting illustration" class="img-fluid wow fade-from-right-left">
+                      </div>
+                    </div>
+                </div>
+
+                
             </div>
         </div>
         <!-- Component ROW END -->
 
     </div>
     <!-- Custom_01 Section END -->
+
+    <!-- Custom_02 Section START -->
+    <section class="testimonials" style="margin-top: -100px;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#5c5c88" fill-opacity="1" d="M0,96L48,128C96,160,192,224,288,213.3C384,203,480,117,576,117.3C672,117,768,203,864,202.7C960,203,1056,117,1152,117.3C1248,117,1344,203,1392,245.3L1440,288L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+        
+        <div class="container">
+            <div class="row text-center text-white">
+                <h1 class="display-3 fw-bold mb-5 wow animated fadeInUp"><b>Visuel læring</b></h1>
+
+                <div class="container">
+                    <div class="row">
+                      <!-- Image 1 -->
+                      <div class="col-md-4 mb-4 learning-images">
+                        <img src="../assets/images/1sem/15_01.png" class="img-fluid rounded shadow wow animated fadeInUp" alt="Image 1">
+                      </div>
+                  
+                      <!-- Image 2 -->
+                      <div class="col-md-4 mb-4 learning-images">
+                        <img src="../assets/images/1sem/15_02.png" class="img-fluid rounded shadow wow animated fadeInUp" alt="Image 2">
+                      </div>
+                  
+                      <!-- Image 3 -->
+                      <div class="col-md-4 mb-4 learning-images">
+                        <img src="../assets/images/1sem/15_03.png" class="img-fluid rounded shadow wow animated fadeInUp" alt="Image 3">
+                      </div>
+                    </div>
+                  </div>
+                  
+            </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#5c5c88" fill-opacity="1" d="M0,96L48,128C96,160,192,224,288,213.3C384,203,480,117,576,117.3C672,117,768,203,864,202.7C960,203,1056,117,1152,117.3C1248,117,1344,203,1392,245.3L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+    </section>
+    <!-- Custom_02 Section END -->  
+
+    <!-- Comparison Section Start -->
+    <div class="deshes-area tilted-line-end section-padding text-center" style="background-color: #5c5c88;">
+
+        <h3 class="wow fade-appear">Test dig selv i rekursion!</h3>
+        <p class="mt-4 wow fade-appear"><i>Herunder er der 2 koder med rekursion.. Skriv svaret i felterne..</i></p>
+
+        <div class="container mt-5">
+            <div class="row justify-content-center">
+
+                <div class="card-deck col-lg-12 wow fade-appear">
+
+                    <div class="card" style="border-style: none !important; background-color: #5c5c88;">
+                        <div class="card-body learning-example-visuals">
+                            <img src="../assets/images/1sem/15_04.png" style="width: 100%; height: 75%;">
+                            <div class="d-flex justify-content-center mt-5 button-cool cool-button-placeholder">
+                                <input id="user-input01" type="text" class="form-control text-center w-50" placeholder="Skriv her..">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" style="border-style: none !important; background-color: #5c5c88;">
+                        <div class="card-body learning-example-visuals">
+                            <img src="../assets/images/1sem/15_05.png" style="width: 100%; height: 75%;">
+                            <div class="d-flex justify-content-center mt-5 button-cool cool-button-placeholder">
+                                <input id="user-input02" type="text" class="form-control text-center w-50" placeholder="Skriv her..">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        
+    </div>
+    <!-- Comparison Section End -->
+
+    <!-- Exam Area Starts -->
+    <div class="deshes-area section-padding wow animated fadeInUp" id="exam">
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-12">
+                    <div class="section-top2 text-center">
+                        <h3>Se om du har forstået <b>Rekursion</b> korrekt</h3>
+                        <p class="mt-4"><i>Du skal svare korrekt på alle spørgsmål for at bestå!</i></p>
+                        <div class="single-element-widget-exam col-lg-6 mx-auto mt-5">
+
+                            <div class="section-top-border">
+                                <h3 class="mb-30 title_color">15 | Rekursion</h3>
+                                
+                                <div class="row">
+                                    <div class="col-lg-12">
+
+                                        <div class="changelog-custom">
+                                            <h4 class="h4-background col-lg-4 mx-auto mb-5">1/10</h4>
+                                            <div id="visual-lives" class="d-flex justify-content-center mb-4">
+                                                <div class="life-star" id="star1">
+                                                    <img src="../assets/images/liv_star_final.png" class="star-img">
+                                                </div>
+                                                <div class="life-star" id="star2">
+                                                    <img src="../assets/images/liv_star_final.png" class="star-img">
+                                                    <img src="../assets/images/liv_astronaut_final.png" class="astronaut-img" id="astronaut">
+                                                </div>
+                                                <div class="life-star" id="star3">
+                                                    <img src="../assets/images/liv_star_final.png" class="star-img balloon">
+                                                </div>
+                                            </div>
+                                            <blockquote class="generic-blockquote">
+                                                En ArrayList er det samme som en Array..
+                                            </blockquote>
+                                            <button>Ja</button>
+                                            <button>Nej</button> 
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+        
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Exam Area End -->
 
     <!-- Javascript -->
     <script src="../assets/js/vendor/jquery-2.2.4.min.js"></script>
@@ -123,6 +321,10 @@
     <script src="../assets/js/vendor/jquery.datetimepicker.full.min.js"></script>
     <script src="../assets/js/vendor/jquery.nice-select.min.js"></script>
     <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/sidney.js"></script>
+    <script src="../assets/js/button-to-top.js"></script>
+    <script src="../assets/js/exam-questions15.js"></script>
+
 </body>
 
 </html>
