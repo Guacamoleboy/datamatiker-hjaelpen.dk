@@ -144,6 +144,9 @@ document.addEventListener("DOMContentLoaded", () => {
                         if (currentQuestionIndex < questions.length) {
                             renderQuestion(currentQuestionIndex);
                         } else {
+
+                            localStorage.setItem("01-input08-correct", "true");
+
                             container.innerHTML = `
                                 <h4 class="h4-background col-lg-4 mx-auto mb-5">Yay</h4>
                                 <blockquote class="generic-blockquote">Tillykke! Du har bestået testen!</blockquote>
@@ -190,7 +193,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             clonedAstronaut.classList.add("dropped");
                             }
 
-                            
+
                                 container.innerHTML = `
                                     <h4 class="h4-background col-lg-4 mx-auto mb-5">Øv!</h4>
                                     <blockquote class="generic-blockquote">Du har brugt alle dine liv.</blockquote>
