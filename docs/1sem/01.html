@@ -47,7 +47,7 @@
     <link rel="stylesheet" href="../assets/css/bootstrap-4.1.3.min.css">
     <link rel="stylesheet" href="../assets/css/owl-carousel.min.css">
     <link rel="stylesheet" href="../assets/css/jquery.datetimepicker.min.css">
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css?v=1.0.1">
 </head>
 
 <body class="dark-mode">
@@ -313,16 +313,14 @@
                 <svg class="control-icon control-icon-close" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" /></svg>
             </summary>
             <p class="mt-5">
-                <b class="b-white">Getter</b><br>Når vores attributter er <b class="b-red">private</b>, så skal vi bruge en Getter
+                <b>Getter</b><br><br>Når vores attributter er <b class="b-red">private</b>, så skal vi bruge en Getter
                 for at hente den hvis vi vil bruge den i en anden klasse.. Vi laver altså en <b>metode</b> som <b>returnerer</b> vores attribut!
-                <br><br>Eksempel:
-                <br><br><b class="b-white"><i>public String getName()</i></b>
+                <img src="../assets/images/terminal/01_06.png" style="width: 75%; height: auto; display: block; margin: 20px auto;">
             </p>
             <p class="mt-5">
-                <b class="b-white">Setter</b><br>En metode som sætter en <b class="b-red">private</b> attribut til noget. 
+                <b>Setter</b><br><br>En metode som sætter en <b class="b-red">private</b> attribut til noget. 
                 Fx hvis vi vil ændre navn på et person, så kan vi kalde metoden setName("NytNavn")..
-                <br><br>Eksempel på en metode:
-                <br><br><b class="b-white"><i>public void setName(String name)</i></b>
+                <img src="../assets/images/terminal/01_07.png" style="width: 75%; height: auto; display: block; margin: 20px auto;">
             </p>
         </details>
 
@@ -479,14 +477,14 @@
                             <div class="row">
                                 <div class="col-lg-6 mt-3">
                                     <div class="image-container">
-                                        <img class="img-fluid" src="../assets/images/terminal/01_01.png" alt="alternative">
+                                        <img class="img-fluid" src="../assets/images/terminal/01_08.png" alt="alternative">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="text-container text-center">
-                                        <h3>Er denne korrekt?</h3>
+                                        <h3>Er denne <b>korrekt</b>?</h3>
                                         <p class="generic-blockquote">
-                                            Hvis du kigger på koden - er denne så <b>korrekt</b>? Hvis vi kører vores program, fungerer det så, eller får vi en fejlkode?
+                                            Hvis du kigger på koden - er denne så <b>korrekt</b>? Hvis vi kalder vores <b>getNavn</b> fra vores Main.java klasse.. Fungerer den så?
                                             <br><br>Kig på koden og <b>vurdér</b> om den fungerer!
                                         </p>
                                         <div class="changelog-custom-learning d-flex justify-content-center align-items-center text-center animated fadeInUp">
@@ -505,7 +503,7 @@
                             <div class="row">
                                 <div class="col-lg-6 mt-3">
                                     <div class="image-container">
-                                        <img class="img-fluid" src="../assets/images/terminal/01_01.png" alt="alternative">
+                                        <img class="img-fluid" src="../assets/images/terminal/01_09.png" alt="alternative">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
@@ -673,6 +671,71 @@
 
     <!-- Comparison Section End -->
 
+    <!-- YouTube Section Start -->
+    <div class="deshes-area section-padding text-center">
+
+        <!-- 2 ROW START -->
+        <div class="container">
+            <div class="row same-height-row">
+
+                <div class="col-12 text-center mb-5">
+                    <h3>Se en video om <b>Objekter og instantiering</b></h3>
+                    <p class="mt-2"><i>Deep learning omkring objekter</i></p>
+                    </div>
+            
+                <div class="col-lg-12 d-flex">
+
+                    <div class="flex-grow-1 me-3" style="flex-basis: 60%; margin-right: 30px;">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="youtube-embed">
+                                    <div class="youtube-embed-custom" onclick="loadYouTubeVideo(this)">
+                                        <img src="../assets/images/youtube/youtube_placeholder02.png" alt="YouTube Thumbnail">
+                                        
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- INDIVIDUAL PER SITE . DO NOT MAKE IT INTO A .JS PLEASE -->
+                    <script>
+                        function loadYouTubeVideo(container) {
+                          const iframe = document.createElement("iframe");
+                          iframe.setAttribute("width", "100%");
+                          iframe.setAttribute("height", "515");
+                          iframe.setAttribute("src", "https://www.youtube.com/embed/IUqKuGNasdM?si=f60qboB_EXhlBvDn?autoplay=1");
+                          iframe.setAttribute("title", "YouTube video player");
+                          iframe.setAttribute("frameborder", "0");
+                          iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
+                          iframe.setAttribute("allowfullscreen", "");
+                        
+                          container.innerHTML = "";
+                          container.appendChild(iframe);
+                        }
+                    </script>
+                    <!-- INDIVIDUAL PER SITE . DO NOT MAKE IT INTO A .JS PLEASE -->
+            
+                    <div class="flex-grow-1" style="flex-basis: 40%;">
+                        <div class="card h-100">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Noter til video</h5>
+                                <p class="card-text"><i>Bare rolig - vi gemmer dem!</i></p>
+                                <div class="note-input-wrapper" style="flex: 1;">
+                                    <textarea id="intet" placeholder="Skriv dine noter her..." spellcheck="false"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- 2 ROW END -->
+
+    </div>
+    <!-- YouTube Section End -->
+
     <!-- Exam Area Starts -->
     <div class="deshes-area section-padding" id="exam">
         <div class="container">
@@ -729,14 +792,14 @@
     <div class="deshes-area section-padding text-center no-spacing" style="margin-top: -200px;">
 
         <div class="section-top2 col-lg-12 text-center wow pop-effect">
-            <h3>Giv <b>01 | ArrayList</b> en rating</h3>
-            <p class="mt-4"><i>Tryk på den du føler for!</i></p>
+            <h3>Giv <b>01 | Objekter</b> en rating</h3>
+            <p class="mt-4"><i>Blev du klogere?</i></p>
         </div>
 
         <div class="d-flex justify-content-center align-items-center flex-row gap-4">
             <div class="outer-circle position-relative mr-5 wow pop-effect delay-1s">
                 <button class="like-button" onclick="scaleHeart()">Like</button>
-                <div class="like-count">12</div>
+                <div class="like-count">0</div>
                 <div class="like-icon">
                     <i class="fa fa-heart"></i>
                 </div>
