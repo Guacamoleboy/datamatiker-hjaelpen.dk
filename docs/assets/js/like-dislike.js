@@ -1,20 +1,20 @@
 async function updateCounts() {
-  const res = await fetch('like-dislike.json');
-  const data = await res.json();
-  document.querySelector('.like-count').textContent = data.likes;
-  document.querySelector('.dislike-count').textContent = data.dislikes;
-}
-
-async function sendVote(action) {
-  const formData = new FormData();
-  formData.append('action', action);
-
-  await fetch('like_handle.php', {
-    method: 'POST',
-    body: formData
-  });
-
-  updateCounts();
+    const res = await fetch('../assets/json/like-dislike.json?ts=' + new Date().getTime());
+    const data = await res.json();
+    document.querySelector('.like-count').textContent = data.likes;
+    document.querySelector('.dislike-count').textContent = data.dislikes;
+  }
+  
+  async function sendVote(action) {
+    const formData = new FormData();
+    formData.append('action', action);
+  
+    await fetch('../like_handle.php', {
+      method: 'POST',
+      body: formData
+    });
+  
+    updateCounts();
 }
 
 function scaleHeart() {

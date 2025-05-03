@@ -1,7 +1,7 @@
 <?php
 header('Content-Type: application/json');
 
-$file = '../assets/json/like-dislike.json';
+$file = 'assets/json/like-dislike.json';
 $data = json_decode(file_get_contents($file), true);
 
 if (!is_array($data)) {

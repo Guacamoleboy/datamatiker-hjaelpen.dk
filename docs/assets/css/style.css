@@ -1443,12 +1443,11 @@ body.dark-mode .wave-path {
 }
 
 .i-candy {
-
     color: #ffffff;
     font-weight: normal;
     font-size: 30px;
     font-family: 'Datamatiker-font', sans-serif;
-
+    text-transform: none !important;
 }
 
 .i-candy-h4 {
