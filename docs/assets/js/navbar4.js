@@ -25,8 +25,8 @@ const navbarHTML = `
                             <ul class="sub-menu">
                                 <li><a href="../../1sem/overblik.html">1. Semester</a>
                                     <ul class="sub-menu-further">
-                                        <li><a href="#">Læringsmål</a></li>
-                                        <li><a href="#">Bøger</a></li>
+                                        <li><a href="../../1sem/overblik.html">Læringsmål</a></li>
+                                        <li><a href="../../1sem/books.html">Bøger</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="../../2sem/overblik.html">2. Semester</a></li>
