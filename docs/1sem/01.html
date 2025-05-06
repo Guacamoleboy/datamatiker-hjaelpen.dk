@@ -613,7 +613,21 @@
                         <p>
                           Som du nok lagde mærke til, havde vores <b>toString()</b> metode en <b>@Override</b> annotation over sig. Men hvad betyder det, og hvad gør det egentlig?
                         </p>
-                        
+                        <p>
+                            <b class="b-green">@Override</b> betyder at vi anerkender at metoden eksisterer, men at vi ønsker at lave vores egen version af den!
+                        </p>    
+                        <p>
+                            Vi siger altså kort sagt - at vi vil bruge vores egen version af den allerede eksisterende metode.. Skriver man <b>ikke</b> @Override, så sker der ikke det store så længe
+                            objektets toString metode er ens med <b>superklassens</b> pre-definerede metode...
+                        </p>
+                        <p>
+                            Hvorfor kan jeg så bare ikke droppe den? Det giver da ingen mening...<br><br>@Override giver os en fejlkode hvis vi skriver forkert.
+                            Dvs hvis vi skriver <b>tostring</b> og ikke <b>toString</b>, så vil @Override sige der er <b class="b-red">fejl</b>. Uden @Override ville den ikke sige fejl, men den ville benytte sig
+                            af den originale toString metode som den <b>nedarver</b> fra Objektet by default. Dvs du får et resultat du <b>ikke forventer</b> og kan måske ikke helt forstå hvorfor.
+                            <img src="../assets/images/terminal/01_10.png" style="width: 75%; height: auto; display: block; margin: 20px auto;">
+                            <br><br>Som du kan se på eksemplet her har vi i vores Bank.java klasse skrevet toString forkert uden @Override. Dvs vi får <b>ingen</b> fejlkoder da programmet så henter toString fra objektets superklasse..
+                            <br><br>Det er derfor vi tilføjer <b class="b-green">@Override</b> til vores nedarvede metoder!
+                        </p>
                       </div>
 					</div>
 			  </div>
