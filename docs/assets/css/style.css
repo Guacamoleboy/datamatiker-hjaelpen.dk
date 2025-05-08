@@ -299,7 +299,7 @@ body.dark-mode .card-title {
 
 body.dark-mode .card-text {
 
-    font-family: 'Datamatiker-font', sans-serif;
+    font-family: 'JetBrains Mono', sans-serif;
     font-weight: normal;
     font-size: 16px !important;
     color: #dedede;
@@ -388,6 +388,24 @@ body.dark-mode .button-cool button{
     padding: 30px 30px 30px 30px; 
     background: #494974;
     text-align: left; 
+}
+
+.line-under-header {
+    position: relative;
+    padding: 10px 10px 10px 10px; 
+    background: #494974 !important;
+    text-align: center;
+}
+
+.line-under-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35%;
+    height: 2px;
+    background-color: #ffb606;
 }
 
 .b-white-learning {
@@ -883,7 +901,17 @@ body.dark-mode .h4-background {
     transition: opacity 0.3s ease;
 }
 
+.narko {
+    font-family: "Poppins", sans-serif !important;
+    font-weight: normal !important;
+    font-size: 16px !important;
+    opacity: 1;
+}
+
 .card-hover .method-text-default {
+    font-family: "Poppins", sans-serif !important;
+    font-weight: normal !important;
+    font-size: 16px !important;
     opacity: 1;
 }
 
@@ -900,7 +928,7 @@ body.dark-mode .h4-background {
 }
 
 .orange-text .method-text-hover {
-    color: #dfae29 !important;
+    color: #ffbb00 !important;
 }
 
 .butterfly-wrapper {

@@ -133,6 +133,9 @@ document.addEventListener("DOMContentLoaded", () => {
                         if (currentQuestionIndex < questions.length) {
                             renderQuestion(currentQuestionIndex);
                         } else {
+
+                            localStorage.setItem("02-input07-correct", "true");
+
                             container.innerHTML = `
                                 <h4 class="h4-background col-lg-4 mx-auto mb-5">Yay</h4>
                                 <blockquote class="generic-blockquote">Tillykke! Du har bestået testen!</blockquote>
