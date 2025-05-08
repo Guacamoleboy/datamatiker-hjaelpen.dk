@@ -1,40 +1,26 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-    const input = document.getElementById('user-input01');
-    const input2 = document.getElementById('user-input02');
-    const input3 = document.getElementById('user-input03');
+    const input = document.getElementById('02-user-input01');
+    const input2 = document.getElementById('02-user-input02');
+    const input3 = document.getElementById('02-user-input03');
+    const input4 = document.getElementById('02-user-input04');
+    const input5 = document.getElementById('02-user-input05');
+    const input6 = document.getElementById('02-user-input06');
 
     const correctAnswer01 = '<Integer>';
     const correctAnswer02 = 'ArrayList <User> user = new ArrayList<>()';
     const correctAnswer02_02 = 'ArrayList <User> user = new ArrayList<User>()';
     const correctAnswer03 = 'ArrayList <Double> balance = new ArrayList<>()';
     const correctAnswer03_02 = 'ArrayList <Double> balance = new ArrayList<Double>()';
+    const correctAnswer04 = 'number.add(42)';
+    const correctAnswer05 = 'String myName = people.get(3)';
+    const correctAnswer06 = 'colors.set(4, "rød")';
 
     const correctSound = new Audio('../assets/sound/coin.mp3');
     correctSound.volume = 0.1;
 
     function playCorrectAnswerSound() {
         correctSound.play();
-    }
-
-    function toggleStatusCard() {
-        const card = document.getElementById('quiz-02-status');
-    
-        if (card.classList.contains('d-none') || card.style.opacity === '0') { 
-            card.classList.remove('d-none');  
-            card.style.transition = 'opacity 0.5s ease';
-            card.style.opacity = '1';        
-            card.style.visibility = 'visible';
-        } else {
-            
-            card.style.transition = 'opacity 0.5s ease';
-            card.style.opacity = '0';         
-            card.style.visibility = 'hidden'; 
-           
-            setTimeout(() => {
-                card.classList.add('d-none');  
-            }, 500); 
-        }
     }
     
     function validateInput(inputElement, correctAnswers, key) {
@@ -46,7 +32,6 @@ document.addEventListener('DOMContentLoaded', function () {
         } else if (correctAnswers.includes(userAnswer)) {
             bgColor = '#0e8a21'; 
             playCorrectAnswerSound();
-            toggleStatusCard();
         } else {
             bgColor = '#8a0e0e'; 
         }
@@ -73,9 +58,15 @@ document.addEventListener('DOMContentLoaded', function () {
     input.addEventListener('input', () => validateInput(input, [correctAnswer01], 'input01'));
     input2.addEventListener('input', () => validateInput(input2, [correctAnswer02, correctAnswer02_02], 'input02'));
     input3.addEventListener('input', () => validateInput(input3, [correctAnswer03, correctAnswer03_02], 'input03'));
+    input4.addEventListener('input', () => validateInput(input4, [correctAnswer04], 'input04'));
+    input5.addEventListener('input', () => validateInput(input5, [correctAnswer05], 'input05'));
+    input6.addEventListener('input', () => validateInput(input6, [correctAnswer06], 'input06'));
 
     restoreInput(input, '02-input01');
     restoreInput(input2, '02-input02');
     restoreInput(input3, '02-input03');
+    restoreInput(input4, '02-input04');
+    restoreInput(input5, '02-input05');
+    restoreInput(input6, '02-input06');
 
 });

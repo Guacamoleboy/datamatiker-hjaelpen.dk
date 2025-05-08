@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // __________________ ArrayList Status ______________________
 
-    const total02 = 4;
+    const total02 = 7;
     let correct02 = 0;
 
     for (let i = 1; i <= total02; i++) {
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function updateStatusTitleIfComplete02() {
-        const keys = ['02-input01-correct', '02-input02-correct', '02-input03-correct', '02-input04-correct'];
+        const keys = ['02-input01-correct', '02-input02-correct', '02-input03-correct', '02-input04-correct', '02-input05-correct', '02-input06-correct', '02-input07-correct'];
         const allCorrect = keys.every(key => localStorage.getItem(key) === 'true');
 
         if (allCorrect) {
