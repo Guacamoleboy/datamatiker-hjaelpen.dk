@@ -6,7 +6,7 @@
     Datamatiker elev Vinter 2025
     
     Sidst opdateret:
-    26-04-2025
+    08-05-2025
     
     Af: Jonas
 
@@ -62,24 +62,42 @@
 
     <script>
         const cursor = document.getElementById('customCursor');
-
-        // Detect if it's a touch device
+    
         const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-
+    
         if (!isTouchDevice) {
             cursor.style.display = 'block';
-
+    
             document.addEventListener('mousemove', (e) => {
                 cursor.style.left = e.clientX + 'px';
                 cursor.style.top = e.clientY + 'px';
-
+    
                 const target = e.target;
-                if (target.tagName === 'A' || target.tagName === 'BUTTON' || target.tagName === 'UL' || target.tagName === 'LI' || target.tagName === 'INPUT') {
+                if (['A', 'BUTTON', 'UL', 'LI', 'INPUT'].includes(target.tagName)) {
                     cursor.classList.add('hover');
                 } else {
                     cursor.classList.remove('hover');
                 }
             });
+    
+            window.addEventListener('mouseout', (e) => {
+                if (!e.relatedTarget && !e.toElement) {
+                    cursor.style.opacity = '0';
+                }
+            });
+    
+            window.addEventListener('mouseover', (e) => {
+                cursor.style.opacity = '1';
+            });
+    
+            window.addEventListener('blur', () => {
+                cursor.style.opacity = '0';
+            });
+    
+            window.addEventListener('focus', () => {
+                cursor.style.opacity = '1';
+            });
+    
         } else {
             cursor.style.display = 'none';
         }
@@ -93,12 +111,12 @@
     <button id="scrollToTopBtn" class="scroll-btn" onclick="scrollToSection()"><i class="fa fa-arrow-up"></i></button>
 
     <!-- Banner Area Starts -->
-    <section class="banner-area banner-area2 text-center">
+    <section class="banner-area banner-area2 text-center" id="start">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1><i>04 | <b>Scanner</b></i></h1>
-                    <p class="pt-2"><i>1. Semester / Læringsmål</i></p>
+                    <h1 class="wow animated fadeInDown"><i>04 | <b>Scanner</b></i></h1>
+                    <p class="pt-2 wow animated fadeInDown"><i>1. Semester / Læringsmål</i></p>
                 </div>
             </div>
         </div>
@@ -116,8 +134,255 @@
     </section>
     <!-- Banner Area End -->
 
+    <!-- Welcome Area Starts -->
+    <section class="welcome-area section-padding2">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 align-self-center">
+                    <div class="welcome-img">
+                        <img src="../assets/images/placeholder.svg?height=400&width=600&query=Java Scanner class diagram" class="img-fluid wow animated fadeInUp" alt="Scanner class diagram">
+                    </div>
+                </div>
+                <div class="col-md-6 align-self-center">
+                    <div class="welcome-text mt-5 mt-md-0">
+                        <h3><span class="style-change">Læringsmål | 04</span><br> Scanner i Java</h3>
+                        <p class="pt-3">
+                            <blockquote class="generic-blockquote-exam">
+                            Her vil vi kigge på <b>Scanner</b> klassen i Java. Scanner er et vigtigt værktøj til at <b>indlæse input</b> fra brugeren via konsollen. Vi vil lære hvordan man opretter en Scanner, læser forskellige datatyper, og håndterer almindelige fejl.
+                            <b>Til sidst</b> tager vi en lille <b>test</b> for at se om du har fået helt styr på stoffet!
+                            </blockquote>
+                        </p>
+                        <a href="#exam" class="template-btn mt-3">Hop til test</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Welcome Area End -->
+
+    <!-- Custom_01 Section Start -->
+    <div class="deshes-area section-padding text-center">
+        
+        <!-- Forskel SECTION START -->
+
+        <div class="container mt-5 wow animated fadeInUp">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-top2 text-center">
+                        <h3 class="card-title">Hvad er <b>Scanner</b>? Hvorfor er den vigtig?</h3>
+                
+                        <div class="row justify-content-center mt-5">
+
+                            <div class="col-lg-6 mb-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title generic-blockquote-bottom" style="background-color: #5e5e93;">Hvorfor</h5>
+                                        <p class="card-text button-cool" style="font-weight: normal;">
+                                            Scanner klassen er en del af <b>java.util</b> pakken og bruges til at læse input fra forskellige kilder:
+                                            <br><br>• Tastatur (System.in)
+                                            <br>• Filer
+                                            <br>• Strenge
+                                            <br>• Netværksforbindelser
+                                            <br><br>På 1. semester bruger vi primært Scanner til at <b>læse input fra brugeren</b> via konsollen, hvilket gør vores programmer interaktive.
+                                            <br><br>Scanner giver os mulighed for at læse forskellige datatyper direkte:
+                                            <br><br>• Tekst (next(), nextLine())
+                                            <br>• Tal (nextInt(), nextDouble())
+                                            <br>• Boolske værdier (nextBoolean())
+                                            <br><br>Dette sparer os for manuel konvertering af input.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 mb-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <img src="../assets/images/placeholder.svg?height=400&width=600&query=Java Scanner code example with System.in" style="width: 100%; height: 100%; border-radius: 25px;">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Forskel SECTION END -->
+
+        <!-- Forskel SECTION START -->
+
+        <div class="container mt-5 wow animated fadeInUp">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-top2 text-center">
+                        <h3 class="card-title">Oprettelse og brug af <b>Scanner</b></h3>
+                
+                        <div class="row justify-content-center mt-5">
+
+                            <div class="col-lg-6 mb-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title generic-blockquote-bottom" style="background-color: #5e5e93;">Import og oprettelse</h5>
+                                        <p class="card-text button-cool" style="font-weight: normal;">
+                                            For at bruge Scanner skal vi først importere den:
+                                            <br><br><code>import java.util.Scanner;</code>
+                                            <br><br>Derefter kan vi oprette en Scanner-instans:
+                                            <br><br><code>Scanner scanner = new Scanner(System.in);</code>
+                                            <br><br>Her bruger vi <b>System.in</b> som input-kilde, hvilket betyder at vi læser fra tastaturet.
+                                            <br><br>Det er vigtigt at lukke Scanner når vi er færdige med at bruge den:
+                                            <br><br><code>scanner.close();</code>
+                                            <br><br>Dette frigiver ressourcer og forhindrer unødvednigt brug af memory.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 mb-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title generic-blockquote-bottom" style="background-color: #5e5e93;">Læsning af forskellige datatyper</h5>
+                                        <p class="card-text button-cool" style="font-weight: normal;">
+                                            Scanner har forskellige metoder til at læse forskellige datatyper:
+                                            <br><br><b>Læs en hel linje tekst:</b>
+                                            <br><code>String navn = scanner.nextLine();</code>
+                                            <br><br><b>Læs et enkelt ord:</b>
+                                            <br><code>String ord = scanner.next();</code>
+                                            <br><br><b>Læs et heltal:</b>
+                                            <br><code>int tal = scanner.nextInt();</code>
+                                            <br><br><b>Læs et kommatal:</b>
+                                            <br><code>double kommatal = scanner.nextDouble();</code>
+                                            <br><br><b>Læs en boolean:</b>
+                                            <br><code>boolean sandFalsk = scanner.nextBoolean();</code>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Forskel SECTION END -->
+
+    </div>
+    <!-- Custom_01 Section End -->
+     
+    <!-- Reservation Area Starts -->
+    <div class="reservation-area reservation-area-learning section-padding text-center">
+
+        <!-- Wavy section Start -->
+        <div class="wave-top">
+            <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <path
+                d="M0,50 Q90,0 180,50 T360,50 T540,50 T720,50 T900,50 T1080,50 T1260,50 T1440,50 L1440,100 L0,100 Z"
+                class="wave-path" />
+            </svg>
+        </div>
+        <!-- Wavy Section End -->
+
+        <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+            <h2 class="wow fade-from-right-left"><i class="i-candy">Almindelige faldgruber med Scanner</i></h2>
+            <h4 class="mt-4 i-candy-h4 wow fade-from-right-left">
+                1. <b>nextLine()</b> efter <b>nextInt()</b> springer en linje over<br><br>
+                2. Manglende <b>håndtering af forkert input</b> kan give exceptions<br><br>
+                3. Glemmer at <b>lukke Scanner</b> med scanner.close()<br><br>
+                4. Blander <b>System.out.print()</b> og Scanner uden at guide brugeren
+            </h4>
+            </div>
+        </div>
+        </div>
+    
+        <!-- Wavy section Start -->
+        <div class="wave-bottom" style="margin-bottom: 5px;">
+        <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+            <path
+            d="M0,50 Q90,0 180,50 T360,50 T540,50 T720,50 T900,50 T1080,50 T1260,50 T1440,50 L1440,100 L0,100 Z"
+            class="wave-path" />
+        </svg>
+        </div>
+        <!-- Wavy Section End -->
+
+    </div>
+    <!-- Reservation Area End -->
+
+    <!-- Dropdown Info Section Start -->
+    <div class="deshes-area section-padding text-center">
+
+        <div style="visibility: hidden; position: absolute; width: 0px; height: 0px;">
+            <svg xmlns="http://www.w3.org/2000/svg">
+              <symbol viewBox="0 0 24 24" id="expand-more">
+                <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/><path d="M0 0h24v24H0z" fill="none"/>
+              </symbol>
+              <symbol viewBox="0 0 24 24" id="close">
+                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/><path d="M0 0h24v24H0z" fill="none"/>
+              </symbol>
+            </svg>
+        </div>
+          
+        <details open class="wow animated fadeInUp">
+            <summary>
+                nextLine() efter nextInt() problem
+                <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" /></svg>
+                <svg class="control-icon control-icon-close" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" /></svg>
+            </summary>
+            <p class="mt-5">Når du bruger <b class="b-red">nextInt()</b>, <b class="b-red">nextDouble()</b> eller lignende metoder, læser Scanner kun selve tallet, men efterlader linjeskiftet (\n) i input-bufferen.</p>
+            <p class="mt-2">Hvis du derefter kalder <b class="b-green">nextLine()</b>, vil denne metode læse og returnere det resterende linjeskift, hvilket resulterer i en tom streng.</p>
+            <p class="mt-2">
+                <b>Løsning:</b> Tilføj et ekstra <b class="b-green">nextLine()</b> kald efter <b class="b-red">nextInt()</b> for at "forbruge" linjeskiftet:
+                <img src="../assets/images/placeholder.svg?height=200&width=600&query=Java Scanner nextLine after nextInt code example" style="width: 75%; height: auto; display: block; margin: 20px auto;">
+            </p>
+        </details>
+          
+        <details class="wow animated fadeInUp">
+            <summary>
+                Håndtering af forkert input
+                <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" /></svg>
+                <svg class="control-icon control-icon-close" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" /></svg>
+            </summary>
+            <p class="mt-5">
+                <b>Problem:</b> Hvis brugeren indtaster tekst når programmet forventer et tal, vil Scanner kaste en <b class="b-red">InputMismatchException</b>.
+            </p>
+            <p class="mt-2">
+                <b>Løsning:</b> Brug try-catch blokke til at håndtere potentielle fejl:
+                <img src="../assets/images/placeholder.svg?height=300&width=600&query=Java Scanner try catch InputMismatchException example" style="width: 75%; height: auto; display: block; margin: 20px auto;">
+            </p>
+            <p class="mt-2">
+                Alternativt kan du bruge <b class="b-green">hasNextInt()</b>, <b class="b-green">hasNextDouble()</b> osv. til at tjekke om det næste input er af den forventede type:
+                <img src="../assets/images/placeholder.svg?height=300&width=600&query=Java Scanner hasNextInt example" style="width: 75%; height: auto; display: block; margin: 20px auto;">
+            </p>
+        </details>
+
+        <details class="wow animated fadeInUp">
+            <summary>
+                Scanner med filer
+                <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" /></svg>
+                <svg class="control-icon control-icon-close" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" /></svg>
+            </summary>
+            <p class="mt-5">
+                <b>Scanner kan også bruges til at læse fra filer:</b>
+            </p>
+            <p class="mt-2">
+                <img src="../assets/images/placeholder.svg?height=300&width=600&query=Java Scanner reading from file example" style="width: 75%; height: auto; display: block; margin: 20px auto;">
+            </p>
+            <p class="mt-2">
+                Når du bruger Scanner med filer, er det særligt vigtigt at lukke Scanner-objektet med <b class="b-green">scanner.close()</b> for at frigive filressourcen.
+            </p>
+            <p class="mt-2">
+                Det er også god praksis at bruge try-with-resources til automatisk at lukke Scanner:
+                <img src="../assets/images/placeholder.svg?height=300&width=600&query=Java Scanner try with resources example" style="width: 75%; height: auto; display: block; margin: 20px auto;">
+            </p>
+        </details>
+
+    </div>
+    <!-- Dropdown Info Section End -->
+
     <!-- Learning by Doing START -->
-    <div id="features" class="tabs">
+    <div id="features" class="tabs lbd-visuals">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -144,7 +409,7 @@
                             <a class="nav-link" id="nav-tab-4" data-toggle="tab" href="#tab-4" role="tab" aria-controls="tab-4" aria-selected="false">4</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="nav-tab-5" data-toggle="tab" href="#tab-5" role="tab" aria-controls="tab-4" aria-selected="false">5</a>
+                            <a class="nav-link" id="nav-tab-5" data-toggle="tab" href="#tab-5" role="tab" aria-controls="tab-5" aria-selected="false">5</a>
                         </li>
                     </ul>
                     <!-- end of tabs links -->
@@ -155,21 +420,24 @@
                         <!-- Tab -->
                         <div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="tab-1">
                             <div class="row">
-                                <div class="col-lg-6">
+                                <div class="col-lg-6 mt-3">
                                     <div class="image-container">
-                                        <img class="img-fluid" src="../assets/images/blob/blob1.png" alt="alternative">
+                                        <img class="img-fluid" src="../assets/images/placeholder.svg?height=400&width=500&query=Java Scanner import and initialization code" alt="Scanner import and initialization">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="text-container">
-                                        <h3>Title here</h3>
+                                    <div class="text-container text-center">
+                                        <h3><b>Oprettelse</b> af Scanner</h3>
                                         <p class="generic-blockquote">
-                                            Her skal spørgsmålet være.. Kan du forstå det!? GG. Det ren GG. Her skal spørgsmålet være.. Kan du forstå det!? GG. Det ren GG.
-                                            Her skal spørgsmålet være.. Kan du forstå det!? GG. Det ren GG. Her skal spørgsmålet være.. Kan du forstå det!? GG. Det ren GG.
+                                            Vi vil gerne oprette en Scanner til at læse input fra tastaturet. Hvad mangler i koden til venstre?
+                                            <br><br>Udfyld det der mangler herunder..
                                         </p>
-                                        
-                                        <a href="#" class="template-btn mt-3 animated fadeInUp">Hint</a>
-                                        <input type="text" class="template-input mt-3 animated fadeInUp" placeholder="Dit svar..">
+                                        <div class="changelog-custom-learning d-flex justify-content-center align-items-center text-center wow animated fadeInUp">
+                                            <label for="user-input" class="into-icon-learning">
+                                                <input id="04-user-input01" type="text" placeholder="Dit svar.." style="margin-right: 10px;">
+                                                <span class="span-white text-visuals-span-input">Scanner scanner = new Scanner()</span>
+                                            </label>
+                                        </div>                                        
                                     </div> 
                                 </div>
                             </div> 
@@ -179,21 +447,23 @@
                         <!-- Tab -->
                         <div class="tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="tab-2">
                             <div class="row">
-                                <div class="col-lg-6">
+                                <div class="col-lg-6 mt-3">
                                     <div class="image-container">
-                                        <img class="img-fluid" src="../assets/images/blob/blob1.png" alt="alternative">
-                                    </div> 
+                                        <img class="img-fluid" src="../assets/images/placeholder.svg?height=400&width=500&query=Java Scanner reading integer input" alt="Scanner reading integer">
+                                    </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="text-container">
-                                        <h3>Title here</h3>
+                                    <div class="text-container text-center">
+                                        <h3><b>Læsning</b> af heltal</h3>
                                         <p class="generic-blockquote">
-                                            Her skal spørgsmålet være.. Kan du forstå det!? GG. Det ren GG. Her skal spørgsmålet være.. Kan du forstå det!? GG. Det ren GG.
-                                            Her skal spørgsmålet være.. Kan du forstå det!? GG. Det ren GG. Her skal spørgsmålet være.. Kan du forstå det!? GG. Det ren GG.
+                                            Vi vil gerne læse et heltal fra brugeren og gemme det i variablen 'alder'.
+                                            <br><br>Hvilken Scanner-metode skal vi bruge?
                                         </p>
-                                        
-                                        <a href="#" class="template-btn mt-3 animated fadeInUp">Hint</a>
-                                        <input type="text" class="template-input mt-3 animated fadeInUp" placeholder="Dit svar..">
+                                        <div class="changelog-custom-learning d-flex justify-content-center align-items-center text-center animated fadeInUp">
+                                            <label for="user-input" class="into-icon-learning-long">
+                                                <input id="04-user-input02" type="text" placeholder="Dit svar.." style="margin-right: 10px;">
+                                            </label>
+                                        </div>                                        
                                     </div> 
                                 </div>
                             </div> 
@@ -203,45 +473,49 @@
                         <!-- Tab -->
                         <div class="tab-pane fade" id="tab-3" role="tabpanel" aria-labelledby="tab-3">
                             <div class="row">
-                                <div class="col-lg-6">
+                                <div class="col-lg-6 mt-3">
                                     <div class="image-container">
-                                        <img class="img-fluid" src="../assets/images/blob/blob1.png" alt="alternative">
-                                    </div> 
-                                </div> 
-                                <div class="col-lg-6">
-                                    <div class="text-container">
-                                        <h3>Title here</h3>
-                                        <p class="generic-blockquote">
-                                            Her skal spørgsmålet være.. Kan du forstå det!? GG. Det ren GG. Her skal spørgsmålet være.. Kan du forstå det!? GG. Det ren GG.
-                                            Her skal spørgsmålet være.. Kan du forstå det!? GG. Det ren GG. Her skal spørgsmålet være.. Kan du forstå det!? GG. Det ren GG.
-                                        </p>
-                                        
-                                        <a href="#" class="template-btn mt-3 animated fadeInUp">Hint</a>
-                                        <input type="text" class="template-input mt-3 animated fadeInUp" placeholder="Dit svar..">
+                                        <img class="img-fluid" src="../assets/images/placeholder.svg?height=400&width=500&query=Java Scanner nextLine after nextInt problem" alt="Scanner nextLine after nextInt">
                                     </div>
                                 </div>
-                            </div>
-                        </div>
+                                <div class="col-lg-6">
+                                    <div class="text-container text-center">
+                                        <h3><b>nextLine()</b> efter nextInt()</h3>
+                                        <p class="generic-blockquote">
+                                            Vi har læst et heltal med nextInt() og vil nu læse en tekstlinje med nextLine(), men der opstår et problem.
+                                            <br><br>Hvad skal vi tilføje mellem de to kald for at løse problemet?
+                                        </p>
+                                        <div class="changelog-custom-learning d-flex justify-content-center align-items-center text-center animated fadeInUp">
+                                            <label for="user-input" class="into-icon-learning-long" style="width: 600px !important;">
+                                                <input id="04-user-input03" type="text" placeholder="Dit svar.." style="margin-right: 10px;">
+                                            </label>
+                                        </div>                                        
+                                    </div> 
+                                </div>
+                            </div> 
+                        </div> 
                         <!-- end of tab -->
 
                         <!-- Tab -->
                         <div class="tab-pane fade" id="tab-4" role="tabpanel" aria-labelledby="tab-4">
                             <div class="row">
-                                <div class="col-lg-6">
+                                <div class="col-lg-6 mt-3">
                                     <div class="image-container">
-                                        <img class="img-fluid" src="../assets/images/blob/blob1.png" alt="alternative">
-                                    </div> 
+                                        <img class="img-fluid" src="../assets/images/placeholder.svg?height=400&width=500&query=Java Scanner hasNextInt validation" alt="Scanner input validation">
+                                    </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="text-container">
-                                        <h3>Title here</h3>
+                                    <div class="text-container text-center">
+                                        <h3>Validering af input</h3>
                                         <p class="generic-blockquote">
-                                            Her skal spørgsmålet være.. Kan du forstå det!? GG. Det ren GG. Her skal spørgsmålet være.. Kan du forstå det!? GG. Det ren GG.
-                                            Her skal spørgsmålet være.. Kan du forstå det!? GG. Det ren GG. Her skal spørgsmålet være.. Kan du forstå det!? GG. Det ren GG.
+                                            Vi vil tjekke om brugerens næste input er et heltal, før vi forsøger at læse det.
+                                            <br><br>Hvilken Scanner-metode skal vi bruge til dette?
                                         </p>
-                                        
-                                        <a href="#" class="template-btn mt-3 animated fadeInUp">Hint</a>
-                                        <input type="text" class="template-input mt-3 animated fadeInUp" placeholder="Dit svar..">
+                                        <div class="changelog-custom-learning d-flex justify-content-center align-items-center text-center animated fadeInUp">
+                                            <label for="user-input" class="into-icon-learning-long">
+                                                <input id="04-user-input04" type="text" placeholder="Dit svar" style="margin-right: 10px;">
+                                            </label>
+                                        </div>                                        
                                     </div> 
                                 </div>
                             </div> 
@@ -251,21 +525,23 @@
                         <!-- Tab -->
                         <div class="tab-pane fade" id="tab-5" role="tabpanel" aria-labelledby="tab-5">
                             <div class="row">
-                                <div class="col-lg-6">
+                                <div class="col-lg-6 mt-3">
                                     <div class="image-container">
-                                        <img class="img-fluid" src="../assets/images/blob/blob1.png" alt="alternative">
-                                    </div> 
+                                        <img class="img-fluid" src="../assets/images/placeholder.svg?height=400&width=500&query=Java Scanner closing resources" alt="Scanner closing">
+                                    </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="text-container">
-                                        <h3>Title here</h3>
+                                    <div class="text-container text-center">
+                                        <h3>Lukning af <b>Scanner</b></h3>
                                         <p class="generic-blockquote">
-                                            Her skal spørgsmålet være.. Kan du forstå det!? GG. Det ren GG. Her skal spørgsmålet være.. Kan du forstå det!? GG. Det ren GG.
-                                            Her skal spørgsmålet være.. Kan du forstå det!? GG. Det ren GG. Her skal spørgsmålet være.. Kan du forstå det!? GG. Det ren GG.
+                                            Når vi er færdige med at bruge Scanner, er det vigtigt at lukke den for at frigive ressourcer.
+                                            <br><br>Hvilken metode skal vi kalde for at lukke Scanner-objektet?
                                         </p>
-                                        
-                                        <a href="#" class="template-btn mt-3 animated fadeInUp">Hint</a>
-                                        <input type="text" class="template-input mt-3 animated fadeInUp" placeholder="Dit svar..">
+                                        <div class="changelog-custom-learning d-flex justify-content-center align-items-center text-center animated fadeInUp">
+                                            <label for="user-input" class="into-icon-learning-long">
+                                                <input id="04-user-input05" type="text" placeholder="Dit svar" style="margin-right: 10px;">
+                                            </label>
+                                        </div>                                        
                                     </div> 
                                 </div>
                             </div> 
@@ -275,14 +551,356 @@
                     </div> <!-- end of tab content -->
                     <!-- end of tabs content -->
 
+                    
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
+        <!-- Wavy section Start -->
     </div> <!-- end of tabs -->
     <!-- Learning by Doing END -->
 
+    <!-- Text Learning START -->
+    <section class="mt-5 mb-5" id="chapter-section">
+        <div class="container">
+            <div class="row justify-content-center py-5 mt-5">
+                <div class="col-md-12 heading-section text-center">
+                    <div class="above-heading">Bedre forståelse</div>
+                    <h2 class="mb-2">Læring om <b>Scanner</b></h2>
+                    <p class="p-heading generic-blockquote-bottom" style="background-color: #494974;">Her har du mulighed for at fordybe dig i Scanner-klassen</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <nav id="navi">
+                        <ul>
+                            <li><a href="#page-1">Scanner Basics</a><div class="indicator"></div></li>
+                            <li><a href="#page-2">Scanner Metoder</a><div class="indicator"></div></li>
+                            <li><a href="#page-3">Fejlhåndtering</a><div class="indicator"></div></li>
+                            <li><a href="#page-4">Best Practices</a><div class="indicator"></div></li>
+                        </ul>
+                    </nav>
+                </div>
+					<div class="col-md-9">
+					  <div id="page-1" class= "page one ml-5 text-center">
+					  	<h2 class="heading">Scanner <b>Basics</b></h2>
+					  	<p>
+                            Scanner-klassen blev introduceret i Java 5 og er en del af <b>java.util</b> pakken. Den gør det nemt at læse input fra forskellige kilder og konvertere det til forskellige datatyper.
+                          </p>
+                          <p>
+                            For at bruge Scanner skal du først importere den med <b>import java.util.Scanner;</b> og derefter oprette en instans af den. Den mest almindelige måde at bruge Scanner på er at læse fra <b>System.in</b>, som repræsenterer tastaturet:
+                          </p>
+                          <p>
+                            <code>Scanner scanner = new Scanner(System.in);</code>
+                          </p>
+                          <p>
+                            Scanner fungerer ved at opdele input i "tokens" ved hjælp af et mønster, som som standard er whitespace (mellemrum, tab, linjeskift). Dette betyder, at når du kalder <b>next()</b>, får du det næste ord i inputtet.
+                          </p>
+                          <p>
+                            Du kan også ændre det mønster, Scanner bruger til at opdele input, ved at kalde <b>useDelimiter()</b> metoden.
+                          </p>
+					  </div>
+					  <div id="page-2" class="page two ml-5 text-center">
+                        <h2 class="heading">Scanner <b>Metoder</b></h2>
+                        <p>
+                          Scanner-klassen har mange metoder til at læse forskellige typer af input:
+                        </p>
+                        <p>
+                          <b>Tekst-metoder:</b>
+                          <br>• <b>next()</b>: Læser det næste token (ord)
+                          <br>• <b>nextLine()</b>: Læser resten af den aktuelle linje
+                          <br>• <b>nextBigInteger()</b>: Læser en BigInteger
+                          <br>• <b>nextBigDecimal()</b>: Læser en BigDecimal
+                        </p>
+                        <p>
+                          <b>Tal-metoder:</b>
+                          <br>• <b>nextInt()</b>: Læser et heltal (int)
+                          <br>• <b>nextLong()</b>: Læser et langt heltal (long)
+                          <br>• <b>nextFloat()</b>: Læser et flydende tal (float)
+                          <br>• <b>nextDouble()</b>: Læser et flydende tal med dobbelt præcision (double)
+                          <br>• <b>nextByte()</b>: Læser en byte
+                          <br>• <b>nextShort()</b>: Læser et kort heltal (short)
+                        </p>
+                        <p>
+                          <b>Andre metoder:</b>
+                          <br>• <b>nextBoolean()</b>: Læser en boolean værdi (true/false)
+                          <br>• <b>hasNext()</b>: Tjekker om der er flere tokens
+                          <br>• <b>hasNextLine()</b>: Tjekker om der er flere linjer
+                          <br>• <b>hasNextInt()</b>, <b>hasNextDouble()</b>, osv.: Tjekker om det næste token kan konverteres til den angivne type
+                        </p>
+                      </div>
+					  <div id="page-3" class="page three ml-5 text-center">
+                        <h2 class="heading"><b>Fejlhåndtering</b> med Scanner</h2>
+                        <p>
+                          Når du bruger Scanner til at læse input, kan der opstå forskellige fejl:
+                        </p>
+                        <p>
+                          <b>InputMismatchException</b>: Denne undtagelse kastes, når Scanner forsøger at læse en bestemt type (f.eks. int), men inputtet ikke kan konverteres til denne type.
+                        </p>
+                        <p>
+                          <b>NoSuchElementException</b>: Denne undtagelse kastes, når Scanner forsøger at læse input, men der er ikke mere input tilgængeligt.
+                        </p>
+                        <p>
+                          <b>IllegalStateException</b>: Denne undtagelse kastes, når Scanner er lukket, men du forsøger stadig at bruge den.
+                        </p>
+                        <p>
+                          For at håndtere disse fejl kan du bruge try-catch blokke:
+                        </p>
+                        <p>
+                          <img src="../assets/images/placeholder.svg?height=300&width=600&query=Java Scanner try catch example" style="width: 75%; height: auto; display: block; margin: 20px auto;">
+                        </p>
+                        <p>
+                          Eller du kan bruge has-metoder til at tjekke inputtet før du forsøger at læse det:
+                        </p>
+                        <p>
+                          <img src="../assets/images/placeholder.svg?height=300&width=600&query=Java Scanner hasNext validation example" style="width: 75%; height: auto; display: block; margin: 20px auto;">
+                        </p>
+                      </div>
+					  <div id="page-4" class="page four ml-5 text-center">
+                        <h2 class="heading"><b>Best Practices</b> med Scanner</h2>
+                        <p>
+                          Her er nogle best practices, når du bruger Scanner i dine Java-programmer:
+                        </p>
+                        <p>
+                          <b>1. Luk altid Scanner-objektet</b>, når du er færdig med at bruge det:
+                          <br><code>scanner.close();</code>
+                          <br>Dette frigiver ressourcer og forhindrer memory leaks.
+                        </p>
+                        <p>
+                          <b>2. Vær opmærksom på nextLine() efter nextInt()</b> problemet:
+                          <br>Tilføj et ekstra nextLine() kald efter at have brugt nextInt(), nextDouble() osv. for at "forbruge" linjeskiftet.
+                        </p>
+                        <p>
+                          <b>3. Brug try-with-resources</b> til automatisk at lukke Scanner:
+                          <br><code>try (Scanner scanner = new Scanner(System.in)) {
+                            // Brug scanner her
+                          }</code>
+                        </p>
+                        <p>
+                          <b>4. Giv altid brugeren klar vejledning</b> om, hvilket input der forventes:
+                          <br><code>System.out.print("Indtast dit navn: ");</code>
+                          <br>Dette gør dit program mere brugervenligt.
+                        </p>
+                        <p>
+                          <b>5. Valider altid brugerinput</b> før du forsøger at bruge det:
+                          <br>Brug has-metoder eller try-catch blokke til at håndtere ugyldigt input.
+                        </p>
+                      </div>
+					</div>
+			  </div>
+    	</div>
+    </section>
+    <!-- Text Learning END -->
+
+    <!-- Comparison Section Start -->
+
+    <div class="deshes-area section-padding text-center wow animated fadeInUp">
+
+        <h3><b>Scanner</b> vs <b>BufferedReader</b> vs <b>Console</b></h3>
+        <p class="mt-4"><i>Forskellige måder at læse input i Java</i></p>
+
+        <div class="container mt-5">
+            <div class="row">
+
+                <div class="card-deck col-lg-12">
+
+                    <div class="card">
+                        <div class="card-body">
+                        <h5 class="card-title"><b>Scanner</b></h5>
+                        <p class="card-text">Alsidig og nem at bruge</p>
+                        <div class="button-cool">
+                            <button>Kan læse forskellige datatyper direkte</button>
+                            <button>Nem at bruge med simple metoder</button>
+                            <button>Langsommere end BufferedReader</button>
+                            <button>Ikke thread-safe</button>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                        <h5 class="card-title"><b>BufferedReader</b></h5>
+                        <p class="card-text">Hurtig og effektiv</p>
+                        <div class="button-cool">
+                            <button>Hurtigere end Scanner</button>
+                            <button>Bedre til at læse store mængder data</button>
+                            <button>Kan kun læse tekst (Strings)</button>
+                            <button>Kræver manuel konvertering af datatyper</button>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                        <h5 class="card-title"><b>Console</b></h5>
+                        <p class="card-text">Sikker men begrænset</p>
+                        <div class="button-cool">
+                            <button>Kan skjule input (f.eks. passwords)</button>
+                            <button>Kun tilgængelig i konsol-miljøer</button>
+                            <button>Kan være null i nogle miljøer</button>
+                            <button>Begrænset funktionalitet sammenlignet med Scanner</button>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Comparison Section End -->
+
+    <!-- YouTube Section Start -->
+    <div class="deshes-area section-padding text-center">
+
+        <!-- 2 ROW START -->
+        <div class="container">
+            <div class="row same-height-row">
+
+                <div class="col-12 text-center mb-5">
+                    <h3>Se en video om <b>Scanner i Java</b></h3>
+                    <p class="mt-2"><i>Lær hvordan du bruger Scanner til at læse input fra brugeren</i></p>
+                    </div>
+            
+                <div class="col-lg-12 d-flex">
+
+                    <div class="flex-grow-1 me-3" style="flex-basis: 60%; margin-right: 30px;">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="youtube-embed">
+                                    <div class="youtube-embed-custom" onclick="loadYouTubeVideo(this)">
+                                        <img src="../assets/images/placeholder.svg?height=400&width=600&query=Java Scanner tutorial video thumbnail" alt="Guide  til Scanner i Java" class="img-fluid">
+                                        
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- INDIVIDUAL PER SITE . DO NOT MAKE IT INTO A .JS PLEASE -->
+                    <script>
+                        function loadYouTubeVideo(container) {
+                          const iframe = document.createElement("iframe");
+                          iframe.setAttribute("width", "100%");
+                          iframe.setAttribute("height", "515");
+                          iframe.setAttribute("src", "https://www.youtube.com/embed/bI7kQq9cjmQ?autoplay=1");
+                          iframe.setAttribute("title", "YouTube video player");
+                          iframe.setAttribute("frameborder", "0");
+                          iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
+                          iframe.setAttribute("allowfullscreen", "");
+                        
+                          container.innerHTML = "";
+                          container.appendChild(iframe);
+                        }
+                    </script>
+                    <!-- INDIVIDUAL PER SITE . DO NOT MAKE IT INTO A .JS PLEASE -->
+            
+                    <div class="flex-grow-1" style="flex-basis: 40%;">
+                        <div class="card h-100">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Noter til video</h5>
+                                <p class="card-text"><i>Bare rolig - vi gemmer dem!</i></p>
+                                <div class="note-input-wrapper" style="flex: 1;">
+                                    <textarea id="intet" placeholder="Skriv dine noter her..." spellcheck="false"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- 2 ROW END -->
+
+    </div>
+    <!-- YouTube Section End -->
+
+    <!-- Exam Area Starts -->
+    <div class="deshes-area section-padding" id="exam">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-top2 text-center">
+                        <h3 class="wow animated fadeInUp">Se om du har forstået <b>Scanner</b></h3>
+                        <p class="mt-4"><i>Du skal svare korrekt på alle spørgsmål for at bestå!</i></p>
+                        <div class="single-element-widget-exam col-lg-6 mx-auto mt-5">
+
+                            <div class="section-top-border">
+                                <h3 class="mb-30 title_color">04 | Scanner</h3>
+                                
+                                <div class="row">
+                                    <div class="col-lg-12">
+
+                                        <div class="changelog-custom">
+                                            <h4 class="h4-background col-lg-4 mx-auto mb-5">1/10</h4>
+                                            <div id="visual-lives" class="d-flex justify-content-center mb-4">
+                                                <div class="life-star" id="star1">
+                                                    <img src="../assets/images/liv_star_final.png" class="star-img">
+                                                </div>
+                                                <div class="life-star" id="star2">
+                                                    <img src="../assets/images/liv_star_final.png" class="star-img">
+                                                    <img src="../assets/images/liv_astronaut_final.png" class="astronaut-img" id="astronaut">
+                                                </div>
+                                                <div class="life-star" id="star3">
+                                                    <img src="../assets/images/liv_star_final.png" class="star-img balloon">
+                                                </div>
+                                            </div>
+                                            <blockquote class="generic-blockquote">
+                                                Hvilken pakke skal importeres for at bruge Scanner-klassen?
+                                            </blockquote>
+                                            <button>java.io.Scanner</button>
+                                            <button>java.util.Scanner</button>
+                                            <button>java.lang.Scanner</button>
+                                            <button>java.scanner.Scanner</button>    
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Exam Area End -->
+
+    <!-- Like Section Start -->
+    <div class="deshes-area section-padding text-center no-spacing" style="margin-top: -200px;">
+
+        <div class="section-top2 col-lg-12 text-center wow pop-effect">
+            <h3>Giv <b>04 | Scanner</b> en rating</h3>
+            <p class="mt-4"><i>Blev du klogere?</i></p>
+        </div>
+
+        <div class="d-flex justify-content-center align-items-center flex-row gap-4">
+            <div class="outer-circle position-relative mr-5 wow pop-effect delay-1s">
+                <button class="like-button" onclick="scaleHeart()">Like</button>
+                <div class="like-count">0</div>
+                <div class="like-icon">
+                    <i class="fa fa-heart"></i>
+                </div>
+            </div>
+            
+            <div class="outer-circle position-relative ml-5 wow pop-effect delay-1s">
+                <button class="like-button" onclick="scaleThumb()">Dislike</button>
+                <div class="dislike-count">0</div>
+                <div class="dislike-icon">
+                    <i class="fa fa-thumbs-down"></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Like Section End -->
+
     <!-- Javascript -->
     <script src="../assets/js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="../assets/js/learning-example.js"></script>
+    <script src="../assets/js/exam-questions04.js"></script>
+    <script src="../assets/js/learning-example-visuals.js"></script>
     <script src="../assets/js/darkmode.js"></script>
     <script src="../assets/js/vendor/bootstrap-4.1.3.min.js"></script>
     <script src="../assets/js/vendor/wow.min.js"></script>
@@ -290,8 +908,12 @@
     <script src="../assets/js/vendor/jquery.datetimepicker.full.min.js"></script>
     <script src="../assets/js/vendor/jquery.nice-select.min.js"></script>
     <script src="../assets/js/main.js"></script>
-    <script src="../assets/js/sidney.js"></script>
+    <script src="../assets/js/like-dislike.js"></script>
+    <script src="../assets/js/prompt-validate04.js"></script>
+    <script src="../assets/js/scaleHeart.js"></script>
+    <script src="../assets/js/scaleThumb.js"></script>
     <script src="../assets/js/button-to-top.js"></script>
+    <script src="../assets/js/learning-page-tab.js"></script>
 
 </body>
 
