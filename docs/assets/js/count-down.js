@@ -1,7 +1,7 @@
 // Counter til construction.html
 
 document.addEventListener("DOMContentLoaded", function () {
-  const countDownDate = new Date("May 14, 2025 00:00:00").getTime();
+  const countDownDate = new Date("August 22, 2025 00:00:00").getTime();
 
   function updateCountdown() {
     const now = new Date().getTime();
